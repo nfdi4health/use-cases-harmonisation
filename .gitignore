@@ -2,4 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-create_mock_data/mock_data_initiation.R
+/create_mock_data/mock_data_initiation.R
