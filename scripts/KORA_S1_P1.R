@@ -13,14 +13,14 @@ library(tidyverse)
 library(here)
 
 #### Step 1: Import overall DataSchema (need to update path)
-dataschema_1 <- tibble(readxl::read_excel(here::here("rmonize/", "dataschema.xlsx"), sheet = 1))
-dataschema_2 <- tibble(readxl::read_excel(here::here("rmonize/", "dataschema.xlsx"), sheet = 2))
+dataschema_1 <- tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
+dataschema_2 <- tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2))
 
 dataschema <- list(Variables = dataschema_1,
                         Categories = dataschema_2)
 
 #### Step 2: Import Datasets (need to update path)
-data <- readxl::read_excel(here::here("data", ""), sheet = 1)
+KORAS1_P1 <- read_csv(here::here("data", "DATA_KORA_S1_P1.csv"))
 
 #### Step 3: Import Data Dictionaries of the study (need to update path)
 dd_var <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary", "DD_KORA_S1_P1.xlsx"), sheet = 1))
@@ -34,7 +34,7 @@ data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", "DPE_K
 
 #### Step 5: Combine input datasets and data dictionaries in a dossier
 dataset <- data_dict_apply(
-  dataset = data,
+  dataset = KORAS1_P1,
   data_dict = dd)
 
 dossier <- dossier_create(dataset_list = list(
