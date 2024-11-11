@@ -1,10 +1,10 @@
 #### Script for harmonizing KORA_S3_P1 for NFDI4Health
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
-install.packages("Rmonize")
-install.packages("readxl")
-install.packages("tidyverse")
-install.packages("here")
+# install.packages("Rmonize")
+# install.packages("readxl")
+# install.packages("tidyverse")
+# install.packages("here")
 
 #### Load the package in order to conduct
 library(Rmonize)

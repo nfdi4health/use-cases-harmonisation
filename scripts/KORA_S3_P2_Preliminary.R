@@ -1,11 +1,11 @@
-#### Script for harmonizing KORA_S1_P2_Preliminary for NFDI4Health
+#### Script for harmonizing KORA_S3_P2_Preliminary for NFDI4Health
 #### Preliminary in nature because not all variables are clarified yet
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
-install.packages("Rmonize")
-install.packages("readxl")
-install.packages("tidyverse")
-install.packages("here")
+# install.packages("Rmonize")
+# install.packages("readxl")
+# install.packages("tidyverse")
+# install.packages("here")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -21,21 +21,21 @@ dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
 
 #### Step 2: Import Datasets (need to update path)
-KORA_S1_P2_Preliminary <- read_csv(here::here("data", "DATA_KORA_S1_P2_Preliminary.csv"))
+KORA_S3_P2_Preliminary <- read_csv(here::here("data", "DATA_KORA_S3_P2_Preliminary.csv"))
 
 #### Step 3: Import Data Dictionaries of the study (need to update path)
-dd_var <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary", "DD_KORA_S1_P2_Preliminary.xlsx"), sheet = 1))
-dd_cat <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary/", "DD_KORA_S1_P2_Preliminary.xlsx"), sheet = 2))
+dd_var <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary", "DD_KORA_S3_P2_Preliminary.xlsx"), sheet = 1))
+dd_cat <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary/", "DD_KORA_S3_P2_Preliminary.xlsx"), sheet = 2))
 
 dd <- list(Variables = dd_var,
            Categories = dd_cat)
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
-data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", "DPE_KORA_S1_P2_Preliminary.xlsx"), sheet = 1)
+data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", "DPE_KORA_S3_P2_Preliminary.xlsx"), sheet = 1)
 
 #### Step 5: Combine input datasets and data dictionaries in a dossier
 dataset <- data_dict_apply(
-  dataset = KORA_S1_P2_Preliminary,
+  dataset = KORA_S3_P2_Preliminary,
   data_dict = dd)
 
 dossier <- dossier_create(dataset_list = list(
