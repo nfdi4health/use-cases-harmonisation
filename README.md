@@ -1,8 +1,9 @@
 # use-cases-harmonisation
+
 A repository for generating and storing essential documents to support data harmonization in use case studies. Something new.
 
-## Folder Structure
 
+## Folder Structure
 
 ### rmonize
 This folder consists of 3 sub-folders (data_dictionary, data_proc_elem and data_schema) which are essential for the
