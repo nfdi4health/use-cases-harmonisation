@@ -3,7 +3,6 @@ A repository for generating and storing essential documents to support data harm
 
 ## Folder Structure
 
-
 ### rmonize
 This folder consists of 3 sub-folders (data_dictionary, data_proc_elem and data_schema) which are essential for the
 correct harmonisation of the local data to a common structure. In the sub-folders, the actual Excel-Files are located
