@@ -2,10 +2,10 @@
 #### Preliminary in nature because not all variables are clarified yet
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
-install.packages("Rmonize")
-install.packages("readxl")
-install.packages("tidyverse")
-install.packages("here")
+# install.packages("Rmonize")
+# install.packages("readxl")
+# install.packages("tidyverse")
+# install.packages("here")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -57,7 +57,7 @@ harmonized_dossier_summary <- harmonized_dossier_summarize(harmonized_dossier)
 # place your harmonized dossier in a folder. This folder name is mandatory, and 
 # must not previously exist.
 
-bookdown_path <- paste0('temp/',basename(tempdir()))
+bookdown_path <- paste0(here::here("output/rmonize_report", "temp/"))
 harmonized_dossier_visualize(harmonized_dossier, bookdown_path)
 
 # Open the visual report in a browser.

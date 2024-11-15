@@ -1,10 +1,11 @@
 #### Script for harmonizing KORA_S1_P1 for NFDI4Health
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
-install.packages("Rmonize")
-install.packages("readxl")
-install.packages("tidyverse")
-install.packages("here")
+# install.packages("Rmonize")
+# install.packages("car")
+# install.packages("readxl")
+# install.packages("tidyverse")
+# install.packages("here")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -27,7 +28,7 @@ dd_var <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary", "DD_KO
 dd_cat <- tibble(readxl::read_excel(here::here("rmonize/data_dictionary/", "DD_KORA_S1_P1.xlsx"), sheet = 2))
 
 dd <- list(Variables = dd_var,
-                Categories = dd_cat)
+           Categories = dd_cat)
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
 data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", "DPE_KORA_S1_P1.xlsx"), sheet = 1)
@@ -54,10 +55,19 @@ harmonized_dossier_evaluation <- harmonized_dossier_evaluate(harmonized_dossier)
 harmonized_dossier_summary <- harmonized_dossier_summarize(harmonized_dossier)
 
 # place your harmonized dossier in a folder. This folder name is mandatory, and 
-# must not previously exist.
+# must not previously exist. include with paste0 the datetime of report and study name
 
 bookdown_path <- paste0('temp/',basename(tempdir()))
 harmonized_dossier_visualize(harmonized_dossier, bookdown_path)
 
 # Open the visual report in a browser.
 bookdown_open(bookdown_path)
+
+#### Step 8: Extract and save harmonized data into a pre-set folder
+
+
+# Extracting the harmonized dataset
+harmonized_dataset <- pooled_harmonized_dataset_create(harmonized_dossier)
+
+# Saving the data as a csv file for upload into Opal/DataSHIELD
+write.csv(harmonized_dataset, file = here::here("output/harmonised_dataset/KORA_S1_P1_harmonized.csv"))

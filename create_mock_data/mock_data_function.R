@@ -1,6 +1,14 @@
 #### Script for creating mock data
 
-create_mock_data <- function(studyname = NULL){
+create_mock_data <- function(studyname = NULL,
+                             single_dataset = TRUE,
+                             vars_second_dataset = NULL){
+  
+  
+  if(single_dataset == FALSE && is.null(vars_second_dataset)){
+    stop("You indicated that there is more than 1 dataset from which variables will be included 
+         but did not specify the variables in the second dataset!")
+  }
   
   library(tidyverse)
   library(readr)
