@@ -14,6 +14,7 @@ library(tidyverse)
 library(here)
 library(car)
 
+#### Step 0: Name of the study
 dataset_name <- "KORA_S1_P1"
 
 #### Step 1: Import overall DataSchema (need to update path)
@@ -60,11 +61,16 @@ harmonized_dossier_summary <- harmonized_dossier_summarize(harmonized_dossier)
 # place your harmonized dossier in a folder. This folder name is mandatory, and 
 # must not previously exist. include with paste0 the datetime of report and study name
 
+system_time <- Sys.time()
+system_name <- stringr::str_replace_all(string = system_time,
+                                    pattern = "[-:]",
+                                    replacement = "")
+system_name <- stringr::str_replace_all(string = system_name,
+                                        pattern = " ",
+                                        replacement = "_")
+system_name <- stringr::str_split(string = system_name,pattern = "[.]")[[1]][1]
 
-bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", Sys.Date()))
-dir.create(bookdown_path)
-bookdown_path <- dir.create(here::here("output/rmonize_report/", paste0(dataset_name, "_", Sys.Date())))
-
+bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", system_name))
 harmonized_dossier_visualize(harmonized_dossier, bookdown_path)
 
 # Open the visual report in a browser.
