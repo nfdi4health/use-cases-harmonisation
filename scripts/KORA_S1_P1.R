@@ -59,12 +59,11 @@ harmonized_dossier_summary <- harmonized_dossier_summarize(harmonized_dossier)
 # place your harmonized dossier in a folder. This folder name is mandatory, and 
 # must not previously exist. include with paste0 the datetime of report and study name
 
-<<<<<<< HEAD
+
 bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", Sys.Date()))
 dir.create(bookdown_path)
-=======
 bookdown_path <- dir.create(here::here("output/rmonize_report/", paste0(dataset_name, "_", Sys.Date())))
->>>>>>> main
+
 harmonized_dossier_visualize(harmonized_dossier, bookdown_path)
 
 # Open the visual report in a browser.
