@@ -2,16 +2,17 @@
 
 ####Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 # install.packages("Rmonize")
-# install.packages("car")
 # install.packages("readxl")
 # install.packages("tidyverse")
 # install.packages("here")
+# install.packages("car")
 
 #### Load the package in order to conduct
 library(Rmonize)
 library(readxl)
 library(tidyverse)
 library(here)
+library(car)
 
 dataset_name <- "KORA_S1_P1"
 
