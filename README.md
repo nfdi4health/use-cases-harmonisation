@@ -33,9 +33,8 @@ the R Project folder to the studies, this is where they should copy their data f
 
 ### scripts
 This folder contains all the R Scripts to run Rmonize. The scripts should be study- and pilot-project specific ones. Only
-very minor things need to changed. This includes data import file names from the rmonize and data objects as well as the
-study name under "Step 2", "Step 5" & "Step 8". Potentially, there will be more Scripts that address the challenge in some studies
-where multiple datasets are present. Sofia and Florian will address those challenges in R.
+the dataset_name ("Step 0") needs to be changed. In some studies, where multiple datasets are present, there will be more
+than one script. Sofia and Florian will address those challenges in R.
 
 ### output
 This folder has two sub-folders: harmonised_dataset and rmonize_report. In the first of those sub-folders, the harmonised
