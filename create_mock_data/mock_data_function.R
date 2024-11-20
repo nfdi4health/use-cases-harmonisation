@@ -68,7 +68,7 @@ create_mock_data <- function(studyname = NULL,
   
   #### Make 10% of the test dataset NA
   level_na <- 0.1
-  dataset <- as.data.frame(lapply(dataset, function(cc) cc[ sample(c(TRUE, NA), prob = c(1-level_na, level_na), size = length(cc), replace = TRUE) ]))
+  dataset[-c(1)] <- as.data.frame(lapply(dataset[-c(1)], function(cc) cc[ sample(c(TRUE, NA), prob = c(1-level_na, level_na), size = length(cc), replace = TRUE) ]))
   
   
   readr::write_delim(x = dataset, 
