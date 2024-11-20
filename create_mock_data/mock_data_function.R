@@ -71,7 +71,6 @@ create_mock_data <- function(studyname = NULL,
   dataset <- as.data.frame(lapply(dataset, function(cc) cc[ sample(c(TRUE, NA), prob = c(1-level_na, level_na), size = length(cc), replace = TRUE) ]))
   
   
-  #write_csv(dataset, file = here::here("data", paste0("DATA_", studyname, ".csv")),append = FALSE)
   readr::write_delim(x = dataset, 
                      file = here::here("data", paste0("DATA_", studyname, ".csv")),
                      delim = ",",
