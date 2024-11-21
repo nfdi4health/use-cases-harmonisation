@@ -1,5 +1,5 @@
 #### Script for creating mock data
-
+# studyname <- "KORA_S1_P2"
 create_mock_data <- function(studyname = NULL,
                              single_dataset = TRUE,
                              vars_second_dataset = NULL){
@@ -54,7 +54,7 @@ create_mock_data <- function(studyname = NULL,
     mutate(across(all_of(vars_categorical), ~ 1)) |> 
     mutate(across(all_of(vars_text[tolower(vars_text) %in% "id"]), ~ rep(1:100,1)))
   
-  
+  dataset[c(1)] <- c(1:100)
   for (i in 1:length(unique_categories)){
     
     relevant_categories <- study_categories |> 
