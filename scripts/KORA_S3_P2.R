@@ -15,11 +15,11 @@ library(here)
 library(car)
 
 #### Step 0: Name of the study
-dataset_name <- "KORA_S3_P1"
+dataset_name <- "KORA_S3_P2"
 
 #### Step 1: Import overall DataSchema
-dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
-dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2))
+dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1))
+dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 2))
 
 dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
