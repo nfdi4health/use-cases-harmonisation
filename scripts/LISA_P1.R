@@ -15,7 +15,7 @@ library(here)
 library(car)
 
 #### Step 0: Name of the study
-dataset_name <- "KORA_S1_P1"
+dataset_name <- "LISA_P1"
 
 #### Step 1: Import overall DataSchema
 dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
@@ -61,7 +61,6 @@ harmonized_dossier <- Rmonize::harmo_process(
 harmonized_dossier_evaluation <- Rmonize::harmonized_dossier_evaluate(harmonized_dossier)
 harmonized_dossier_summary <- Rmonize::harmonized_dossier_summarize(harmonized_dossier)
 harmonized_dossier_summary[[1]][2,2] <- dataset_name
-
 
 #### Step 8: Create Reports on the harmonized dossiers; Folder name will include study name, date and time
 system_time <- Sys.time()
