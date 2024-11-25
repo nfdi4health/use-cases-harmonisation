@@ -60,7 +60,7 @@ harmonized_dossier <- Rmonize::harmo_process(
 #### Step 7: Evaluate and summarize a harmonized dossier containing multiple harmonized datasets
 harmonized_dossier_evaluation <- Rmonize::harmonized_dossier_evaluate(harmonized_dossier)
 harmonized_dossier_summary <- Rmonize::harmonized_dossier_summarize(harmonized_dossier)
-
+harmonized_dossier_summary[[1]][2,2] <- dataset_name
 
 #### Step 8: Create Reports on the harmonized dossiers; Folder name will include study name, date and time
 system_time <- Sys.time()
@@ -73,7 +73,9 @@ system_name <- stringr::str_replace_all(string = system_name,
 system_name <- stringr::str_split(string = system_name,pattern = "[.]")[[1]][1]
 
 bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", system_name))
-Rmonize::harmonized_dossier_visualize(harmonized_dossier, bookdown_path)
+Rmonize::harmonized_dossier_visualize(harmonized_dossier, 
+                                      bookdown_path,
+                                      harmonized_dossier_summary = harmonized_dossier_summary)
 
 # Open the visual report in a browser.
 fabR::bookdown_open(bookdown_path)
