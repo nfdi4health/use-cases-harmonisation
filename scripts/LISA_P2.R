@@ -15,7 +15,7 @@ library(here)
 library(car)
 
 #### Step 0: Name of the study
-dataset_name <- "KORA_S3_P2"
+dataset_name <- "LISA_P2"
 
 #### Step 1: Import overall DataSchema
 dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1))
@@ -87,3 +87,5 @@ readr::write_delim(x = harmonized_dataset,
                    file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_harmonized.csv")),
                    delim = ",",
                    na = "")
+
+
