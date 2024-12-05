@@ -87,6 +87,6 @@ assign_and_compare <- function(dfA, dfB, tracy_vars, ines_vars, franzi_vars) {
   return(result)
 }
 
-write.csv(result$Tracy, "tests/DPE_KARMEN_TRACY.csv", row.names = F)
-write.csv(result$Ines, "tests/DPE_KARMEN_INES.csv", row.names = F)
-write.csv(result$Franzi, "tests/DPE_KARMEN_FRANZI.csv", row.names = F)
+writexl::write_xlsx(result$Tracy, "tests/DPE_KARMEN_TRACY.xlsx")
+writexl::write_xlsx(result$Ines, "tests/DPE_KARMEN_INES.xlsx")
+writexl::write_xlsx(result$Franzi, "tests/DPE_KARMEN_FRANZI.xlsx")
