@@ -1,0 +1,49 @@
+"index","dataschema_variable","label","valueType","input_dataset","input_variables","Mlstr_harmo::rule_category","Mlstr_harmo::algorithm","Mlstr_harmo::comment","Mlstr_harmo::status","Mlstr_harmo::status_detail"
+5,"TOT_PA_QX","Physical activity from questionnaire data","decimal","KARMEN_PX",NA,NA,NA,NA,"ERROR",NA
+7,"BMI","Body Mass index at baseline","decimal","KARMEN_PX",NA,NA,NA,NA,"ERROR",NA
+8,"TOT_PA_AC","Physical activity from accelerometry data","integer","KARMEN_PX","AH_BE_AEE_AF AH_MW_AEE_AF","operation",NA,"Activity energy expenditure (AEE) on day 6 (day prior to blood sampling) assessed by Actiheart ;
+Mean Activity energy expenditure (AEE) assessed by Actiheart","compatible","proximate"
+19,"TG","Triglycerides measured from blood samples","decimal","KARMEN_PX","KL_TG","operation","KL_TG * 88.57",NA,"complete","compatible"
+20,"CHOL","Total cholesterol measured from blood samples","decimal","KARMEN_PX","KL_CHO","operation","KL_CHO * 38.67",NA,"complete","compatible"
+21,"LDL","LDL cholesterol measured from blood samples","decimal","KARMEN_PX","KL_LDLC","operation","KL_LDLC * 38.67",NA,"complete","compatible"
+22,"HDL","HDL cholesterol measured from blood samples","decimal","KARMEN_PX","KL_HDLC","operation","KL_HDLC * 38.67",NA,"complete","compatible"
+66,"BMI_FUP","Body Mass index at follow-up",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+67,"BMI_SDS","Body Mass index Standard Deviation Score at baseline (children studies)",NA,"KARMEN_PX",NA,"impossible",NA,"N/A adult participants","impossible","unavailable"
+68,"BMI_SDS_FUP","Body Mass index Standard Deviation Score at follow-up (children studies)",NA,"KARMEN_PX",NA,"impossible",NA,"N/A adult participants","impossible","unavailable"
+69,"WAIST_FUP","Waist circumference at follow-up",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+70,"WAIST","Waist circumference at baseline","decimal","KARMEN_PX","TU
+FR_android","direct_mapping",NA,NA,"complete","identical"
+71,"HIP","Hip circumference at baseline","decimal","KARMEN_PX","FR_gynoid","direct_mapping",NA,NA,"complete","identical"
+72,"HIP_FUP","Hip circumference at follow-up",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+73,"FMI","Fat mass index at baseline","decimal","KARMEN_PX","FMI","direct_mapping",NA,NA,"complete","identical"
+74,"BODY_FAT","Body fat at at baseline",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+75,"ENERGY","Energy intake [kcal/d]","decimal","KARMEN_PX","kcal_zb_tag
+kcal_zb_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+76,"CARB","Carbohydrate intake [g/d]","decimal","KARMEN_PX","kh_tag
+kh_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+77,"PROT","Protein intake [g/d]","decimal","KARMEN_PX","prot_tag
+prot_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+78,"FAT","Fat intake [g/d]","decimal","KARMEN_PX","ft_tag
+ft_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+79,"ALC","Alcohol intake [g/d]","decimal","KARMEN_PX","al_tag
+al_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+80,"FIBER","Dietary fiber intake [g/d]","decimal","KARMEN_PX","bs_tag
+bs_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+81,"SFA","Saturated fat intake [g/d]","decimal","KARMEN_PX","fsges_tag
+fsges_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+82,"MUFA","Monounsaturated fat intake [g/d]","decimal","KARMEN_PX","fseuges_tag
+fseuges_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+83,"PUFA","Polyunsaturated fat intake [g/d]","decimal","KARMEN_PX","fsmuges_tag
+fsmuges_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+84,"TOT_SUGARS","Total sugar intake [g/d]","decimal","KARMEN_PX","KMD_tag
+(mo_tag_NCI+di_tag_NCI)","direct_mapping",NA,NA,"complete","identical"
+85,"ADD_SUGARS","Added sugar intake [g/d]",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+86,"FREE_SUGARS","Free sugar intake [g/d]",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+87,"GLUC","Glucose intake [g/d]","decimal","KARMEN_PX","KMT_tag","direct_mapping",NA,NA,"complete","identical"
+88,"FRUC","Fructose intake [g/d]","decimal","KARMEN_PX","KMF_tag","direct_mapping",NA,NA,"complete","identical"
+89,"GI","Daily glycaemic index",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+90,"GL","Daily glycaemic load",NA,"KARMEN_PX",NA,"impossible",NA,NA,"impossible","unavailable"
+91,"SODIUM","Sodium intake [g/d]","decimal","KARMEN_PX","na_tag
+na_tag_NCI","direct_mapping",NA,NA,"complete","identical"
+92,"SOD_POT_RATIO","Sodium to potassium intake ratio [g/d]","decimal","KARMEN_PX","na_tag/na_tag_NCI
+k_tag/k_tag_NCI","operation",NA,NA,NA,NA
