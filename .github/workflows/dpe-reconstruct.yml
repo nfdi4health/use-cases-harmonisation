@@ -22,10 +22,10 @@ jobs:
         with:
           r-version: '4.3'
 
-      # Step 3: Install dependencies)
+      # Step 3: Install dependencies
       - name: Install R packages
         run: |
-          Rscript -e "install.packages(c('dplyr', 'readxl', 'writexl', 'here', repos='https://cloud.r-project.org/')"
+          Rscript -e "install.packages(c('dplyr', 'readxl', 'writexl', 'here'), repos='https://cloud.r-project.org/')"
 
       # Step 4: Run the code to update the document
       - name: Run update script
