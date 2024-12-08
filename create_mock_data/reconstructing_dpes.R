@@ -1,3 +1,13 @@
+
+# Load necessary libraries
+library(dplyr)
+library(readxl)
+library(writexl)
+library(here)
+
+# Your code that uses these libraries
+
+
 ##### Creating DPE_P1 and DPE_P2
 dpe_tracy <- readxl::read_excel(here::here("Tracy/DPE_KARMEN_TRACY.xlsx"), sheet = 1)
 dpe_ines <- readxl::read_excel(here::here("Ines/DPE_KARMEN_INES.xlsx"), sheet = 1)
@@ -8,8 +18,6 @@ dataschema_p1 <- list(Variables =  tibble::tibble(readxl::read_excel(here::here(
                       Categories = tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2)))
 dataschema_p2 <- list(Variables =  tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1)),
                       Categories = tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 2)))
-
-library(dplyr)
 
 # Assuming these are data.frames
 combined_data <- bind_rows(dpe_tracy, dpe_ines, dpe_franzi)
