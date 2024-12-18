@@ -104,7 +104,9 @@ fabR::bookdown_open(bookdown_path)
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
 
+ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
+
 readr::write_delim(x = harmonized_dataset, 
-                   file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_harmonized.csv")),
+                   file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_", system_name, "/", dataset_name,"_harmonized.csv")),
                    delim = ",",
                    na = "")
