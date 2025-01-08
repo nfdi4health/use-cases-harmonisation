@@ -64,6 +64,7 @@ harmonized_dossier_evaluation <- Rmonize::harmonized_dossier_evaluate(harmonized
 harmonized_dossier_summary <- Rmonize::harmonized_dossier_summarize(harmonized_dossier)
 harmonized_dossier_summary[[1]][2,2] <- dataset_name
 
+
 #### Step 8: Create Reports on the harmonized dossiers; Folder name will include study name, date and time
 system_time <- Sys.time()
 system_name <- stringr::str_replace_all(string = system_time,
@@ -78,7 +79,6 @@ bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", 
 Rmonize::harmonized_dossier_visualize(harmonized_dossier, 
                                       bookdown_path,
                                       harmonized_dossier_summary = harmonized_dossier_summary)
-
 
 ifelse(!dir.exists(file.path(here::here("output/rmonize_summary/"))), dir.create(file.path(here::here("output/rmonize_summary/"))), FALSE)
 ifelse(!dir.exists(file.path(here::here("output/opal_dd/"))), dir.create(file.path(here::here("output/opal_dd/"))), FALSE)
