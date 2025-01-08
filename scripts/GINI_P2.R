@@ -6,6 +6,7 @@
 # install.packages("tidyverse")
 # install.packages("here")
 # install.packages("car")
+# install.packages("writexl")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -13,6 +14,7 @@ library(readxl)
 library(tidyverse)
 library(here)
 library(car)
+library(writexl)
 
 #### Step 0: Name of the study
 dataset_name <- "GINI_P2"
@@ -77,13 +79,34 @@ Rmonize::harmonized_dossier_visualize(harmonized_dossier,
                                       bookdown_path,
                                       harmonized_dossier_summary = harmonized_dossier_summary)
 
+
+ifelse(!dir.exists(file.path(here::here("output/rmonize_summary/"))), dir.create(file.path(here::here("output/rmonize_summary/"))), FALSE)
+ifelse(!dir.exists(file.path(here::here("output/opal_dd/"))), dir.create(file.path(here::here("output/opal_dd/"))), FALSE)
+
+
+dir.create(here::here("output/rmonize_summary/", paste0(dataset_name, "_", system_name)))
+file.copy(here::here("output/rmonize_report/", paste0(dataset_name, "_", system_name, "/docs")), 
+          here::here("output/rmonize_summary/", paste0(dataset_name, "_", system_name)),  recursive=TRUE)
+
+dir.create(here::here("output/opal_dd/", paste0(dataset_name, "_", system_name)))
+opal_dd <- dataschema
+opal_dd$Variables$table <- dataset_name
+opal_dd$Categories$table <- dataset_name
+opal_dd$Variables <- opal_dd$Variables[c(1,5,2:4)]
+opal_dd$Categories <- opal_dd$Categories[c(4,1:3)]
+
+writexl::write_xlsx(opal_dd, here::here("output/opal_dd/", paste0(dataset_name, "_", system_name, "/", dataset_name, "_DD.xlsx")))
+
+
 # Open the visual report in a browser.
 fabR::bookdown_open(bookdown_path)
 
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
 
+ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
+
 readr::write_delim(x = harmonized_dataset, 
-                   file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_harmonized.csv")),
+                   file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_", system_name, "/", dataset_name,"_harmonized.csv")),
                    delim = ",",
                    na = "")

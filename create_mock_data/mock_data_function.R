@@ -1,5 +1,5 @@
 #### Script for creating mock data
-#studyname <- "GINI_P1"
+#studyname <- "GINI_P2"
 create_mock_data <- function(studyname = NULL,
                              single_dataset = TRUE,
                              vars_second_dataset = NULL){
