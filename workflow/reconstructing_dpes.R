@@ -25,14 +25,16 @@ combined_data <- bind_rows(dpe_tracy, dpe_ines, dpe_franzi)
 # Subset for dpe_p1
 dpe_p1 <- combined_data %>%
   filter(dataschema_variable %in% dataschema_p1$Variables$name) %>%
-  slice(match(dataschema_p1$Variables$index, row_number())) %>%
+  mutate(index = match(dataschema_variable, dataschema_p1$Variables$name)) %>%
+  arrange(index) %>%
   mutate(input_dataset = "KARMEN_P1")
 
 # Subset for dpe_p2
 dpe_p2 <- combined_data %>%
   filter(dataschema_variable %in% dataschema_p2$Variables$name) %>%
-  slice(match(dataschema_p2$Variables$index, row_number())) %>%
+  mutate(index = match(dataschema_variable, dataschema_p2$Variables$name)) %>%
+  arrange(index) %>%
   mutate(input_dataset = "KARMEN_P2")
 
-writexl::write_xlsx(dpe_p1, paste0("rmonize/DPE_KARMEN_P1_test.xlsx"))
-writexl::write_xlsx(dpe_p2, paste0("rmonize/DPE_KARMEN_P2_test.xlsx"))
+writexl::write_xlsx(dpe_p1, paste0("rmonize/data_proc_elem/DPE_KARMEN_P1_test.xlsx"))
+writexl::write_xlsx(dpe_p2, paste0("rmonize/data_proc_elem/DPE_KARMEN_P2_test.xlsx"))
