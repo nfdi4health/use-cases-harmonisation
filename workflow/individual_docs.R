@@ -86,3 +86,9 @@ dd <-list(
 writexl::write_xlsx(dd, paste0("Tracy/rmonize/data_dictionary/DD_", studyname, "_TRACY.xlsx"))
 writexl::write_xlsx(dd, paste0("Franzi/rmonize/data_dictionary/DD_", studyname, "_FRANZI.xlsx"))
 writexl::write_xlsx(dd, paste0("Ines/rmonize/data_dictionary/DD_", studyname, "_INES.xlsx"))
+
+# Scripts creation
+source(here::here("workflow", "update_script.R"))
+update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_TRACY"), folder_name = "Tracy")
+update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_FRANZI"), folder_name = "Franzi")
+update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_INES"), folder_name = "Ines")
