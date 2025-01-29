@@ -1,0 +1,164 @@
+index;dataschema_variable;valueType;ss_table;ss_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail;Mlstr::algorithm
+1;SEX;integer;EPICP_P2;sex;direct_mapping;direct_mapping;;complete;identical;
+2;AGE_BASE;integer;EPICP_P2;age0;direct_mapping;direct_mapping;;complete;identical;
+3;EDU_LEVEL;integer;EPICP_P2;educc7;recode;"recode(1 = 3; 2= 5; 3= 5; 4= 3; 5= 2; 6= 4; 7= 4;)";educational level with 7 categories;partial;proximate;
+4;EMPLOY;integer;EPICP_P2;occstat6;recode;"recode(1 = 1; 2=2; 3=7; 4=7; 5=4; 6=5;) 
+";current occupation (baseline) 6 categories;partial;proximate;
+5;IMMIGRATION;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+6;TOT_PA_QX;decimal;EPICP_P2;PAL;direct_mapping;direct_mapping;physical activity level (MET-hr/day);complete;identical;
+7;TOT_PA_AC;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+8;SMOKE_ST;integer;EPICP_P2;smkst0i;direct_mapping;direct_mapping;smoking status with three categories;complete;identical;
+9;TOBACCO_PY;decimal;EPICP_P2;Dur_Smok;impossible;impossible;could be used but harmonized variable would need to  be adapted for all studies;impossible;incompatible;
+10;TOBACCO_D;integer;EPICP_P2;"ncigar0;
+ncigr0;
+npipe0";operation;"ncigr0 * 1 + ncigar0 * 5 + npipe0 * 5 ;";"Sum of (ncigr0*1,
+ncigar0*5,
+npipe0*5)";complete;compatible;
+11;AGE_SMOKE_QUIT;integer;EPICP_P2;"d_birth;
+ysmkces";operation;"ysmkces - format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";calculated from date of recruitment and year of assement;complete;compatible;
+12;MED_SUPPL;integer;EPICP_P2;vitamin0;recode;"recode(0=0;1=1;9="""")";;complete;compatible;
+13;MENOPAUSE;integer;EPICP_P2;;recode;"recode(0=3; 1=0; 1=2; 2=1; 9="""")";"pre-and perimenopausal can't be distinguished
+0=surgically induced menopause
+1= pre- or perimenopausal
+2=postmenopausal
+9= undefinable";partial;tentative;
+14;HRT;integer;EPICP_P2;Hrt;recode;"recode(0=0;1=1;9="""")";hormone replacement therapy as combination of MEDI_DAT + HORHEUTE;complete;identical;
+15;CONTRACEPTIVE;integer;EPICP_P2;;impossible;impossible;;impossible;incompatible;
+16;LIVE_BIRTHS;integer;EPICP_P2;"kinder;
+FF10";operation;"kinder-FF10
+";;complete;compatible;
+17;AGE_FIRST_BIRTH;integer;EPICP_P2;kind1;direct_mapping;direct_mapping;;complete;identical;
+18;TG;decimal;EPICP_P2;corr_trigly;direct_mapping;direct_mapping;corrected tryglycerides;complete;identical;
+19;CHOL;integer;EPICP_P2;corr_chol;direct_mapping;direct_mapping;;complete;identical;
+20;LDL;decimal;EPICP_P2;;operation;corr_chol-corr_hdl;Cholesterol-HDL=LDL;partial;proximate;
+21;HDL;decimal;EPICP_P2;corr_hdl;direct_mapping;direct_mapping;corrected hdl cholesterol;complete;identical;
+22;PREV_DIAB;integer;EPICP_P2;prevdiab;recode;"recode(0=0;1=1;9="""")";;complete;identical;
+23;PREV_HYP;integer;EPICP_P2;prevhyp;recode;"recode(0=0;1=1;9="""")";;complete;identical;
+24;PREV_CVD;integer;EPICP_P2;"prevmi;
+prevstroke";case_when;"case_when(
+prevmi == 0 | prevstroke == 0 ~ 0;
+prevmi == 1 | prevstroke == 0 ~ 1;
+prevmi == 0 | prevstroke == 1 ~ 1;
+prevmi == 9 | prevstroke == 9 ~ """")";;complete;compatible;
+26;PREV_CANCER;integer;EPICP_P2;prevcanc;recode;"recode(0=0;1=1;9="""")";;complete;identical;
+27;FAM1_CHD_STROKE;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+28;FAM1_DIAB2;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+29;FAM1_CANCER;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+30;DRE_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+31;PSA_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+32;FOBT_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable/incompatible;
+33;COL_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable/incompatible;
+34;MELANOMA_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable/incompatible;
+35;MAMMO_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable/incompatible;
+36;CERVICAL_SCREEN;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable/incompatible;
+37;MED_STAT;integer;EPICP_P2;Med_Hlipid;recode;"recode(0=0;1=1;9="""")";medication used to lower hyperlipidemia (HGL Gruppe 57);complete;identical;
+38;MED_NSAID;integer;EPICP_P2;Nsaid;recode;"recode(0=0;1=1;9="""")";;complete;identical;
+39;INC_CVD;integer;EPICP_P2;"casemi_fup5;
+casestroke_fup5";case_when;"case_when(
+casemi_fup5 == 0 | casestroke_fup5 == 0 ~ 0;
+casemi_fup5 == 2 | casestroke_fup5 == 2 ~ 1)";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified);";complete;compatible;
+40;AGE_CVD;integer;EPICP_P2;"d_birth;
+dd_incmi; 
+dd_incstroke";recode;"(dd_incmi - d_birth)/365.25 
+(dd_incstroke-d_birth)/365.25";(dd_incmi - d_birth)/365.25  or (dd_incstroke-d_birth)/365.25;complete;compatible;
+41;INC_ANGINA;integer;EPICP_P2;caseap_fup5;recode;"recode (0=0; 1=""""; 2=1; 9="""")";"0=not diseased; 1= prevalent; 2=incident; 9= incident (not yet verified);";complete;compatible;
+42;AGE_ANGINA;integer;EPICP_P2;"age0;
+d_recrui;
+dy_incAP";operation;age0 + (dy_incAP - (dd_recrui/365.25));calculated from age at recruitment, date of recruitment and year of diagnosis;partial;proximate;
+43;INC_MI;integer;EPICP_P2;casemi_fup5;recode;"recode (0=0; 2=1) 1, 5, 8, 9 & 10 should be excluded";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified);";complete;compatible;
+44;AGE_MI;integer;EPICP_P2;"d_birth;
+dd_incmi";operation;(dd_incmi - d_birth)/365.25;calculated from date of birth and date of diagnosis;complete;compatible;
+45;INC_STR;integer;EPICP_P2;casestroke_fup5;recode;"recode (0=0; 2=1) 1, 6, 8, 9 & 10 should be excluded";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified);";complete;compatible;
+46;AGE_STR;integer;EPICP_P2;"d_birth;
+dd_incstroke";operation;(dd_incstroke - d_birth)/365.25;calculated from date of birth and date of diagnosis;complete;compatible;
+47;INC_ISC_STR;integer;EPICP_P2;caseI63_fup5;direct_mapping;direct_mapping;;complete;identical;
+48;AGE_ISC_STR;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+49;INC_HAEMO_STR;integer;EPICP_P2;caseI61_fup5;direct_mapping;direct_mapping;;complete;identical;
+50;AGE_HAEMO_STR;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+51;INC_HYP;integer;EPICP_P2;casehyp_fup5;direct_mapping;direct_mapping;;complete;identical;
+52;AGE_HYP;integer;EPICP_P2;"
+d_birth;
+dd_inchyp";operation;(dd_inchyp - d_birth)/365.25;calculated from date of birth and date of diagnosis;complete;compatible;
+53;INC_HF;integer;EPICP_P2;casehf_fup5;direct_mapping;direct_mapping;;complete;identical;
+54;AGE_HF;integer;EPICP_P2;"d_birth
+dd_inchf";operation;(dd_inchf - d_birth)/365.25;calculated from date of birth and date of diagnosis;complete;compatible;
+55;INC_DIAB2;integer;EPICP_P2;casediab_fup5;recode;"recode (0=0; 2=1) 1, 5,6,8,9,10 should be excluded";case status diabetes at follow-up 5;complete;compatible;
+56;AGE_DIAB2;integer;EPICP_P2;"d_birth;
+dd_incdiab";operation;(dd_incdiab - d_birth)/365.25;calculated from date of birth and date of diagnosis;complete;compatible;
+57;INC_CANCER;integer;EPICP_P2;;impossible;impossible;;impossible;unavaible;
+58;TYPE_CANCER;integer;EPICP_P2;;impossible;impossible;Type of first verified cancer at longest possible follow-up, ICD-10 code;impossible;unavaible;
+59;AGE_CANCER;integer;EPICP_P2;;impossible;impossible;;impossible;unavaible;
+60;VITAL_ST;integer;EPICP_P2;vitstat;recode;"recode(1= 1; 2= 0; 6= 0;)
+";"vital status at follow-up 5: 
+1= alive;
+2= dead;
+6=dropped out";complete;compatible;
+61;AGE_DEATH;decimal;EPICP_P2;age_dea;direct_mapping;direct_mapping;;complete;identical;
+62;VITAL_ST_CVD;integer;EPICP_P2;vitstat;recode;"recode(1= 1; 2= 0; 6= """";)";"vital status at follow-up 5: 
+1= alive;
+2= dead;
+6=dropped out";complete;compatible;
+63;VITAL_ST_CANCER;integer;EPICP_P2;;impossible;impossible;;impossible;unavailable;
+64;AGE_FUP;integer;EPICP_P2;"d_birth;
+d_censor";operation;d_censor-d_birth;calculated from date of birth and date of censoring;complete;compatible;
+65;BMI;decimal;EPICP_P2;BMI0;direct_mapping;;;complete;identical;
+66;BMI_FUP;decimal;EPICP_P2;BMI5;direct_mapping;;;complete;identical;
+67;WAIST_FUP;decimal;EPICP_P2;waist;direct_mapping;;;partial;proximate;
+68;WAIST;decimal;EPICP_P2;taille;direct_mapping;;;complete;identical;
+69;HIP;decimal;EPICP_P2;huefte;direct_mapping;;;complete;identical;
+70;HIP_FUP;decimal;EPICP_P2;hip;direct_mapping;;;partial;proximate;
+71;FMI;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+72;BODY_FAT;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+74;ENERGY;decimal;EPICP_P2;gj;operation;gj/4.2;change unit from KJ to kcal;complete;compatible;
+75;CARB;decimal;EPICP_P2;zk;direct_mapping;;;complete;identical;
+76;PROT;decimal;EPICP_P2;ze;direct_mapping;;;complete;identical;
+77;FAT;decimal;EPICP_P2;zf;direct_mapping;;;complete;identical;
+78;ALC;decimal;EPICP_P2;za;direct_mapping;;;complete;identical;
+79;FIBER;decimal;EPICP_P2;zb;direct_mapping;;;complete;identical;
+80;SFA;decimal;EPICP_P2;fs;direct_mapping;;;complete;identical;
+81;MUFA;decimal;EPICP_P2;fu;direct_mapping;;;complete;identical;
+82;PUFA;decimal;EPICP_P2;fp;direct_mapping;;;complete;identical;
+83;TOT_SUGARS;decimal;EPICP_P2;"kd;
+km";direct_mapping;;operation needed to consider both kd and km;complete;identical;
+84;ADD_SUGARS;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+85;FREE_SUGARS;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+86;GLUC;decimal;EPICP_P2;kmt;direct_mapping;;;complete;identical;
+87;FRUC;decimal;EPICP_P2;kmf;direct_mapping;;;complete;identical;
+88;GI;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+89;GL;decimal;EPICP_P2;;impossible;;;impossible;unavailable;
+90;SODIUM;decimal;EPICP_P2;mna;direct_mapping;;;complete;identical;
+91;SOD_POT_RATIO;decimal;EPICP_P2;"mna; mk";operation;mna/mk;ratio = mna:mk;complete;compatible;
+92;SUGAR_CONFECT_11;decimal;EPICP_P2;"GROUP;
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11;complete;compatible;
+93;CAKES_12;decimal;EPICP_P2;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 12;complete;compatible;
+94;FRUITVEG_JUICE_1301;decimal;EPICP_P2;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 01;complete;compatible;
+95;SOFTDRINKS_1302;decimal;EPICP_P2;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 02;complete;compatible;
+96;ART_SWEETENER_170201;decimal;EPICP_P2;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17 und subgroup1=02 und subgroup2=01;complete;compatible;
+97;VEGETABLES_02;decimal;EPICP_P2;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02;complete;compatible;
+98;LEGUMES_TOT_03;decimal;EPICP_P2;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 03;complete;compatible;
+99;FRUITS_TOT_04;decimal;EPICP_P2;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 04;complete;compatible;
+100;RED_MEAT_0701;decimal;EPICP_P2;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01;complete;compatible;
+101;PROCMEAT_0704;decimal;EPICP_P2;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 04;complete;compatible;
+102;COFFEE_130301;decimal;EPICP_P2;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=01;complete;compatible;
+103;TEA_130302;decimal;EPICP_P2;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=02;complete;compatible;

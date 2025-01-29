@@ -1,0 +1,6 @@
+index;name;label;valueType
+1;id;ID of the participant;text
+2;GROUP;EPICSOFT food group;integer
+3;subgroup1;EPICSOFT food subgroup1;integer
+4;subgroup2;EPICSOFT food subgroup2;integer
+5;quant_grp17;quantity of consumed food;decimal
