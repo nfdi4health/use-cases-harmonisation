@@ -1,0 +1,61 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;id;id_creation;id_creation;complete;complete;identical
+;SEX;Sex;integer;;Geschlecht;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;Alter_BE;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Education;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
+;SMOKE_ST;Smoking status;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;EMPLOY;Employment;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;IMMIGRATION;Immigration background;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;impossible;impossible;impossible;;impossible;unavailable
+;MENOPAUSE;Menopause status;integer;;Menopause;recode;"recode(0=1;1=2;)";;complete;compatible
+;HRT;Hormone replacement therapy;integer;;__BLANK__;paste;0;no HRT for all included women due to inclusion criteria, new variable could be created coded such as HRT=0;complete;compatible
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;__BLANK__;paste;0;all included women did not take contraceptives due to inclusion criteria, new variable could be created coding all participants =0;complete;compatible
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;impossible;impossible;impossible;;impossible;unavailable
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;PREV_DIAB;History of diabetes;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_HYP;History of hypertension;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_CVD;History of cardiovascular disease;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_CANCER;History of cancer;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of cancer; new variable could be created coded =0 for all participants";complete;compatible
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;FAM1_DIAB2;First degree family history of T2D;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;FAM1_CANCER;First degree family history of cancer;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;DRE_SCREEN;Screening, DRE;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;FOBT_SCREEN;Screening, FOBT;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;MAMMO_SCREEN;Screening, mammography;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;INC_CVD;CVD event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_MI;Myocardial infarction during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_STR;Stroke during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_HYP;Essential hypertension during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_HF;Heart failure during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;INC_CANCER;Cancer during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_DEATH;Age at time of death [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
+;AGE_FUP;Age at end of follow-up [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable

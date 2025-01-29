@@ -1,0 +1,25 @@
+index;name;label;valueType
+;KL_TG;Triglycerides;decimal
+;KL_CHO;Total Cholesterol;decimal
+;KL_LDLC;LDL-Cholesterol;decimal
+;KL_HDLC;HDL-Cholesterol;decimal
+;BMI;Body Mass Index (BMI);decimal
+;TU;waist circumference;decimal
+;FR_android;%body fat - Android region (related to total body mass as assessed by DXA);decimal
+;FR_gynoid;%body fat - Gynoid region (related to total body mass as assessed by DXA);decimal
+;FMI;Fat Mass Index;decimal
+;Alter_BE;Age at blood sampling;decimal
+;kcal_zb_tag_NCI;Energy intake [kcal/d];decimal
+;kh_tag_NCI;Carbohydrate intake [g/d];decimal
+;prot_tag_NCI;Protein intake [g/d];decimal
+;ft_tag_NCI;Fat intake [g/d];decimal
+;al_tag_NCI;Alcohol intake [g/d];decimal
+;bs_tag_NCI;Dietary fiber intake [g/d];decimal
+;fsges_tag_NCI;Saturated fat intake [g/d];decimal
+;fseuges_tag_NCI;Monounsaturated fat intake [g/d];decimal
+;fsmuges_tag_NCI;Polyunsaturated fat intake [g/d];
+;KMD_tag;Total sugar intake [g/d];
+;KMT_tag;Glucose intake [g/d];
+;KMF_tag;Fructose intake [g/d];
+;na_tag_NCI;Sodium intake [g/d];
+;k_tag_NCI;Potassium intake [g/d];

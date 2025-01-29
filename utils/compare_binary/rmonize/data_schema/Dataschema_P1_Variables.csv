@@ -1,0 +1,129 @@
+index;name;label;valueType
+1;ID;Participant identification number;integer
+2;SEX;Sex;integer
+3;AGE_BASE;Age at exposure measure [years];decimal
+4;EDU_LEVEL;Education;integer
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal
+6;SMOKE_ST;Smoking status;integer
+7;BMI;Body Mass Index at baseline [kg/m²];decimal
+8;ENERGY;Energy intake [kcal/d];decimal
+9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal
+10;POTATOES_0101;Potato intake [g/d];decimal
+11;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal
+12;VEGETABLES_02;Vegetable intake [g/d];decimal
+13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal
+14;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal
+15;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal
+16;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal
+17;MUSHROOMS_0205;Mushroom intake [g/d];decimal
+18;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal
+19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal
+20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal
+21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal
+23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal
+24;FRUITS_TOT_04;Total fruit intake [g/d];decimal
+25;FRUITS_0401;Intake of fresh fruits [g/d];decimal
+26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal
+27;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal
+28;OLIVES_0404;Intake of olives [g/d];decimal
+29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal
+30;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal
+31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal
+32;YOGURT_0503;Intake of fermented milk products [g/d];decimal
+33;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal
+34;CHEESE_0505;Intake of cheese [g/d];decimal
+35;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal
+36;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal
+37;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal
+38;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal
+39;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal
+40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal
+41;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal
+42;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal
+43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal
+44;BREAD_060301;Intake of bread [g/d];decimal
+45;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal
+46;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal
+47;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal
+48;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal
+49;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal
+50;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal
+51;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal
+52;VEAL_070102;Intake of calf fresh meat [g/d];decimal
+53;PORK_070103;Intake of pig fresh meat [g/d];decimal
+54;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal
+55;HORSE_070105;Intake of horse meat [g/d];decimal
+56;GOAT_070106;Intake of goat meat [g/d];decimal
+57;POULTRY_0702;Intake of poultry meat [g/d];decimal
+58;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal
+59;CHICKEN_070201;Intake of chicken meat [g/d];decimal
+60;TURKEY_070202;Intake of turkey meat [g/d];decimal
+61;DUCK_070203;Intake of duck meat [g/d];decimal
+62;GOOSE_070204;Intake of goose meat [g/d];decimal
+63;RABBIT_070205;Intake of rabbit meat [g/d];decimal
+64;GAME_0703;Intake of game [g/d];decimal
+65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal
+66;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal
+67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal
+68;FISH_0801;Intake of fish (meat) [g/d];decimal
+69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal
+70;FISH_PROD_0803;Intake of processed fish [g/d];decimal
+71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal
+72;EGGS_0901;Intake of eggs [g/d];decimal
+73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal
+74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal
+75;BUTTER_1002;Intake of butter [g/d];decimal
+76;MARGARINE_1003;Intake of margarines and similar [g/d];decimal
+77;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal
+78;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal
+79;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal
+80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal
+81;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal
+82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal
+83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal
+84;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal
+85;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal
+86;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal
+87;SORBET_110502;Sorbet intake [g/d];decimal
+88;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal
+89;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal
+90;VARPASTRY_1201;Intake of various pastry [g/d];decimal
+91;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal
+92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal
+93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal
+94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal
+95;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal
+96;COFFEE_130301;Coffee intake [g/d];decimal
+97;TEA_130302;Tea intake [g/d];decimal
+98;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal
+99;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal
+100;WATER_1304;Intake of water and water-based beverages [g/d];decimal
+101;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal
+102;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal
+103;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal
+104;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal
+105;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal
+106;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal
+107;LIQUEURS_1406;Intake of liqueurs [g/d];decimal
+108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal
+109;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal
+110;SAUCES_1501;Intake of savoury sauces [g/d];decimal
+111;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal
+112;DRESSINGS_150102;Dressing intake [g/d];decimal
+113;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal
+114;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal
+115;YEAST_1502;Intake of yeast cultures [g/d];decimal
+116;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal
+117;CONDIMENTS_1504;Condiments intake [g/d];decimal
+118;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal
+119;SOUP_1601;Intake of soups [g/d];decimal
+120;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal
+121;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal
+122;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal
+123;SOY_PROD_1701;Intake of soy products [g/d];decimal
+124;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal
+125;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal
+126;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal
+127;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal
+128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer
