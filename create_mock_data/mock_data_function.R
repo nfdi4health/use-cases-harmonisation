@@ -10,10 +10,6 @@ create_mock_data <- function(studyname = NULL,
          but did not specify the variables in the second dataset!")
   }
   
-  if (is.null(folder_name)) {
-    stop("Please specify a folder name.")
-  }
-  
   library(tidyverse)
   library(readr)
   
