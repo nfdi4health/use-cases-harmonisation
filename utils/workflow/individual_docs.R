@@ -51,22 +51,22 @@ Dataschema_FRANZI <- filter_dataschema(merged_dataschema, franzi_vars)
 # writexl::write_xlsx(Dataschema_INES, "Ines/rmonize/data_schema/Dataschema_INES.xlsx")
 
 # DPEs based on Dataschema
-studyname = "DEGS1"
+studyname = ""
 
 DPE_TRACY <- Dataschema_TRACY[["Variables"]]
 names(DPE_TRACY)[2] <- "dataschema_variable"
 DPE_TRACY[, c("input_dataset", "input_variables","Mlstr_harmo::rule_category","Mlstr_harmo::algorithm" ,"Mlstr_harmo::comment","Mlstr_harmo::status","Mlstr_harmo::status_detail")] <- NA
-writexl::write_xlsx(DPE_TRACY, paste0("Tracy/rmonize/data_proc_elem/DPE_", studyname, "_TRACY.xlsx"))
+writexl::write_xlsx(DPE_TRACY, paste0("analyst/Tracy/rmonize/data_proc_elem/DPE_", studyname, "_TRACY.xlsx"))
 
 DPE_FRANZI <- Dataschema_FRANZI[["Variables"]]
 names(DPE_FRANZI)[2] <- "dataschema_variable"
 DPE_FRANZI[, c("input_dataset", "input_variables","Mlstr_harmo::rule_category","Mlstr_harmo::algorithm" ,"Mlstr_harmo::comment","Mlstr_harmo::status","Mlstr_harmo::status_detail")] <- NA
-writexl::write_xlsx(DPE_FRANZI, paste0("Franzi/rmonize/data_proc_elem/DPE_", studyname, "_FRANZI.xlsx"))
+writexl::write_xlsx(DPE_FRANZI, paste0("analyst/Franzi/rmonize/data_proc_elem/DPE_", studyname, "_FRANZI.xlsx"))
 
 DPE_INES <- Dataschema_INES[["Variables"]]
 names(DPE_INES)[2] <- "dataschema_variable"
 DPE_INES[, c("input_dataset", "input_variables","Mlstr_harmo::rule_category","Mlstr_harmo::algorithm" ,"Mlstr_harmo::comment","Mlstr_harmo::status","Mlstr_harmo::status_detail")] <- NA
-writexl::write_xlsx(DPE_INES, paste0("Ines/rmonize/data_proc_elem/DPE_", studyname, "_INES.xlsx"))
+writexl::write_xlsx(DPE_INES, paste0("analyst/Ines/rmonize/data_proc_elem/DPE_", studyname, "_INES.xlsx"))
 
 dd <-list(
   Variables = tibble::tibble(
@@ -83,12 +83,12 @@ dd <-list(
   )
 )
 
-writexl::write_xlsx(dd, paste0("Tracy/rmonize/data_dictionary/DD_", studyname, "_TRACY.xlsx"))
-writexl::write_xlsx(dd, paste0("Franzi/rmonize/data_dictionary/DD_", studyname, "_FRANZI.xlsx"))
-writexl::write_xlsx(dd, paste0("Ines/rmonize/data_dictionary/DD_", studyname, "_INES.xlsx"))
+writexl::write_xlsx(dd, paste0("analyst/Tracy/rmonize/data_dictionary/DD_", studyname, "_TRACY.xlsx"))
+writexl::write_xlsx(dd, paste0("analyst/Franzi/rmonize/data_dictionary/DD_", studyname, "_FRANZI.xlsx"))
+writexl::write_xlsx(dd, paste0("analyst/Ines/rmonize/data_dictionary/DD_", studyname, "_INES.xlsx"))
 
 # Scripts creation
-source(here::here("workflow", "update_script.R"))
-update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_TRACY"), folder_name = "Tracy")
-update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_FRANZI"), folder_name = "Franzi")
-update_script(script_path = "workflow/script_template.R", dataset_name =paste0(studyname, "_INES"), folder_name = "Ines")
+source(here::here("utils/workflow", "update_script.R"))
+update_script(script_path = "utils/workflow/script_template.R", dataset_name =paste0(studyname, "_TRACY"), folder_name = "analyst/Tracy")
+update_script(script_path = "utils/workflow/script_template.R", dataset_name =paste0(studyname, "_FRANZI"), folder_name = "analyst/Franzi")
+update_script(script_path = "utils/workflow/script_template.R", dataset_name =paste0(studyname, "_INES"), folder_name = "analyst/Ines")

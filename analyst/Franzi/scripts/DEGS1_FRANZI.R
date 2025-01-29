@@ -18,15 +18,15 @@ library(writexl)
 
 
 #### Step 0: Name of the study and creation of mock data
-dataset_name <- 'KARMEN_INES'
-folder_name <- 'Ines'
+dataset_name <- 'DEGS1_FRANZI'
+folder_name <- 'analyst/Franzi'
 
-source(here::here("create_mock_data", "mock_data_function.R"))
+source(here::here("utils/create_mock_data", "mock_data_function.R"))
 create_mock_data(studyname = dataset_name, folder_name = folder_name)
 
 #### Step 1: Import overall DataSchema
-dataschema_1 <- tibble::tibble(readxl::read_excel(here::here(paste0(folder_name, "/rmonize/data_schema/", paste0("Dataschema_", toupper(folder_name), ".xlsx"))), sheet = 1))
-dataschema_2 <- tibble::tibble(readxl::read_excel(here::here(paste0(folder_name, "/rmonize/data_schema/", paste0("Dataschema_", toupper(folder_name), ".xlsx"))), sheet = 2))
+dataschema_1 <- tibble::tibble(readxl::read_excel(here::here(paste0(folder_name, "/rmonize/data_schema/", paste0("Dataschema_", toupper(strsplit(folder_name, "/")[[1]][2]), ".xlsx"))), sheet = 1))
+dataschema_2 <- tibble::tibble(readxl::read_excel(here::here(paste0(folder_name, "/rmonize/data_schema/", paste0("Dataschema_", toupper(strsplit(folder_name, "/")[[1]][2]), ".xlsx"))), sheet = 2))
 
 dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
