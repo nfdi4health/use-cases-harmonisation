@@ -67,4 +67,7 @@ harmonized_dossier <- Rmonize::harmo_process(
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
 
+#### Extra: Create files that can be compared with git-diff
+source(here::here("utils/compare_binary", "create_comparable_files.R"))
+create_comparable_files()
 
