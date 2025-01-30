@@ -1,0 +1,36 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;TG;Triglycerides measured from blood samples [mmol/L];decimal;;KL_TG;operation;KL_TG * 88.57;;complete;compatible
+;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;;KL_CHO;operation;KL_CHO * 38.67;;complete;compatible
+;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;;KL_LDLC;operation;KL_LDLC * 38.67;;complete;compatible
+;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;;KL_HDLC;operation;KL_HDLC * 38.67;;complete;compatible
+;BMI;Body Mass Index at baseline [kg/m²];decimal;;BMI;direct_mapping;complete;;complete;identical
+;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;;impossible;impossible;impossible;N/A adult participants;impossible;unavailable
+;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;;impossible;impossible;impossible;N/A adult participants;impossible;unavailable
+;WAIST_FUP;Waist circumference at follow-up [cm];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;WAIST;Waist circumference at baseline [cm];decimal;;TU;direct_mapping;complete;;complete;identical
+;HIP;Hip circumference at baseline [cm];decimal;;FR_gynoid;direct_mapping;complete;;complete;identical
+;HIP_FUP;Hip circumference at follow-up [cm];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;;;;;;;
+;FMI;Fat mass index at baseline  [kg/m²];decimal;;FMI;direct_mapping;complete;;complete;identical
+;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;;;;;;;
+;BODY_FAT;Body fat precent at baseline  [%];decimal;;;;;;;
+;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;;Alter_BE;direct_mapping;complete;;complete;identical
+;ENERGY;Energy intake [kcal/d];decimal;;kcal_zb_tag_NCI;direct_mapping;complete;;complete;identical
+;CARB;Carbohydrate intake [g/d];decimal;;kh_tag_NCI;direct_mapping;complete;;complete;identical
+;PROT;Protein intake [g/d];decimal;;prot_tag_NCI;direct_mapping;complete;;complete;identical
+;FAT;Fat intake [g/d];decimal;;ft_tag_NCI;direct_mapping;complete;;complete;identical
+;ALC;Alcohol intake [g/d];decimal;;al_tag_NCI;direct_mapping;complete;;complete;identical
+;FIBER;Dietary fiber intake [g/d];decimal;;bs_tag_NCI;direct_mapping;complete;;complete;identical
+;SFA;Saturated fat intake [g/d];decimal;;fsges_tag_NCI;direct_mapping;complete;;complete;identical
+;MUFA;Monounsaturated fat intake [g/d];decimal;;fseuges_tag_NCI;direct_mapping;complete;;complete;identical
+;PUFA;Polyunsaturated fat intake [g/d];decimal;;fsmuges_tag_NCI;direct_mapping;complete;;complete;identical
+;TOT_SUGARS;Total sugar intake [g/d];decimal;;KMD_tag;direct_mapping;complete;;complete;identical
+;ADD_SUGARS;Added sugar intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;FREE_SUGARS;Free sugar intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;GLUC;Glucose intake [g/d];decimal;;KMT_tag;direct_mapping;complete;;complete;identical
+;FRUC;Fructose intake [g/d];decimal;;KMF_tag;direct_mapping;complete;;complete;identical
+;GI;Daily glycaemic index;decimal;;impossible;impossible;impossible;;impossible;unavailable
+;GL;Daily glycaemic load;decimal;;impossible;impossible;impossible;;impossible;unavailable
+;SODIUM;Sodium intake [g/d];decimal;;na_tag_NCI;direct_mapping;complete;;complete;identical
+;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;;"na_tag_NCI;k_tag_NCI";operation;(na_tag_NCI/k_tag_NCI);;complete;identical

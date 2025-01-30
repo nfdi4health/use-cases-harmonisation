@@ -1,0 +1,323 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;variable_ID;;text;EPICP_P1;id;id_creation;id_creation;complete;complete;identical
+2;POTATOES_TUB_01;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 01;complete;compatible
+3;POTATOES_0101;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 01 und subgroup1= 01;complete;compatible
+4;OTHERTUB_0102;;num;EPICP_P1;;;;;impossible;unavailable
+5;VEGETABLES_02;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02;complete;compatible
+6;LEAFYVEG_0201;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 01;complete;compatible
+7;FRUITINGVEG_0202;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 02;complete;compatible
+8;ROOTVEG_0203;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 03;complete;compatible
+9;CABBAGE_0204;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 04;complete;compatible
+10;MUSHROOMS_0205;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 05;complete;compatible
+11;GRAINPODVEG_0206;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 06;complete;compatible
+12;ONION_GARLIC_0207;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 07;complete;compatible
+13;STALKVEG_0208;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 08;complete;compatible
+14;MIXEDVEG_0209;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 02 und subgroup1= 09;complete;compatible
+15;LEGUMES_TOT_03;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 03;complete;compatible
+16;LEGUMES_0301;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 03 und subgroup1= 01;complete;compatible
+17;FRUITS_TOT_04;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 04;complete;compatible
+18;FRUITS_0401;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 04 und subgroup1= 01;complete;compatible
+19;NUTS_SEEDS_0402;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 04 und subgroup1= 02;complete;compatible
+20;MIXEDFRUITS_0403;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 04 und subgroup1= 03;complete;compatible
+21;OLIVES_0404;;num;EPICP_P1;;;;;impossible;unavailable
+22;DAIRY_05;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05;complete;compatible
+23;MILK_0501;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 01;complete;compatible
+24;MILKBEV_0502;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 02;complete;compatible
+25;YOGURT_0503;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 03;complete;compatible
+26;CURD_0504;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 04;complete;compatible
+27;CHEESE_0505;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 05;complete;compatible
+28;DAIRYDESSERT_0506;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 06;complete;compatible
+29;CREAM_PROD_0507;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 07;complete;compatible
+30;DAIRYCREAM_050701;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 07 und subgroup2=01;complete;compatible
+31;NONDAIRYCREAM_050702;;num;EPICP_P1;;;;;impossible;unavailable
+32;MILK_FOR_COFFEE_0508;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 05 und subgroup1= 08;complete;compatible
+33;CEREAL_PROD_06;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06;complete;compatible
+34;FLOUR_FLAKES_0601;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 01;complete;compatible
+35;PASTA_RICE_0602;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 02;complete;compatible
+36;BREAD_PROD_0603;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 03;complete;compatible
+37;BREAD_060301;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 03 und subgroup2=01;complete;compatible
+38;CRISPBREAD_060302;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 03 und subgroup2=02;complete;compatible
+39;BREAKF_CEREALS_0604;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 04;complete;compatible
+40;SALT_BISCUIT_0605;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 05;complete;compatible
+41;DOUGH_PASTRY_0606;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 06 und subgroup1= 06;complete;compatible
+42;MEAT_PROD_07;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07;complete;compatible
+43;RED_MEAT_0701;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01;complete;compatible
+44;BEEF_070101;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01 und subgroup2=01;complete;compatible
+45;VEAL_070102;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01 und subgroup2=02 + Gewichtung (noch überlegen!);complete;
+46;PORK_070103;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01 und subgroup2=03;complete;compatible
+47;MUTTON_LAMB_070104;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 01 und subgroup2=04 + Gewichtung (noch überlegen!);complete;
+48;HORSE_070105;;num;EPICP_P1;;;;;impossible;unavailable
+49;GOAT_070106;;num;EPICP_P1;;;;;impossible;unavailable
+50;POULTRY_0702;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 02;complete;compatible
+51;OTHERPOULTRY_070200;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 02 und subgroup2 = 00;complete;compatible
+52;CHICKEN_070201;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 02 und subgroup2 = 01;complete;compatible
+53;TURKEY_070202;;num;EPICP_P1;;;;;impossible;unavailable
+54;DUCK_070203;;num;EPICP_P1;;;;;impossible;unavailable
+55;GOOSE_070204;;num;EPICP_P1;;;;;impossible;unavailable
+56;RABBIT_070205;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 02 und subgroup2=05 + Gewichtung (noch überlegen!);complete;
+57;GAME_0703;;num;EPICP_P1;;;;;impossible;unavailable
+58;PROCMEAT_0704;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 04;complete;compatible
+59;OFFALS_0705;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 07 und subgroup1= 05;complete;compatible
+60;FISH_SHELLFISH_08;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 08;complete;compatible
+61;FISH_0801;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 08 und subgroup1= 01;complete;compatible
+62;CRUSTACEANS_0802;;num;EPICP_P1;;;;;impossible;unavailable
+63;FISH_PROD_0803;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 08 und subgroup1= 03;complete;compatible
+64;EGG_PROD_09;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 09;complete;compatible
+65;EGGS_0901;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 09 und subgroup1= 01;complete;compatible
+66;FAT_10;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10;complete;compatible
+67;VEGOILS_1001;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10 und subgroup1= 01;complete;compatible
+68;BUTTER_1002;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10 und subgroup1= 02;complete;compatible
+69;MARGARINE_1003;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10 und subgroup1= 03;complete;compatible
+70;FRYFAT_1004;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10 und subgroup1= 04;complete;compatible
+71;MARINEOILS_1005;;num;EPICP_P1;;;;;impossible;unavailable
+72;OTHER_ANIMALFAT_1006;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 10 und subgroup1= 06;complete;compatible
+73;SUGAR_CONFECT_11;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11;complete;compatible
+74;HONEY_JAM_1101;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11 und subgroup1= 01;complete;compatible
+75;CHOCOLATE_1102;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11 und subgroup1= 02;complete;compatible
+76;NONCHOC_SWEETS_1103;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11 und subgroup1= 03;complete;compatible
+77;SYRUP_1104;;num;EPICP_P1;;;;;impossible;unavailable
+78;ICECREAM_1105;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11 und subgroup1= 05;complete;compatible
+79;ICECREAM_MILK_110501;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 11 und subgroup1= 05 und subgroup2=01;complete;compatible
+80;SORBET_110502;;num;EPICP_P1;;;;;impossible;unavailable
+81;WATER_ICE_110503;;num;EPICP_P1;;;;;impossible;unavailable
+82;CAKES_12;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 12;complete;compatible
+83;VARPASTRY_1201;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 12 und subgroup1= 01;complete;compatible
+84;DRYCAKE_1202;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 12 und subgroup1= 02;complete;compatible
+85;NONALC_BEV_13;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13;complete;compatible
+86;FRUITVEG_JUICE_1301;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 01;complete;compatible
+87;SOFTDRINKS_1302;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 02;complete;compatible
+88;HOTDRINKS_1303;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03;complete;compatible
+89;COFFEE_130301;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=01;complete;compatible
+90;TEA_130302;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=02;complete;compatible
+91;HERBALTEA_130303;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=03;complete;compatible
+92;COFFEE_IMITATE_130304;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 03 und subgroup2=04;complete;compatible
+93;WATER_1304;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 13 und subgroup1= 04;complete;compatible
+94;ALC_BEV_14;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14;complete;compatible
+95;WINE_1401;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=01;complete;compatible
+96;FORTWINE_1402;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=02;complete;compatible
+97;BEER_1403;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=03;complete;compatible
+98;SPIRITS_1404;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=04;complete;compatible
+99;HERBLIQUEUR_1405;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=05;complete;compatible
+100;LIQUEURS_1406;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 14 und subgroup1=06;complete;compatible
+101;COCKTAILS_1407;;num;EPICP_P1;;;;;impossible;unavailable
+102;CONDIMENT_SAUCES_15;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15;complete;compatible
+103;SAUCES_1501;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=01;complete;compatible
+104;TOMATOSAUCE_150101;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=01 und subgroup2=01;complete;compatible
+105;DRESSINGS_150102;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=01 und subgroup2=02;complete;compatible
+106;MAYONNAISE_150103;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=01 und subgroup2=03;complete;compatible
+107;DESSERTSAUCE_150104;;num;EPICP_P1;;;;;impossible;unavailable
+108;YEAST_1502;;num;EPICP_P1;;;;;impossible;unavailable
+109;HERBS_SPICES_1503;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=03;complete;compatible
+110;CONDIMENTS_1504;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 15 und subgroup1=04;complete;compatible
+111;SOUP_BOUILLON_16;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 16;complete;compatible
+112;SOUP_1601;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 16 und subgroup1=01;complete;compatible
+113;BOUILLON_1602;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 16 und subgroup1=02;complete;compatible
+114;MISCELLANEOUS_17;;num;EPICP_P1;"GROUP
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17;complete;compatible
+115;VEG_DISHES_1700;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17 und subgroup1=00;complete;compatible
+116;SOY_PROD_1701;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17 und subgroup1=01;complete;compatible
+117;DIET_PROD_1702;;num;EPICP_P1;"GROUP
+subgroup1
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17 und subgroup1=02;complete;compatible
+118;ART_SWEETENER_170201;;num;EPICP_P1;"GROUP
+subgroup1
+subgroup2
+quant_grp17";operation/other;;Summe von quant_grp17, wo GROUP = 17 und subgroup1=02 und subgroup2=01;complete;compatible
+119;SNACKS_1703;;num;EPICP_P1;;;;;impossible;unavailable
+120;AMPHIBIANS_1704;;num;EPICP_P1;;;;;impossible;unavailable
