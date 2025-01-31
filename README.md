@@ -37,7 +37,7 @@ The "analyst/[Tracy/Ines/Franzi]/scripts" folder contains R files that are used 
 ### utils
 This folder contains a lot of scripts used for creating specific aspects in the pipeline.
 
-## create_mock_data 
+#### create_mock_data 
 This folder includes two R Scripts called mock_data_function.R and mock_data_initiation.R. The first Script contains
 the function to create artificial data of a study based on the respective DataDictionary File. It is not necessary to
 change anything in that file.
@@ -49,14 +49,14 @@ that match the study name structure, duplicate variable names in the DataDiction
 you need help with this.For some studies, more than one data file is necessary to imitate the local setting. We will think
 of a solution for that.
 
-## tests
+#### tests
 This folder contains R Scripts used for testing for specific aspects of the DD and DPE's.
 
-## workflow
+#### workflow
 This folder contains R Scripts used by Sofia for initiating empty files with variables for the analyst as well as sorting
 out the variables per pilot project.
 
-## compare_binary
+#### compare_binary
 This folder contains R Scripts to create csv's out of the Excel files. They will not be used for anything but are necessary
 because Excel files cannot be git-diff compared as they are binary files. Having csv's in place for the important documents
 makes it possible to see what is changing in the documents way better, thereby, creating a solid foundation for Pull Requests.
