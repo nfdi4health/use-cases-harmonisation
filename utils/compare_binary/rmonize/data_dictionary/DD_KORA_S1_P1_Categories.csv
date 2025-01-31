@@ -1,0 +1,9 @@
+variable;name;label;missing
+acsex;1;male;
+atbbild;1;primary school completed;
+atbbild;2;technical/professional school completed;
+atbbild;3;secondary school;
+atbbild;4;longer education (incl. university);
+atcigsmk;1;current;
+atcigsmk;2;former;
+atcigsmk;3;never;

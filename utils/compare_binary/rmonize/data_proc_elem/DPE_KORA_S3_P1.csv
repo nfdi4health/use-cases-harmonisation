@@ -1,0 +1,269 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;ID;Participant identification number;integer;KORA_S3_P1;d_id;id_creation;id_creation;complete;complete;identical
+2;SEX;Sex;integer;KORA_S3_P1;dcsex;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure;decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Education;integer;KORA_S3_P1;dtbbild;direct_mapping;direct_mapping;;complete;identical
+5;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+6;SMOKE_ST;Smoking status;integer;KORA_S3_P1;dtcigsmk;direct_mapping;direct_mapping;;complete;identical
+7;BMI;Body Mass Index at baseline;decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
+8;ENERGY;Energy intake [kcal/d];decimal;KORA_S3_P1;dkcal;direct_mapping;direct_mapping;;complete;identical
+9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KORA_S3_P1;"DV410;
+DV420";operation;DV410 + DV420;"DV410 (potato) + DV420 (potato products)
+in this case, this combined group only consists of potatoes and no other tubers";partial;tentative
+10;POTATOES_0101;Potato intake [g/d];decimal;KORA_S3_P1;"DV410;
+DV420";operation;DV410 + DV420;DV410 (potato) + DV420 (potato products);complete;compatible
+11;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+12;VEGETABLES_02;Vegetable intake [g/d];decimal;KORA_S3_P1;"DV431; DV433; DV440;
+DV451; DV455; DV459; DV461; DV465;
+DV469; DV470; DV480; 
+DV499";operation;DV431 + DV433 + DV440 + DV451 + DV455 + DV459 + DV461 + DV465 + DV469 + DV470 + DV480 + DV499;"DV431 (cauliflower) + DV433 (other cabbage) + DV440 (leafy and stem vegetables) +
+DV451 (tomatoes) + DV455 (cucumbers) + DV459 (other fruit vegetables) + DV461 (onion vegetables) +  DV465 (carrots) +
+DV469 (other fresh vegetables) + DV470 (frozen vegetables) + DV480 (canned vegetables) + 
+DV499 (other vegetable products)";complete;compatible
+13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;KORA_S3_P1;DV440;operation;0.5*DV440;DV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
+14;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;KORA_S3_P1;"DV451;
+DV455;
+DV459";operation;DV451 + DV455 + DV459;DV451 (Tomatoes) + DV455 (cucumbers) + DV459 (other fruit vegetables) ;complete;compatible
+15;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;KORA_S3_P1;DV465;direct_mapping;direct_mapping;DV465 (carrots);complete;identical
+16;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;KORA_S3_P1;"DV431; DV433";operation;DV431 + DV433;DV431 (cauliflower) + DV433 (other cabbage);complete;compatible
+17;MUSHROOMS_0205;Mushroom intake [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+18;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KORA_S3_P1;DV461;direct_mapping;direct_mapping;DV461 (onion vegetables) ;complete;identical
+20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S3_P1;DV440;operation;0.5*DV440;DV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
+21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S3_P1;DV491;direct_mapping;direct_mapping;DV491 (dry legumes) ;complete;identical
+23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KORA_S3_P1;"DV310; DV311; DV315; DV321; DV323;
+DV325; DV331; DV334; DV337; DV341;
+DV343; DV344; DV345; DV346; DV351;
+DV357; DV360; DV370; DV390";operation;"DV310 + DV311 + DV315 + DV321+ DV323 +
+DV325 + DV331 + DV334 + DV337 + DV341 +
+DV343 + DV344 + DV345 + DV346 + DV351 +
+DV357 + DV360 + DV370 + DV390";"DV310 (fruit without specification) +
+DV311 (apples) +
+DV315 (other pome fruits) +
+DV321 (peaches) +
+DV323 (cherries) +
+DV325 (other stone fruits)+
+DV331 (strawberries)+
+DV334 (other berries)+
+DV337 (grapes)+
+DV341 (oranges, mandarins)+
+DV343 (grapefruits)+
+DV344 (other citrus fruits)+
+DV345 (bananas)+
+DV346 (other tropical fruits)+
+DV351 (nuts)+
+DV357 (dried fruit)+
+DV360 (canned fruit)+
+DV370 (frozen fruits)+
+DV390 (other processed fruit)";complete;compatible
+25;FRUITS_0401;Intake of fresh fruits [g/d];decimal;KORA_S3_P1;"DV310; DV311; DV315;
+DV321;
+DV323;
+DV325;
+DV331;
+DV334;
+DV337;
+DV341;
+DV343;
+DV344;
+DV345;
+DV346;
+DV357;
+DV370";operation;"DV310 +
+DV311 +
+DV315 +
+DV321 +
+DV323 +
+DV325 +
+DV331 +
+DV334 +
+DV337 +
+DV341 +
+DV343 +
+DV344 +
+DV345 +
+DV346 +
+DV357 +
+DV370";"DV310 (fruit without specification) +
+DV311 (apples) +
+DV315 (other pome fruits) +
+DV321 (peaches) +
+DV323 (cherries) +
+DV325 (other stone fruits) +
+DV331 (strawberries) +
+DV334 (other berries) +
+DV337 (grapes) +
+DV341 (oranges, mandarins) +
+DV343 (grapefruits) +
+DV344 (other citrus fruits) +
+DV345 (bananas) +
+DV346 (other tropical fruits) +
+DV357 (dried fruit) +
+DV370 (frozen fruits)";complete;compatible
+26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;KORA_S3_P1;DV351;direct_mapping;direct_mapping;DV351 (nuts);complete;identical
+27;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;KORA_S3_P1;"DV360; DV390";operation;DV360 + DV390;DV360 (canned fruit) + DV390 (other processed fruit);complete;compatible
+28;OLIVES_0404;Intake of olives [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;KORA_S3_P1;"DV210; DV220; DV231; DV232; DV233; DV245; DV248";operation;DV210 + DV220 + DV231 + DV232 + DV233 + DV245 + DV248;"DV210 (drinking milk) +
+DV220 (condensed milk or powder) +
+DV231 (cream) +
+DV232 (yogurt, soured milk) +
+DV233 (other dairy products) +
+DV245 (fresh cheese, curd) +
+DV248 (cheese)";complete;compatible
+30;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;KORA_S3_P1;DV210;direct_mapping;direct_mapping;DV210 (drinking milk);complete;identical
+31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+32;YOGURT_0503;Intake of fermented milk products [g/d];decimal;KORA_S3_P1;DV232;direct_mapping;direct_mapping;DV232 (yogurt, soured milk);complete;identical
+33;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;KORA_S3_P1;DV245;direct_mapping;direct_mapping;DV245 (fresh cheese, curd);complete;identical
+34;CHEESE_0505;Intake of cheese [g/d];decimal;KORA_S3_P1;DV248;direct_mapping;direct_mapping;DV248 (cheese);complete;identical
+35;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+36;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+37;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;KORA_S3_P1;DV231;direct_mapping;direct_mapping;DV231 (cream);complete;identical
+38;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+39;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;KORA_S3_P1;DV220;direct_mapping;direct_mapping;DV220 (condensed milk or powder);complete;identical
+40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;KORA_S3_P1;"DV711; DV715; DV719; DV731; DV511; DV512; DV515; DV517; DV540";operation;DV711 + DV715 + DV719 + DV731 + DV511 + DV512 + DV515 + DV517 + DV540;"DV711 (Wheat flour) +
+DV715 (rice) +
+DV719 (products from other cereals) +
+DV731 (pasta) +
+DV511 (white bread) +
+DV512 (brown bread) +
+DV515 (crisp bread) +
+DV517 (other bread) +
+DV540 (fine bakery products)";complete;compatible
+41;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;KORA_S3_P1;"DV711; DV719";operation;DV711 + DV719;DV711 (Wheat flour) + DV719 (products from other cereals);complete;compatible
+42;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;KORA_S3_P1;"DV731; DV715";operation;DV731 + DV715;DV731 (pasta) + DV715 (rice);complete;compatible
+43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;KORA_S3_P1;"DV511; DV512; DV515; DV517";operation;DV511 + DV512 + DV515 + DV517;DV511 (white bread) + DV512 (brown bread) + DV515 (crisp bread) + D517 (other bread);complete;compatible
+44;BREAD_060301;Intake of bread [g/d];decimal;KORA_S3_P1;"DV511; DV512; DV517";operation;DV511 + DV512 + DV517;DV511 (white bread) + DV512 (brown bread) + DV517 (other bread);complete;compatible
+45;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;KORA_S3_P1;DV515;direct_mapping;direct_mapping;DV515 (crisp bread);complete;identical
+46;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+47;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+48;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;DV540 (fine bakery products) zu CAKES_12;impossible;unavailable
+49;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;KORA_S3_P1;"DV111; DV112; DV113; DV115; DV117;
+DV119; DV120; DV131; DV135; DV141;
+DV145; DV147; DV150; DV160";operation;"DV111 + DV112 + DV113 + DV115 + DV117 +
+DV119 + DV120 + DV131 + DV135 + DV141 +
+DV145 + DV147 + DV150 + DV160";"DV111 (beef) + 
+DV112 (veal) + 
+DV113 (pork meat) + 
+DV115 (sheep or goat meat) + 
+DV117 (game meat) + 
+DV119 (other meat) + 
+DV120 (poultry meat) + 
+DV131 (minced meat) + 
+DV135 (animal offal) + 
+DV141 (sausage) + 
+DV145 (ham) + 
+DV147 (bacon) + 
+DV150 (canned, frozen meat or meat products) + 
+DV160 (other meat products)";complete;compatible
+50;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;KORA_S3_P1;"DV111; DV112; DV113; DV115; DV117;
+DV119; DV131";operation;"DV111 + DV112 + DV113 + DV115 + DV117 +
+DV119 + DV131";"DV111 (beef) + 
+DV112 (veal) + 
+DV113 (pork meat) + 
+DV115 (sheep or goat meat) + 
+DV117 (game meat) + 
+DV119 (other meat) + 
+DV131 (minced meat)";complete;compatible
+51;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;KORA_S3_P1;DV111;direct_mapping;direct_mapping;DV111 (beef);complete;identical
+52;VEAL_070102;Intake of calf fresh meat [g/d];decimal;KORA_S3_P1;DV112;direct_mapping;direct_mapping;DV112 (veal);complete;identical
+53;PORK_070103;Intake of pig fresh meat [g/d];decimal;KORA_S3_P1;DV113;direct_mapping;direct_mapping;DV113 (pork meat);complete;identical
+54;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;KORA_S3_P1;DV115;operation;0.9 * DV115;DV115 (sheep or goat meat);partial;tentative
+55;HORSE_070105;Intake of horse meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+56;GOAT_070106;Intake of goat meat [g/d];decimal;KORA_S3_P1;DV115;operation;0.1 * DV115;DV115 (sheep or goat meat);partial;tentative
+57;POULTRY_0702;Intake of poultry meat [g/d];decimal;KORA_S3_P1;DV120;direct_mapping;direct_mapping;DV120 (poultry meat);complete;identical
+58;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+59;CHICKEN_070201;Intake of chicken meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+60;TURKEY_070202;Intake of turkey meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+61;DUCK_070203;Intake of duck meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+62;GOOSE_070204;Intake of goose meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+63;RABBIT_070205;Intake of rabbit meat [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+64;GAME_0703;Intake of game [g/d];decimal;KORA_S3_P1;DV117;direct_mapping;direct_mapping;DV117 (game meat);complete;identical
+65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;KORA_S3_P1;"DV141; DV145; DV147; DV150; DV160";operation;DV141 + DV145 + DV147 + DV150 + DV160;"DV141 (sausage) + 
+DV145 (ham) + 
+DV147 (bacon) + 
+DV150 (canned, frozen meat or meat products) + 
+DV160 (other meat products)";complete;compatible
+66;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;KORA_S3_P1;DV135;direct_mapping;direct_mapping;DV135 (animal offal);complete;identical
+67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;KORA_S3_P1;"DV170; DV180; DV190";operation;DV170 + DV180 + DV190;DV170 (fish) + DV180 (canned fish) + DV190 (other fish products);complete;compatible
+68;FISH_0801;Intake of fish (meat) [g/d];decimal;KORA_S3_P1;DV170;direct_mapping;direct_mapping;DV170 (fish);complete;identical
+69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;KORA_S3_P1;"DV180; DV190";operation;DV180 + DV190;DV180 (canned fish) + DV190 (other fish products);complete;compatible
+71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;KORA_S3_P1;"DV250; DV255";operation;DV250 + DV255;DV250 (fresh eggs) + DV255 (egg products);complete;compatible
+72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S3_P1;DV255;direct_mapping;direct_mapping;DV255 (egg products);complete;identical
+73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KORA_S3_P1;"DV270; DV291; DV293; DV295";operation;DV270 + DV291 + DV293 + DV295;"DV270 (butter) + 
+DV291 (margarines) + 
+DV293 (vegetable edible oils) + 
+DV295 (other edible oils)";complete;compatible
+74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;KORA_S3_P1;DV293;direct_mapping;direct_mapping;DV293 (vegetable edible oils);complete;identical
+75;BUTTER_1002;Intake of butter [g/d];decimal;KORA_S3_P1;DV270;direct_mapping;direct_mapping;DV270 (butter);complete;identical
+76;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;KORA_S3_P1;DV291;direct_mapping;direct_mapping;DV291 (margarines);complete;identical
+77;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+78;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+79;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KORA_S3_P1;"DV610; DV681; DV684; DV687; DV620; DV630; DV650; DV670";operation;DV610 + DV681 + DV684 + DV687 + DV620 + DV630 + DV650 + DV670;"DV610 (sugar) + 
+DV681 (honey) + 
+DV684 (jam) + 
+DV687 (other sweet spreads) + 
+DV620 (cacao products) + 
+DV630 (chocolate products) + 
+DV650 (confectionery) + 
+DV670 (all ice cream)";complete;compatible
+81;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;KORA_S3_P1;"DV681; DV684";operation;DV681 + DV684;DV681 (honey) + DV684 (jam);complete;compatible
+82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;KORA_S3_P1;"DV620; DV630";operation;DV620 + DV630;DV620 (cacao products) + DV630 (chocolate products);complete;compatible
+83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;KORA_S3_P1;DV650;direct_mapping;direct_mapping;DV650 (confectionary);complete;identical
+84;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+85;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+86;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;KORA_S3_P1;DV670;direct_mapping;direct_mapping;DV670 (all ice cream);complete;identical
+87;SORBET_110502;Sorbet intake [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+88;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+89;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;KORA_S3_P1;"DV540; DV570";operation;DV540 + DV570;DV540 (fine bakery wares) + DV570 (long-life baked goods);complete;compatible
+90;VARPASTRY_1201;Intake of various pastry [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+91;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;KORA_S3_P1;"DV810; DV821; DV825; DV829";operation;DV810 + DV821 + DV825 + DV829;"DV810 (fruit / vegetable juice) + 
+DV821 (table water) + 
+DV825 (caffeinated lemonade) + 
+DV829 (other soft drinks)";complete;compatible
+93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KORA_S3_P1;DV810;direct_mapping;direct_mapping;DV810 (fruit / vegetable juice);complete;identical
+94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;KORA_S3_P1;"DV825; DV829";operation;DV825 + DV829;DV825 (caffeinated lemonade) + DV829 (other soft drinks);complete;compatible
+95;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;KORA_S3_P1;"DV841; DV845; DV850";operation;DV841 + DV845 + DV850;DV841 (roasted coffee) + DV845 (coffee extracts) + DV850 (tea);complete;compatible
+96;COFFEE_130301;Coffee intake [g/d];decimal;KORA_S3_P1;"DV841; DV845";operation;DV841 + DV845;DV841 (roasted coffee) + DV845 (coffee extracts);complete;compatible
+97;TEA_130302;Tea intake [g/d];decimal;KORA_S3_P1;DV850;direct_mapping;direct_mapping;DV850 (tea);complete;identical
+98;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+99;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+100;WATER_1304;Intake of water and water-based beverages [g/d];decimal;KORA_S3_P1;DV821;direct_mapping;direct_mapping;DV821 (table water);complete;identical
+101;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;KORA_S3_P1;"DV860; DV870; DV881; DV885; DV889";operation;DV860 + DV870 + DV881 + DV885 + DV889;"DV860 (spirits) + 
+DV870 (beer) + 
+DV881 (grape wine) + 
+DV885 (grape sparkling wine) + 
+DV889 (fruit wine)";complete;compatible
+102;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;KORA_S3_P1;"DV881; DV885; DV889";operation;DV881 + DV885 + DV889;"DV881 (grape wine) + 
+DV885 (grape sparkling wine) + 
+DV889 (fruit wine)";complete;compatible
+103;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+104;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;KORA_S3_P1;DV870;direct_mapping;direct_mapping;DV870 (beer);complete;identical
+105;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;KORA_S3_P1;DV860;direct_mapping;direct_mapping;DV860 (spirits);complete;identical
+106;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+107;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+109;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+110;SAUCES_1501;Intake of savoury sauces [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+111;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+112;DRESSINGS_150102;Dressing intake [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+113;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+114;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+115;YEAST_1502;Intake of yeast cultures [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+116;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+117;CONDIMENTS_1504;Condiments intake [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+118;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+119;SOUP_1601;Intake of soups [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+120;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+121;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+122;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+123;SOY_PROD_1701;Intake of soy products [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+124;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+125;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+126;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+127;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;KORA_S3_P1;__BLANK__;paste;5;5 (7_d_FR_w);complete;identical

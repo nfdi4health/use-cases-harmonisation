@@ -1,0 +1,61 @@
+index;name;label;valueType
+;ID;Participant identification number;integer
+;SEX;Sex;integer
+;AGE_BASE;Age at exposure measure [years];decimal
+;EDU_LEVEL;Education;integer
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal
+;SMOKE_ST;Smoking status;integer
+;EMPLOY;Employment;integer
+;IMMIGRATION;Immigration background;integer
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer
+;MENOPAUSE;Menopause status;integer
+;HRT;Hormone replacement therapy;integer
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal
+;PREV_DIAB;History of diabetes;integer
+;PREV_HYP;History of hypertension;integer
+;PREV_CVD;History of cardiovascular disease;integer
+;PREV_CANCER;History of cancer;integer
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer
+;FAM1_DIAB2;First degree family history of T2D;integer
+;FAM1_CANCER;First degree family history of cancer;integer
+;DRE_SCREEN;Screening, DRE;integer
+;PSA_SCREEN;Screening, PSA;integer
+;FOBT_SCREEN;Screening, FOBT;integer
+;COL_SCREEN;Screening, colonoscopy;integer
+;MELANOMA_SCREEN;Screening, skin cancer;integer
+;MAMMO_SCREEN;Screening, mammography;integer
+;CERVICAL_SCREEN;Screening cervical, smear test;integer
+;MED_STAT;Regular use of statins;integer
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer
+;INC_CVD;CVD event during follow-up;integer
+;AGE_CVD;Age at diagnosis of CVD [years];decimal
+;INC_ANGINA;Angina pectoris event during follow-up;integer
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal
+;INC_MI;Myocardial infarction during follow-up;integer
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal
+;INC_STR;Stroke during follow-up;integer
+;AGE_STR;Age at diagnosis of stroke [years];decimal
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal
+;INC_HYP;Essential hypertension during follow-up;integer
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal
+;INC_HF;Heart failure during follow-up;integer
+;AGE_HF;Age at diagnosis of heart failure [years];decimal
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal
+;INC_CANCER;Cancer during follow-up;integer
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal
+;VITAL_ST;Vital status at the end of mortality follow-up;integer
+;AGE_DEATH;Age at time of death [years];decimal
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer
+;AGE_FUP;Age at end of follow-up [years];decimal

@@ -1,0 +1,203 @@
+Index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;ID;Participant identification number;integer;LISA_P2;ID;id_creation;id_creation;complete;complete;identical
+2;SEX;Sex;integer;LISA_P2;GESCHL;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P2;KIALTER_15;direct_mapping;direct_mapping;;complete;compatible
+4;EDU_LEVEL;Education;integer;LISA_P2;"MUTBILD_0;
+VATBILD_0;";case_when;"case_when(
+      MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
+      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
+      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 2L, 
+      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 3L, 
+      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L, 
+      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,  
+      TRUE ~ NA_integer_
+    )";"""None"" (0): Both parents have 1 (no certificate).
+""Primary School Completed"" (1): Either parent has 2.
+""Technical/Professional School"" (2): Either parent has 3.
+""Secondary School"" (3): Either parent has 4.
+""Longer Education"" (4): Either parent has 5 or 6.
+""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
+5;EMPLOY;Employment;integer;LISA_P2;"mutberuztak3_15;
+vatberuztak3_15";case_when;"case_when(
+      mutberuztak3_15 == 1 | vatberuztak3_15 == 1 ~ 1L,
+      mutberuztak3_15 %in% 2:4 | vatberuztak3_15 %in% 2:4 ~ 2L,  
+      mutberuztak3_15 == 5 & vatberuztak3_15 == 5 ~ 5L,
+      is.na(mutberuztak3_15) & vatberuztak3_15 == 5 ~ 5L,
+      is.na(vatberuztak3_15) & mutberuztak3_15 == 5 ~ 5L,
+      is.na(mutberuztak3_15) & is.na(vatberuztak3_15) ~ 7L,
+      TRUE ~ NA_integer_
+    )";"If either parent is ""fully employed (100%),"" assign 1L.
+If either parent works ""more than half day,"" ""half day,"" or ""less than half day,"" 
+If both parents are ""not at all employed,"" assign 5L.
+If one parent's status is NA, use the other parent's status to determine the category.
+If both are NA, assign 7L (""other"").";partial;proximate
+6;IMMIGRATION;Immigration background;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;LISA_P2;"aktivleiisommn_15;
+aktivleiwintn_15;
+aktivmitsommn_15;
+aktivmitwintn_15;
+aktivschsommn_15;
+aktivschwintn_15";operation;"(
+  1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) +
+  3 * ((aktivmitsommn_15 + aktivmitwintn_15) / 2) +
+  6 * ((aktivschsommn_15 + aktivschwintn_15) / 2)
+) / 7";(1.5(average mean of light activities)+ 3(average mean of moderate actvities)+6(average mean of heavy activities)/7;complete;compatible
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+9;SMOKE_ST;Smoking status;integer;LISA_P2;K_FB_rauchkind_15;recode;"recode(1= 1; 2 = 3; 3=3; 4 = 3; 5=3)";;partial;proximate
+10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;LISA_P2;FFQMULTI_15;recode;"recode(1=1; 2= 0;)";as needed is considered not regular use in the categories;complete;compatible
+14;MENOPAUSE;Menopause status;integer;LISA_P2;;impossible;impossible;Children cohort, so considering creating variable for all 0=premenopausal and 0=no hormone repl.;impossible;incompatible
+15;HRT;Hormone replacement therapy;integer;LISA_P2;;impossible;impossible;unavailable;impossible;unavailable
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;LISA_P2;;impossible;impossible;Question asked for this variable is different for required variable for harmonisation;impossible;incompatible
+17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;LISA_P2;;impossible;impossible;children study;impossible;impossible
+18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;LISA_P2;TG_15;direct_mapping;direct_mapping;;complete;compatible
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;LISA_P2;CHOL_15;direct_mapping;direct_mapping;;complete;compatible
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;LISA_P2;LDLC_15;direct_mapping;direct_mapping;;complete;compatible
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;LISA_P2;HDL_15;direct_mapping;direct_mapping;;complete;compatible
+23;PREV_DIAB;History of diabetes;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+24;PREV_HYP;History of hypertension;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+25;PREV_CVD;History of cardiovascular disease;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+26;PREV_CANCER;History of cancer;integer;LISA_P2;maligjead_15;recode;"recode(1=1; 2= 0; ELSE= NA)";;complete;compatible
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;LISA_P2;;impossible;impossible;;impossible;incompatible
+28;FAM1_DIAB2;First degree family history of T2D;integer;LISA_P2;"diabmut_15;
+diabvat_15";case_when;"case_when (
+  diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
+  diabmut_15 == 0 & diabvat_15 == 0 ~ 0L,
+  (is.na(diabmut_15) | diabmut_15 == 3) & diabvat_15 == 0 ~ NA_integer_,
+  (is.na(diabvat_15) | diabvat_15 == 3) & diabmut_15 == 0 ~ NA_integer_,
+  (is.na(diabmut_15) | diabmut_15 == 3) & (is.na(diabvat_15) | diabvat_15 == 3) ~ NA_integer_, 
+  TRUE ~ NA_integer_
+)";"If either parent has diabetes, the family history is marked as 1.
+If both parents do not have diabetes, the family history is marked as 0.
+If one parent's status is missing or unknown (NA or 3), use the other parent’s status. If the known parent has diabetes, the family history is marked as 1, and if the known parent does not have diabetes, the family history is marked as NA.
+If both parents' statuses are missing -> """" or unknown -> 888, the family history is marked as NA (insufficient data).";partial;proximate
+29;FAM1_CANCER;First degree family history of cancer;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+30;DRE_SCREEN;Screening, DRE;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+31;PSA_SCREEN;Screening, PSA;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+32;FOBT_SCREEN;Screening, FOBT;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+33;COL_SCREEN;Screening, colonoscopy;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+34;MELANOMA_SCREEN;Screening, skin cancer;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+35;MAMMO_SCREEN;Screening, mammography;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+36;CERVICAL_SCREEN;Screening cervical, smear test;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+37;MED_STAT;Regular use of statins;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+39;INC_CVD;CVD event during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+40;AGE_CVD;Age at diagnosis of CVD [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+41;INC_ANGINA;Angina pectoris event during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+42;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+43;INC_MI;Myocardial infarction during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+44;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+45;INC_STR;Stroke during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+46;AGE_STR;Age at diagnosis of stroke [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+47;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+49;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+51;INC_HYP;Essential hypertension during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+52;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+53;INC_HF;Heart failure during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+54;AGE_HF;Age at diagnosis of heart failure [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+55;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+57;INC_CANCER;Cancer during follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;incompatible
+58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;LISA_P2;;impossible;impossible;;impossible;unavailable
+59;AGE_CANCER;Age at diagnosis of cancer [years];decimal;LISA_P2;maligjeadalt_15;direct_mapping;direct_mapping;;complete;identical
+60;VITAL_ST;Vital status at the end of mortality follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+61;AGE_DEATH;Age at time of death [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+62;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+64;AGE_FUP;Age at end of follow-up [years];decimal;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
+65;BMI;Body Mass Index at baseline [kg/m²];decimal;LISA_P2;UB_bmi_15;direct_mapping;direct_mapping;;complete;identical
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;LISA_P2;KIbmi_20;direct_mapping;direct_mapping;;complete;identical
+67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;LISA_P2;UB_khszscore_15;direct_mapping;direct_mapping;;complete;compatible
+68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;LISA_P2;;impossible;impossible;adult data;impossible;unavailable
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+70;WAIST;Waist circumference at baseline [cm];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+71;HIP;Hip circumference at baseline [cm];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+74;FMI;Fat mass index at baseline  [kg/m²];decimal;LISA_P2;UB_fmi_15;direct_mapping;direct_mapping;;complete;identical
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;LISA_P2;UB_fbm_15;direct_mapping;direct_mapping;calculated from lean mass measured by BIA (weight in kg minus lean body mass (ub_lbm_15);complete;compatible
+77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;LISA_P2;KIALTER_20;direct_mapping;direct_mapping;;complete;identical
+78;ENERGY;Energy intake [kcal/d];decimal;LISA_P2;FFQGCAL_15;direct_mapping;direct_mapping;;complete;identical
+79;CARB;Carbohydrate intake [g/d];decimal;LISA_P2;FFQZK_15;operation;FFQZK_15/1000;;complete;identical
+80;PROT;Protein intake [g/d];decimal;LISA_P2;FFQZE_15;operation;FFQZE_15/1000;;complete;identical
+81;FAT;Fat intake [g/d];decimal;LISA_P2;FFQZF_15;operation;FFQZF_15/1000;;complete;identical
+82;ALC;Alcohol intake [g/d];decimal;LISA_P2;FFQZA_15;operation;FFQZA_15/1000;;complete;identical
+83;FIBER;Dietary fiber intake [g/d];decimal;LISA_P2;FFQZB_15;operation;FFQZB_15/1000;;complete;identical
+84;SFA;Saturated fat intake [g/d];decimal;LISA_P2;FFQFS_15;operation;FFQFS_15/1000;;complete;identical
+85;MUFA;Monounsaturated fat intake [g/d];decimal;LISA_P2;FFQFU_15;operation;FFQFU_15/1000;;complete;identical
+86;PUFA;Polyunsaturated fat intake [g/d];decimal;LISA_P2;FFQFP_15;operation;FFQFP_15 /1000;;complete;identical
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+90;GLUC;Glucose intake [g/d];decimal;LISA_P2;FFQKMT_15;operation;FFQKMT_15/1000;;complete;identical
+91;FRUC;Fructose intake [g/d];decimal;LISA_P2;FFQKMF_15;operation;FFQKMF_15/1000;;complete;identical
+92;GI;Daily glycaemic index;decimal;LISA_P2;FFQGI_15;direct_mapping;direct_mapping; ;complete;identical
+93;GL;Daily glycaemic load;decimal;LISA_P2;FFQGL_15;direct_mapping;direct_mapping; ;complete;identical
+94;SODIUM;Sodium intake [g/d];decimal;LISA_P2;FFQMNA_15;operation;FFQMNA_15/1000;;complete;identical
+95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;LISA_P2;"FFQMK_15;
+FFQMNA_15";operation;FFQMK_15/FFQMNA_15;;complete;identical
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;LISA_P2;"FFQSCHOKOL_15;
+FFQSCHOKOR_15;
+FFQGUMMIB_15;
+FFQZUCK_15;
+FFQEIS_15";operation;"FFQSCHOKOL_15 +
+FFQSCHOKOR_15 +
+FFQGUMMIB_15 +
+FFQZUCK_15 +
+FFQEIS_15";;complete;compatible
+97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;LISA_P2;"FFQKEKS_15;
+FFQOBSTK_15;
+FFQTORTE_15;
+FFQGEBAE_15;
+FFQRUEHRK_15";operation;"FFQKEKS_15 +
+FFQOBSTK_15 +
+FFQTORTE_15 +
+FFQGEBAE_15 +
+FFQRUEHRK_15 ";;complete;compatible
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;LISA_P2;"FFQNEKT_15;
+FFQFRSAFT_15;
+FFQGESAFT_15;
+FFQSCHOR_15;";operation;"FFQNEKT_15 +
+FFQFRSAFT_15 +
+FFQGESAFT_15 + 
+FFQSCHOR_15 ";;complete;compatible
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;LISA_P2;"FFQENERG_15;
+FFQCOLA_15";operation;"FFQENERG_15 +
+FFQCOLA_15 ";;complete;compatible
+100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;LISA_P2;"FFQSALAT_15;
+FFQKOHL_15;
+FFQSPIN_15;
+FFQPAPR_15;
+FFQKAROT_15";operation;"FFQSALAT_15 +
+FFQKOHL_15 +
+FFQSPIN_15 +
+FFQPAPR_15 +
+FFQKAROT_15";;complete;compatible
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;LISA_P2;"FFQAPFEL_15;
+FFQBEERE_15;
+FFQSUED_15;
+FFQNUSS_15";operation;"FFQAPFEL_15 +
+FFQBEERE_15 +
+FFQSUED_15 +
+FFQNUSS_15";;complete;compatible
+104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;LISA_P2;"FFQRIND_15;
+FFQSCHW_15";operation;"FFQRIND_15 +
+FFQSCHW_15";;complete;compatible
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;LISA_P2;"FFQAUFSCH_15;
+FFQBOCK_15;
+FFQBRAT_15;
+FFQSALAM_15";operation;"FFQAUFSCH_15 +
+FFQBOCK_15 +
+FFQBRAT_15 +
+FFQSALAM_15";;complete;compatible
+106;COFFEE_130301;Coffee intake [g/d];decimal;LISA_P2;;impossible;impossible;;impossible;unavailable
+107;TEA_130302;Tea intake [g/d];decimal;LISA_P2;FFQTEE_15;direct_mapping;direct_mapping;;complete;identical
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;LISA_P2;__BLANK__;paste;1;1 (FFQ);complete;identical

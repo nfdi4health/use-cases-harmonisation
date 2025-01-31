@@ -1,0 +1,20 @@
+variable;label;name
+SEX;male;1
+SEX;female;2
+EDU_LEVEL;none;0
+EDU_LEVEL;primary school completed;1
+EDU_LEVEL;technical/professional school completed;2
+EDU_LEVEL;secondary school;3
+EDU_LEVEL;longer education (incl. university);4
+EDU_LEVEL;not specified;5
+SMOKE_ST;never;1
+SMOKE_ST;former;2
+SMOKE_ST;current;3
+SMOKE_ST;unknown;4
+DIETARY_ASSESS_INSTR;FPQ (Food propensity questionnair without portion sizes);0
+DIETARY_ASSESS_INSTR;FFQ (Food frequency questionnaire);1
+DIETARY_ASSESS_INSTR;24HDR (24-h dietary recall);2
+DIETARY_ASSESS_INSTR;3_d_FR_w (3-day weighing food record);3
+DIETARY_ASSESS_INSTR;"7_d_FR (7-day  food record; described portion sizes)";4
+DIETARY_ASSESS_INSTR;7_d_FR_w (7-day weighing food record);5
+DIETARY_ASSESS_INSTR;24HFL_FFQ (24-h short food list combined with FFQ);6

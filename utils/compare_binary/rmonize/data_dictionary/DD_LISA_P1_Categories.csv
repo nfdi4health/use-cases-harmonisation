@@ -1,0 +1,22 @@
+variable;name;label
+GESCHL;1;male
+GESCHL;2;female
+MUTBILD_0;1;No secondary school or elementary school certificate (Mother)
+MUTBILD_0;2;Lower secondary school or elementary school certificate (Mother)
+MUTBILD_0;3;Secondary school certificate (middle school leaving certificate)(Mother)
+MUTBILD_0;4;Completion of Polytechnic. high school (Mother)
+MUTBILD_0;5;Advanced technical college entrance qualification (Mother)
+MUTBILD_0;6;General or specialist university entrance qualification (Mother)
+MUTBILD_0;7;Other degree (Mother)
+VATBILD_0;1;No secondary school or elementary school certificate
+VATBILD_0;2;Lower secondary school or elementary school certificate
+VATBILD_0;3;Secondary school certificate (middle school leaving certificate)
+VATBILD_0;4;Completion of Polytechnic. high school
+VATBILD_0;5;Advanced technical college entrance qualification
+VATBILD_0;6;general or specialist university entrance qualification
+VATBILD_0;7;other degree
+K_FB_rauchkind_15;1;no
+K_FB_rauchkind_15;2;yes, daily
+K_FB_rauchkind_15;3;yes, several times a week
+K_FB_rauchkind_15;4;yes, once a week
+K_FB_rauchkind_15;5;yes, less often

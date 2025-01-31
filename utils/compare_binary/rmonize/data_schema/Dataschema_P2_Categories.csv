@@ -1,0 +1,95 @@
+variable;label;name
+SEX;male;1
+SEX;female;2
+EDU_LEVEL;none;0
+EDU_LEVEL;primary school completed;1
+EDU_LEVEL;technical/professional school completed;2
+EDU_LEVEL;secondary school;3
+EDU_LEVEL;longer education (incl. university);4
+EDU_LEVEL;not specified;5
+EMPLOY;employed-full time;1
+EMPLOY;employed-part time;2
+EMPLOY;housewife;3
+EMPLOY;retired;4
+EMPLOY;unemployed;5
+EMPLOY;student;6
+EMPLOY;other;7
+IMMIGRATION;no;0
+IMMIGRATION;yes;1
+SMOKE_ST;never;1
+SMOKE_ST;former;2
+SMOKE_ST;current;3
+SMOKE_ST;unknown;4
+MED_SUPPL;no;0
+MED_SUPPL;yes;1
+MENOPAUSE;premenopausal;0
+MENOPAUSE;postmenopausal;1
+MENOPAUSE;perimenopausal;2
+MENOPAUSE;surgical postmenopausal (bilateral ovariectomy);3
+HRT;no;0
+HRT;yes;1
+PREV_DIAB;no;0
+PREV_DIAB;yes;1
+PREV_HYP;no;0
+PREV_HYP;yes;1
+PREV_CVD;no;0
+PREV_CVD;yes;1
+PREV_CANCER;no;0
+PREV_CANCER;yes;1
+FAM1_CHD_STROKE;no;0
+FAM1_CHD_STROKE;yes;1
+FAM1_DIAB2;no;0
+FAM1_DIAB2;yes;1
+FAM1_CANCER;no;0
+FAM1_CANCER;yes;1
+DRE_SCREEN;no;0
+DRE_SCREEN;yes;1
+PSA_SCREEN;no;0
+PSA_SCREEN;yes;1
+FOBT_SCREEN;no;0
+FOBT_SCREEN;yes;1
+COL_SCREEN;no;0
+COL_SCREEN;yes;1
+MELANOMA_SCREEN;no;0
+MELANOMA_SCREEN;yes;1
+MAMMO_SCREEN;no;0
+MAMMO_SCREEN;yes;1
+CERVICAL_SCREEN;no;0
+CERVICAL_SCREEN;yes;1
+MED_STAT;no;0
+MED_STAT;yes;1
+MED_NSAID;no;0
+MED_NSAID;yes;1
+INC_CVD;no;0
+INC_CVD;yes;1
+INC_ANGINA;no;0
+INC_ANGINA;yes;1
+INC_MI;no;0
+INC_MI;yes;1
+INC_STR;no;0
+INC_STR;yes;1
+INC_ISC_STR;no;0
+INC_ISC_STR;yes;1
+INC_HAEMO_STR;no;0
+INC_HAEMO_STR;yes;1
+INC_HYP;no;0
+INC_HYP;yes;1
+INC_HF;no;0
+INC_HF;yes;1
+INC_DIAB2;no;0
+INC_DIAB2;yes;1
+INC_CANCER;no;0
+INC_CANCER;yes;1
+VITAL_ST;no;0
+VITAL_ST;yes;1
+VITAL_ST_CVD;no;0
+VITAL_ST_CVD;yes;1
+VITAL_ST_CANCER;no;0
+VITAL_ST_CANCER;yes;1
+DIETARY_ASSESS_INSTR;FPQ (Food propensity questionnair without portion sizes);0
+DIETARY_ASSESS_INSTR;FFQ (Food frequency questionnaire);1
+DIETARY_ASSESS_INSTR;24HDR (24-h dietary recall);2
+DIETARY_ASSESS_INSTR;3_d_FR_w (3-day weighing food record);3
+DIETARY_ASSESS_INSTR;"7_d_FR (7-day  food record; described portion sizes)";4
+DIETARY_ASSESS_INSTR;7_d_FR_w (7-day weighing food record);5
+DIETARY_ASSESS_INSTR;24HFL_FFQ (24-h short food list combined with FFQ);6
