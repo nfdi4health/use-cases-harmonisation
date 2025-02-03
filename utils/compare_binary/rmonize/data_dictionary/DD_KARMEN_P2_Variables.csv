@@ -1,0 +1,39 @@
+index;name;label;valueType
+1;id;ID of the participant;integer
+2;Geschlecht;Sex;integer
+3;Alter_BE;Age at blood sampling;decimal
+4;IPAQ_MET_Total;IPAQ_MET_Total;decimal
+5;Menopause;Menopause;integer
+6;KL_TG;Triglycerides;decimal
+7;KL_CHO;Total Cholesterol;decimal
+8;KL_LDLC;LDL-Cholesterol;decimal
+9;KL_HDLC;HDL-Cholesterol;decimal
+10;BMI;Body Mass Index (BMI);decimal
+11;TU;waist circumference;decimal
+12;FR_android;%body fat - Android region (related to total body mass as assessed by DXA);decimal
+13;FR_gynoid;%body fat - Gynoid region (related to total body mass as assessed by DXA);decimal
+14;FMI;Fat Mass Index;decimal
+15;kcal_zb_tag_NCI;Energy intake [kcal/d];decimal
+16;kh_tag_NCI;Carbohydrate intake [g/d];decimal
+17;prot_tag_NCI;Protein intake [g/d];decimal
+18;ft_tag_NCI;Fat intake [g/d];decimal
+19;al_tag_NCI;Alcohol intake [g/d];decimal
+20;bs_tag_NCI;Dietary fiber intake [g/d];decimal
+21;fsges_tag_NCI;Saturated fat intake [g/d];decimal
+22;fseuges_tag_NCI;Monounsaturated fat intake [g/d];decimal
+23;fsmuges_tag_NCI;Polyunsaturated fat intake [g/d];
+24;KMD_tag;Total sugar intake [g/d];
+25;KMT_tag;Glucose intake [g/d];
+26;KMF_tag;Fructose intake [g/d];
+27;na_tag_NCI;Sodium intake [g/d];
+28;k_tag_NCI;Potassium intake [g/d];
+29;Gem02_1;Vegetables and vegetable products;decimal
+30;Gem02_Hu;"Legumes/Pulses (incl. lentils, chickpeas, green peas, white/broad beans, kidney/soy beans; exception: green beans; incl. canned pulses and as sauce)";decimal
+31;Obst_sum;Fruit and fruit products (without juice) including unsweetened frozen fruit, fruit sauces and processed products like sweetened or heated fruit, canned fruit, dried fruit;decimal
+32;Flei_Wurst;Sausages and meat products smoked including salami, liver sausage, ham, bacon, cured pork, meat loaf, bratwurst;decimal
+33;Sues_sum;Sweets (sum);decimal
+34;Cakes_NCI;Cakes;decimal
+35;Getr15_14;Fruit juices/nectars (incl. Spritzer) - excl. vegetable juices;decimal
+36;Getr15_16;Soft drinks e.g. lemonades, bitter lemon (incl. low-calorie drinks);decimal
+37;Getr15_12;Coffee + Tea (black/green);decimal
+38;Suessstoffe;table sweeteners (low/no caloric sweeteners) (excl. Stevia);decimal

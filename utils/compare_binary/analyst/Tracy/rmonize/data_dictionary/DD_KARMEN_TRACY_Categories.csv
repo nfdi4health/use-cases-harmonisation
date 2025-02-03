@@ -1,0 +1,5 @@
+variable;name;label
+Geschlecht;1;male
+Geschlecht;2;female
+Menopause;1;premenopausal
+Menopause;2;postmenopausal

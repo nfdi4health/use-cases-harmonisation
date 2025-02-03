@@ -1,0 +1,20 @@
+variable;name;label;missing
+GESCHL;1;male;
+GESCHL;2;female;
+gsc09m;1;Volksschule/Hauptschule;
+gsc09m;2;Mittlere Reife/Realschule;
+gsc09m;3;Abitur/Fachabitur;
+gsc09m;4;Hochschule/Fachhochschule/Universität;
+gsc09m;5;Sonstiger Abschluss;
+gsc09m;6;kein Abschluss;
+gsc08v;1;Volksschule/Hauptschule;
+gsc08v;2;Mittlere Reife/Realschule;
+gsc08v;3;Abitur/Fachabitur;
+gsc08v;4;Hochschule/Fachhochschuli/Universität;
+gsc08v;5;Sonstiger Abschluss;
+gsc08v;6;Kein Abschluss;
+K_FB_rauchkind_15;1;no;
+K_FB_rauchkind_15;2;yes, daily;
+K_FB_rauchkind_15;3;yes, several times a week;
+K_FB_rauchkind_15;4;yes, once a week;
+K_FB_rauchkind_15;5;yes, less often;

@@ -1,0 +1,8 @@
+variable;label;name
+DIETARY_ASSESS_INSTR;FPQ (Food propensity questionnair without portion sizes);0
+DIETARY_ASSESS_INSTR;FFQ (Food frequency questionnaire);1
+DIETARY_ASSESS_INSTR;24HDR (24-h dietary recall);2
+DIETARY_ASSESS_INSTR;3_d_FR_w (3-day weighing food record);3
+DIETARY_ASSESS_INSTR;"7_d_FR (7-day  food record; described portion sizes)";4
+DIETARY_ASSESS_INSTR;7_d_FR_w (7-day weighing food record);5
+DIETARY_ASSESS_INSTR;24HFL_FFQ (24-h short food list combined with FFQ);6
