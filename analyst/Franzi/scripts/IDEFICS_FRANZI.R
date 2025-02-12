@@ -69,5 +69,6 @@ harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossi
 
 #### Extra: Create files that can be compared with git-diff
 source(here::here("utils/compare_binary", "create_comparable_files.R"))
-create_comparable_files(folder_to_update = "analyst")
+create_comparable_files(folder_to_update = "analyst",
+                        dataset_name = dataset_name)
 
