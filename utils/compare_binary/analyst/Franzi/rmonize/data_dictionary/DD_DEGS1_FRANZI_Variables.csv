@@ -1,1 +1,117 @@
 index;name;label;valueType
+;FQgkart1;Wie oft gekochte Kartoffeln?;decimal
+;FQgkart2;Wie viel gekochte Kartoffeln?;decimal
+;FQbkart1;Wie oft gebratene Kartoffeln?;decimal
+;FQbkart2;Wie viel gebratene Kartoffeln?;decimal
+;FQpomm1;Wie oft Pommes frites?;decimal
+;FQpomm2;Wie viel Pommes frites?;decimal
+;FQrgem1;Wie oft rohes Gemüse?;decimal
+;FQrgem2;Wie viel rohes Gemüse?;decimal
+;FQggem1;Wie oft gegartes Gemüse?;decimal
+;FQggem2;Wie viel gegartes Gemüse?;decimal
+;FQhuelse1;Wie oft Hülsenfrüchte?;decimal
+;FQhuelse2;Wie viel Hülsenfrüchte?;decimal
+;FQfobst1;Wie oft frisches Obst?;decimal
+;FQfobst2;Wie viel frisches Obst?;decimal
+;FQgobst1;Wie oft gegartes Obst?;decimal
+;FQgobst2;Wie viel gegartes Obst?;decimal
+;FQnuss1;Wie oft Nüsse?;decimal
+;FQnuss2;Wie viel Nüsse?;decimal
+;FQmilch1;Wie oft Milch?;decimal
+;FQmilch2;Wie viel Milch?;decimal
+;FQquark1;Wie oft Quark, Joghurt oder Dickmilch?;decimal
+;FQquark2;Wie viel Quark, Joghurt oder Dickmilch?;decimal
+;FQquark3;Anteil fettarmer Quark, Joghurt, Dickmilch;decimal
+;FQfkaes1;Wie oft Frischkäse?;decimal
+;FQfkaes2;Wie viel Frischkäse?;decimal
+;FQfkaes3;Anteil fettarmer Frischkäse;decimal
+;FQkaes1;Wie oft Käse (Weich-, Schnitt- oder Hartkäse)?;decimal
+;FQkaes2;Wie viel Käse (Weich-, Schnitt- oder Hartkäse)?;decimal
+;FQkaes3;Anteil fettarmer Käse;decimal
+;FQnudel1;Wie oft Nudeln?;decimal
+;FQnudel2;Wie viel Nudeln?;decimal
+;FQreis1;Wie oft Reis?;decimal
+;FQreis2;Wie viel Reis?;decimal
+;FQvbrot1;Wie oft Vollkornbrot oder -brötchen?;decimal
+;FQvbrot2;Wie viel Vollkornbrot oder -brötchen?;decimal
+;FQmbrot1;Wie oft Graubrot oder Mischbrot?;decimal
+;FQmbrot2;Wie viel Graubrot oder Mischbrot?;decimal
+;FQwbrot1;Wie oft Weißbrot oder Brötchen?;decimal
+;FQwbrot2;Wie viel Weißbrot oder Brötchen?;decimal
+;FQcorn1;Wie oft Cornflakes?;decimal
+;FQcorn2;Wie viel Cornflakes?;decimal
+;FQmuesli1;Wie oft Müsli?;decimal
+;FQmuesli2;Wie viel Müsli?;decimal
+;FQcrack1;Wie oft Salzgebäck oder Cracker?;decimal
+;FQcrack2;Wie viel Salzgebäck oder Cracker?;decimal
+;FQfleisch1;Wie oft Fleisch (ohne Geflügel, ohne Wurst)?;decimal
+;FQfleisch2;Wie viel Fleisch (ohne Geflügel, ohne Wurst)?;decimal
+;FQfleisch3;Wie oft paniertes Fleisch?;decimal
+;FQhuhn1;Wie oft Geflügel?;decimal
+;FQhuhn2;Wie viel Geflügel?;decimal
+;FQhuhn3;Anteil paniertes oder frittiertes Geflügel;decimal
+;FQburg1;Wie oft Hamburger oder Döner Kebab?;decimal
+;FQburg2;Wie viel Hamburger oder Döner Kebab?;decimal
+;FQcwurst1;Wie oft Brat- oder Currywurst?;decimal
+;FQcwurst2;Wie viel Brat- oder Currywurst?;decimal
+;FQwurst1;Wie oft Wurst?;decimal
+;FQwurst2;Wie viel Wurst?;decimal
+;FQwurst3;Wie oft fettarme Wurst?;decimal
+;FQschink1;Wie oft Schinken?;decimal
+;FQschink2;Wie viel Schinken?;decimal
+;FQkfisch1;Wie oft kalten Fisch?;decimal
+;FQkfisch2;Wie viel kalten Fisch?;decimal
+;FQwfisch1;Wie oft warmen Fisch?;decimal
+;FQwfisch2;Wie viel warmen Fisch?;decimal
+;FQwfisch3;Anteil panierter Fisch;decimal
+;FQei1;Wie oft Eier?;decimal
+;FQei2;Wie viel Eier?;decimal
+;FQsfett1;Wie oft Butter oder Margarine?;decimal
+;FQsfett2;Wie viel Butter oder Margarine?;decimal
+;FQhonig1;Wie oft Honig oder Marmelade?;decimal
+;FQhonig2;Wie viel Honig oder Marmelade?;decimal
+;FQncreme1;Wie oft Nuss-Nougatcreme?;decimal
+;FQncreme2;Wie viel Nuss-Nougatcreme?;decimal
+;FQschok1;Wie oft Schokolade oder Schokoriegel?;decimal
+;FQschok2;Wie viel Schokolade oder Schokoriegel?;decimal
+;FQsuess1;Wie oft Süßigkeiten?;decimal
+;FQsuess2;Wie viel Süßigkeiten?;decimal
+;FQeis1;Wie oft Eis?;decimal
+;FQeis2;Wie viel Eis?;decimal
+;FQkuch1;Wie oft Kuchen, Torten oder süße Backwaren?;decimal
+;FQkuch2;Wie viel Kuchen, Torten oder süße Backwaren?;decimal
+;FQkeks1;Wie oft Kekse?;decimal
+;FQkeks2;Wie viel Kekse?;decimal
+;FQfsaft1;Wie oft Fruchtsaft?;decimal
+;FQfsaft2;Wie viel Fruchtsaft?;decimal
+;FQfsaft3;Fruchtsaft verdünnt/unverdünnt;decimal
+;FQgsaft1;Wie oft Gemüsesaft?;decimal
+;FQgsaft2;Wie viel Gemüsesaft?;decimal
+;FQgsaft3;Gemüsesaft verdünnt/unverdünnt;decimal
+;FQcola1;Wie oft zuckerh. Erfrischungsgetränke?;decimal
+;FQcola2;Wie viel zuckerh. Erfrischungsgetränke?;decimal
+;FQlight1;Wie oft kal. red. Erfrischungsgetränke?;decimal
+;FQlight2;Wie viel kal. red. Erfrischungsgetränke?;decimal
+;FQkaff1;Wie oft Kaffee?;decimal
+;FQkaff2;Wie viel Kaffee?;decimal
+;FQkaff3;Zucker:Kaffee;decimal
+;FQstee1;Wie oft schwarzer oder grüner Tee?;decimal
+;FQstee2;Wie viel schwarzer oder grüner Tee?;decimal
+;FQstee3;Zucker:schwarzer oder grüner Tee;decimal
+;FQftee1;Wie oft Früchte- oder Kräutertee?;decimal
+;FQftee2;Wie viel Früchte- oder Kräutertee?;decimal
+;FQftee3;Zucker: früchte- oder Kräutertee;decimal
+;FQwass1;Wie oft Wasser?;decimal
+;FQwass2;Wie viel Wasser?;decimal
+;FQwein1;Wie oft Wein, Sekt oder Obstwein?;decimal
+;FQwein2;Wie viel Wein, Sekt oder Obstwein?;decimal
+;FQbier1;Wie oft Bier?;decimal
+;FQbier2;Wie viel Bier?;decimal
+;FQschnaps1;Wie oft hochprozentige alkoholische Getränke?;decimal
+;FQschnaps2;Wie viel hochprozentige alkoholische Getränke?;decimal
+;FQcockt1;Wie oft Cocktails o.a. alkoholische Mischgetränke?;decimal
+;FQcockt2;Wie viel Cocktails o.a. alkoholische Mischgetränke?;decimal
+;FQpizza1;Wie oft Pizza?;decimal
+;FQpizza2;Wie viel Pizza?;decimal
+;FQchips1;Wie oft Kartoffelchips?;decimal
+;FQchips2;Wie viel Kartoffelchips?;decimal
