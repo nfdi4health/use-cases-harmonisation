@@ -1,121 +1,144 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
-;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;;;;;;;
-;POTATOES_0101;Potato intake [g/d];decimal;;;;;;;
-;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;;;;;;;
-;VEGETABLES_02;Vegetable intake [g/d];decimal;;;;;;;
-;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;;;;;;;
-;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;;;;;;;
-;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;;;;;;;
-;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;;;;;;;
-;MUSHROOMS_0205;Mushroom intake [g/d];decimal;;;;;;;
-;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;;;;;;;
-;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;;;;;;;
-;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;;;;;;;
-;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;;;;;;;
-;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;;;;;;;
-;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;;;;;;;
-;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;;;;;;
-;FRUITS_0401;Intake of fresh fruits [g/d];decimal;;;;;;;
-;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;;;;;;;
-;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;;;;;;;
-;OLIVES_0404;Intake of olives [g/d];decimal;;;;;;;
-;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;;;;;;;
-;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;;;;;;;
-;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;;;;;;;
-;YOGURT_0503;Intake of fermented milk products [g/d];decimal;;;;;;;
-;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;;;;;;;
-;CHEESE_0505;Intake of cheese [g/d];decimal;;;;;;;
-;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;;;;;;;
-;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;;;;;;;
-;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;;;;;;;
-;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;;;;;;;
-;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;;;;;;;
-;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;;;;;;;
-;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;;;;;;;
-;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;;;;;;;
-;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;;;;;;;
-;BREAD_060301;Intake of bread [g/d];decimal;;;;;;;
-;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;;;;;;;
-;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;;;;;;;
-;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;;;;;;;
-;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;;;;;;;
-;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;;;;;;;
-;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;;;;;;;
-;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;;;;;;;
-;VEAL_070102;Intake of calf fresh meat [g/d];decimal;;;;;;;
-;PORK_070103;Intake of pig fresh meat [g/d];decimal;;;;;;;
-;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;;;;;;;
-;HORSE_070105;Intake of horse meat [g/d];decimal;;;;;;;
-;GOAT_070106;Intake of goat meat [g/d];decimal;;;;;;;
-;POULTRY_0702;Intake of poultry meat [g/d];decimal;;;;;;;
-;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;;;;;;;
-;CHICKEN_070201;Intake of chicken meat [g/d];decimal;;;;;;;
-;TURKEY_070202;Intake of turkey meat [g/d];decimal;;;;;;;
-;DUCK_070203;Intake of duck meat [g/d];decimal;;;;;;;
-;GOOSE_070204;Intake of goose meat [g/d];decimal;;;;;;;
-;RABBIT_070205;Intake of rabbit meat [g/d];decimal;;;;;;;
-;GAME_0703;Intake of game [g/d];decimal;;;;;;;
-;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;;;;;;;
-;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;;;;;;;
-;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;;;;;;;
-;FISH_0801;Intake of fish (meat) [g/d];decimal;;;;;;;
-;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;;;;;;;
-;FISH_PROD_0803;Intake of processed fish [g/d];decimal;;;;;;;
-;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;;;;;;;
-;EGGS_0901;Intake of eggs [g/d];decimal;;;;;;;
-;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;;;;;;;
-;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;;;;;;;
-;BUTTER_1002;Intake of butter [g/d];decimal;;;;;;;
-;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;;;;;;;
-;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;;;;;;;
-;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;;;;;;;
-;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;;;;;;;
-;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;;;;;;;
-;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;;;;;;;
-;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;;;;;;;
-;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;;;;;;;
-;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;;;;;;;
-;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;;;;;;;
-;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;;;;;;;
-;SORBET_110502;Sorbet intake [g/d];decimal;;;;;;;
-;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;;;;;;;
-;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;;;;;;;
-;VARPASTRY_1201;Intake of various pastry [g/d];decimal;;;;;;;
-;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;;;;;;;
-;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;;;;;;;
-;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;;;;;;;
-;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;;;;;;;
-;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;;;;;;;
-;COFFEE_130301;Coffee intake [g/d];decimal;;;;;;;
-;TEA_130302;Tea intake [g/d];decimal;;;;;;;
-;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;;;;;;;
-;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;;;;;;;
-;WATER_1304;Intake of water and water-based beverages [g/d];decimal;;;;;;;
-;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;;;;;;;
-;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;;;;;;;
-;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;;;;;;;
-;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;;;;;;;
-;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;;;;;;;
-;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;;;;;;;
-;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;;;;;;;
-;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;;;;;;;
-;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;;;;;;;
-;SAUCES_1501;Intake of savoury sauces [g/d];decimal;;;;;;;
-;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;;;;;;;
-;DRESSINGS_150102;Dressing intake [g/d];decimal;;;;;;;
-;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;;;;;;;
-;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;;;;;;;
-;YEAST_1502;Intake of yeast cultures [g/d];decimal;;;;;;;
-;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;;;;;;;
-;CONDIMENTS_1504;Condiments intake [g/d];decimal;;;;;;;
-;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;;;;;;;
-;SOUP_1601;Intake of soups [g/d];decimal;;;;;;;
-;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;;;;;;;
-;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;;;;;;;
-;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;;;;;;;
-;SOY_PROD_1701;Intake of soy products [g/d];decimal;;;;;;;
-;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;;;;;;;
-;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;;;;;;;
-;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;;;;;;;
-;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;;;;;;;
-;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;;;;;;;
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;DEGS1_P1;"FQgkart1;FQgkart2;FQbkart1;FQbkart2;FQpomm1;FQpomm2";operation;((FQgkart1*FQgkart2) + (FQbkart1*FQbkart2) + (FQpomm1*FQpomm2))/28;"Wie oft und wieviel gekochte Kartoffeln?
+Wie oft und wieviel gebratene Kartoffeln? 
+Wie oft und wieviel Pommes frites?";partial;tentative
+;POTATOES_0101;Potato intake [g/d];decimal;DEGS1_P1;"FQgkart1;FQgkart2;FQbkart1;FQbkart2;FQpomm1;FQpomm2";operation;((FQgkart1*FQgkart2) + (FQbkart1*FQbkart2) + (FQpomm1*FQpomm2))/28;"Wie oft und wieviel gekochte Kartoffeln?
+Wie oft und wieviel gebratene Kartoffeln? 
+Wie oft und wieviel Pommes frites?";complete;compatible
+;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;VEGETABLES_02;Vegetable intake [g/d];decimal;DEGS1_P1;"FQrgem1;FQrgem2;FQggem1;FQggem2";operation;((FQrgem1*FQrgem2) + (FQggem1*FQggem2))/28;"Wie oft und wieviel rohes Gemüse?
+Wie oft und wieviel gegartes Gemüse?";complete;compatible
+;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MUSHROOMS_0205;Mushroom intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;DEGS1_P1;"FQhuelse1;FQhuelse2";operation;(FQhuelse1*FQhuelse2)/28;Wie oft und wieviel Hülsenfrüchte?;complete;compatible
+;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;DEGS1_P1;"FQfobst1;FQfobst2;FQgobst1;FQgobst2";operation;((FQfobst1*FQfobst2)+(FQgobst1*FQgobst2))/28;"Wie oft und wieviel frisches Obst?
+Wie oft und wieviel gegartes Obst?";complete;compatible
+;FRUITS_0401;Intake of fresh fruits [g/d];decimal;DEGS1_P1;"FQfobst1;FQfobst2";operation;(FQfobst1*FQfobst2)/28;Wie oft und wieviel frisches Obst?;complete;compatible
+;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;DEGS1_P1;"FQnuss1;FQnuss2";operation;(FQnuss1*FQnuss2)/28;Wie oft und wieviel Nüsse?;complete;compatible
+;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;DEGS1_P1;"FQgobst1;FQgobst2";operation;(FQgobst1*FQgobst2)/28;Wie oft und wieviel gegartes Obst?;complete;compatible
+;OLIVES_0404;Intake of olives [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;DEGS1_P1;"FQmilch1;FQmilch2";operation;(FQmilch1*FQmilch2)/28;Wie oft und wieviel Milch?;complete;compatible
+;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;YOGURT_0503;Intake of fermented milk products [g/d];decimal;DEGS1_P1;"FQquark1;FQquark2";operation;(FQquark1*FQquark2)/28;"Wie oft und  wieviel Quark, Joghurt oder Dickmilch?
+Was machen wir mit FQquark3 (Anteil fettarmer Quark, Joghurt, Dickmilch)?";complete;compatible
+;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;DEGS1_P1;"FQfkaes1;FQfkaes2";operation;(FQfkaes1*FQfkaes2)/28;"Wie oft und wieviel Frischkäse?
+Was machen wir mit FQfkaes3 (Anteil fettarmer Frischkäse)?";complete;compatible
+;CHEESE_0505;Intake of cheese [g/d];decimal;DEGS1_P1;"FQkaes1;FQkaes2";operation;(FQkaes1*FQkaes2)/28;"Wie oft und wieviel Käse (Weich-, Schnitt- oder Hartkäse)?
+Was machen wir mit FQkaes3 (Anteil fettarmer Käse)?";complete;compatible
+;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;DEGS1_P1;"FQnudel1;FQnudel2;FQreis1;FQreis2";operation;((FQnudel1*FQnudel2) + (FQreis1*FQreis2))/28;Wie oft und wieviel Nudeln und Reis?;complete;compatible
+;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;DEGS1_P1;"FQvbrot1;FQvbrot2;FQmbrot1;FQmbrot2;FQwbrot1;FQwbrot2";operation;((FQvbrot1*FQvbrot2)+(FQmbrot1*FQmbrot2)+(FQwbrot1*FQwbrot2))/28;Wie oft und wieviel Vollkornbrot oder -brötchen, Grau- oder Mischbrot, Weißbrot oder Brötchen?;complete;compatible
+;BREAD_060301;Intake of bread [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;DEGS1_P1;"FQcorn1;FQcorn2;FQmuesli1;FQmuesli2";operation;((FQcorn1*FQcorn2)+(FQmuesli1*FQmuesli2))/28;Wie oft und wieviel Cornflakes und Müsli?;complete;compatible
+;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;DEGS1_P1;"FQcrack1;FQcrack2";operation;(FQcrack1*FQcrack2)/28;Wie oft und wieviel Salzgebäck und Cracker?;complete;compatible
+;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;DEGS1_P1;"FQfleisch1;FQfleisch2";operation;(FQfleisch1*FQfleisch2)/28;"Wie oft und wieviel Fleisch (ohne Geflügel, ohne Wurst) 
+Was machen wir mit FQfleisch3 (Wie oft paniertes Fleisch)?";complete;compatible
+;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;VEAL_070102;Intake of calf fresh meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;PORK_070103;Intake of pig fresh meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;HORSE_070105;Intake of horse meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;GOAT_070106;Intake of goat meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;POULTRY_0702;Intake of poultry meat [g/d];decimal;DEGS1_P1;"FQhuhn1;FQhuhn2";operation;(FQhuhn1*FQhuhn2)/28;"Wie oft und wieviel Geflügel?
+Was machen wir mit FGhuhn3 (Anteil paniertes o frittiertes Geflügel)?";complete;compatible
+;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CHICKEN_070201;Intake of chicken meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;TURKEY_070202;Intake of turkey meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DUCK_070203;Intake of duck meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;GOOSE_070204;Intake of goose meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;RABBIT_070205;Intake of rabbit meat [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;GAME_0703;Intake of game [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;DEGS1_P1;"FQburg1;FQburg2;FQcwurst1;FQcwurst2;FQwurst1;FQwurst2;FQschink1;FQschink2";operation;((FQburg1*FQburg2)+(FQcwurst1*FQcwurst2)+(FQwurst1*FQwurst2)+(FQschink1*FQschink2))/28;"Wie oft und wieviel Hamburger oder Döner Kebab? Wie oft und wiviel Brat- oder Currywurst? Wie oft und wieivel Wurst? Wie oft und wieviel Schinken? 
+Was machen wir mit FQwurst3 (Wie oft fettarme Wurst)?";complete;compatible
+;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FISH_0801;Intake of fish (meat) [g/d];decimal;DEGS1_P1;"FQkfisch1;FQkfisch2;FQwfisch1;FQwfisch2";operation;((FQkfisch1*FQkfisch2)+(FQwfisch1*FQwfisch2))/28;"Wie oft und wieviel kalter Fisch? Wie oft und wieviel warmer Fisch?
+Was machen wir mit FQwfisch3 (Anteil panierter Fisch)?";complete;compatible
+;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FISH_PROD_0803;Intake of processed fish [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;DEGS1_P1;"FQei1;FQei2";operation;(FQei1*FQei2)/28;Wie oft und wieviel Eier?;complete;compatible
+;EGGS_0901;Intake of eggs [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;DEGS1_P1;"FQsfett1;FQsfett2";operation;(FQsfett1*FQsfett2)/28;"Wie oft und wieviel Butter oder Margarine?
+Achtung: keine pflanzl. Öle!";partial;tentative
+;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;BUTTER_1002;Intake of butter [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;DEGS1_P1;"FQhonig1;FQhonig2;FQncreme1;FQncreme2";operation;((FQhonig1*FQhonig2)+(FQncreme1*FQncreme2))/28;Wie of und wieviel Honig oder Marmelade? Wie oft und wieviel Nuss-Nougatcreme?;complete;compatible
+;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;DEGS1_P1;"FQschok1;FQschok2";operation;(FQschok1*FQschok2)/28;Wie oft und wieviel Schokolade oder Schokoriegel?;complete;compatible
+;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;DEGS1_P1;"FQsuess1;FQsuess2";operation;(FQsuess1*FQsuess2)/28;Wie oft und wieviel Süßigkeiten?;complete;compatible
+;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;DEGS1_P1;"FQeis1;FQeis2";operation;(FQeis1*FQeis2)/28;Wie oft und wieviel Eis?;complete;compatible
+;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SORBET_110502;Sorbet intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;DEGS1_P1;"FQkuch1;FQkuch2;FQkeks1;FQkeks2";operation;((FQkuch1*FQkuch2)+(FQkeks1*FQkeks2))/28;"Wie oft und wieviel Kuchen, Torten oder süße Backwaren?
+Wie oft und wieviel Kekse?";complete;compatible
+;VARPASTRY_1201;Intake of various pastry [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;DEGS1_P1;"FQfsaft1;FQfsaft2;FQgsaft1;FQgsaft2";operation;((FQfsaft1*FQfsaft2)+(FQgsaft1*FQgsaft2))/28;"Wie oft und wieviel Fruchtsaft?
+Wie oft und wieviel Gemüsesaft?
+Was machen wir mit FGfsaft3 (Fruchtsaftverdünnt/unverdünnt)? 
+Was machen wir mit FQgsaft3 (Gemüsesaft verdünnt/unverdünnt)?";complete;compatible
+;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;DEGS1_P1;"FQcola1;FQcola2;FQlight1;FQlight2";operation;((FQcola1*FQcola2)+(FQlight1*FQlight2))/28;"Wie oft und wieviel zuckerh. Erfrischungsgetränke?
+Wie oft und wieviel kal.red. Erfrischungsgetränke?";complete;compatible
+;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;COFFEE_130301;Coffee intake [g/d];decimal;DEGS1_P1;"FQkaff1;FQkaff2";operation;(FQkaff1*FQkaff2)/28;"Wie oft und wieviel Kaffee?
+Was machen wir mit FQkaff3 (Zucker: Kaffee)?";complete;compatible
+;TEA_130302;Tea intake [g/d];decimal;DEGS1_P1;"FQstee1;FQstee2";operation;(FQstee1*FQstee2)/28;"Wie oft und wieviel schwarzer oder grüner Tee?
+Was machen wir mit FQstee3 (Zucker:Schwarzer oder grüner Tee)?";complete;compatible
+;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;DEGS1_P1;"FQftee1;FQftee2";operation;(FQftee1*FQftee2)/28;"Wie oft und wieviel Früchte- oder Kräutertee?
+Was machen wir mit FQftee3 (Zucker: Früchte- oder Kräutertee)?";complete;compatible
+;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;WATER_1304;Intake of water and water-based beverages [g/d];decimal;DEGS1_P1;"FQwass1;FQwass2";operation;(FQwass1*FQwass2)/28;Wie oft und wieviel Wasser?;complete;compatible
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;DEGS1_P1;"FQwein1;FQwein2";operation;(FQwein1*FQwein2)/28;Wie oft  und wieviel Wein, Sekt, Obstwein?;complete;compatible
+;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;DEGS1_P1;"FQbier1;FQbier2";operation;(FQbier1*FQbier2)/28;Wie oft und wieviel Bier?;complete;compatible
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;DEGS1_P1;"FQschnaps1;FQschnaps2";operation;(FQschnaps1*FQschnaps2)/28;Wie oft und wieviel hochprozentige alkoholische Getränke?;complete;compatible
+;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;DEGS1_P1;"FQcockt1;FQcockt2";operation;(FQcockt1*FQcockt2)/28;Wie oft und wieviel Cocktails?;complete;compatible
+;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SAUCES_1501;Intake of savoury sauces [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DRESSINGS_150102;Dressing intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;YEAST_1502;Intake of yeast cultures [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;CONDIMENTS_1504;Condiments intake [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SOUP_1601;Intake of soups [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SOY_PROD_1701;Intake of soy products [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;DEGS1_P1;"FQpizza1;FQpizza2;FQchips1;FQchips2";operation;((FQpizza1*FQpizza2)+(FQchips1*FQchips2))/28;"Wie oft und wieviel Pizza?
+Wie oft und wieviel Kartoffelchips?";complete;compatible
+;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DEGS1_P1;__BLANK__;paste;1;1 (FFQ);complete;identical
