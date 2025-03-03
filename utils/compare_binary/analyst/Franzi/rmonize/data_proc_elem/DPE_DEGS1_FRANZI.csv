@@ -141,4 +141,4 @@ Was machen wir mit FQftee3 (Zucker: Früchte- oder Kräutertee)?";complete;compa
 ;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;DEGS1_P1;"FQpizza1;FQpizza2;FQchips1;FQchips2";operation;((FQpizza1*FQpizza2)+(FQchips1*FQchips2))/28;"Wie oft und wieviel Pizza?
 Wie oft und wieviel Kartoffelchips?";complete;compatible
 ;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;DEGS1_P1;impossible;impossible;impossible;;impossible;impossible
-;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DEGS1_P1;__BLANK__;paste;1;1 (FFQ);complete;identical
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DEGS1_P1;__BLANK__;paste;1;1 (FFQ), but asks only about the last 4 weeks;complete;identical
