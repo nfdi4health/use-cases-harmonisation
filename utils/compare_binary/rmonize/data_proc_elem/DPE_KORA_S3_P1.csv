@@ -1,11 +1,11 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
 1;ID;Participant identification number;integer;KORA_S3_P1;d_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S3_P1;dcsex;direct_mapping;direct_mapping;;complete;identical
-3;AGE_BASE;Age at exposure measure;decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KORA_S3_P1;dtbbild;direct_mapping;direct_mapping;;complete;identical
-5;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S3_P1;dtcigsmk;direct_mapping;direct_mapping;;complete;identical
-7;BMI;Body Mass Index at baseline;decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
+7;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;KORA_S3_P1;dkcal;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KORA_S3_P1;"DV410;
 DV420";operation;DV410 + DV420;"DV410 (potato) + DV420 (potato products)
