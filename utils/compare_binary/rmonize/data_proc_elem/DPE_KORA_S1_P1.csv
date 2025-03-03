@@ -31,7 +31,7 @@ AV459";operation;AV451 + AV455 + AV459;AV451 (Tomatoes) + AV455 (cucumbers) + AV
 19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KORA_S1_P1;AV461;direct_mapping;direct_mapping;AV461 (onion vegetables) ;complete;identical
 20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S1_P1;AV440;operation;0.5*AV440;AV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
-22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S1_P1;AV491;direct_mapping;direct_mapping;AV491 (dry legumes) ;complete;identical
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S1_P1;AV491;operation;AV491*2;double the amount of AV491 (dry legumes) to be comparable to other studies;complete;compatible
 23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KORA_S1_P1;"AV310; AV311; AV315; AV321; AV323;
 AV325; AV331; AV334; AV337; AV341;
@@ -154,7 +154,7 @@ AV119 + AV131";AV111 (beef)+ AV112 (veal) + AV113 (pork meat) + AV115 (sheep or 
 69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;KORA_S1_P1;"AV180; AV190";operation;AV180 + AV190;AV180 (canned fish) + AV190 (other fish products);complete;compatible
 71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;KORA_S1_P1;"AV250; AV255";operation;AV250 + AV255;AV250 (fresh eggs) + AV255 (egg products);complete;compatible
-72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S1_P1;AV255;direct_mapping;direct_mapping;AV255 (egg products);complete;identical
+72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S1_P1;AV250;direct_mapping;direct_mapping;AV250 (fresh eggs);complete;identical
 73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KORA_S1_P1;"AV270; AV291; AV293; AV295";operation;AV270 + AV291 + AV293 + AV295;AV270 (butter) + AV291 (margarines) + AV293 (vegetable edible oils) + AV295 (other edible oils);complete;compatible
 74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;KORA_S1_P1;AV293;direct_mapping;direct_mapping;AV293 (vegetable edible oils);complete;identical
 75;BUTTER_1002;Intake of butter [g/d];decimal;KORA_S1_P1;AV270;direct_mapping;direct_mapping;AV270 (butter);complete;identical

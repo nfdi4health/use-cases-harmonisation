@@ -7,7 +7,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 6;IMMIGRATION;Immigration background;integer;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
 8;TOT_PA_AC;Physical activity from accelerometry data;decimal;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
-9;SMOKE_ST;Smoking status;integer;KORA_S3_P2;dtcigsmk;direct_mapping;direct_mapping;smoking status with three categories;complete;identical
+9;SMOKE_ST;Smoking status;integer;KORA_S3_P2;dtcigsmk;direct_mapping;direct_mapping;;complete;identical
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure;decimal;KORA_S3_P2;dtpyrs;direct_mapping;direct_mapping; ;complete;identical
 11;TOBACCO_D;Amount of daily tobacco smoked;decimal;KORA_S3_P2;;impossible;impossible;unavailable;impossible;incompatible
 12;AGE_SMOKE_QUIT;Age at time of quitting smoking;decimal;KORA_S3_P2;dtstsalt;direct_mapping;direct_mapping;;complete;identical
@@ -85,7 +85,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 84;SFA;Saturated fat intake [g/d];decimal;KORA_S3_P2;dges;direct_mapping;direct_mapping;;complete;identical
 85;MUFA;Monounsaturated fat intake [g/d];decimal;KORA_S3_P2;deuf;direct_mapping;direct_mapping;;complete;identical
 86;PUFA;Polyunsaturated fat intake [g/d];decimal;KORA_S3_P2;dmuf;direct_mapping;direct_mapping;;complete;identical
-87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S3_P2;dkmd;direct_mapping;direct_mapping;;complete;identical
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S3_P2;"dkmosa; dkdisa";operation;dkmosa + dkdisa;dkmosa (monosaccharides) + dkdisa (disaccharides);complete;compatible
 88;ADD_SUGARS;Added sugar intake [g/d];decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
 89;FREE_SUGARS;Free sugar intake [g/d];decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
 90;GLUC;Glucose intake [g/d];decimal;KORA_S3_P2;dkmt;direct_mapping;direct_mapping;;complete;identical
