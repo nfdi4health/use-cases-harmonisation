@@ -7,7 +7,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 6;IMMIGRATION;Immigration background;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 8;TOT_PA_AC;Physical activity from accelerometry data;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-9;SMOKE_ST;Smoking status;integer;KORA_S1_P2;atcigsmk;direct_mapping;direct_mapping;smoking status with three categories;tentive;compatible
+9;SMOKE_ST;Smoking status;integer;KORA_S1_P2;atcigsmk;direct_mapping;direct_mapping;;complete;identical
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
 11;TOBACCO_D;Amount of daily tobacco smoked;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
 12;AGE_SMOKE_QUIT;Age at time of quitting smoking;decimal;KORA_S1_P2;atstsalt;direct_mapping;direct_mapping;only for cigarettes;partial;identical
@@ -25,9 +25,9 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 24;PREV_HYP;History of hypertension;integer;KORA_S1_P2;athyact;direct_mapping;direct_mapping;;complete;identical
 25;PREV_CVD;History of cardiovascular disease;integer;KORA_S1_P2;atcvd;direct_mapping;direct_mapping;combination prev_mi_16 and prev_apo_16;complete;compatible
 26;PREV_CANCER;History of cancer;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;KORA_S1_P2;atmvcvd;direct_mapping;direct_mapping;atvinfa + atminfa + atvschl + atmschl --> atmvcvd;partial;identical
-28;FAM1_DIAB2;First degree family history of T2D;integer;KORA_S1_P2;atmvdiab;direct_mapping;direct_mapping;atvdiab + atmdiab --> atmvdiab;partial;identical
-29;FAM1_CANCER;First degree family history of cancer;integer;KORA_S1_P2;atmvca;direct_mapping;direct_mapping;only parents: atvca + atmca --> atmvca;partial;identical
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;KORA_S1_P2;atmvcvd;direct_mapping;direct_mapping;atvinfa + atminfa + atvschl + atmschl --> atmvcvd;complete;identical
+28;FAM1_DIAB2;First degree family history of T2D;integer;KORA_S1_P2;atmvdiab;direct_mapping;direct_mapping;atvdiab + atmdiab --> atmvdiab;complete;identical
+29;FAM1_CANCER;First degree family history of cancer;integer;KORA_S1_P2;atmvca;direct_mapping;direct_mapping;only parents: atvca + atmca --> atmvca;complete;identical
 30;DRE_SCREEN;Screening, DRE;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 32;FOBT_SCREEN;Screening, FOBT;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -85,7 +85,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 84;SFA;Saturated fat intake [g/d];decimal;KORA_S1_P2;ages;direct_mapping;direct_mapping;;complete;identical
 85;MUFA;Monounsaturated fat intake [g/d];decimal;KORA_S1_P2;aeuf;direct_mapping;direct_mapping;;complete;identical
 86;PUFA;Polyunsaturated fat intake [g/d];decimal;KORA_S1_P2;amuf;direct_mapping;direct_mapping;;complete;identical
-87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S1_P2;akmd;direct_mapping;direct_mapping;;complete;identical
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S1_P2;"akmosa; akdisa";operation;akmosa + akdisa;akmosa (monosaccharides) + akdisa (disaccharides);complete;compatible
 88;ADD_SUGARS;Added sugar intake [g/d];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 89;FREE_SUGARS;Free sugar intake [g/d];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 90;GLUC;Glucose intake [g/d];decimal;KORA_S1_P2;akmt;direct_mapping;direct_mapping;;complete;identical

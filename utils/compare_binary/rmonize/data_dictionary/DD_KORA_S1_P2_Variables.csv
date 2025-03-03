@@ -38,69 +38,70 @@ index;name;label;valueType
 37;ages;saturated fat;decimal
 38;aeuf;monounsaturated fat;decimal
 39;amuf;polyunsaturated fat;decimal
-40;akmd;total sugar;decimal
-41;akmt;glucose;decimal
-42;akmf;fructose;decimal
-43;anatr;sodium intake;decimal
-44;akal;potassium intake;decimal
-45;AV610;sugar;decimal
-46;AV681;Honey;decimal
-47;AV684;Jam;decimal
-48;AV687;Other sweet spreads;decimal
-49;AV620;cacao products;decimal
-50;AV630;chocolate products;decimal
-51;AV650;confectionary;decimal
-52;AV670;all ice cream;decimal
-53;AV570;long-life baked goods;decimal
-54;AV540;Fine bakery products;decimal
-55;AV810;fruit/vegetable juice;decimal
-56;AV825;caffeinated lemonade;decimal
-57;AV829;other soft drinks;decimal
-58;AV431;cauliflower;decimal
-59;AV433;other cabbage;decimal
-60;AV440;leafy and stem vegetables;decimal
-61;AV451;tomatoes;decimal
-62;AV455;cucumbers;decimal
-63;AV459;other fruit vegetables;decimal
-64;AV461;onion vegetables;decimal
-65;AV465;carrots;decimal
-66;AV469;other fresh vegetables;decimal
-67;AV470;frozen vegetables;decimal
-68;AV480;canned vegetables;decimal
-69;AV499;other vegetable products;decimal
-70;AV491;dry legumes;decimal
-71;AV310;fruit without specification;decimal
-72;AV311;apples;decimal
-73;AV315;other pome fruits;decimal
-74;AV321;peaches;decimal
-75;AV323;cherries;decimal
-76;AV325;other stone fruits;decimal
-77;AV331;strawberries;decimal
-78;AV334;other berries;decimal
-79;AV337;grapes;decimal
-80;AV111;Beef;decimal
-81;AV112;Veal;decimal
-82;AV113;Pork meat;decimal
-83;AV115;Sheep or goat meat;decimal
-84;AV117;Game meat;decimal
-85;AV119;other meat;decimal
-86;AV120;Poultry meat;decimal
-87;AV141;Sausage;decimal
-88;AV145;Ham;decimal
-89;AV147;Bacon;decimal
-90;AV150;canned, frozen meat or meat products;decimal
-91;AV160;other meat products;decimal
-92;AV841;roasted coffee;decimal
-93;AV845;coffee extracts;decimal
-94;AV850;tea;decimal
-95;AV341;oranges, mandarins;decimal
-96;AV343;grapefruits;decimal
-97;AV344;other citrus fruits;decimal
-98;AV345;bananas;decimal
-99;AV346;other tropical fruits;decimal
-100;AV351;nuts;decimal
-101;AV357;dried fruit;decimal
-102;AV360;canned fruit;decimal
-103;AV370;frozen fruit;decimal
-104;AV390;other processed fruit;decimal
-105;AV131;all kinds of minced meat;decimal
+40;akmosa;monosaccharides;decimal
+41;akdisa;disaccharides;decimal
+42;akmt;glucose;decimal
+43;akmf;fructose;decimal
+44;anatr;sodium intake;decimal
+45;akal;potassium intake;decimal
+46;AV610;sugar;decimal
+47;AV681;Honey;decimal
+48;AV684;Jam;decimal
+49;AV687;Other sweet spreads;decimal
+50;AV620;cacao products;decimal
+51;AV630;chocolate products;decimal
+52;AV650;confectionary;decimal
+53;AV670;all ice cream;decimal
+54;AV570;long-life baked goods;decimal
+55;AV540;Fine bakery products;decimal
+56;AV810;fruit/vegetable juice;decimal
+57;AV825;caffeinated lemonade;decimal
+58;AV829;other soft drinks;decimal
+59;AV431;cauliflower;decimal
+60;AV433;other cabbage;decimal
+61;AV440;leafy and stem vegetables;decimal
+62;AV451;tomatoes;decimal
+63;AV455;cucumbers;decimal
+64;AV459;other fruit vegetables;decimal
+65;AV461;onion vegetables;decimal
+66;AV465;carrots;decimal
+67;AV469;other fresh vegetables;decimal
+68;AV470;frozen vegetables;decimal
+69;AV480;canned vegetables;decimal
+70;AV499;other vegetable products;decimal
+71;AV491;dry legumes;decimal
+72;AV310;fruit without specification;decimal
+73;AV311;apples;decimal
+74;AV315;other pome fruits;decimal
+75;AV321;peaches;decimal
+76;AV323;cherries;decimal
+77;AV325;other stone fruits;decimal
+78;AV331;strawberries;decimal
+79;AV334;other berries;decimal
+80;AV337;grapes;decimal
+81;AV111;Beef;decimal
+82;AV112;Veal;decimal
+83;AV113;Pork meat;decimal
+84;AV115;Sheep or goat meat;decimal
+85;AV117;Game meat;decimal
+86;AV119;other meat;decimal
+87;AV120;Poultry meat;decimal
+88;AV141;Sausage;decimal
+89;AV145;Ham;decimal
+90;AV147;Bacon;decimal
+91;AV150;canned, frozen meat or meat products;decimal
+92;AV160;other meat products;decimal
+93;AV841;roasted coffee;decimal
+94;AV845;coffee extracts;decimal
+95;AV850;tea;decimal
+96;AV341;oranges, mandarins;decimal
+97;AV343;grapefruits;decimal
+98;AV344;other citrus fruits;decimal
+99;AV345;bananas;decimal
+100;AV346;other tropical fruits;decimal
+101;AV351;nuts;decimal
+102;AV357;dried fruit;decimal
+103;AV360;canned fruit;decimal
+104;AV370;frozen fruit;decimal
+105;AV390;other processed fruit;decimal
+106;AV131;all kinds of minced meat;decimal
