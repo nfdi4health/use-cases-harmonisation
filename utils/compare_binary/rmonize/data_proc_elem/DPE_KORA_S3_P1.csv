@@ -31,7 +31,7 @@ DV459";operation;DV451 + DV455 + DV459;DV451 (Tomatoes) + DV455 (cucumbers) + DV
 19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KORA_S3_P1;DV461;direct_mapping;direct_mapping;DV461 (onion vegetables) ;complete;identical
 20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S3_P1;DV440;operation;0.5*DV440;DV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
-22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S3_P1;DV491;direct_mapping;direct_mapping;DV491 (dry legumes) ;complete;identical
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S3_P1;DV491;operation;DV491*2;double the amount of DV491 (dry legumes) to be comparable to other studies;complete;compatible
 23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KORA_S3_P1;"DV310; DV311; DV315; DV321; DV323;
 DV325; DV331; DV334; DV337; DV341;
@@ -191,7 +191,7 @@ DV160 (other meat products)";complete;compatible
 69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;KORA_S3_P1;"DV180; DV190";operation;DV180 + DV190;DV180 (canned fish) + DV190 (other fish products);complete;compatible
 71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;KORA_S3_P1;"DV250; DV255";operation;DV250 + DV255;DV250 (fresh eggs) + DV255 (egg products);complete;compatible
-72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S3_P1;DV255;direct_mapping;direct_mapping;DV255 (egg products);complete;identical
+72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S3_P1;DV250;direct_mapping;direct_mapping;DV250 (fresh eggs);complete;identical
 73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KORA_S3_P1;"DV270; DV291; DV293; DV295";operation;DV270 + DV291 + DV293 + DV295;"DV270 (butter) + 
 DV291 (margarines) + 
 DV293 (vegetable edible oils) + 
