@@ -1,6 +1,5 @@
 variable;name;label;missings
 dcsex;1;male;
-dcsex;2;female;
 dtbbild;0;none;
 dtbbild;1;primary school completed;
 dtbbild;2;technical/professional school completed;

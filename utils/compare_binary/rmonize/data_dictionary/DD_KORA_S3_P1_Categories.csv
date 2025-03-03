@@ -1,9 +1,11 @@
 variable;name;label;missing
 dcsex;1;male;
+dtbbild;0;none;
 dtbbild;1;primary school completed;
 dtbbild;2;technical/professional school completed;
 dtbbild;3;secondary school;
 dtbbild;4;longer education (incl. university);
+dtbbild;5;not specified;
 dtcigsmk;1;never;
 dtcigsmk;2;former;
 dtcigsmk;3;current;
