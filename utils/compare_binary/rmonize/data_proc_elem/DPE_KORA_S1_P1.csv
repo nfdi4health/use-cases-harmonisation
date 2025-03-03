@@ -1,11 +1,11 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
 1;ID;Participant identification number;integer;KORA_S1_P1;a_id;id_creation;id_creation;;complete;identical
 2;SEX;Sex;integer;KORA_S1_P1;acsex;direct_mapping;direct_mapping;;complete;identical
-3;AGE_BASE;Age at exposure measure;decimal;KORA_S1_P1;atalteru;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S1_P1;atalteru;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KORA_S1_P1;atbbild;direct_mapping;direct_mapping;;complete;identical
-5;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S1_P1;atcigsmk;direct_mapping;direct_mapping;;complete;identical
-7;BMI;Body Mass Index at baseline;decimal;KORA_S1_P1;atbmi;direct_mapping;direct_mapping;;complete;identical
+7;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S1_P1;atbmi;direct_mapping;direct_mapping;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;KORA_S1_P1;akcal;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KORA_S1_P1;"AV410;
 AV420";operation;AV410 + AV420;"AV410 (potato) + AV420 (potato products)
@@ -162,7 +162,7 @@ AV119 + AV131";AV111 (beef)+ AV112 (veal) + AV113 (pork meat) + AV115 (sheep or 
 77;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 78;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 79;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
-80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KORA_S1_P1;"AV610; AV681; AV684; AV687; AV620; AV630; AV650; AV670";operation;AV610 + AV681 + AV684, AV687 +AV620 + AV630 + AV650 + AV670;AV610 (sugar) + AV681 (honey) + AV684 (jam) + AV687 (other sweet spreads) + AV620 (cacao products) + AV630 (chocolate products) + AV650 (confectionary) + AV670 (all ice cream);complete;compatible
+80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KORA_S1_P1;"AV610; AV681; AV684; AV687; AV620; AV630; AV650; AV670";operation;AV610 + AV681 + AV684 + AV687 +AV620 + AV630 + AV650 + AV670;AV610 (sugar) + AV681 (honey) + AV684 (jam) + AV687 (other sweet spreads) + AV620 (cacao products) + AV630 (chocolate products) + AV650 (confectionary) + AV670 (all ice cream);complete;compatible
 81;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;KORA_S1_P1;"AV681; AV684";operation;AV681 + AV684;AV681 (honey) + AV684 (jam);complete;compatible
 82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;KORA_S1_P1;"AV620; AV630";operation;AV620 + AV630;AV620 (cacao products) + AV630 (chocolate products);complete;compatible
 83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;KORA_S1_P1;AV650;direct_mapping;direct_mapping;AV650 (confectionary);complete;identical
