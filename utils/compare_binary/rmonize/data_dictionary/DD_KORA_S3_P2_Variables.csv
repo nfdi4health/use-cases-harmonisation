@@ -45,69 +45,70 @@ index;name;label;valueType
 44;dges;saturated fat;decimal
 45;deuf;monounsaturated fat;decimal
 46;dmuf;polyunsaturated fat;decimal
-47;dkmd;total sugar;decimal
-48;dkmt;glucose;decimal
-49;dkmf;fructose;decimal
-50;dnatr;sodium intake;decimal
-51;dkal;potassium intake;decimal
-52;DV610;sugar;decimal
-53;DV681;Honey;decimal
-54;DV684;Jam;decimal
-55;DV687;Other sweet spreads;decimal
-56;DV620;cacao products;decimal
-57;DV630;chocolate products;decimal
-58;DV650;confectionary;decimal
-59;DV670;all ice cream;decimal
-60;DV570;long-life baked goods;decimal
-61;DV540;Fine bakery products;decimal
-62;DV810;fruit/vegetable juice;decimal
-63;DV825;caffeinated lemonade;decimal
-64;DV829;other soft drinks;decimal
-65;DV431;cauliflower;decimal
-66;DV433;other cabbage;decimal
-67;DV440;leafy and stem vegetables;decimal
-68;DV451;tomatoes;decimal
-69;DV455;cucumbers;decimal
-70;DV459;other fruit vegetables;decimal
-71;DV461;onion vegetables;decimal
-72;DV465;carrots;decimal
-73;DV469;other fresh vegetables;decimal
-74;DV470;frozen vegetables;decimal
-75;DV480;canned vegetables;decimal
-76;DV499;other vegetable products;decimal
-77;DV491;dry legumes;decimal
-78;DV310;fruit without specification;decimal
-79;DV311;apples;decimal
-80;DV315;other pome fruits;decimal
-81;DV321;peaches;decimal
-82;DV323;cherries;decimal
-83;DV325;other stone fruits;decimal
-84;DV331;strawberries;decimal
-85;DV334;other berries;decimal
-86;DV337;grapes;decimal
-87;DV111;Beef;decimal
-88;DV112;Veal;decimal
-89;DV113;Pork meat;decimal
-90;DV115;Sheep or goat meat;decimal
-91;DV117;Game meat;decimal
-92;DV119;other meat;decimal
-93;DV120;Poultry meat;decimal
-94;DV141;Sausage;decimal
-95;DV145;Ham;decimal
-96;DV147;Bacon;decimal
-97;DV150;canned, frozen meat or meat products;decimal
-98;DV160;other meat products;decimal
-99;DV841;roasted coffee;decimal
-100;DV845;coffee extracts;decimal
-101;DV850;tea;decimal
-102;DV341;oranges, mandarins;decimal
-103;DV343;grapefruits;decimal
-104;DV344;other citrus fruits;decimal
-105;DV345;bananas;decimal
-106;DV346;other tropical fruits;decimal
-107;DV351;nuts;decimal
-108;DV357;dried fruit;decimal
-109;DV360;canned fruit;decimal
-110;DV370;frozen fruit;decimal
-111;DV390;other processed fruit;decimal
-112;DV131;all kinds of minced meat;decimal
+47;dkmosa;monosaccharides;decimal
+48;dkdisa;disaccharides;decimal
+49;dkmt;glucose;decimal
+50;dkmf;fructose;decimal
+51;dnatr;sodium intake;decimal
+52;dkal;potassium intake;decimal
+53;DV610;sugar;decimal
+54;DV681;Honey;decimal
+55;DV684;Jam;decimal
+56;DV687;Other sweet spreads;decimal
+57;DV620;cacao products;decimal
+58;DV630;chocolate products;decimal
+59;DV650;confectionary;decimal
+60;DV670;all ice cream;decimal
+61;DV570;long-life baked goods;decimal
+62;DV540;Fine bakery products;decimal
+63;DV810;fruit/vegetable juice;decimal
+64;DV825;caffeinated lemonade;decimal
+65;DV829;other soft drinks;decimal
+66;DV431;cauliflower;decimal
+67;DV433;other cabbage;decimal
+68;DV440;leafy and stem vegetables;decimal
+69;DV451;tomatoes;decimal
+70;DV455;cucumbers;decimal
+71;DV459;other fruit vegetables;decimal
+72;DV461;onion vegetables;decimal
+73;DV465;carrots;decimal
+74;DV469;other fresh vegetables;decimal
+75;DV470;frozen vegetables;decimal
+76;DV480;canned vegetables;decimal
+77;DV499;other vegetable products;decimal
+78;DV491;dry legumes;decimal
+79;DV310;fruit without specification;decimal
+80;DV311;apples;decimal
+81;DV315;other pome fruits;decimal
+82;DV321;peaches;decimal
+83;DV323;cherries;decimal
+84;DV325;other stone fruits;decimal
+85;DV331;strawberries;decimal
+86;DV334;other berries;decimal
+87;DV337;grapes;decimal
+88;DV111;Beef;decimal
+89;DV112;Veal;decimal
+90;DV113;Pork meat;decimal
+91;DV115;Sheep or goat meat;decimal
+92;DV117;Game meat;decimal
+93;DV119;other meat;decimal
+94;DV120;Poultry meat;decimal
+95;DV141;Sausage;decimal
+96;DV145;Ham;decimal
+97;DV147;Bacon;decimal
+98;DV150;canned, frozen meat or meat products;decimal
+99;DV160;other meat products;decimal
+100;DV841;roasted coffee;decimal
+101;DV845;coffee extracts;decimal
+102;DV850;tea;decimal
+103;DV341;oranges, mandarins;decimal
+104;DV343;grapefruits;decimal
+105;DV344;other citrus fruits;decimal
+106;DV345;bananas;decimal
+107;DV346;other tropical fruits;decimal
+108;DV351;nuts;decimal
+109;DV357;dried fruit;decimal
+110;DV360;canned fruit;decimal
+111;DV370;frozen fruit;decimal
+112;DV390;other processed fruit;decimal
+113;DV131;all kinds of minced meat;decimal

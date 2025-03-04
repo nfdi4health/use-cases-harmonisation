@@ -1,33 +1,33 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
 1;ID;Participant identification number;integer;KORA_S1_P2;a_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S1_P2;acsex;direct_mapping;direct_mapping;;complete;identical
-3;AGE_BASE;Age at exposure measure;decimal;KORA_S1_P2;atalteru;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S1_P2;atalteru;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KORA_S1_P2;atbbild;direct_mapping;direct_mapping;;complete;identical
 5;EMPLOY;Employment;integer;KORA_S1_P2;atemploy;direct_mapping;direct_mapping;ai16, ai17, ai28 --> atemploy;complete;identical
 6;IMMIGRATION;Immigration background;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-7;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-8;TOT_PA_AC;Physical activity from accelerometry data;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-9;SMOKE_ST;Smoking status;integer;KORA_S1_P2;atcigsmk;direct_mapping;direct_mapping;smoking status with three categories;tentive;compatible
-10;TOBACCO_PY;Cumulative lifetime tobacco exposure;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
-11;TOBACCO_D;Amount of daily tobacco smoked;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
-12;AGE_SMOKE_QUIT;Age at time of quitting smoking;decimal;KORA_S1_P2;atstsalt;direct_mapping;direct_mapping;only for cigarettes;partial;identical
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+9;SMOKE_ST;Smoking status;integer;KORA_S1_P2;atcigsmk;direct_mapping;direct_mapping;;complete;identical
+10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
+11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;KORA_S1_P2;atstsalt;direct_mapping;direct_mapping;only for cigarettes;partial;identical
 13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 14;MENOPAUSE;Menopause status;integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
 15;HRT;Hormone replacement therapy;integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
-16;CONTRACEPTIVE;Use of contraceptive pills or injections;integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
-17;LIVE_BIRTHS;Number of live births given;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-18;AGE_FIRST_BIRTH;Age at the first given birth;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-19;TG;Triglycerides measured from blood samples;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-20;CHOL;Total cholesterol measured from blood samples;decimal;KORA_S1_P2;al_choln;direct_mapping;direct_mapping;;complete;identical
-21;LDL;LDL cholesterol measured from blood samples;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-22;HDL;HDL cholesterol measured from blood samples;decimal;KORA_S1_P2;al_hdln;direct_mapping;direct_mapping;;complete;identical
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
+17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;KORA_S1_P2;al_choln;direct_mapping;direct_mapping;;complete;identical
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;KORA_S1_P2;al_hdln;direct_mapping;direct_mapping;;complete;identical
 23;PREV_DIAB;History of diabetes;integer;KORA_S1_P2;prev_dm_16;direct_mapping;direct_mapping;;complete;identical
 24;PREV_HYP;History of hypertension;integer;KORA_S1_P2;athyact;direct_mapping;direct_mapping;;complete;identical
 25;PREV_CVD;History of cardiovascular disease;integer;KORA_S1_P2;atcvd;direct_mapping;direct_mapping;combination prev_mi_16 and prev_apo_16;complete;compatible
 26;PREV_CANCER;History of cancer;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;KORA_S1_P2;atmvcvd;direct_mapping;direct_mapping;atvinfa + atminfa + atvschl + atmschl --> atmvcvd;partial;identical
-28;FAM1_DIAB2;First degree family history of T2D;integer;KORA_S1_P2;atmvdiab;direct_mapping;direct_mapping;atvdiab + atmdiab --> atmvdiab;partial;identical
-29;FAM1_CANCER;First degree family history of cancer;integer;KORA_S1_P2;atmvca;direct_mapping;direct_mapping;only parents: atvca + atmca --> atmvca;partial;identical
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;KORA_S1_P2;atmvcvd;direct_mapping;direct_mapping;atvinfa + atminfa + atvschl + atmschl --> atmvcvd;complete;identical
+28;FAM1_DIAB2;First degree family history of T2D;integer;KORA_S1_P2;atmvdiab;direct_mapping;direct_mapping;atvdiab + atmdiab --> atmvdiab;complete;identical
+29;FAM1_CANCER;First degree family history of cancer;integer;KORA_S1_P2;atmvca;direct_mapping;direct_mapping;only parents: atvca + atmca --> atmvca;complete;identical
 30;DRE_SCREEN;Screening, DRE;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 32;FOBT_SCREEN;Screening, FOBT;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -38,44 +38,44 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 37;MED_STAT;Regular use of statins;integer;KORA_S1_P2;atmstati;direct_mapping;direct_mapping;;complete;identical
 38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 39;INC_CVD;CVD event during follow-up;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-40;AGE_CVD;Age at diagnosis of CVD;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+40;AGE_CVD;Age at diagnosis of CVD [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 41;INC_ANGINA;Angina pectoris event during follow-up;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-42;AGE_ANGINA;Age at diagnosis of angina pectoris;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+42;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 43;INC_MI;Myocardial infarction during follow-up;integer;KORA_S1_P2;inz_mi_16;direct_mapping;direct_mapping;but not only ICD-10: I21- also I22 - I25 and R96;complete;identical
-44;AGE_MI;Age at diagnosis of myocardial infarction;decimal;KORA_S1_P2;mi_alter_16;direct_mapping;direct_mapping;age at end of follow-up for myocardial infarction;complete;identical
+44;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;KORA_S1_P2;mi_alter_16;direct_mapping;direct_mapping;age at end of follow-up for myocardial infarction;complete;identical
 45;INC_STR;Stroke during follow-up;integer;KORA_S1_P2;inz_apo_16;direct_mapping;direct_mapping;validated incidence stroke (without TIA);complete;identical
-46;AGE_STR;Age at diagnosis of stroke;decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of follow-up for stroke;complete;identical
+46;AGE_STR;Age at diagnosis of stroke [years];decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of follow-up for stroke;complete;identical
 47;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;KORA_S1_P2;inz_apo_isc_16;direct_mapping;direct_mapping;validated incidence: inz_apo_16 = 1 (apo_typ_ 16 = 1, 2);complete;identical
-48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke);decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of ischaemic stroke;complete;identical
+48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of ischaemic stroke;complete;identical
 49;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;KORA_S1_P2;inz_apo_haem_16;direct_mapping;direct_mapping;validated incidence: inz_apo_16 = 1 (apo_typ_ 16 = 3, 4);complete;identical
-50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke;decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of follow-up for haemorrhagic stroke;complete;identical
+50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;KORA_S1_P2;apo_alter_16;direct_mapping;direct_mapping;age at end of follow-up for haemorrhagic stroke;complete;identical
 51;INC_HYP;Essential hypertension during follow-up;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-52;AGE_HYP;Age at diagnosis of essential hypertension;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+52;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 53;INC_HF;Heart failure during follow-up;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-54;AGE_HF;Age at diagnosis of heart failure;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+54;AGE_HF;Age at diagnosis of heart failure [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 55;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;KORA_S1_P2;inz_dm_16;direct_mapping;direct_mapping;;complete;identical
-56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2;decimal;KORA_S1_P2;dm_alter_16;direct_mapping;direct_mapping;;complete;identical
+56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;KORA_S1_P2;dm_alter_16;direct_mapping;direct_mapping;;complete;identical
 57;INC_CANCER;Cancer during follow-up;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18);integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-59;AGE_CANCER;Age at diagnosis of cancer;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+59;AGE_CANCER;Age at diagnosis of cancer [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 60;VITAL_ST;Vital status at the end of mortality follow-up;integer;KORA_S1_P2;t_all_16;direct_mapping;direct_mapping;;complete;identical
-61;AGE_DEATH;Age at time of death;decimal;KORA_S1_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
+61;AGE_DEATH;Age at time of death [years];decimal;KORA_S1_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
 62;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;KORA_S1_P2;t_cvd_16;direct_mapping;direct_mapping;;complete;identical
 63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;KORA_S1_P2;t_ca_16;direct_mapping;direct_mapping;;complete;identical
-64;AGE_FUP;Age at end of follow-up;decimal;KORA_S1_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
-65;BMI;Body Mass Index at baseline;decimal;KORA_S1_P2;atbmi;direct_mapping;direct_mapping;;complete;identical
-66;BMI_FUP;Body Mass Index at follow-up;decimal;KORA_S1_P2;k4tbmi;direct_mapping;direct_mapping;self-reported;proximate;tentative
+64;AGE_FUP;Age at end of follow-up [years];decimal;KORA_S1_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
+65;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S1_P2;atbmi;direct_mapping;direct_mapping;;complete;identical
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S1_P2;k4tbmi;direct_mapping;direct_mapping;self-reported;proximate;tentative
 67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-69;WAIST_FUP;Waist circumference at follow-up;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-70;WAIST;Waist circumference at baseline;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-71;HIP;Hip circumference at baseline;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-72;HIP_FUP;Hip circumference at follow-up;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-73;FMI_FUP;Fat mass index at follow-up;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-74;FMI;Fat mass index at baseline;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-75;BODY_FAT_FUP;Body fat precent at follow-up;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-76;BODY_FAT;Body fat precent at baseline;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+70;WAIST;Waist circumference at baseline [cm];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+71;HIP;Hip circumference at baseline [cm];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+74;FMI;Fat mass index at baseline  [kg/m²];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
+77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 78;ENERGY;Energy intake [kcal/d];decimal;KORA_S1_P2;akcal;direct_mapping;direct_mapping;;complete;identical
 79;CARB;Carbohydrate intake [g/d];decimal;KORA_S1_P2;akohle;direct_mapping;direct_mapping;;complete;identical
 80;PROT;Protein intake [g/d];decimal;KORA_S1_P2;aeiwei;direct_mapping;direct_mapping;;complete;identical
@@ -85,7 +85,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 84;SFA;Saturated fat intake [g/d];decimal;KORA_S1_P2;ages;direct_mapping;direct_mapping;;complete;identical
 85;MUFA;Monounsaturated fat intake [g/d];decimal;KORA_S1_P2;aeuf;direct_mapping;direct_mapping;;complete;identical
 86;PUFA;Polyunsaturated fat intake [g/d];decimal;KORA_S1_P2;amuf;direct_mapping;direct_mapping;;complete;identical
-87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S1_P2;akmd;direct_mapping;direct_mapping;;complete;identical
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;KORA_S1_P2;"akmosa; akdisa";operation;akmosa + akdisa;akmosa (monosaccharides) + akdisa (disaccharides);complete;compatible
 88;ADD_SUGARS;Added sugar intake [g/d];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 89;FREE_SUGARS;Free sugar intake [g/d];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 90;GLUC;Glucose intake [g/d];decimal;KORA_S1_P2;akmt;direct_mapping;direct_mapping;;complete;identical
@@ -109,7 +109,7 @@ AV499";"AV431 (cauliflower) + AV433 (other cabbage) + AV440 (leafy and stem vege
 AV451 (tomatoes) + AV455 (cucumbers) + AV459 (other fruit vegetables) + AV461 (onion vegetables) +  AV465 (carrots) +
 AV469 (other frsh vegetables) + AV470 (frzoen vegetables) + AV480 (canned vegetables) +
 AV499 (other vegetable products)";complete;compatible
-102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S1_P2;AV491;direct_mapping;direct_mapping;AV491 (dry legumes) ;complete;identical
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S1_P2;AV491;operation;AV491*2;double the amount of AV491 (dry legumes) to be comparable to other studies;complete;compatible
 103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KORA_S1_P2;"AV310; AV311; AV315;AV321; AV323;
 AV325; AV331; AV334; AV337; AV341;
 AV343; AV344; AV345; AV346; AV351;

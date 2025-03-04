@@ -1,4 +1,4 @@
-studyname = "LISA"
+studyname = ""
 
 dataschema1 <- list(Variables = tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1)),
                     Categories = tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2)))
@@ -36,7 +36,54 @@ comparison <- data_proc_elem_P1 %>% filter(dataschema_variable %in% common_varia
 comparison[,2] <- sort(common_variables)
 
 # Checking individual discrepancies
-variable = "CAKES_12"
+variable = ""
 
-data_proc_elem_P1%>% filter(dataschema_variable == variable)%>%select(input_variables)
-data_proc_elem_P2%>% filter(dataschema_variable == variable)%>%select(input_variables)
+data_proc_elem_P1%>% filter(dataschema_variable == variable)%>%select(`Mlstr_harmo::algorithm`)
+data_proc_elem_P2%>% filter(dataschema_variable == variable)%>%select(`Mlstr_harmo::algorithm`)
+
+
+# Checking DDs
+# Function to load Data Dictionary
+load_dd <- function(study_name, phase) {
+  file_path <- here("rmonize/data_dictionary", paste0("DD_", study_name, "_", phase, ".xlsx"))
+  
+  dd_var <- tibble(read_excel(file_path, sheet = 1))
+  dd_cat <- tibble(read_excel(file_path, sheet = 2))
+  
+  list(Variables = dd_var, Categories = dd_cat)
+}
+
+# Load P1 and P2 data dictionaries
+dd_p1 <- load_dd(studyname, "P1")
+dd_p2 <- load_dd(studyname, "P2")
+
+# Compare Variables based on name
+var_comparison <- dd_p1$Variables %>%
+  inner_join(dd_p2$Variables, by = "name", suffix = c("_p1", "_p2")) %>%
+  mutate(
+    label_match = label_p1 == label_p2,
+    valueType_match = valueType_p1 == valueType_p2
+  )
+
+# Compare Categories only where name matches in Variables
+# Get common variables between P1 and P2
+common_vars <- intersect(dd_p1$Categories$variable, dd_p2$Categories$variable)
+
+# Compare categories for each common variable
+category_comparison <- lapply(common_vars, function(var) {
+  cat_p1 <- dd_p1$Categories %>% filter(variable == var) %>% select(name, label)
+  cat_p2 <- dd_p2$Categories %>% filter(variable == var) %>% select(name, label)
+  
+  comparison <- full_join(cat_p1, cat_p2, by = "name", suffix = c("_p1", "_p2")) %>%
+    mutate(match = label_p1 == label_p2)
+  
+  list(variable = var, comparison = comparison)
+})
+
+# Print results
+for (res in category_comparison) {
+  print(paste("Variable:", res$variable))
+  print(res$comparison)
+}
+
+

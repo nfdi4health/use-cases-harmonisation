@@ -1,6 +1,5 @@
 variable;name;label;missings
 dcsex;1;male;
-dcsex;2;female;
 dtbbild;0;none;
 dtbbild;1;primary school completed;
 dtbbild;2;technical/professional school completed;
@@ -48,7 +47,10 @@ inz_apo_haem_16;0;no;
 inz_apo_haem_16;1;yes;
 dtmvcvd;0;no;
 dtmvcvd;1;yes;
+dtmvcvd;2;I don't know;
 dtmvdiab;0;no;
 dtmvdiab;1;yes;
+dtmvdiab;2;I don't know;
 dtmvca;0;no;
 dtmvca;1;yes;
+dtmvca;2;I don't know;
