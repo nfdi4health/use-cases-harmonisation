@@ -1,6 +1,5 @@
 variable;name;label;missings
 acsex;1;male;
-acsex;2;female;
 atbbild;0;none;
 atbbild;1;primary school completed;
 atbbild;2;technical/professional school completed;
@@ -44,7 +43,10 @@ atemploy;6;student;
 atemploy;7;other;
 atmvcvd;0;no;
 atmvcvd;1;yes;
+atmvcvd;2;I don't know;
 atmvdiab;0;no;
 atmvdiab;1;yes;
+atmvdiab;2;I don't know;
 atmvca;0;no;
 atmvca;1;yes;
+atmvca;2;I don't know;

@@ -1,11 +1,11 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
 1;ID;Participant identification number;integer;KORA_S3_P1;d_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S3_P1;dcsex;direct_mapping;direct_mapping;;complete;identical
-3;AGE_BASE;Age at exposure measure;decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KORA_S3_P1;dtbbild;direct_mapping;direct_mapping;;complete;identical
-5;TOT_PA_QX;Physical activity from questionnaire data;decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S3_P1;dtcigsmk;direct_mapping;direct_mapping;;complete;identical
-7;BMI;Body Mass Index at baseline;decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
+7;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;KORA_S3_P1;dkcal;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KORA_S3_P1;"DV410;
 DV420";operation;DV410 + DV420;"DV410 (potato) + DV420 (potato products)
@@ -31,7 +31,7 @@ DV459";operation;DV451 + DV455 + DV459;DV451 (Tomatoes) + DV455 (cucumbers) + DV
 19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KORA_S3_P1;DV461;direct_mapping;direct_mapping;DV461 (onion vegetables) ;complete;identical
 20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S3_P1;DV440;operation;0.5*DV440;DV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
-22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S3_P1;DV491;direct_mapping;direct_mapping;DV491 (dry legumes) ;complete;identical
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S3_P1;DV491;operation;DV491*2;double the amount of DV491 (dry legumes) to be comparable to other studies;complete;compatible
 23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KORA_S3_P1;"DV310; DV311; DV315; DV321; DV323;
 DV325; DV331; DV334; DV337; DV341;
@@ -191,7 +191,7 @@ DV160 (other meat products)";complete;compatible
 69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;KORA_S3_P1;"DV180; DV190";operation;DV180 + DV190;DV180 (canned fish) + DV190 (other fish products);complete;compatible
 71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;KORA_S3_P1;"DV250; DV255";operation;DV250 + DV255;DV250 (fresh eggs) + DV255 (egg products);complete;compatible
-72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S3_P1;DV255;direct_mapping;direct_mapping;DV255 (egg products);complete;identical
+72;EGGS_0901;Intake of eggs [g/d];decimal;KORA_S3_P1;DV250;direct_mapping;direct_mapping;DV250 (fresh eggs);complete;identical
 73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KORA_S3_P1;"DV270; DV291; DV293; DV295";operation;DV270 + DV291 + DV293 + DV295;"DV270 (butter) + 
 DV291 (margarines) + 
 DV293 (vegetable edible oils) + 
