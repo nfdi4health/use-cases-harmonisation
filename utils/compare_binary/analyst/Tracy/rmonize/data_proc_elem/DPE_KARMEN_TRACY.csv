@@ -4,7 +4,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;AGE_BASE;Age at exposure measure [years];decimal;;Alter_BE;direct_mapping;direct_mapping;;complete;identical
 ;EDU_LEVEL;Education;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
-;SMOKE_ST;Smoking status;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;SMOKE_ST;Smoking status;integer;;__BLANK__;paste;4;"all included participants are current non-smokers; no information available on former smoking";partial;compatible
 ;EMPLOY;Employment;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;IMMIGRATION;Immigration background;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
