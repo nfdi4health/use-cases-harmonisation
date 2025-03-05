@@ -31,8 +31,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;MELANOMA_SCREEN;Screening, skin cancer;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;MAMMO_SCREEN;Screening, mammography;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;CERVICAL_SCREEN;Screening cervical, smear test;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
-;MED_STAT;Regular use of statins;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;MED_STAT;Regular use of statins;integer;;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
 ;INC_CVD;CVD event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
 ;AGE_CVD;Age at diagnosis of CVD [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
 ;INC_ANGINA;Angina pectoris event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
