@@ -18,8 +18,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;impossible;impossible;impossible;;impossible;unavailable
 ;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;PREV_DIAB;History of diabetes;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-;PREV_HYP;History of hypertension;integer;;__BLANK__;paste;0;new variable could be created coded =0 for all participants;complete;compatible
-;PREV_CVD;History of cardiovascular disease;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_HYP;History of hypertension;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of hypertension; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_CVD;History of cardiovascular disease;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of CVD; new variable could be created coded =0 for all participants";complete;compatible
 ;PREV_CANCER;History of cancer;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of cancer; new variable could be created coded =0 for all participants";complete;compatible
 ;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;FAM1_DIAB2;First degree family history of T2D;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
