@@ -1,45 +1,45 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
-;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;;Kart_sum_NCI;direct_mapping;direct_mapping;in this case, this combined group only consists of potatoes and no other tubers;partial;tentative
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;;Kart_sum_NCI;direct_mapping;direct_mapping;does not contain other tubers than potatoes;partial;tentative
 ;POTATOES_0101;Potato intake [g/d];decimal;;Kart_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;VEGETABLES_02;Vegetable intake [g/d];decimal;;Gem02_1;direct_mapping;direct_mapping;;complete;identical
+;VEGETABLES_02;Vegetable intake [g/d];decimal;;Gem02_1_NCI;direct_mapping;direct_mapping;;complete;identical
 ;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;MUSHROOMS_0205;Mushroom intake [g/d];decimal;;Gem02_2;direct_mapping;direct_mapping;;complete;identical
+;MUSHROOMS_0205;Mushroom intake [g/d];decimal;;Gem02_2_NCI;direct_mapping;direct_mapping;;complete;identical
 ;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;;Gem02_Hu;direct_mapping;direct_mapping;;complete;identical
+;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;;Gem02_Hu_NCI;direct_mapping;direct_mapping;;complete;identical
 ;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;Obst_sum;direct_mapping;direct_mapping;;complete;identical
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;Obst_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;FRUITS_0401;Intake of fresh fruits [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;;Nusa_sum;direct_mapping;direct_mapping;;complete;identical
+;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;;Nusa_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;OLIVES_0404;Intake of olives [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;;Milc_sum;direct_mapping;direct_mapping;;complete;identical
-;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;;Milc07_1;operation;tba;Would it be possible to calculate % of milk intake from the group Milc07_1? ;complete;identical
-;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;;impossible;impossible;impossible;"Zu geringe Anzahl an Konsumenten für Berechnung via NCI-Methode (Recall1: n=2; Recall2: n=3) ";impossible;unavailable
+;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;;Milc_sum_NCI;direct_mapping;direct_mapping;;complete;identical
+;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;;milk_NCI;direct_mapping;direct_mapping;;complete;identical
+;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;;milkbased_bev_NCI;direct_mapping;direct_mapping;;complete;identical
 ;YOGURT_0503;Intake of fermented milk products [g/d];decimal;;Fermented_milk_NCI;direct_mapping;direct_mapping;;complete;identical
-;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;;Milc07_2;operation;tba;Would it be possible to calculate % of cheese curd, quark and cottage intake from the group Milc07_2?;complete;identical
-;CHEESE_0505;Intake of cheese [g/d];decimal;;Milc07_2;operation;tba;Would it be possible to calculate % of cheese intake from the group Milc07_2?;complete;identical
-;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;;Sues13_6;direct_mapping;direct_mapping;;complete;identical
+;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;;quark_curd_NCI;direct_mapping;direct_mapping;;complete;identical
+;CHEESE_0505;Intake of cheese [g/d];decimal;;cheeses_NCI;direct_mapping;direct_mapping;;complete;identical
+;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;;Sues13_6_NCI;direct_mapping;direct_mapping;;complete;identical
 ;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;;Brot_sum;direct_mapping;direct_mapping;;complete;identical
+;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;;Brot_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;;Flours_milled_prod_NCI;direct_mapping;direct_mapping;;complete;identical
 ;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;;Pasta_rice_NCI;direct_mapping;direct_mapping;;complete;identical
-;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;;Brot01_1;direct_mapping;direct_mapping;;complete;identical
+;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;;Brot01_1_NCI;direct_mapping;direct_mapping;;complete;identical
 ;BREAD_060301;Intake of bread [g/d];decimal;;Bread_NCI;direct_mapping;direct_mapping;;complete;identical
 ;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;;Crispbread_NCI;direct_mapping;direct_mapping;;complete;identical
 ;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;;Breakfast_cereals_NCI;direct_mapping;direct_mapping;;complete;identical
 ;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;;Crackers_NCI;direct_mapping;direct_mapping;;complete;identical
 ;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;;Fine_bakery_NCI;direct_mapping;direct_mapping;;complete;identical
-;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;;Flei_sum;direct_mapping;direct_mapping;;complete;identical
+;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;;Flei_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;VEAL_070102;Intake of calf fresh meat [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
@@ -55,51 +55,51 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;GOOSE_070204;Intake of goose meat [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;RABBIT_070205;Intake of rabbit meat [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;GAME_0703;Intake of game [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;;Flei_Wurst;direct_mapping;direct_mapping;;complete;identical
+;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;;Flei_Wurst_NCI;direct_mapping;direct_mapping;;complete;identical
 ;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;;Fish_sum;direct_mapping;direct_mapping;;complete;identical
+;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;;Fish_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;FISH_0801;Intake of fish (meat) [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;FISH_PROD_0803;Intake of processed fish [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;;Eier_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;EGGS_0901;Intake of eggs [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;;Fett_sum;direct_mapping;direct_mapping;;complete;identical
+;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;;Fett_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;;veg_fatsoils_NCI;direct_mapping;direct_mapping;;complete;identical
 ;BUTTER_1002;Intake of butter [g/d];decimal;;Butter_NCI;direct_mapping;direct_mapping;;complete;identical
 ;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;;Marg_Streichf_NCI;direct_mapping;direct_mapping;;complete;identical
 ;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;;Animal_fatsoils_NCI;direct_mapping;direct_mapping;;complete;identical
-;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;;Sues_sum;direct_mapping;direct_mapping;;complete;identical
+;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;;Sues_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;;Sues13_1;operation;0.5 * Sues13_1;;partial;tentative
-;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;;Sues13_1;operation;0.5 * Sues13_1;;partial;tentative
+;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;;chocolate_sweets_NCI;direct_mapping;direct_mapping;;complete;identical
+;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;;nonchoc_sweets_NCI;direct_mapping;direct_mapping;;complete;identical
 ;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;;Sues13_2;direct_mapping;direct_mapping;;complete;identical
+;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;;Sues13_2_NCI;direct_mapping;direct_mapping;;complete;identical
 ;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;SORBET_110502;Sorbet intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;;Cakes_NCI;direct_mapping;direct_mapping;;complete;identical
 ;VARPASTRY_1201;Intake of various pastry [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;;Getr15_1;direct_mapping;direct_mapping;;complete;identical
-;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;;Getr15_14;direct_mapping;direct_mapping;;complete;identical
-;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;;Getr15_16;direct_mapping;direct_mapping;;complete;identical
-;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;;"Getr15_12;Getr15_13";operation;Getr15_12 + Getr15_13;;complete;compatible
-;COFFEE_130301;Coffee intake [g/d];decimal;;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of coffee drinkers? Does 50% make sense?;partial;tentative
-;TEA_130302;Tea intake [g/d];decimal;;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of tea drinkers? Does 50% make sense?;partial;tentative
-;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;;Getr15_13;direct_mapping;direct_mapping;;complete;identical
+;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;;Getr15_1_NCI;direct_mapping;direct_mapping;;complete;identical
+;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;;Getr15_14_NCI;direct_mapping;direct_mapping;;complete;identical
+;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;;Getr15_16_NCI;direct_mapping;direct_mapping;;complete;identical
+;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;;"Kaffee_NCI;blackgreentea_NCI;Getr15_13_NCI";operation;Kaffee_NCI+blackgreentea_NCI+Getr15_13_NCI;;complete;compatible
+;COFFEE_130301;Coffee intake [g/d];decimal;;Kaffee_NCI;direct_mapping;direct_mapping;;complete;identical
+;TEA_130302;Tea intake [g/d];decimal;;blackgreentea_NCI;direct_mapping;direct_mapping;;complete;identical
+;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;;Getr15_13_NCI;direct_mapping;direct_mapping;;complete;identical
 ;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;WATER_1304;Intake of water and water-based beverages [g/d];decimal;;Getr15_11;direct_mapping;direct_mapping;;complete;identical
-;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;;Getr15_2;direct_mapping;direct_mapping;;complete;identical
-;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;;Getr15_22;direct_mapping;direct_mapping;;complete;identical
+;WATER_1304;Intake of water and water-based beverages [g/d];decimal;;Getr15_11_NCI;direct_mapping;direct_mapping;;complete;identical
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;;Getr15_2_NCI;direct_mapping;direct_mapping;;complete;identical
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;;Getr15_22_NCI;direct_mapping;direct_mapping;;complete;identical
 ;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;;Getr15_21;direct_mapping;direct_mapping;;complete;identical
-;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;;Getr15_23;direct_mapping;direct_mapping;;complete;identical
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;;Getr15_21_NCI;direct_mapping;direct_mapping;;complete;identical
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;;Getr15_23_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
 ;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;;Getr15_24;direct_mapping;direct_mapping;;complete;identical
-;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;;Sose_sum;direct_mapping;direct_mapping;;complete;identical
+;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;;Getr15_24_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
+;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;;Sose_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;SAUCES_1501;Intake of savoury sauces [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;DRESSINGS_150102;Dressing intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
@@ -108,14 +108,14 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;YEAST_1502;Intake of yeast cultures [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;CONDIMENTS_1504;Condiments intake [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;;Supp_sum;direct_mapping;direct_mapping;;complete;identical
+;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;;Supp_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;SOUP_1601;Intake of soups [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;;Sonst_sum;direct_mapping;direct_mapping;;complete;identical
+;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;;Sonst_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 ;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;;Veg_products_NCI;direct_mapping;direct_mapping;;complete;identical
 ;SOY_PROD_1701;Intake of soy products [g/d];decimal;;Soyproducts_NCI;direct_mapping;direct_mapping;;complete;identical
 ;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;;Suessstoffe;direct_mapping;direct_mapping;;complete;identical
+;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;;Suessstoffe_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
 ;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;;impossible;impossible;impossible;;impossible;unavailable
-;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;;__BLANK__;paste;2;2 (24HDR);complete;identical
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;;__BLANK__;paste;2;2 (24HDR) NCI method;complete;identical
