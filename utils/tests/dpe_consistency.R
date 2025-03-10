@@ -1,3 +1,7 @@
+library(dplyr)
+library(here)
+library(readxl)
+
 studyname = ""
 
 dataschema1 <- list(Variables = tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1)),
@@ -30,16 +34,24 @@ data_proc_elem_P2[,1:4] == dataschema2$Variables[,1:4]
 # Comparing common variables in P1 and P2
 common_variables <- intersect(data_proc_elem_P1$dataschema_variable, data_proc_elem_P2$dataschema_variable)
 
-comparison <- data_proc_elem_P1 %>% filter(dataschema_variable %in% common_variables)  %>% arrange(dataschema_variable)==
-  data_proc_elem_P2 %>% filter(dataschema_variable %in% common_variables) %>% arrange(dataschema_variable)
+comparison <- data_proc_elem_P1 %>%
+  filter(dataschema_variable %in% common_variables)  %>%
+  arrange(dataschema_variable) == data_proc_elem_P2 %>%
+  filter(dataschema_variable %in% common_variables) %>%
+  arrange(dataschema_variable)
 
 comparison[,2] <- sort(common_variables)
 
 # Checking individual discrepancies
 variable = ""
 
-data_proc_elem_P1%>% filter(dataschema_variable == variable)%>%select(`Mlstr_harmo::algorithm`)
-data_proc_elem_P2%>% filter(dataschema_variable == variable)%>%select(`Mlstr_harmo::algorithm`)
+data_proc_elem_P1 %>%
+  filter(dataschema_variable == variable) %>%
+  select(`Mlstr_harmo::algorithm`)
+
+data_proc_elem_P2 %>%
+  filter(dataschema_variable == variable) %>%
+  select(`Mlstr_harmo::algorithm`)
 
 
 # Checking DDs
