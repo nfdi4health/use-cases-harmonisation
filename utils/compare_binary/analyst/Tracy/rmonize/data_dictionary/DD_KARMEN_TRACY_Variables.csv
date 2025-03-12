@@ -1,5 +1,5 @@
 index;name;label;valueType
-;id;ID of the participant;integer
+;id;ID;integer
 ;Geschlecht;Sex;integer
 ;Alter_BE;Age at blood sampling;decimal
 ;IPAQ_MET_Total;IPAQ_MET_Total;decimal

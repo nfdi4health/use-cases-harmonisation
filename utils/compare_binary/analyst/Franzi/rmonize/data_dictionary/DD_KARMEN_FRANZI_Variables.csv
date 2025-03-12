@@ -1,51 +1,55 @@
 index;name;label;valueType
-;Kart_sum_NCI;Potatoes and potato products (incl. Fresh potatoes, heated and processed products like French fries, potato pancakes, potato chips);decimal
-;Gem02_1;Vegetables and vegetable products;decimal
-;Gem02_2;Mushrooms;decimal
-;Gem02_Hu;"Legumes/Pulses (incl. lentils, chickpeas, green peas, white/broad beans, kidney/soy beans; exception: green beans; incl. canned pulses and as sauce)";decimal
-;Obst_sum;Fruit and fruit products (without juice) including unsweetened frozen fruit, fruit sauces and processed products like sweetened or heated fruit, canned fruit, dried fruit;decimal
-;Nusa_sum;Nuts and seeds (Hazelnuts, peanuts, almonds etc. or processed products like peanut butter, salted or roasted nuts);decimal
-;Milc_sum;Total Dairy incl. milk and dairy products, cheese and curd cheese (incl. variants from goat, sheep);decimal
-;Milc07_1;Milk and dairy products including cocoa drinks, milkshakes, yoghurt, (sour) cream, buttermilk, kefir, whey, milk powder;decimal
-;Fermented_milk_NCI;Fermented milk products;decimal
-;Milc07_2;Cheese and curd cheese;decimal
-;Sues13_6;Creams and desserts including pudding, semolina, tiramisu;decimal
-;Brot_sum;Sum of Wholemeal bread/rolls, White, brown or multigrain bread/rolls, Cereals and cereal products, Pastries;decimal
-;Flours_milled_prod_NCI;Flours, milled products;decimal
-;Pasta_rice_NCI;Pasta, rice;decimal
-;Brot01_1;Sum of Wholemeal bread/rolls, White, brown or multigrain bread/rolls (incl. Crisp bread);decimal
-;Bread_NCI;Bread;decimal
-;Crispbread_NCI;Crispbread;decimal
-;Breakfast_cereals_NCI;Breakfast cereals;decimal
-;Crackers_NCI;Crackers, breadsticks;decimal
-;Fine_bakery_NCI;Fine bakery wares;decimal
-;Flei_sum;Sum of meat and meat products unsmoked (including roast, goulash, schnitzel, beef olive, minced meat, meat balls, ground meat sauce) & sausages and meat products smoked (including salami, liver sausage, ham, bacon, cured pork, meat loaf, bratwurst);decimal
-;Flei_Wurst;Sausages and meat products smoked including salami, liver sausage, ham, bacon, cured pork, meat loaf, bratwurst;decimal
-;Fish_sum;Fish and fish products including salt- and freshwater fish, shrimps, mussels, snails, processed products like caviar, tinned fish;decimal
-;Eier_sum_NCI;Eggs and egg products including scrambled, fried and boiled eggs, omelets, soufflé;decimal
-;Fett_sum;fats & oils (excl: in salad dressings) - incl. Animal-based fats, plant-based fats and not specified fats/öls;decimal
-;veg_fatsoils_NCI;Vegetable fats and oils;decimal
-;Butter_NCI;Butter;decimal
-;Marg_Streichf_NCI;Margarine and similar;decimal
-;Animal_fatsoils_NCI;Animal fats excluding butter, fish oil;decimal
-;Sues_sum;Sweets (sum);decimal
-;Sues13_1;Sweets including sweets with chocolate, confectionaries, candies, fruit gums, cereal bars;decimal
-;Sues13_2;Ice cream;decimal
-;Cakes_NCI;Cakes;decimal
-;Getr15_1;non-alcoholic beverages (sum);decimal
-;Getr15_14;Fruit juices/nectars (incl. Spritzer) - excl. vegetable juices;decimal
-;Getr15_16;Soft drinks e.g. lemonades, bitter lemon (incl. low-calorie drinks);decimal
-;Getr15_11;Water;decimal
-;Getr15_12;Coffee + Tea (black/green);decimal
-;Getr15_13;Herbal/fruit tea;decimal
-;Getr15_2;Alcoholic beverages (sum);decimal
-;Getr15_22;Wine and sparkling wine;decimal
-;Getr15_21;Beer including mixed beer drinks;decimal
-;Getr15_23;spirits incl. schnapps, liqueurs;decimal
-;Getr15_24;Other alcoholic beverages e.g. alcopops, cocktails;decimal
-;Sose_sum;"Sauces including warm and cold sauces (e.g. ketchup, salad dressing), mustard, vinegar etc.; exceptions: fruit-, vegetable-, ground meat sauce";decimal
-;Supp_sum;Soups without stews;decimal
-;Sonst_sum;Milk substitutes (e.g. soy products (milk, yoghurt, cheese), coconut-, rice-, oat-, almond milk, cereal milk with soy), meat substitutes (e.g. tofu, tempeh, soy protein, vegetarian sausages), cereal substitutes (e.g. soy flour/flakes, lupines), sweeteners, sugar substitutes, beverage powders/ -granules (e.g. cocoa powder, lemonade powder), herbs, spices, vegetarian spreads, protein powder, yeast, miso;decimal
-;Veg_products_NCI;Vegetarian products;decimal
-;Soyproducts_NCI;Soyproducts;decimal
-;Suessstoffe;table sweeteners (low/no caloric sweeteners) (excl. Stevia);decimal
+1;Kart_sum_NCI;Potatoes and potato products (incl. Fresh potatoes, heated and processed products like French fries, potato pancakes, potato chips);decimal
+2;Gem02_1_NCI;Vegetables and vegetable products;decimal
+3;Gem02_2_NCI;Mushrooms;decimal
+4;Gem02_Hu_NCI;"Legumes/Pulses (incl. lentils, chickpeas, green peas, white/broad beans, kidney/soy beans; exception: green beans; incl. canned pulses and as sauce)";decimal
+5;Obst_sum_NCI;Fruit and fruit products (without juice) including unsweetened frozen fruit, fruit sauces and processed products like sweetened or heated fruit, canned fruit, dried fruit;decimal
+6;Nusa_sum_NCI;Nuts and seeds (Hazelnuts, peanuts, almonds etc. or processed products like peanut butter, salted or roasted nuts);decimal
+7;Milc_sum_NCI;Total Dairy incl. milk and dairy products, cheese and curd cheese (incl. variants from goat, sheep);decimal
+8;milk_NCI;Milk;decimal
+9;milkbased_bev_NCI;milk-based beverages incl. cocoa drinks, milkshakes;decimal
+10;Fermented_milk_NCI;Fermented milk products;decimal
+11;quark_curd_NCI;quark and curd cheese;decimal
+12;cheeses_NCI;Cheese;decimal
+13;Sues13_6_NCI;Creams and desserts including pudding, semolina, tiramisu;decimal
+14;Brot_sum_NCI;Sum of whole grain bread/rolls, White, brown or multigrain bread/rolls, Cereals and cereal products, Pastries;decimal
+15;Flours_milled_prod_NCI;Flours, milled products;decimal
+16;Pasta_rice_NCI;Pasta, rice;decimal
+17;Brot01_1_NCI;Sum of Wholemeal bread/rolls, White, brown or multigrain bread/rolls (incl. Crisp bread);decimal
+18;Bread_NCI;Bread;decimal
+19;Crispbread_NCI;Crispbread;decimal
+20;Breakfast_cereals_NCI;Breakfast cereals;decimal
+21;Crackers_NCI;Crackers, breadsticks;decimal
+22;Fine_bakery_NCI;Fine bakery wares;decimal
+23;Flei_sum_NCI;Sum of meat and meat products unsmoked (including roast, goulash, schnitzel, beef olive, minced meat, meat balls, ground meat sauce) & sausages and meat products smoked (including salami, liver sausage, ham, bacon, cured pork, meat loaf, bratwurst);decimal
+24;Flei_Wurst_NCI;Sausages and meat products smoked including salami, liver sausage, ham, bacon, cured pork, meat loaf, bratwurst;decimal
+25;Fish_sum_NCI;Fish and fish products including salt- and freshwater fish, shrimps, mussels, snails, processed products like caviar, tinned fish;decimal
+26;Eier_sum_NCI;Eggs and egg products including scrambled, fried and boiled eggs, omelets, soufflé;decimal
+27;Fett_sum_NCI;fats & oils (excl: in salad dressings) - incl. Animal-based fats, plant-based fats and not specified fats/oils;decimal
+28;veg_fatsoils_NCI;Vegetable fats and oils;decimal
+29;Butter_NCI;Butter;decimal
+30;Marg_Streichf_NCI;Margarine and similar;decimal
+31;Animal_fatsoils_NCI;Animal fats excluding butter, fish oil;decimal
+32;Sues_sum_NCI;Sweets (sum);decimal
+33;chocolate_sweets_NCI;Sweets including chocolate, sweets with chocolate coating, confectioneries with chocolate;decimal
+34;nonchoc_sweets_NCI;Sweets without chocolate such as  candies, fruit gums, cereal bars;decimal
+35;Sues13_2_NCI;Ice cream;decimal
+36;Cakes_NCI;Cakes;decimal
+37;Getr15_1_NCI;non-alcoholic beverages (sum);decimal
+38;Getr15_14_NCI;Fruit juices/nectars (incl. Spritzer) - excl. vegetable juices;decimal
+39;Getr15_16_NCI;Soft drinks e.g. lemonades, bitter lemon (incl. low-calorie drinks);decimal
+40;Getr15_11_NCI;Water;decimal
+41;blackgreentea_NCI;black and green tea;decimal
+42;Kaffee_NCI;coffee;decimal
+43;Getr15_13_NCI;Herbal/fruit tea;decimal
+44;Getr15_2_NCI;Alcoholic beverages (sum);decimal
+45;Getr15_22_NCI;Wine and sparkling wine;decimal
+46;Getr15_21_NCI;Beer including mixed beer drinks;decimal
+47;Getr15_23_MW;spirits incl. schnaps, liqueurs;decimal
+48;Getr15_24_MW;Other alcoholic beverages e.g. alcopops, cocktails;decimal
+49;Sose_sum_NCI;"Sauces including warm and cold sauces (e.g. ketchup, salad dressing), mustard, vinegar etc.; exceptions: fruit-, vegetable-, ground meat sauce";decimal
+50;Supp_sum_NCI;Soups without stews;decimal
+51;Sonst_sum_NCI;Milk substitutes (e.g. soy products (milk, yoghurt, cheese), coconut-, rice-, oat-, almond milk, cereal milk with soy), meat substitutes (e.g. tofu, tempeh, soy protein, vegetarian sausages), cereal substitutes (e.g. soy flour/flakes, lupines), sweeteners, sugar substitutes, beverage powders/ -granules (e.g. cocoa powder, lemonade powder), herbs, spices, vegetarian spreads, protein powder, yeast, miso;decimal
+52;Veg_products_NCI;Vegetarian products;decimal
+53;Soyproducts_NCI;Soyproducts;decimal
+54;Suessstoffe_MW;table sweeteners (low/no caloric sweeteners) (excl. Stevia);decimal

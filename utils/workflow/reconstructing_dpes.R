@@ -15,9 +15,9 @@ dataschema_p2 <- list(Variables =  tibble::tibble(readxl::read_excel(here::here(
 
 # 1. Create DPE P1 and DPE P2 ----
 ## 1.1 Load individual DPEs for Tracy, Ines, Franzi ----
-dpe_tracy <- readxl::read_excel(here::here(paste0("analyst/Tracy/DPE_", studyname, "_TRACY.xlsx")), sheet = 1)
-dpe_ines <- readxl::read_excel(here::here(paste0("analyst/Ines/DPE_", studyname, "_INES.xlsx")), sheet = 1)
-dpe_franzi <- readxl::read_excel(here::here(paste0("analyst/Franzi/DPE_", studyname, "_FRANZI.xlsx")), sheet = 1)
+dpe_tracy <- readxl::read_excel(here::here(paste0("analyst/Tracy/rmonize/data_proc_elem/DPE_", studyname, "_TRACY.xlsx")), sheet = 1)
+dpe_ines <- readxl::read_excel(here::here(paste0("analyst/Ines/rmonize/data_proc_elem/DPE_", studyname, "_INES.xlsx")), sheet = 1)
+dpe_franzi <- readxl::read_excel(here::here(paste0("analyst/Franzi/rmonize/data_proc_elem/DPE_", studyname, "_FRANZI.xlsx")), sheet = 1)
 
 ## 1.2 Combine individual DPEs into one ----
 combined_dpe <- bind_rows(dpe_tracy, dpe_ines, dpe_franzi)
@@ -44,24 +44,24 @@ writexl::write_xlsx(dpe_p2, paste0("rmonize/data_proc_elem/DPE_", studyname, "_P
 # 2. Create DD P1 and DD P2 ----
 ## 2.1 Load individual DDs for Tracy, Ines, Franzi ----
 ### 2.1.1 Tracy ----
-dd_tracy <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Tracy/", paste0("DD_",studyname, "_TRACY.xlsx")), sheet = 1)),
-     Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Tracy/", paste0("DD_",studyname, "_TRACY.xlsx")), sheet = 2)))
+dd_tracy <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Tracy/rmonize/data_dictionary/", paste0("DD_",studyname, "_TRACY.xlsx")), sheet = 1)),
+     Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Tracy/rmonize/data_dictionary/", paste0("DD_",studyname, "_TRACY.xlsx")), sheet = 2)))
 
 dd_tracy$Categories$variable <- as.character(dd_tracy$Categories$variable)
 dd_tracy$Categories$name <- as.numeric(dd_tracy$Categories$name)
 dd_tracy$Categories$label <- as.character(dd_tracy$Categories$label)
 
 ### 2.1.2 Ines ----
-dd_ines <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Ines/", paste0("DD_",studyname, "_INES.xlsx")), sheet = 1)),
-                Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Ines/", paste0("DD_",studyname, "_INES.xlsx")), sheet = 2)))
+dd_ines <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Ines/rmonize/data_dictionary/", paste0("DD_",studyname, "_INES.xlsx")), sheet = 1)),
+                Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Ines/rmonize/data_dictionary/", paste0("DD_",studyname, "_INES.xlsx")), sheet = 2)))
 
 dd_ines$Categories$variable <- as.character(dd_ines$Categories$variable)
 dd_ines$Categories$name <- as.numeric(dd_ines$Categories$name)
 dd_ines$Categories$label <- as.character(dd_ines$Categories$label)
 
 ### 2.1.3 Franzi ----
-dd_franzi <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Franzi/", paste0("DD_",studyname, "_FRANZI.xlsx")), sheet = 1)),
-                Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Franzi/", paste0("DD_",studyname, "_FRANZI.xlsx")), sheet = 2)))
+dd_franzi <-list(Variables = tibble::tibble(readxl::read_excel(here::here("analyst/Franzi/rmonize/data_dictionary/", paste0("DD_",studyname, "_FRANZI.xlsx")), sheet = 1)),
+                Categories = tibble::tibble(readxl::read_excel(here::here("analyst/Franzi/rmonize/data_dictionary/", paste0("DD_",studyname, "_FRANZI.xlsx")), sheet = 2)))
 
 dd_franzi$Categories$variable <- as.character(dd_franzi$Categories$variable)
 dd_franzi$Categories$name <- as.numeric(dd_franzi$Categories$name)
