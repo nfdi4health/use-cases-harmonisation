@@ -17,7 +17,7 @@ colnames(existing_files) <- "files"
 wanted_files <- existing_files |> 
   filter(str_detect(files, paste(plot_studies, collapse = "|"))) |> 
   filter(str_detect(files, paste(pilot_project, collapse = "|")))
-  
+
 #### Step 2: Create data.frame for ggplot
 
 temp_df <- data.frame()
@@ -109,27 +109,42 @@ rm(df_list,
 
 #### Step 3: Create ggplot figures
 variable_groups <- readxl::read_excel(here::here("utils/plots/", "Variable_Groups.xlsx"), sheet = 1) |> 
-  select(c("name", "group"))
-colnames(variable_groups) <- c("dataschema_variable", "group")
+  select(-c("label"))
+colnames(variable_groups) <- c("dataschema_variable", "group", "xmin", "xmax", "ymin", "ymax")
 
 data_for_plot <- left_join(comparison_object, variable_groups, by = "dataschema_variable")
 
-## Across Pilot-Project
-plot <- data_for_plot |> 
-  pivot_longer(!(c(dataschema_variable, group)), names_to = "Study", values_to = "Status") |> 
-  group_by(Study, Status) |> 
-  summarise(Variables = n()) |> 
-  ggplot(aes(fill = Status, x = Study, y = Variables)) +
-  geom_bar(position = "stack", stat = "identity")
+data_for_plot <- within(data_for_plot, KARMEN[KARMEN == "compatible"] <- "complete") 
+data_for_plot <- within(data_for_plot, KORA_S1[KORA_S1 == "proximate"] <- "partial") 
+data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "partial") 
 
 ## Across variable domain
+plot <- data_for_plot |> 
+  filter(dataschema_variable != "ID") |> 
+  mutate(Score = (case_when(GINI == "impossible" ~ 0,
+                           GINI == "partial" ~ 0.5,
+                           GINI == "complete" ~ 1) +
+           case_when(LISA == "impossible" ~ 0,
+                     LISA == "partial" ~ 0.5,
+                     LISA == "complete" ~ 1) + 
+           case_when(KORA_S1 == "impossible" ~ 0,
+                     KORA_S1 == "partial" ~ 0.5,
+                     KORA_S1 == "complete" ~ 1) + 
+           case_when(KORA_S3 == "impossible" ~ 0,
+                     KORA_S3 == "partial" ~ 0.5,
+                     KORA_S3 == "complete" ~ 1) + 
+           case_when(KARMEN == "impossible" ~ 0,
+                     KARMEN == "partial" ~ 0.5,
+                     KARMEN == "complete" ~ 1)) / 5)
+
+
 
 
 
 # Interpolation smooths the surface & is most helpful when rendering images.
 #### documentation 
-ggplot(faithfuld, aes(waiting, eruptions)) +
-  geom_raster(aes(fill = density), interpolate = TRUE)
+ggplot(plot, aes(x = xmin, y = ymin)) +
+  geom_tile(aes(fill = Score), colour = "grey")
 
 
 #### Step 4: Save figures in a folder
