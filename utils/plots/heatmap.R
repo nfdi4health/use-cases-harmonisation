@@ -1,6 +1,8 @@
 
 library(tidyverse)
 library(readxl)
+library(treemapify)
+library(paletteer)
 
 
 plot_studies <- c("KORA",
@@ -135,7 +137,8 @@ plot <- data_for_plot |>
                      KORA_S3 == "complete" ~ 1) + 
            case_when(KARMEN == "impossible" ~ 0,
                      KARMEN == "partial" ~ 0.5,
-                     KARMEN == "complete" ~ 1)) / 5)
+                     KARMEN == "complete" ~ 1)) / 5) |> 
+  mutate(Number = 1)
 
 
 
@@ -143,8 +146,17 @@ plot <- data_for_plot |>
 
 # Interpolation smooths the surface & is most helpful when rendering images.
 #### documentation 
-ggplot(plot, aes(x = xmin, y = ymin)) +
-  geom_tile(aes(fill = Score), colour = "grey")
+ggplot(plot, aes(area = Number, fill = Score, label = dataschema_variable,
+                subgroup = group)) +
+  geom_treemap() +
+  scale_fill_paletteer_c("pals::coolwarm") +
+  geom_treemap_subgroup_border() +
+  geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.5, colour =
+                               "black", fontface = "italic", min.size = 0) +
+  geom_treemap_text(colour = "white", place = "topleft", reflow = T)
+
+
+ggsave(filename = here::here("utils/plots/figures", "Heatmap.png"))
 
 
 #### Step 4: Save figures in a folder

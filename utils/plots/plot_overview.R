@@ -1,6 +1,7 @@
 
 library(tidyverse)
 library(readxl)
+library(paletteer)
 
 
 plot_studies <- c("KORA",
@@ -17,7 +18,7 @@ colnames(existing_files) <- "files"
 wanted_files <- existing_files |> 
   filter(str_detect(files, paste(plot_studies, collapse = "|"))) |> 
   filter(str_detect(files, paste(pilot_project, collapse = "|")))
-  
+
 #### Step 2: Create data.frame for ggplot
 
 temp_df <- data.frame()
@@ -109,27 +110,50 @@ rm(df_list,
 
 #### Step 3: Create ggplot figures
 variable_groups <- readxl::read_excel(here::here("utils/plots/", "Variable_Groups.xlsx"), sheet = 1) |> 
-  select(c("name", "group"))
-colnames(variable_groups) <- c("dataschema_variable", "group")
+  select(-c("label"))
+colnames(variable_groups) <- c("dataschema_variable", "group", "xmin", "xmax", "ymin", "ymax")
 
 data_for_plot <- left_join(comparison_object, variable_groups, by = "dataschema_variable")
 
+data_for_plot <- within(data_for_plot, KARMEN[KARMEN == "compatible"] <- "complete") 
+data_for_plot <- within(data_for_plot, KORA_S1[KORA_S1 == "proximate"] <- "partial") 
+data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "partial") 
+
 ## Across Pilot-Project
+
+
 plot <- data_for_plot |> 
+  select(c(dataschema_variable, group, KORA_S1, KORA_S3, GINI, LISA, KARMEN)) |> 
   pivot_longer(!(c(dataschema_variable, group)), names_to = "Study", values_to = "Status") |> 
+  mutate(Study = factor(Study, levels = c("KORA_S1",
+                                          "KORA_S3",
+                                          "GINI",
+                                          "LISA",
+                                          "KARMEN"))) |> 
+  mutate(Status = factor(Status, levels = c("impossible",
+                                            "partial",
+                                            "complete"))) |>
   group_by(Study, Status) |> 
   summarise(Variables = n()) |> 
   ggplot(aes(fill = Status, x = Study, y = Variables)) +
-  geom_bar(position = "stack", stat = "identity")
+  geom_bar(position = "stack", stat = "identity", colour = "black") +
+  scale_fill_paletteer_d("MexBrewer::Aurora") +
+  labs(title = "Harmonisation Potential across studies") +
+  theme_classic() +
+  theme(axis.text.x=element_text(colour="black"),
+        axis.text.y=element_text(colour="black"),
+        axis.title=element_text(size=12,face="bold"),
+        axis.ticks.x=element_line(colour="black"),
+        axis.ticks.y=element_line(colour="black"),
+        plot.title = element_text(color="black", size=18, face="bold.italic", hjust = 0.5))
 
-## Across variable domain
+plot
 
 
 
-# Interpolation smooths the surface & is most helpful when rendering images.
-#### documentation 
-ggplot(faithfuld, aes(waiting, eruptions)) +
-  geom_raster(aes(fill = density), interpolate = TRUE)
+ggsave(filename = here::here("utils/plots/figures", "Harmonisation_Overview.png"))
 
 
+my_colors <- paletteer::paletteer_d("PrettyCols::Beach")
+print(my_colors)
 #### Step 4: Save figures in a folder

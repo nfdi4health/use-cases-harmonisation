@@ -149,7 +149,7 @@ labels_plot <- labels_plot$dataschema_variable
 #### documentation 
 image <- data_for_plot |> 
   filter(dataschema_variable != "ID") |> 
-  filter(group == "anthropometric") |> 
+  filter(group == "reproduction") |> 
   select(c("dataschema_variable", "GINI", "LISA", "KORA_S1", "KORA_S3", "KARMEN")) |> 
   pivot_longer(!(c(dataschema_variable)), names_to = "Study", values_to = "Status") |> 
   mutate(Study = factor(Study, levels = c("KORA_S1",
@@ -163,11 +163,13 @@ image <- data_for_plot |>
   group_by(Study) |> 
   ggplot(aes(fill = Status, x = Study, y = dataschema_variable)) +
   geom_bar(position = "stack", stat = "identity") + 
-  scale_fill_manual(values = c("green", "yellow", "red")) +
-  scale_y_discrete(labels = labels_plot)+
-  geom_col(position = "fill") +
+  scale_fill_manual(values = c("green", "red")) +
+  #scale_y_discrete(labels = labels_plot)+
+  #geom_col(position = "fill") +
   ylab("Variables") +
-  xlab("Study")
+  xlab("Study") +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
 
 
-
+ggsave(filename = here::here("utils/plots/figures", "reproduction.png"))
