@@ -3,6 +3,7 @@ library(tidyverse)
 library(readxl)
 library(treemapify)
 library(paletteer)
+library(MexBrewer)
 
 
 plot_studies <- c("KORA",
@@ -121,39 +122,37 @@ data_for_plot <- within(data_for_plot, KORA_S1[KORA_S1 == "proximate"] <- "parti
 data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "partial") 
 
 ## Across variable domain
-plot <- data_for_plot |> 
+data_for_plot <- data_for_plot |> 
   filter(dataschema_variable != "ID") |> 
-  mutate(Score = (case_when(GINI == "impossible" ~ 0,
-                           GINI == "partial" ~ 0.5,
-                           GINI == "complete" ~ 1) +
-           case_when(LISA == "impossible" ~ 0,
-                     LISA == "partial" ~ 0.5,
-                     LISA == "complete" ~ 1) + 
-           case_when(KORA_S1 == "impossible" ~ 0,
-                     KORA_S1 == "partial" ~ 0.5,
-                     KORA_S1 == "complete" ~ 1) + 
-           case_when(KORA_S3 == "impossible" ~ 0,
-                     KORA_S3 == "partial" ~ 0.5,
-                     KORA_S3 == "complete" ~ 1) + 
-           case_when(KARMEN == "impossible" ~ 0,
-                     KARMEN == "partial" ~ 0.5,
-                     KARMEN == "complete" ~ 1)) / 5) |> 
+  mutate(Score = as.factor((case_when(GINI == "impossible" ~ 0,
+                            GINI == "partial" ~ 0.5,
+                            GINI == "complete" ~ 1) +
+                    case_when(LISA == "impossible" ~ 0,
+                              LISA == "partial" ~ 0.5,
+                              LISA == "complete" ~ 1) + 
+                    case_when(KORA_S1 == "impossible" ~ 0,
+                              KORA_S1 == "partial" ~ 0.5,
+                              KORA_S1 == "complete" ~ 1) + 
+                    case_when(KORA_S3 == "impossible" ~ 0,
+                              KORA_S3 == "partial" ~ 0.5,
+                              KORA_S3 == "complete" ~ 1) + 
+                    case_when(KARMEN == "impossible" ~ 0,
+                              KARMEN == "partial" ~ 0.5,
+                              KARMEN == "complete" ~ 1)) / 5)) |> 
   mutate(Number = 1)
-
-
-
 
 
 # Interpolation smooths the surface & is most helpful when rendering images.
 #### documentation 
-ggplot(plot, aes(area = Number, fill = Score, label = dataschema_variable,
-                subgroup = group)) +
+ggplot(data_for_plot, aes(area = Number, fill = Score, label = dataschema_variable,
+                          subgroup = group)) +
   geom_treemap() +
-  scale_fill_paletteer_c("pals::coolwarm") +
-  geom_treemap_subgroup_border() +
-  geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 0.5, colour =
-                               "black", fontface = "italic", min.size = 0) +
-  geom_treemap_text(colour = "white", place = "topleft", reflow = T)
+  scale_fill_paletteer_d("jcolors::pal11") +
+  geom_treemap_subgroup_border(colour = "red") +
+  geom_treemap_subgroup_text(place = "centre", grow = T, alpha = 1, colour =
+                               "white", fontface = "italic", min.size = 0) 
+  #scale_fill_mex_c("Alacena") +
+  #geom_treemap_text(colour = "white", place = "topleft", reflow = T)
 
 
 ggsave(filename = here::here("utils/plots/figures", "Heatmap.png"))

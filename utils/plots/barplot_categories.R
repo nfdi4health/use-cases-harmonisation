@@ -1,6 +1,7 @@
 
 library(tidyverse)
 library(readxl)
+library(paletteer)
 
 
 plot_studies <- c("KORA",
@@ -110,16 +111,18 @@ rm(df_list,
 #### Step 3: Create ggplot figures
 variable_groups <- readxl::read_excel(here::here("utils/plots/", "Variable_Groups.xlsx"), sheet = 1) |> 
   select(-c("label"))
-colnames(variable_groups) <- c("dataschema_variable", "group", "xmin", "xmax", "ymin", "ymax")
+colnames(variable_groups) <- c("dataschema_variable", "group")
 
 data_for_plot <- left_join(comparison_object, variable_groups, by = "dataschema_variable")
 
+#### Correcting Mistakes in the DPE's
 data_for_plot <- within(data_for_plot, KARMEN[KARMEN == "compatible"] <- "complete") 
 data_for_plot <- within(data_for_plot, KORA_S1[KORA_S1 == "proximate"] <- "partial") 
 data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "partial") 
 
+
 ## Across variable domain
-plot <- data_for_plot |> 
+data_for_plot <- data_for_plot |> 
   filter(dataschema_variable != "ID") |> 
   mutate(Score = (case_when(GINI == "impossible" ~ 0,
                             GINI == "partial" ~ 0.5,
@@ -139,15 +142,8 @@ plot <- data_for_plot |>
 
 
 
-labels_plot <- data_for_plot |> 
-  filter(dataschema_variable != "ID") |> 
-  filter(group == "anthropometric") |> 
-  select(dataschema_variable)
-
-labels_plot <- labels_plot$dataschema_variable
-
 #### documentation 
-image <- data_for_plot |> 
+plot <- data_for_plot |> 
   filter(dataschema_variable != "ID") |> 
   filter(group == "reproduction") |> 
   select(c("dataschema_variable", "GINI", "LISA", "KORA_S1", "KORA_S3", "KARMEN")) |> 
@@ -164,12 +160,13 @@ image <- data_for_plot |>
   ggplot(aes(fill = Status, x = Study, y = dataschema_variable)) +
   geom_bar(position = "stack", stat = "identity") + 
   scale_fill_manual(values = c("green", "red")) +
-  #scale_y_discrete(labels = labels_plot)+
-  #geom_col(position = "fill") +
   ylab("Variables") +
   xlab("Study") +
   theme(axis.ticks.y = element_blank(),
         axis.text.y = element_blank())
+
+
+plot
 
 
 ggsave(filename = here::here("utils/plots/figures", "reproduction.png"))

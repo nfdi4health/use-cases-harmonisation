@@ -111,10 +111,11 @@ rm(df_list,
 #### Step 3: Create ggplot figures
 variable_groups <- readxl::read_excel(here::here("utils/plots/", "Variable_Groups.xlsx"), sheet = 1) |> 
   select(-c("label"))
-colnames(variable_groups) <- c("dataschema_variable", "group", "xmin", "xmax", "ymin", "ymax")
+colnames(variable_groups) <- c("dataschema_variable", "group")
 
 data_for_plot <- left_join(comparison_object, variable_groups, by = "dataschema_variable")
 
+#### Correcting Mistakes in the DPE's
 data_for_plot <- within(data_for_plot, KARMEN[KARMEN == "compatible"] <- "complete") 
 data_for_plot <- within(data_for_plot, KORA_S1[KORA_S1 == "proximate"] <- "partial") 
 data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "partial") 
@@ -150,10 +151,10 @@ plot <- data_for_plot |>
 plot
 
 
+#### Step 4: Save figures in a folder
 
 ggsave(filename = here::here("utils/plots/figures", "Harmonisation_Overview.png"))
 
 
 my_colors <- paletteer::paletteer_d("PrettyCols::Beach")
 print(my_colors)
-#### Step 4: Save figures in a folder
