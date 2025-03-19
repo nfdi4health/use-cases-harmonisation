@@ -1,10 +1,9 @@
 index;name;label;valueType
-;BMI;Body Mass Index at baseline [kg/m²];decimal
-;ENERGY;Energy intake [kcal/d];decimal
 ;TG;Triglycerides measured from blood samples [mmol/L];decimal
 ;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal
 ;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal
 ;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal
+;BMI;Body Mass Index at baseline [kg/m²];decimal
 ;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal
 ;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal
 ;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal
@@ -17,6 +16,7 @@ index;name;label;valueType
 ;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal
 ;BODY_FAT;Body fat precent at baseline  [%];decimal
 ;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal
+;ENERGY;Energy intake [kcal/d];decimal
 ;CARB;Carbohydrate intake [g/d];decimal
 ;PROT;Protein intake [g/d];decimal
 ;FAT;Fat intake [g/d];decimal
