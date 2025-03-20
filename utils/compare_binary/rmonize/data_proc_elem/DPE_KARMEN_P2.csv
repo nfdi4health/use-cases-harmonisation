@@ -5,22 +5,22 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 4;EDU_LEVEL;Education;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 5;EMPLOY;Employment;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 6;IMMIGRATION;Immigration background;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
-7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P2;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P2;IPAQ_MET_Total;operation;(IPAQ_MET_Total/60)/7;MET-min/week;complete;compatible
 8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 9;SMOKE_ST;Smoking status;integer;KARMEN_P2;__BLANK__;paste;4;non-smokers as inclusion criterion, but we cannot be sure, if they are real never smokers or former smokers;partial;proximate
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-14;MENOPAUSE;Menopause status;integer;KARMEN_P2;Menopause;recode;"recode(0=1;1=2;)";;complete;compatible
+14;MENOPAUSE;Menopause status;integer;KARMEN_P2;Menopause;recode;"recode(1=0;2=1;)";;complete;compatible
 15;HRT;Hormone replacement therapy;integer;KARMEN_P2;__BLANK__;paste;0;no HRT for all included women due to inclusion criteria, new variable could be created coded such as HRT=0;complete;compatible
-16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;KARMEN_P2;__BLANK__;paste;0;all included women did not take contraceptives due to inclusion criteria, new variable could be created coding all participants =0;complete;compatible
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;KARMEN_P2;impossible;impossible;impossible;;impossible;incompatible
 17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-19;TG;Triglycerides measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_TG;operation;KL_TG * 88.57;;complete;compatible
-20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_CHO;operation;KL_CHO * 38.67;;complete;compatible
-21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_LDLC;operation;KL_LDLC * 38.67;;complete;compatible
-22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_HDLC;operation;KL_HDLC * 38.67;;complete;compatible
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_TG;operation;KL_TG * 0.0113;;complete;compatible
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_CHO;operation;KL_CHO * 0.0259;;complete;compatible
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_LDLC;operation;KL_LDLC * 0.0259;;complete;compatible
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_HDLC;operation;KL_HDLC * 0.0259;;complete;compatible
 23;PREV_DIAB;History of diabetes;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
 24;PREV_HYP;History of hypertension;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of hypertension; new variable could be created coded =0 for all participants";complete;compatible
 25;PREV_CVD;History of cardiovascular disease;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of CVD; new variable could be created coded =0 for all participants";complete;compatible
