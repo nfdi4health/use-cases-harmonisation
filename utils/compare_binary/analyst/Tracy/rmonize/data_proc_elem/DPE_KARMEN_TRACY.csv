@@ -3,8 +3,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;SEX;Sex;integer;;Geschlecht;direct_mapping;direct_mapping;;complete;identical
 ;AGE_BASE;Age at exposure measure [years];decimal;;Alter_BE;direct_mapping;direct_mapping;;complete;identical
 ;EDU_LEVEL;Education;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
-;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
-;SMOKE_ST;Smoking status;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;IPAQ_MET_Total;operation;(IPAQ_MET_Total/60)/7;MET-min/week;complete;compatible
+;SMOKE_ST;Smoking status;integer;;__BLANK__;paste;4;non-smokers as inclusion criterion, but we cannot be sure, if they are real never smokers or former smokers;partial;proximate
 ;EMPLOY;Employment;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;IMMIGRATION;Immigration background;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
@@ -12,14 +12,14 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;impossible;impossible;impossible;;impossible;unavailable
-;MENOPAUSE;Menopause status;integer;;Menopause;recode;"recode(0=1;1=2;)";;complete;compatible
+;MENOPAUSE;Menopause status;integer;;Menopause;recode;"recode(1=0;2=1;)";;complete;compatible
 ;HRT;Hormone replacement therapy;integer;;__BLANK__;paste;0;no HRT for all included women due to inclusion criteria, new variable could be created coded such as HRT=0;complete;compatible
-;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;__BLANK__;paste;0;all included women did not take contraceptives due to inclusion criteria, new variable could be created coding all participants =0;complete;compatible
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;impossible;impossible;impossible;;impossible;incompatible
 ;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;impossible;impossible;impossible;;impossible;unavailable
 ;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
 ;PREV_DIAB;History of diabetes;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-;PREV_HYP;History of hypertension;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-;PREV_CVD;History of cardiovascular disease;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_HYP;History of hypertension;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of hypertension; new variable could be created coded =0 for all participants";complete;compatible
+;PREV_CVD;History of cardiovascular disease;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of CVD; new variable could be created coded =0 for all participants";complete;compatible
 ;PREV_CANCER;History of cancer;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of cancer; new variable could be created coded =0 for all participants";complete;compatible
 ;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;FAM1_DIAB2;First degree family history of T2D;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
@@ -31,8 +31,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;MELANOMA_SCREEN;Screening, skin cancer;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;MAMMO_SCREEN;Screening, mammography;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
 ;CERVICAL_SCREEN;Screening cervical, smear test;integer;;impossible;impossible;impossible;unavailable;impossible;unavailable
-;MED_STAT;Regular use of statins;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+;MED_STAT;Regular use of statins;integer;;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
 ;INC_CVD;CVD event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable
 ;AGE_CVD;Age at diagnosis of CVD [years];decimal;;impossible;impossible;impossible;impossible;impossible;unavailable
 ;INC_ANGINA;Angina pectoris event during follow-up;integer;;impossible;impossible;impossible;impossible;impossible;unavailable

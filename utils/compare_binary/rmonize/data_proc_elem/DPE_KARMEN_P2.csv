@@ -5,25 +5,25 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 4;EDU_LEVEL;Education;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 5;EMPLOY;Employment;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 6;IMMIGRATION;Immigration background;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
-7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P2;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P2;IPAQ_MET_Total;operation;(IPAQ_MET_Total/60)/7;MET-min/week;complete;compatible
 8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-9;SMOKE_ST;Smoking status;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
+9;SMOKE_ST;Smoking status;integer;KARMEN_P2;__BLANK__;paste;4;non-smokers as inclusion criterion, but we cannot be sure, if they are real never smokers or former smokers;partial;proximate
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-14;MENOPAUSE;Menopause status;integer;KARMEN_P2;Menopause;recode;"recode(0=1;1=2;)";;complete;compatible
+14;MENOPAUSE;Menopause status;integer;KARMEN_P2;Menopause;recode;"recode(1=0;2=1;)";;complete;compatible
 15;HRT;Hormone replacement therapy;integer;KARMEN_P2;__BLANK__;paste;0;no HRT for all included women due to inclusion criteria, new variable could be created coded such as HRT=0;complete;compatible
-16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;KARMEN_P2;__BLANK__;paste;0;all included women did not take contraceptives due to inclusion criteria, new variable could be created coding all participants =0;complete;compatible
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;KARMEN_P2;impossible;impossible;impossible;;impossible;incompatible
 17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
 18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-19;TG;Triglycerides measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_TG;operation;KL_TG * 88.57;;complete;compatible
-20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_CHO;operation;KL_CHO * 38.67;;complete;compatible
-21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_LDLC;operation;KL_LDLC * 38.67;;complete;compatible
-22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_HDLC;operation;KL_HDLC * 38.67;;complete;compatible
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_TG;operation;KL_TG * 0.0113;;complete;compatible
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_CHO;operation;KL_CHO * 0.0259;;complete;compatible
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_LDLC;operation;KL_LDLC * 0.0259;;complete;compatible
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;KARMEN_P2;KL_HDLC;operation;KL_HDLC * 0.0259;;complete;compatible
 23;PREV_DIAB;History of diabetes;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-24;PREV_HYP;History of hypertension;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-25;PREV_CVD;History of cardiovascular disease;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+24;PREV_HYP;History of hypertension;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of hypertension; new variable could be created coded =0 for all participants";complete;compatible
+25;PREV_CVD;History of cardiovascular disease;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of CVD; new variable could be created coded =0 for all participants";complete;compatible
 26;PREV_CANCER;History of cancer;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of cancer; new variable could be created coded =0 for all participants";complete;compatible
 27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 28;FAM1_DIAB2;First degree family history of T2D;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
@@ -35,8 +35,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 34;MELANOMA_SCREEN;Screening, skin cancer;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 35;MAMMO_SCREEN;Screening, mammography;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
 36;CERVICAL_SCREEN;Screening cervical, smear test;integer;KARMEN_P2;impossible;impossible;impossible;unavailable;impossible;unavailable
-37;MED_STAT;Regular use of statins;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
-38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, all participants were healthy at time of reruitment without a history of diabetes; new variable could be created coded =0 for all participants";complete;compatible
+37;MED_STAT;Regular use of statins;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
+38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;KARMEN_P2;__BLANK__;paste;0;"due to inclusion criteria, no medication for all included participants; new variable could be created coded =0 for all participants";complete;compatible
 39;INC_CVD;CVD event during follow-up;integer;KARMEN_P2;impossible;impossible;impossible;impossible;impossible;unavailable
 40;AGE_CVD;Age at diagnosis of CVD [years];decimal;KARMEN_P2;impossible;impossible;impossible;impossible;impossible;unavailable
 41;INC_ANGINA;Angina pectoris event during follow-up;integer;KARMEN_P2;impossible;impossible;impossible;impossible;impossible;unavailable
@@ -64,17 +64,17 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;KARMEN_P2;impossible;impossible;impossible;impossible;impossible;unavailable
 64;AGE_FUP;Age at end of follow-up [years];decimal;KARMEN_P2;impossible;impossible;impossible;impossible;impossible;unavailable
 65;BMI;Body Mass Index at baseline [kg/m²];decimal;KARMEN_P2;BMI;direct_mapping;complete;;complete;identical
-66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KARMEN_P2;impossible;impossible;impossible;N/A adult participants;impossible;unavailable
-68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KARMEN_P2;impossible;impossible;impossible;N/A adult participants;impossible;unavailable
-69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KARMEN_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
+68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KARMEN_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
 70;WAIST;Waist circumference at baseline [cm];decimal;KARMEN_P2;TU;direct_mapping;complete;;complete;identical
-71;HIP;Hip circumference at baseline [cm];decimal;KARMEN_P2;FR_gynoid;direct_mapping;complete;;complete;identical
-72;HIP_FUP;Hip circumference at follow-up [cm];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;KARMEN_P2;;;;;;
+71;HIP;Hip circumference at baseline [cm];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
 74;FMI;Fat mass index at baseline  [kg/m²];decimal;KARMEN_P2;FMI;direct_mapping;complete;;complete;identical
-75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;KARMEN_P2;;;;;;
-76;BODY_FAT;Body fat precent at baseline  [%];decimal;KARMEN_P2;;;;;;
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;KARMEN_P2;FG_Prozent;direct_mapping;complete;;complete;identical
 77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;KARMEN_P2;Alter_BE;direct_mapping;complete;;complete;identical
 78;ENERGY;Energy intake [kcal/d];decimal;KARMEN_P2;kcal_zb_tag_NCI;direct_mapping;complete;;complete;identical
 79;CARB;Carbohydrate intake [g/d];decimal;KARMEN_P2;kh_tag_NCI;direct_mapping;complete;;complete;identical
@@ -85,25 +85,25 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 84;SFA;Saturated fat intake [g/d];decimal;KARMEN_P2;fsges_tag_NCI;direct_mapping;complete;;complete;identical
 85;MUFA;Monounsaturated fat intake [g/d];decimal;KARMEN_P2;fseuges_tag_NCI;direct_mapping;complete;;complete;identical
 86;PUFA;Polyunsaturated fat intake [g/d];decimal;KARMEN_P2;fsmuges_tag_NCI;direct_mapping;complete;;complete;identical
-87;TOT_SUGARS;Total sugar intake [g/d];decimal;KARMEN_P2;KMD_tag;direct_mapping;complete;;complete;identical
-88;ADD_SUGARS;Added sugar intake [g/d];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-89;FREE_SUGARS;Free sugar intake [g/d];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-90;GLUC;Glucose intake [g/d];decimal;KARMEN_P2;KMT_tag;direct_mapping;complete;;complete;identical
-91;FRUC;Fructose intake [g/d];decimal;KARMEN_P2;KMF_tag;direct_mapping;complete;;complete;identical
-92;GI;Daily glycaemic index;decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-93;GL;Daily glycaemic load;decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;KARMEN_P2;sugars_NCI;direct_mapping;complete;;complete;identical
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+90;GLUC;Glucose intake [g/d];decimal;KARMEN_P2;KMT_tag_NCI;direct_mapping;complete;;complete;identical
+91;FRUC;Fructose intake [g/d];decimal;KARMEN_P2;KMF_tag_NCI;direct_mapping;complete;;complete;identical
+92;GI;Daily glycaemic index;decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
+93;GL;Daily glycaemic load;decimal;KARMEN_P2;;impossible;impossible;;impossible;unavailable
 94;SODIUM;Sodium intake [g/d];decimal;KARMEN_P2;na_tag_NCI;direct_mapping;complete;;complete;identical
 95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;KARMEN_P2;"na_tag_NCI;k_tag_NCI";operation;(na_tag_NCI/k_tag_NCI);;complete;identical
-96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KARMEN_P2;Sues_sum;direct_mapping;direct_mapping;;complete;identical
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KARMEN_P2;Sues_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;KARMEN_P2;Cakes_NCI;direct_mapping;direct_mapping;;complete;identical
-98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KARMEN_P2;Getr15_14;direct_mapping;direct_mapping;;complete;identical
-99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;KARMEN_P2;Getr15_16;direct_mapping;direct_mapping;;complete;identical
-100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;KARMEN_P2;Suessstoffe;direct_mapping;direct_mapping;;complete;identical
-101;VEGETABLES_02;Vegetable intake [g/d];decimal;KARMEN_P2;Gem02_1;direct_mapping;direct_mapping;;complete;identical
-102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KARMEN_P2;Gem02_Hu;direct_mapping;direct_mapping;;complete;identical
-103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KARMEN_P2;Obst_sum;direct_mapping;direct_mapping;;complete;identical
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KARMEN_P2;Getr15_14_NCI;direct_mapping;direct_mapping;;complete;identical
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;KARMEN_P2;Getr15_16_NCI;direct_mapping;direct_mapping;;complete;identical
+100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;KARMEN_P2;Suessstoffe_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;KARMEN_P2;Gem02_1_NCI;direct_mapping;direct_mapping;;complete;identical
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KARMEN_P2;Gem02_Hu_NCI;direct_mapping;direct_mapping;;complete;identical
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KARMEN_P2;Obst_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;KARMEN_P2;impossible;impossible;impossible;;impossible;unavailable
-105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;KARMEN_P2;Flei_Wurst;direct_mapping;direct_mapping;;complete;identical
-106;COFFEE_130301;Coffee intake [g/d];decimal;KARMEN_P2;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of coffee drinkers? Does 50% make sense?;partial;tentative
-107;TEA_130302;Tea intake [g/d];decimal;KARMEN_P2;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of tea drinkers? Does 50% make sense?;partial;tentative
-108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;KARMEN_P2;__BLANK__;paste;2;2 (24HDR);complete;identical
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;KARMEN_P2;Flei_Wurst_NCI;direct_mapping;direct_mapping;;complete;identical
+106;COFFEE_130301;Coffee intake [g/d];decimal;KARMEN_P2;Kaffee_NCI;direct_mapping;direct_mapping;;complete;identical
+107;TEA_130302;Tea intake [g/d];decimal;KARMEN_P2;blackgreentea_NCI;direct_mapping;direct_mapping;;complete;identical
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;KARMEN_P2;__BLANK__;paste;2;2 (24HDR) NCI method;complete;identical

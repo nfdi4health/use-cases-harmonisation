@@ -3,51 +3,51 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 2;SEX;Sex;integer;KARMEN_P1;Geschlecht;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KARMEN_P1;Alter_BE;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KARMEN_P1;impossible;impossible;impossible;unavailable;impossible;unavailable
-5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P1;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
-6;SMOKE_ST;Smoking status;integer;KARMEN_P1;impossible;impossible;impossible;unavailable;impossible;unavailable
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P1;IPAQ_MET_Total;operation;(IPAQ_MET_Total/60)/7;MET-min/week;complete;compatible
+6;SMOKE_ST;Smoking status;integer;KARMEN_P1;__BLANK__;paste;4;non-smokers as inclusion criterion, but we cannot be sure, if they are real never smokers or former smokers;partial;proximate
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;KARMEN_P1;BMI;direct_mapping;complete;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;KARMEN_P1;kcal_zb_tag_NCI;direct_mapping;complete;;complete;identical
-9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KARMEN_P1;Kart_sum_NCI;direct_mapping;direct_mapping;in this case, this combined group only consists of potatoes and no other tubers;partial;tentative
+9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KARMEN_P1;Kart_sum_NCI;direct_mapping;direct_mapping;does not contain other tubers than potatoes;partial;tentative
 10;POTATOES_0101;Potato intake [g/d];decimal;KARMEN_P1;Kart_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 11;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-12;VEGETABLES_02;Vegetable intake [g/d];decimal;KARMEN_P1;Gem02_1;direct_mapping;direct_mapping;;complete;identical
+12;VEGETABLES_02;Vegetable intake [g/d];decimal;KARMEN_P1;Gem02_1_NCI;direct_mapping;direct_mapping;;complete;identical
 13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 14;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 15;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 16;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-17;MUSHROOMS_0205;Mushroom intake [g/d];decimal;KARMEN_P1;Gem02_2;direct_mapping;direct_mapping;;complete;identical
+17;MUSHROOMS_0205;Mushroom intake [g/d];decimal;KARMEN_P1;Gem02_2_NCI;direct_mapping;direct_mapping;;complete;identical
 18;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KARMEN_P1;Gem02_Hu;direct_mapping;direct_mapping;;complete;identical
+22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KARMEN_P1;Gem02_Hu_NCI;direct_mapping;direct_mapping;;complete;identical
 23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KARMEN_P1;Obst_sum;direct_mapping;direct_mapping;;complete;identical
+24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;KARMEN_P1;Obst_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 25;FRUITS_0401;Intake of fresh fruits [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;KARMEN_P1;Nusa_sum;direct_mapping;direct_mapping;;complete;identical
+26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;KARMEN_P1;Nusa_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 27;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 28;OLIVES_0404;Intake of olives [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;KARMEN_P1;Milc_sum;direct_mapping;direct_mapping;;complete;identical
-30;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;KARMEN_P1;Milc07_1;operation;tba;Would it be possible to calculate % of milk intake from the group Milc07_1? ;complete;identical
-31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;"Zu geringe Anzahl an Konsumenten für Berechnung via NCI-Methode (Recall1: n=2; Recall2: n=3) ";impossible;unavailable
+29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;KARMEN_P1;Milc_sum_NCI;direct_mapping;direct_mapping;;complete;identical
+30;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;KARMEN_P1;milk_NCI;direct_mapping;direct_mapping;;complete;identical
+31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;KARMEN_P1;milkbased_bev_NCI;direct_mapping;direct_mapping;;complete;identical
 32;YOGURT_0503;Intake of fermented milk products [g/d];decimal;KARMEN_P1;Fermented_milk_NCI;direct_mapping;direct_mapping;;complete;identical
-33;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;KARMEN_P1;Milc07_2;operation;tba;Would it be possible to calculate % of cheese curd, quark and cottage intake from the group Milc07_2?;complete;identical
-34;CHEESE_0505;Intake of cheese [g/d];decimal;KARMEN_P1;Milc07_2;operation;tba;Would it be possible to calculate % of cheese intake from the group Milc07_2?;complete;identical
-35;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;KARMEN_P1;Sues13_6;direct_mapping;direct_mapping;;complete;identical
+33;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;KARMEN_P1;quark_curd_NCI;direct_mapping;direct_mapping;;complete;identical
+34;CHEESE_0505;Intake of cheese [g/d];decimal;KARMEN_P1;cheeses_NCI;direct_mapping;direct_mapping;;complete;identical
+35;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;KARMEN_P1;Sues13_6_NCI;direct_mapping;direct_mapping;;complete;identical
 36;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 37;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 38;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 39;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;KARMEN_P1;Brot_sum;direct_mapping;direct_mapping;;complete;identical
+40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;KARMEN_P1;Brot_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 41;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;KARMEN_P1;Flours_milled_prod_NCI;direct_mapping;direct_mapping;;complete;identical
 42;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;KARMEN_P1;Pasta_rice_NCI;direct_mapping;direct_mapping;;complete;identical
-43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;KARMEN_P1;Brot01_1;direct_mapping;direct_mapping;;complete;identical
+43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;KARMEN_P1;Brot01_1_NCI;direct_mapping;direct_mapping;;complete;identical
 44;BREAD_060301;Intake of bread [g/d];decimal;KARMEN_P1;Bread_NCI;direct_mapping;direct_mapping;;complete;identical
 45;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;KARMEN_P1;Crispbread_NCI;direct_mapping;direct_mapping;;complete;identical
 46;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;KARMEN_P1;Breakfast_cereals_NCI;direct_mapping;direct_mapping;;complete;identical
 47;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;KARMEN_P1;Crackers_NCI;direct_mapping;direct_mapping;;complete;identical
 48;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;KARMEN_P1;Fine_bakery_NCI;direct_mapping;direct_mapping;;complete;identical
-49;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;KARMEN_P1;Flei_sum;direct_mapping;direct_mapping;;complete;identical
+49;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;KARMEN_P1;Flei_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 50;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 51;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 52;VEAL_070102;Intake of calf fresh meat [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -63,51 +63,51 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 62;GOOSE_070204;Intake of goose meat [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 63;RABBIT_070205;Intake of rabbit meat [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 64;GAME_0703;Intake of game [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;KARMEN_P1;Flei_Wurst;direct_mapping;direct_mapping;;complete;identical
+65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;KARMEN_P1;Flei_Wurst_NCI;direct_mapping;direct_mapping;;complete;identical
 66;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;KARMEN_P1;Fish_sum;direct_mapping;direct_mapping;;complete;identical
+67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;KARMEN_P1;Fish_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 68;FISH_0801;Intake of fish (meat) [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;KARMEN_P1;Eier_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 72;EGGS_0901;Intake of eggs [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KARMEN_P1;Fett_sum;direct_mapping;direct_mapping;;complete;identical
+73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;KARMEN_P1;Fett_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;KARMEN_P1;veg_fatsoils_NCI;direct_mapping;direct_mapping;;complete;identical
 75;BUTTER_1002;Intake of butter [g/d];decimal;KARMEN_P1;Butter_NCI;direct_mapping;direct_mapping;;complete;identical
 76;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;KARMEN_P1;Marg_Streichf_NCI;direct_mapping;direct_mapping;;complete;identical
 77;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 78;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 79;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;KARMEN_P1;Animal_fatsoils_NCI;direct_mapping;direct_mapping;;complete;identical
-80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KARMEN_P1;Sues_sum;direct_mapping;direct_mapping;;complete;identical
+80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KARMEN_P1;Sues_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 81;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;KARMEN_P1;Sues13_1;operation;0.5 * Sues13_1;;partial;tentative
-83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;KARMEN_P1;Sues13_1;operation;0.5 * Sues13_1;;partial;tentative
+82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;KARMEN_P1;chocolate_sweets_NCI;direct_mapping;direct_mapping;;complete;identical
+83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;KARMEN_P1;nonchoc_sweets_NCI;direct_mapping;direct_mapping;;complete;identical
 84;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-85;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;KARMEN_P1;Sues13_2;direct_mapping;direct_mapping;;complete;identical
+85;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;KARMEN_P1;Sues13_2_NCI;direct_mapping;direct_mapping;;complete;identical
 86;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 87;SORBET_110502;Sorbet intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 88;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 89;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;KARMEN_P1;Cakes_NCI;direct_mapping;direct_mapping;;complete;identical
 90;VARPASTRY_1201;Intake of various pastry [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 91;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;KARMEN_P1;Getr15_1;direct_mapping;direct_mapping;;complete;identical
-93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KARMEN_P1;Getr15_14;direct_mapping;direct_mapping;;complete;identical
-94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;KARMEN_P1;Getr15_16;direct_mapping;direct_mapping;;complete;identical
-95;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;KARMEN_P1;"Getr15_12;Getr15_13";operation;Getr15_12 + Getr15_13;;complete;compatible
-96;COFFEE_130301;Coffee intake [g/d];decimal;KARMEN_P1;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of coffee drinkers? Does 50% make sense?;partial;tentative
-97;TEA_130302;Tea intake [g/d];decimal;KARMEN_P1;Getr15_12;operation;0.5 * Getr15_12;Do you know the proportion of tea drinkers? Does 50% make sense?;partial;tentative
-98;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;KARMEN_P1;Getr15_13;direct_mapping;direct_mapping;;complete;identical
+92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;KARMEN_P1;Getr15_1_NCI;direct_mapping;direct_mapping;;complete;identical
+93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KARMEN_P1;Getr15_14_NCI;direct_mapping;direct_mapping;;complete;identical
+94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;KARMEN_P1;Getr15_16_NCI;direct_mapping;direct_mapping;;complete;identical
+95;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;KARMEN_P1;"Kaffee_NCI;blackgreentea_NCI;Getr15_13_NCI";operation;Kaffee_NCI+blackgreentea_NCI+Getr15_13_NCI;;complete;compatible
+96;COFFEE_130301;Coffee intake [g/d];decimal;KARMEN_P1;Kaffee_NCI;direct_mapping;direct_mapping;;complete;identical
+97;TEA_130302;Tea intake [g/d];decimal;KARMEN_P1;blackgreentea_NCI;direct_mapping;direct_mapping;;complete;identical
+98;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;KARMEN_P1;Getr15_13_NCI;direct_mapping;direct_mapping;;complete;identical
 99;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-100;WATER_1304;Intake of water and water-based beverages [g/d];decimal;KARMEN_P1;Getr15_11;direct_mapping;direct_mapping;;complete;identical
-101;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;KARMEN_P1;Getr15_2;direct_mapping;direct_mapping;;complete;identical
-102;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;KARMEN_P1;Getr15_22;direct_mapping;direct_mapping;;complete;identical
+100;WATER_1304;Intake of water and water-based beverages [g/d];decimal;KARMEN_P1;Getr15_11_NCI;direct_mapping;direct_mapping;;complete;identical
+101;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;KARMEN_P1;Getr15_2_NCI;direct_mapping;direct_mapping;;complete;identical
+102;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;KARMEN_P1;Getr15_22_NCI;direct_mapping;direct_mapping;;complete;identical
 103;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-104;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;KARMEN_P1;Getr15_21;direct_mapping;direct_mapping;;complete;identical
-105;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;KARMEN_P1;Getr15_23;direct_mapping;direct_mapping;;complete;identical
+104;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;KARMEN_P1;Getr15_21_NCI;direct_mapping;direct_mapping;;complete;identical
+105;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;KARMEN_P1;Getr15_23_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
 106;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 107;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;KARMEN_P1;Getr15_24;direct_mapping;direct_mapping;;complete;identical
-109;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;KARMEN_P1;Sose_sum;direct_mapping;direct_mapping;;complete;identical
+108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;KARMEN_P1;Getr15_24_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
+109;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;KARMEN_P1;Sose_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 110;SAUCES_1501;Intake of savoury sauces [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 111;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 112;DRESSINGS_150102;Dressing intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -116,14 +116,14 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 115;YEAST_1502;Intake of yeast cultures [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 116;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 117;CONDIMENTS_1504;Condiments intake [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-118;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;KARMEN_P1;Supp_sum;direct_mapping;direct_mapping;;complete;identical
+118;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;KARMEN_P1;Supp_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 119;SOUP_1601;Intake of soups [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 120;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-121;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;KARMEN_P1;Sonst_sum;direct_mapping;direct_mapping;;complete;identical
+121;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;KARMEN_P1;Sonst_sum_NCI;direct_mapping;direct_mapping;;complete;identical
 122;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;KARMEN_P1;Veg_products_NCI;direct_mapping;direct_mapping;;complete;identical
 123;SOY_PROD_1701;Intake of soy products [g/d];decimal;KARMEN_P1;Soyproducts_NCI;direct_mapping;direct_mapping;;complete;identical
 124;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-125;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;KARMEN_P1;Suessstoffe;direct_mapping;direct_mapping;;complete;identical
+125;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;KARMEN_P1;Suessstoffe_MW;direct_mapping;direct_mapping;calculated as mean of 2 24h-recalls;partial;tentative
 126;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
 127;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;KARMEN_P1;impossible;impossible;impossible;;impossible;unavailable
-128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;KARMEN_P1;__BLANK__;paste;2;2 (24HDR);complete;identical
+128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;KARMEN_P1;__BLANK__;paste;2;2 (24HDR) NCI method;complete;identical
