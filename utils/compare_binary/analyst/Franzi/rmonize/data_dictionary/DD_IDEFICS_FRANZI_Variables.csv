@@ -23,6 +23,7 @@ index;name;label;valueType
 ;J38a;"SACANA FGS J38a ""Cheese low fat and curd (unsweetened)""";decimal
 ;J38;"SACANA FGS  J38 ""Cheese n.s.""";decimal
 ;J39a;"SACANA FGS J39a ""milk based ice-creams, desserts, (chocolate) pudding""";decimal
+;J38c;"SACANA FGS J38c ""Sweetened cheese and curd""";decimal
 ;J39c;"SACANA FGS J39c ""cream""";decimal
 ;K40b;"SACANA FGS  K40b ""Vegetal milk (soymilk, rice milk etc.)""";decimal
 ;A;"SACANA FGS A ""Cereals and cereal products and starchy snacks ns""";decimal
