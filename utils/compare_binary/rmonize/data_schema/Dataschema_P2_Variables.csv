@@ -92,8 +92,8 @@ index;name;label;valueType
 91;FRUC;Fructose intake [g/d];decimal
 92;GI;Daily glycaemic index;decimal
 93;GL;Daily glycaemic load;decimal
-94;SODIUM;Sodium intake [g/d];decimal
-95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal
+94;SODIUM;Sodium intake [mg/d];decimal
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal
 96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal
 97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal
 98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal

@@ -3,7 +3,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 2;SEX;Sex;integer;KARMEN_P1;Geschlecht;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KARMEN_P1;Alter_BE;direct_mapping;direct_mapping;;complete;identical
 4;EDU_LEVEL;Education;integer;KARMEN_P1;impossible;impossible;impossible;unavailable;impossible;unavailable
-5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P1;IPAQ_MET_Total;operation;(IPAQ_MET_Total*60)/7;MET-min/week;compatible;proximate
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KARMEN_P1;IPAQ_MET_Total;operation;(IPAQ_MET_Total/60)/7;MET-min/week;complete;compatible
 6;SMOKE_ST;Smoking status;integer;KARMEN_P1;__BLANK__;paste;4;non-smokers as inclusion criterion, but we cannot be sure, if they are real never smokers or former smokers;partial;proximate
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;KARMEN_P1;BMI;direct_mapping;complete;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;KARMEN_P1;kcal_zb_tag_NCI;direct_mapping;complete;;complete;identical
