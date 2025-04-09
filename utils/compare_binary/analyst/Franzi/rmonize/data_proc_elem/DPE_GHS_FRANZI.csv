@@ -1,0 +1,121 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;GHS_P1;"qu_nutr_potato_c;qu_nutr_fries_c";operation;qu_nutr_potato_c + qu_nutr_fries_c;only frequency;partial;tentative
+;POTATOES_0101;Potato intake [g/d];decimal;GHS_P1;"qu_nutr_potato_c;qu_nutr_fries_c";operation;qu_nutr_potato_c + qu_nutr_fries_c;only frequency;partial;tentative
+;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEGETABLES_02;Vegetable intake [g/d];decimal;GHS_P1;"qu_nutr_salad_c;qu_nutr_veggie_c";;qu_nutr_salad_c + qu_nutr_veggie_c;only frequency;partial;tentative
+;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MUSHROOMS_0205;Mushroom intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;GHS_P1;qu_nutr_salad_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;GHS_P1;qu_nutr_pulse_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;GHS_P1;"qu_nutr_fruit_c;qu_nutr_nuts_c";operation;qu_nutr_fruit_c + qu_nutr_nuts_c;only frequency;partial;tentative
+;FRUITS_0401;Intake of fresh fruits [g/d];decimal;GHS_P1;qu_nutr_fruit_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;GHS_P1;qu_nutr_nuts_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;OLIVES_0404;Intake of olives [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;GHS_P1;"qu_nutr_cheese_c;qu_nutr_cream_c;qu_nutr_normalfatmilk_c;qu_nutr_lowfatmilk_c;qu_nutr_buttermilk_c";operation;qu_nutr_cheese_c + qu_nutr_cream_c + qu_nutr_normalfatmilk_c + qu_nutr_lowfatmilk_c + qu_nutr_buttermilk_c;only frequency;partial;tentative
+;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;GHS_P1;qu_nutr_buttermilk_c;operation;qu_nutr_buttermilk_c + weighting?;"Milk, including buttermilk; only frequency";partial;tentative
+;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;GHS_P1;qu_nutr_buttermilk_c;operation;qu_nutr_buttermilk_c + weighting?;"Milk, including buttermilk; only frequency";partial;tentative
+;YOGURT_0503;Intake of fermented milk products [g/d];decimal;GHS_P1;"qu_nutr_normalfatmilk_c; qu_nutr_lowfatmilk_c";operation;qu_nutr_normalfatmilk_c + qu_nutr_lowfatmilk_c;Can we apply weighting to reflect proportions of yogurt with different fat content?;partial;tentative
+;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;GHS_P1;"qu_nutr_normalfatmilk_c;qu_nutr_lowfatmilk_c";operation;qu_nutr_normalfatmilk_c + qu_nutr_lowfatmilk_c;Can we apply weighting to reflect proportions of yogurt with different fat content?;partial;tentative
+;CHEESE_0505;Intake of cheese [g/d];decimal;GHS_P1;qu_nutr_cheese_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;GHS_P1;qu_nutr_cream_c;direct_mapping;;only frequency;partial;tentative
+;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;GHS_P1;"qu_nutr_cereals_c;qu_nutr_oats_c;qu_nutr_pasta_c;qu_nutr_reis_c;qu_nutr_wbread_c;qu_nutr_bbread_c;qu_nutr_blackbread_c";operation;qu_nutr_cereals_c+qu_nutr_oats_c+qu_nutr_pasta_c+qu_nutr_reis_c+qu_nutr_wbread_c+qu_nutr_bbread_c+qu_nutr_blackbread_c;only frequency;partial;tentative
+;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;GHS_P1;"qu_nutr_pasta_c;qu_nutr_reis_c";operation;qu_nutr_pasta_c + qu_nutr_reis_c;only frequency;partial;tentative
+;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;GHS_P1;"qu_nutr_wbread_c;qu_nutr_bbread_c;qu_nutr_blackbread_c";operation;qu_nutr_wbread_c + qu_nutr_bbread_c + qu_nutr_blackbread_c;only frequency;partial;tentative
+;BREAD_060301;Intake of bread [g/d];decimal;GHS_P1;"qu_nutr_wbread_c;qu_nutr_bbread_c";operation;qu_nutr_wbread_c + qu_nutr_bbread_c;only frequency;partial;tentative
+;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;GHS_P1;qu_nutr_blackbread_c;direct_mapping;direct_mapping;"includes ""Schwarzbrot"" besides ""Knäckebrot""; only frequency";partial;tentative
+;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;GHS_P1;"qu_nutr_cereals_c;qu_nutr_oats_c";operation;qu_nutr_cereals_c + qu_nutr_oats_c;only frequency;partial;tentative
+;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;GHS_P1;"qu_nutr_meat_c;qu_nutr_poultry_c;qu_nutr_sausage_c";operation;qu_nutr_meat_c + qu_nutr_poultry_c + qu_nutr_sausage_c;only frequency;partial;tentative
+;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;GHS_P1;qu_nutr_meat_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEAL_070102;Intake of calf fresh meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;PORK_070103;Intake of pig fresh meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HORSE_070105;Intake of horse meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GOAT_070106;Intake of goat meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;POULTRY_0702;Intake of poultry meat [g/d];decimal;GHS_P1;qu_nutr_poultry_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CHICKEN_070201;Intake of chicken meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;TURKEY_070202;Intake of turkey meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DUCK_070203;Intake of duck meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GOOSE_070204;Intake of goose meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;RABBIT_070205;Intake of rabbit meat [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GAME_0703;Intake of game [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;GHS_P1;qu_nutr_sausage_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;GHS_P1;qu_nutr_fish_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;FISH_0801;Intake of fish (meat) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FISH_PROD_0803;Intake of processed fish [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;GHS_P1;qu_nutr_egg_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;EGGS_0901;Intake of eggs [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;GHS_P1;"qu_nutr_butter_c;qu_nutr_margarine_c;qu_nutr_oliveoil_c;qu_nutr_vegetableoil_c";operation;qu_nutr_butter_c + qu_nutr_margarine_c + qu_nutr_oliveoil_c + qu_nutr_vegetableoil_c;only frequency;partial;tentative
+;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;GHS_P1;"qu_nutr_vegetableoil_c;qu_nutr_oliveoil_c";operation;qu_nutr_vegetableoil_c + qu_nutr_oliveoil_c;only frequency;partial;tentative
+;BUTTER_1002;Intake of butter [g/d];decimal;GHS_P1;qu_nutr_butter_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;GHS_P1;qu_nutr_margarine_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;GHS_P1;qu_nutr_sweets_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SORBET_110502;Sorbet intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;GHS_P1;qu_nutr_cake_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;VARPASTRY_1201;Intake of various pastry [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;GHS_P1;"qu_nutr_regimensoftdrink_c;qu_nutr_fruitjuice_c;qu_nutr_softdrink_c;qu_nutr_water_c;qu_nutr_coffee_d;qu_nutr_tea_d";operation;qu_nutr_regimensoftdrink_c + qu_nutr_fruitjuice_c + qu_nutr_softdrink_c + qu_nutr_water_c + qu_nutr_coffee_d + qu_nutr_tea_d;only frequency;partial;tentative
+;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;GHS_P1;qu_nutr_fruitjuice_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;GHS_P1;"qu_nutr_softdrink_c;qu_nutr_regimensoftdrink_c";operation;qu_nutr_softdrink_c + qu_nutr_regimensoftdrink_c;only frequency;partial;tentative
+;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;GHS_P1;"qu_nutr_coffee_d;qu_nutr_tea_d";operation;qu_nutr_coffee_d + qu_nutr_tea_d;only frequency;partial;tentative
+;COFFEE_130301;Coffee intake [g/d];decimal;GHS_P1;qu_nutr_coffee_d;direct_mapping;direct_mapping;only frequency;partial;tentative
+;TEA_130302;Tea intake [g/d];decimal;GHS_P1;qu_nutr_tea_d;direct_mapping;direct_mapping;only frequency;partial;tentative
+;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;WATER_1304;Intake of water and water-based beverages [g/d];decimal;GHS_P1;qu_nutr_water_c;direct_mapping;direct_mapping;only frequency;partial;tentative
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;GHS_P1;"sacapi_sm019_i_4;sacapi_sm020_i_4;sacapi_sm019_i_1;sacapi_sm020_i_1;sacapi_sm019_i_5;sacapi_sm020_i_5;sacapi_sm019_i_6;sacapi_sm020_i_6";operation;sacapi_sm019_i_4 + sacapi_sm020_i_4 + sacapi_sm019_i_1 + sacapi_sm020_i_1 + sacapi_sm019_i_5 + sacapi_sm020_i_5 + sacapi_sm019_i_6 + sacapi_sm019_tx + sacapi_sm020_i_6 + sacapi_sm020_tx;alcohol intake available in g/day;complete;compatible
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;GHS_P1;"sacapi_sm019_i_4;sacapi_sm020_i_4";operation;sacapi_sm019_i_4 + sacapi_sm020_i_4;sum of wine intake from weekdays and weekend in g/day;complete;compatible
+;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;GHS_P1;"sacapi_sm019_i_1;sacapi_sm020_i_1";operation;sacapi_sm019_i_1 + sacapi_sm020_i_1;sum of beer intake from weekdays and weekend in g/day;complete;compatible
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;GHS_P1;"sacapi_sm019_i_5;sacapi_sm020_i_5";operation;sacapi_sm019_i_5 + sacapi_sm020_i_5;sum of spirits intake from weekdays and weekend in g/day;complete;compatible
+;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;GHS_P1;"sacapi_sm019_i_6;sacapi_sm020_i_6";operation;sacapi_sm019_i_6 + sacapi_sm020_i_6;sum of mixed alcoholic drink intake from weekdays and weekend in g/day;complete;compatible
+;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SAUCES_1501;Intake of savoury sauces [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DRESSINGS_150102;Dressing intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;YEAST_1502;Intake of yeast cultures [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CONDIMENTS_1504;Condiments intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SOUP_1601;Intake of soups [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SOY_PROD_1701;Intake of soy products [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;GHS_P1;_BLANK_;paste;1;1 (FFQ);complete;identical
