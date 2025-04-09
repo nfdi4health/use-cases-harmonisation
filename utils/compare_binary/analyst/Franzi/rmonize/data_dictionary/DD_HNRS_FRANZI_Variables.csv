@@ -1,0 +1,36 @@
+index;name;label;valueType
+;fe_ff9;Gekochte Kartoffeln;integer
+;fe_ff10;frittierte Speisen (z.B. Pommes frites, Kroketten etc.);integer
+;fe_ff11;Frisches Gemüse gekocht;integer
+;fe_ff12;Frisches Gemüse/Salat roh;integer
+;fe_ff13;Frisches Obst;integer
+;fe_ff23;Milch;integer
+;fe_ff7;Quark/Joghurt;integer
+;fe_ff6;Käse;integer
+;fe_ff15;Haferflocken/Müsli/Cornflakes;integer
+;fe_ff8;Nudeln/Reis;integer
+;fe_ff14;Vollkornbrot/Schwarzbrot;integer
+;fe_ff1;Fleisch (ohne Geflügel);integer
+;fe_ff2;Geflügel;integer
+;fe_ff3;Wurstwaren/Schinken;integer
+;fe_ff16;Bratwurst, Currywurst, Hamburger, Döner Kebab, Pizza;integer
+;fe_ff4;Fisch;integer
+;fe_ff5;Eier/Eierspeisen;integer
+;fe_fe4;Sonnenblumenöl;integer
+;fe_fe5;Distelöl;integer
+;fe_fe6;Olivenöl;integer
+;fe_fe1;Butter;integer
+;fe_fe2;Margarine;integer
+;fe_fe3;Schmalz;integer
+;fe_ff17;Süßwaren und Gebäck;integer
+;fe_ff22;Obst- und Gemüsesäfte;integer
+;fe_ff24;Erfrischungsgetränke;integer
+;fe_ff25;Kaffee;integer
+;fe_ff26;Tee;integer
+;fe_ff27;Tee, andere Sorten (z.B. Grüner Tee, Pfefferminz);integer
+;fe_ff21;Wasser/Mineralwasser;integer
+;ALK_RE;Alkohol pro Tag;decimal
+;ALK_WEIN;Alkohol aus Wein/Sekt;decimal
+;ALK_Bier;Alkohol aus Bier/Sekt;decimal
+;ALK_Schnaps;Alkohol aus Schnaps/Likör;decimal
+;fe_ff18;Salzige Knabbereien (z.B. Nüsse, Kartoffelchips etc.);integer
