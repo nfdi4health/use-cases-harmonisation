@@ -1,0 +1,239 @@
+variable;name;label
+qu_nutr_potato_c;0;Nie oder fast nie
+qu_nutr_potato_c;1;Einmal im Monat oder seltener
+qu_nutr_potato_c;2;Mehrmals im Monat
+qu_nutr_potato_c;3;Etwa einmal in der Woche
+qu_nutr_potato_c;4;Mehrmals in der Woche
+qu_nutr_potato_c;5;Täglich oder fast täglich
+qu_nutr_potato_c;6;Mehrmals täglich
+qu_nutr_fries_c;0;Nie oder fast nie
+qu_nutr_fries_c;1;Einmal im Monat oder seltener
+qu_nutr_fries_c;2;Mehrmals im Monat
+qu_nutr_fries_c;3;Etwa einmal in der Woche
+qu_nutr_fries_c;4;Mehrmals in der Woche
+qu_nutr_fries_c;5;Täglich oder fast täglich
+qu_nutr_fries_c;6;Mehrmals täglich
+qu_nutr_salad_c;0;Nie oder fast nie
+qu_nutr_salad_c;1;Einmal im Monat oder seltener
+qu_nutr_salad_c;2;Mehrmals im Monat
+qu_nutr_salad_c;3;Etwa einmal in der Woche
+qu_nutr_salad_c;4;Mehrmals in der Woche
+qu_nutr_salad_c;5;Täglich oder fast täglich
+qu_nutr_salad_c;6;Mehrmals täglich
+qu_nutr_veggie_c;0;Nie oder fast nie
+qu_nutr_veggie_c;1;Einmal im Monat oder seltener
+qu_nutr_veggie_c;2;Mehrmals im Monat
+qu_nutr_veggie_c;3;Etwa einmal in der Woche
+qu_nutr_veggie_c;4;Mehrmals in der Woche
+qu_nutr_veggie_c;5;Täglich oder fast täglich
+qu_nutr_veggie_c;6;Mehrmals täglich
+qu_nutr_pulse_c;0;Nie oder fast nie
+qu_nutr_pulse_c;1;Einmal im Monat oder seltener
+qu_nutr_pulse_c;2;Mehrmals im Monat
+qu_nutr_pulse_c;3;Etwa einmal in der Woche
+qu_nutr_pulse_c;4;Mehrmals in der Woche
+qu_nutr_pulse_c;5;Täglich oder fast täglich
+qu_nutr_pulse_c;6;Mehrmals täglich
+qu_nutr_fruit_c;0;Nie oder fast nie
+qu_nutr_fruit_c;1;Einmal im Monat oder seltener
+qu_nutr_fruit_c;2;Mehrmals im Monat
+qu_nutr_fruit_c;3;Etwa einmal in der Woche
+qu_nutr_fruit_c;4;Mehrmals in der Woche
+qu_nutr_fruit_c;5;Täglich oder fast täglich
+qu_nutr_fruit_c;6;Mehrmals täglich
+qu_nutr_nuts_c;0;Nie oder fast nie
+qu_nutr_nuts_c;1;Einmal im Monat oder seltener
+qu_nutr_nuts_c;2;Mehrmals im Monat
+qu_nutr_nuts_c;3;Etwa einmal in der Woche
+qu_nutr_nuts_c;4;Mehrmals in der Woche
+qu_nutr_nuts_c;5;Täglich oder fast täglich
+qu_nutr_nuts_c;6;Mehrmals täglich
+qu_nutr_cheese_c;0;Nie oder fast nie
+qu_nutr_cheese_c;1;Einmal im Monat oder seltener
+qu_nutr_cheese_c;2;Mehrmals im Monat
+qu_nutr_cheese_c;3;Etwa einmal in der Woche
+qu_nutr_cheese_c;4;Mehrmals in der Woche
+qu_nutr_cheese_c;5;Täglich oder fast täglich
+qu_nutr_cheese_c;6;Mehrmals täglich
+qu_nutr_cream_c;0;Nie oder fast nie
+qu_nutr_cream_c;1;Einmal im Monat oder seltener
+qu_nutr_cream_c;2;Mehrmals im Monat
+qu_nutr_cream_c;3;Etwa einmal in der Woche
+qu_nutr_cream_c;4;Mehrmals in der Woche
+qu_nutr_cream_c;5;Täglich oder fast täglich
+qu_nutr_cream_c;6;Mehrmals täglich
+qu_nutr_normalfatmilk_c;0;Nie oder fast nie
+qu_nutr_normalfatmilk_c;1;Einmal im Monat oder seltener
+qu_nutr_normalfatmilk_c;2;Mehrmals im Monat
+qu_nutr_normalfatmilk_c;3;Etwa einmal in der Woche
+qu_nutr_normalfatmilk_c;4;Mehrmals in der Woche
+qu_nutr_normalfatmilk_c;5;Täglich oder fast täglich
+qu_nutr_normalfatmilk_c;6;Mehrmals täglich
+qu_nutr_lowfatmilk_c;0;Nie oder fast nie
+qu_nutr_lowfatmilk_c;1;Einmal im Monat oder seltener
+qu_nutr_lowfatmilk_c;2;Mehrmals im Monat
+qu_nutr_lowfatmilk_c;3;Etwa einmal in der Woche
+qu_nutr_lowfatmilk_c;4;Mehrmals in der Woche
+qu_nutr_lowfatmilk_c;5;Täglich oder fast täglich
+qu_nutr_lowfatmilk_c;6;Mehrmals täglich
+qu_nutr_buttermilk_c;0;Nie oder fast nie
+qu_nutr_buttermilk_c;1;Einmal im Monat oder seltener
+qu_nutr_buttermilk_c;2;Mehrmals im Monat
+qu_nutr_buttermilk_c;3;Etwa einmal in der Woche
+qu_nutr_buttermilk_c;4;Mehrmals in der Woche
+qu_nutr_buttermilk_c;5;Täglich oder fast täglich
+qu_nutr_buttermilk_c;6;Mehrmals täglich
+qu_nutr_cereals_c;0;Nie oder fast nie
+qu_nutr_cereals_c;1;Einmal im Monat oder seltener
+qu_nutr_cereals_c;2;Mehrmals im Monat
+qu_nutr_cereals_c;3;Etwa einmal in der Woche
+qu_nutr_cereals_c;4;Mehrmals in der Woche
+qu_nutr_cereals_c;5;Täglich oder fast täglich
+qu_nutr_cereals_c;6;Mehrmals täglich
+qu_nutr_oats_c;0;Nie oder fast nie
+qu_nutr_oats_c;1;Einmal im Monat oder seltener
+qu_nutr_oats_c;2;Mehrmals im Monat
+qu_nutr_oats_c;3;Etwa einmal in der Woche
+qu_nutr_oats_c;4;Mehrmals in der Woche
+qu_nutr_oats_c;5;Täglich oder fast täglich
+qu_nutr_oats_c;6;Mehrmals täglich
+qu_nutr_pasta_c;0;Nie oder fast nie
+qu_nutr_pasta_c;1;Einmal im Monat oder seltener
+qu_nutr_pasta_c;2;Mehrmals im Monat
+qu_nutr_pasta_c;3;Etwa einmal in der Woche
+qu_nutr_pasta_c;4;Mehrmals in der Woche
+qu_nutr_pasta_c;5;Täglich oder fast täglich
+qu_nutr_pasta_c;6;Mehrmals täglich
+qu_nutr_reis_c;0;Nie oder fast nie
+qu_nutr_reis_c;1;Einmal im Monat oder seltener
+qu_nutr_reis_c;2;Mehrmals im Monat
+qu_nutr_reis_c;3;Etwa einmal in der Woche
+qu_nutr_reis_c;4;Mehrmals in der Woche
+qu_nutr_reis_c;5;Täglich oder fast täglich
+qu_nutr_reis_c;6;Mehrmals täglich
+qu_nutr_wbread_c;0;Nie oder fast nie
+qu_nutr_wbread_c;1;Einmal im Monat oder seltener
+qu_nutr_wbread_c;2;Mehrmals im Monat
+qu_nutr_wbread_c;3;Etwa einmal in der Woche
+qu_nutr_wbread_c;4;Mehrmals in der Woche
+qu_nutr_wbread_c;5;Täglich oder fast täglich
+qu_nutr_wbread_c;6;Mehrmals täglich
+qu_nutr_bbread_c;0;Nie oder fast nie
+qu_nutr_bbread_c;1;Einmal im Monat oder seltener
+qu_nutr_bbread_c;2;Mehrmals im Monat
+qu_nutr_bbread_c;3;Etwa einmal in der Woche
+qu_nutr_bbread_c;4;Mehrmals in der Woche
+qu_nutr_bbread_c;5;Täglich oder fast täglich
+qu_nutr_bbread_c;6;Mehrmals täglich
+qu_nutr_blackbread_c;0;Nie oder fast nie
+qu_nutr_blackbread_c;1;Einmal im Monat oder seltener
+qu_nutr_blackbread_c;2;Mehrmals im Monat
+qu_nutr_blackbread_c;3;Etwa einmal in der Woche
+qu_nutr_blackbread_c;4;Mehrmals in der Woche
+qu_nutr_blackbread_c;5;Täglich oder fast täglich
+qu_nutr_blackbread_c;6;Mehrmals täglich
+qu_nutr_meat_c;0;Nie oder fast nie
+qu_nutr_meat_c;1;Einmal im Monat oder seltener
+qu_nutr_meat_c;2;Mehrmals im Monat
+qu_nutr_meat_c;3;Etwa einmal in der Woche
+qu_nutr_meat_c;4;Mehrmals in der Woche
+qu_nutr_meat_c;5;Täglich oder fast täglich
+qu_nutr_meat_c;6;Mehrmals täglich
+qu_nutr_poultry_c;0;Nie oder fast nie
+qu_nutr_poultry_c;1;Einmal im Monat oder seltener
+qu_nutr_poultry_c;2;Mehrmals im Monat
+qu_nutr_poultry_c;3;Etwa einmal in der Woche
+qu_nutr_poultry_c;4;Mehrmals in der Woche
+qu_nutr_poultry_c;5;Täglich oder fast täglich
+qu_nutr_poultry_c;6;Mehrmals täglich
+qu_nutr_sausage_c;0;Nie oder fast nie
+qu_nutr_sausage_c;1;Einmal im Monat oder seltener
+qu_nutr_sausage_c;2;Mehrmals im Monat
+qu_nutr_sausage_c;3;Etwa einmal in der Woche
+qu_nutr_sausage_c;4;Mehrmals in der Woche
+qu_nutr_sausage_c;5;Täglich oder fast täglich
+qu_nutr_sausage_c;6;Mehrmals täglich
+qu_nutr_fish_c;0;Nie oder fast nie
+qu_nutr_fish_c;1;Einmal im Monat oder seltener
+qu_nutr_fish_c;2;Mehrmals im Monat
+qu_nutr_fish_c;3;Etwa einmal in der Woche
+qu_nutr_fish_c;4;Mehrmals in der Woche
+qu_nutr_fish_c;5;Täglich oder fast täglich
+qu_nutr_fish_c;6;Mehrmals täglich
+qu_nutr_egg_c;0;Nie oder fast nie
+qu_nutr_egg_c;1;Einmal im Monat oder seltener
+qu_nutr_egg_c;2;Mehrmals im Monat
+qu_nutr_egg_c;3;Etwa einmal in der Woche
+qu_nutr_egg_c;4;Mehrmals in der Woche
+qu_nutr_egg_c;5;Täglich oder fast täglich
+qu_nutr_egg_c;6;Mehrmals täglich
+qu_nutr_butter_c;0;Nie oder fast nie
+qu_nutr_butter_c;1;Einmal im Monat oder seltener
+qu_nutr_butter_c;2;Mehrmals im Monat
+qu_nutr_butter_c;3;Etwa einmal in der Woche
+qu_nutr_butter_c;4;Mehrmals in der Woche
+qu_nutr_butter_c;5;Täglich oder fast täglich
+qu_nutr_butter_c;6;Mehrmals täglich
+qu_nutr_margarine_c;0;Nie oder fast nie
+qu_nutr_margarine_c;1;Einmal im Monat oder seltener
+qu_nutr_margarine_c;2;Mehrmals im Monat
+qu_nutr_margarine_c;3;Etwa einmal in der Woche
+qu_nutr_margarine_c;4;Mehrmals in der Woche
+qu_nutr_margarine_c;5;Täglich oder fast täglich
+qu_nutr_margarine_c;6;Mehrmals täglich
+qu_nutr_oliveoil_c;0;Nie oder fast nie
+qu_nutr_oliveoil_c;1;Einmal im Monat oder seltener
+qu_nutr_oliveoil_c;2;Mehrmals im Monat
+qu_nutr_oliveoil_c;3;Etwa einmal in der Woche
+qu_nutr_oliveoil_c;4;Mehrmals in der Woche
+qu_nutr_oliveoil_c;5;Täglich oder fast täglich
+qu_nutr_oliveoil_c;6;Mehrmals täglich
+qu_nutr_vegetableoil_c;0;Nie oder fast nie
+qu_nutr_vegetableoil_c;1;Einmal im Monat oder seltener
+qu_nutr_vegetableoil_c;2;Mehrmals im Monat
+qu_nutr_vegetableoil_c;3;Etwa einmal in der Woche
+qu_nutr_vegetableoil_c;4;Mehrmals in der Woche
+qu_nutr_vegetableoil_c;5;Täglich oder fast täglich
+qu_nutr_vegetableoil_c;6;Mehrmals täglich
+qu_nutr_sweets_c;0;Nie oder fast nie
+qu_nutr_sweets_c;1;Einmal im Monat oder seltener
+qu_nutr_sweets_c;2;Mehrmals im Monat
+qu_nutr_sweets_c;3;Etwa einmal in der Woche
+qu_nutr_sweets_c;4;Mehrmals in der Woche
+qu_nutr_sweets_c;5;Täglich oder fast täglich
+qu_nutr_sweets_c;6;Mehrmals täglich
+qu_nutr_cake_c;0;Nie oder fast nie
+qu_nutr_cake_c;1;Einmal im Monat oder seltener
+qu_nutr_cake_c;2;Mehrmals im Monat
+qu_nutr_cake_c;3;Etwa einmal in der Woche
+qu_nutr_cake_c;4;Mehrmals in der Woche
+qu_nutr_cake_c;5;Täglich oder fast täglich
+qu_nutr_cake_c;6;Mehrmals täglich
+qu_nutr_regimensoftdrink_c;0;Nie oder fast nie
+qu_nutr_regimensoftdrink_c;1;Einmal im Monat oder seltener
+qu_nutr_regimensoftdrink_c;2;Mehrmals im Monat
+qu_nutr_regimensoftdrink_c;3;Etwa einmal in der Woche
+qu_nutr_regimensoftdrink_c;4;Mehrmals in der Woche
+qu_nutr_regimensoftdrink_c;5;Täglich oder fast täglich
+qu_nutr_regimensoftdrink_c;6;Mehrmals täglich
+qu_nutr_fruitjuice_c;0;Nie oder fast nie
+qu_nutr_fruitjuice_c;1;Einmal im Monat oder seltener
+qu_nutr_fruitjuice_c;2;Mehrmals im Monat
+qu_nutr_fruitjuice_c;3;Etwa einmal in der Woche
+qu_nutr_fruitjuice_c;4;Mehrmals in der Woche
+qu_nutr_fruitjuice_c;5;Täglich oder fast täglich
+qu_nutr_fruitjuice_c;6;Mehrmals täglich
+qu_nutr_softdrink_c;0;Nie oder fast nie
+qu_nutr_softdrink_c;1;Einmal im Monat oder seltener
+qu_nutr_softdrink_c;2;Mehrmals im Monat
+qu_nutr_softdrink_c;3;Etwa einmal in der Woche
+qu_nutr_softdrink_c;4;Mehrmals in der Woche
+qu_nutr_softdrink_c;5;Täglich oder fast täglich
+qu_nutr_softdrink_c;6;Mehrmals täglich
+qu_nutr_water_c;0;Nie oder fast nie
+qu_nutr_water_c;1;Einmal im Monat oder seltener
+qu_nutr_water_c;2;Mehrmals im Monat
+qu_nutr_water_c;3;Etwa einmal in der Woche
+qu_nutr_water_c;4;Mehrmals in der Woche
+qu_nutr_water_c;5;Täglich oder fast täglich
+qu_nutr_water_c;6;Mehrmals täglich
