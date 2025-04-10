@@ -2,7 +2,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;GHS_P1;"qu_nutr_potato_c;qu_nutr_fries_c";operation;qu_nutr_potato_c + qu_nutr_fries_c;only frequency;partial;tentative
 ;POTATOES_0101;Potato intake [g/d];decimal;GHS_P1;"qu_nutr_potato_c;qu_nutr_fries_c";operation;qu_nutr_potato_c + qu_nutr_fries_c;only frequency;partial;tentative
 ;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
-;VEGETABLES_02;Vegetable intake [g/d];decimal;GHS_P1;"qu_nutr_salad_c;qu_nutr_veggie_c";;qu_nutr_salad_c + qu_nutr_veggie_c;only frequency;partial;tentative
+;VEGETABLES_02;Vegetable intake [g/d];decimal;GHS_P1;"qu_nutr_salad_c;qu_nutr_veggie_c";operation;qu_nutr_salad_c + qu_nutr_veggie_c;only frequency;partial;tentative
 ;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -91,7 +91,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;WATER_1304;Intake of water and water-based beverages [g/d];decimal;GHS_P1;qu_nutr_water_c;direct_mapping;direct_mapping;only frequency;partial;tentative
-;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;GHS_P1;"sacapi_sm019_i_4;sacapi_sm020_i_4;sacapi_sm019_i_1;sacapi_sm020_i_1;sacapi_sm019_i_5;sacapi_sm020_i_5;sacapi_sm019_i_6;sacapi_sm020_i_6";operation;sacapi_sm019_i_4 + sacapi_sm020_i_4 + sacapi_sm019_i_1 + sacapi_sm020_i_1 + sacapi_sm019_i_5 + sacapi_sm020_i_5 + sacapi_sm019_i_6 + sacapi_sm019_tx + sacapi_sm020_i_6 + sacapi_sm020_tx;alcohol intake available in g/day;complete;compatible
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;GHS_P1;"sacapi_sm019_i_4;sacapi_sm020_i_4;sacapi_sm019_i_1;sacapi_sm020_i_1;sacapi_sm019_i_5;sacapi_sm020_i_5;sacapi_sm019_i_6;sacapi_sm020_i_6";operation;sacapi_sm019_i_4 + sacapi_sm020_i_4 + sacapi_sm019_i_1 + sacapi_sm020_i_1 + sacapi_sm019_i_5 + sacapi_sm020_i_5 + sacapi_sm019_i_6 + sacapi_sm020_i_6;alcohol intake available in g/day;complete;compatible
 ;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;GHS_P1;"sacapi_sm019_i_4;sacapi_sm020_i_4";operation;sacapi_sm019_i_4 + sacapi_sm020_i_4;sum of wine intake from weekdays and weekend in g/day;complete;compatible
 ;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;GHS_P1;"sacapi_sm019_i_1;sacapi_sm020_i_1";operation;sacapi_sm019_i_1 + sacapi_sm020_i_1;sum of beer intake from weekdays and weekend in g/day;complete;compatible
@@ -118,4 +118,4 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
 ;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;GHS_P1;impossible;impossible;impossible;;impossible;unavailable
-;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;GHS_P1;_BLANK_;paste;1;1 (FFQ);complete;identical
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;GHS_P1;_BLANK_;paste;0;0 (FPQ);complete;identical
