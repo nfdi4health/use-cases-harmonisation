@@ -2,3 +2,17 @@
 .Rhistory
 .RData
 .Ruserdata
+
+
+# output documents besides the placeholders
+output/rmonize_report/*
+!output/rmonize_report/placeholder.txt
+
+output/opal_dd/*
+!output/opal_dd/placeholder.txt
+
+output/rmonize_summary/*
+!output/rmonize_summary/placeholder.txt
+
+output/harmonised_dataset/*
+!output/harmonised_dataset/placeholder.txt
