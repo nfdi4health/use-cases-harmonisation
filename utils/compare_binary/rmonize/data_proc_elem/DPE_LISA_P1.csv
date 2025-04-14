@@ -2,7 +2,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;LISA_P1;ID;id_creation;id_creation;;complete;identical
 2;SEX;Sex;integer;LISA_P1;GESCHL;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P1;KIALTER_15;direct_mapping;direct_mapping;compatible, because it is integer in the study and we want decimal;complete;compatible
-4;EDU_LEVEL;Education;integer;LISA_P1;"MUTBILD_0; VATBILD_0;";case_when;"case_when(
+4;EDU_LEVEL;Education;integer;LISA_P1;"MUTBILD_0;VATBILD_0;";case_when;"case_when(
       MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
       MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
       MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 2L, 
@@ -16,12 +16,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ""Secondary School"" (3): Either parent has 4.
 ""Longer Education"" (4): Either parent has 5 or 6.
 ""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
-5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;LISA_P1;"aktivleiisommn_15;
-aktivleiwintn_15;
-aktivmitsommn_15;
-aktivmitwintn_15;
-aktivschsommn_15;
-aktivschwintn_15";operation;"(
+5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;LISA_P1;"aktivleiisommn_15;aktivleiwintn_15;aktivmitsommn_15;aktivmitwintn_15;aktivschsommn_15;aktivschwintn_15";operation;"(
   1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) +
   3 * ((aktivmitsommn_15 + aktivmitwintn_15) / 2) +
   6 * ((aktivschsommn_15 + aktivschwintn_15) / 2)
@@ -29,24 +24,17 @@ aktivschwintn_15";operation;"(
 6;SMOKE_ST;Smoking status;integer;LISA_P1;K_FB_rauchkind_15;recode;"recode(1= 1; 2 = 3; 3=3; 4 = 3; 5=3)";;partial;proximate
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;LISA_P1;UB_bmi_15;direct_mapping;direct_mapping;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;LISA_P1;FFQGCAL_15;direct_mapping;direct_mapping;;complete;identical
-9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;LISA_P1;"FFQKARTO_15; 
-FFQPOMM_15";operation;"FFQKARTO_15 + 
+9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;LISA_P1;"FFQKARTO_15;FFQPOMM_15";operation;"FFQKARTO_15 + 
 FFQPOMM_15";"in this case, this combined group only consists of potatoes and no other tubers, thats why the harmopotential is set to ""partial""";partial;tentative
-10;POTATOES_0101;Potato intake [g/d];decimal;LISA_P1;"FFQKARTO_15; 
-FFQPOMM_15";operation;"FFQKARTO_15 + 
+10;POTATOES_0101;Potato intake [g/d];decimal;LISA_P1;"FFQKARTO_15;FFQPOMM_15";operation;"FFQKARTO_15 + 
 FFQPOMM_15";;complete;compatible
 11;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-12;VEGETABLES_02;Vegetable intake [g/d];decimal;LISA_P1;"FFQSALAT_15;
-FFQKOHL_15;
-FFQSPIN_15;
-FFQPAPR_15; 
-FFQKAROT_15";operation;"FFQSALAT_15 +
+12;VEGETABLES_02;Vegetable intake [g/d];decimal;LISA_P1;"FFQSALAT_15;FFQKOHL_15;FFQSPIN_15;FFQPAPR_15;FFQKAROT_15";operation;"FFQSALAT_15 +
 FFQKOHL_15 +
 FFQSPIN_15 +
 FFQPAPR_15 +
 FFQKAROT_15";;complete;compatible
-13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;LISA_P1;"FFQSALAT_15;
-FFQSPIN_15";operation;"FFQSALAT_15
+13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;LISA_P1;"FFQSALAT_15;FFQSPIN_15";operation;"FFQSALAT_15
 + FFQSPIN_15";;complete;compatible
 14;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;LISA_P1;FFQPAPR_15;direct_mapping;direct_mapping;;complete;identical
 15;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;LISA_P1;FFQKAROT_15;direct_mapping;direct_mapping;;complete;identical
@@ -57,30 +45,17 @@ FFQSPIN_15";operation;"FFQSALAT_15
 20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;LISA_P1;FFQKERN_15;direct_mapping;direct_mapping;;complete;identical
-24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;LISA_P1;"FFQAPFEL_15;
-FFQBEERE_15;
-FFQSUED_15;
-FFQNUSS_15";operation;"FFQAPFEL_15 +
+23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
+24;FRUITS_TOT_04;Total fruit intake [g/d];decimal;LISA_P1;"FFQAPFEL_15;FFQBEERE_15;FFQSUED_15;FFQNUSS_15";operation;"FFQAPFEL_15 +
 FFQBEERE_15 +
 FFQSUED_15 + FFQNUSS_15";;complete;compatible
-25;FRUITS_0401;Intake of fresh fruits [g/d];decimal;LISA_P1;"FFQAPFEL_15;
-FFQBEERE_15;
-FFQSUED_15";operation;"FFQAPFEL_15 +
+25;FRUITS_0401;Intake of fresh fruits [g/d];decimal;LISA_P1;"FFQAPFEL_15;FFQBEERE_15;FFQSUED_15";operation;"FFQAPFEL_15 +
 FFQBEERE_15 +
 FFQSUED_15";;complete;compatible
-26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;LISA_P1;FFQNUSS_15;direct_mapping;direct_mapping;;complete;identical
+26;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;LISA_P1;"FFQNUSS_15;FFQKERN_15";operation;FFQNUSS_15 + FFQKERN_15;;complete;compatible
 27;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 28;OLIVES_0404;Intake of olives [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;LISA_P1;"FFQMIL_15; 
-FFQMOLK_15;
-FFQKAKAO_15;
-FFQJOGH_15;
-FFQQUARK_15;
-FFQWEICH_15;
-FFQPUDD_15;
-FFQSAHN_15;
-FFQHARTK_15";operation;"FFQMIL_15 +
+29;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;LISA_P1;"FFQMIL_15;FFQMOLK_15;FFQKAKAO_15;FFQJOGH_15;FFQQUARK_15;FFQWEICH_15;FFQPUDD_15;FFQSAHN_15;FFQHARTK_15";operation;"FFQMIL_15 +
 FFQMOLK_15 +
 FFQKAKAO_15 +
 FFQJOGH_15 +
@@ -89,30 +64,18 @@ FFQWEICH_15 +
 FFQPUDD_15 +
 FFQSAHN_15 + FFQHARTK_15";;complete;compatible
 30;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;LISA_P1;FFQMIL_15;direct_mapping;direct_mapping;;complete;identical
-31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;LISA_P1;"FFQMOLK_15;
-FFQKAKAO_15";operation;"FFQMOLK_15 +
+31;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;LISA_P1;"FFQMOLK_15;FFQKAKAO_15";operation;"FFQMOLK_15 +
 FFQKAKAO_15";;complete;compatible
 32;YOGURT_0503;Intake of fermented milk products [g/d];decimal;LISA_P1;FFQJOGH_15;direct_mapping;direct_mapping;;complete;identical
 33;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;LISA_P1;FFQQUARK_15;direct_mapping;direct_mapping;;complete;identical
-34;CHEESE_0505;Intake of cheese [g/d];decimal;LISA_P1;"FFQHARTK_15; 
-FFQWEICH_15";operation;"FFQHARTK_15 + 
+34;CHEESE_0505;Intake of cheese [g/d];decimal;LISA_P1;"FFQHARTK_15;FFQWEICH_15";operation;"FFQHARTK_15 + 
 FFQWEICH_15";;complete;compatible
 35;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;LISA_P1;FFQPUDD_15;direct_mapping;direct_mapping;;complete;identical
 36;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;LISA_P1;FFQSAHN_15;direct_mapping;direct_mapping;;complete;identical
 37;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;LISA_P1;FFQSAHN_15;direct_mapping;direct_mapping;;complete;identical
 38;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 39;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;LISA_P1;"FFQNUD_15;  
-FFQREIS_15;
-FFQBROE_15;
-FFQROGGEN_15;
-FFQROSIN_15;
-FFQTOAST_15;
-FFQVOLLK_15;
-FFQCORN_15;
-FFQMUES_15;
-FFQCROIS_15;
-FFQGEBAE_15";operation;"FFQNUD_15 + 
+40;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;LISA_P1;"FFQNUD_15;FFQREIS_15;FFQBROE_15;FFQROGGEN_15;FFQROSIN_15;FFQTOAST_15;FFQVOLLK_15;FFQCORN_15;FFQMUES_15;FFQCROIS_15;FFQGEBAE_15";operation;"FFQNUD_15 + 
 FFQREIS_15 +
 FFQBROE_15 +
 FFQROGGEN_15 +
@@ -124,35 +87,24 @@ FFQMUES_15 +
 FFQCROIS_15 +
 FFQGEBAE_15";;complete;compatible
 41;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-42;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;LISA_P1;"FFQNUD_15;
-FFQREIS_15";operation;FFQNUD_15 + FFQREIS_15;;complete;compatible
-43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;LISA_P1;"FFQBROE_15;
-FFQROGGEN_15;
-FFQROSIN_15;
-FFQTOAST_15;
-FFQVOLLK_15";operation;"FFQBROE_15 +
+42;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;LISA_P1;"FFQNUD_15;FFQREIS_15";operation;FFQNUD_15 + FFQREIS_15;;complete;compatible
+43;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;LISA_P1;"FFQBROE_15;FFQROGGEN_15;FFQROSIN_15;FFQTOAST_15;FFQVOLLK_15";operation;"FFQBROE_15 +
 FFQROGGEN_15 +
 FFQROSIN_15 +
 FFQTOAST_15 +
 FFQVOLLK_15";similar to subgroup;partial;tentative
-44;BREAD_060301;Intake of bread [g/d];decimal;LISA_P1;"FFQBROE_15;
-FFQROGGEN_15;
-FFQROSIN_15;
-FFQTOAST_15;
-FFQVOLLK_15";operation;"FFQBROE_15 +
+44;BREAD_060301;Intake of bread [g/d];decimal;LISA_P1;"FFQBROE_15;FFQROGGEN_15;FFQROSIN_15;FFQTOAST_15;FFQVOLLK_15";operation;"FFQBROE_15 +
 FFQROGGEN_15 +
 FFQROSIN_15 +
 FFQTOAST_15 +
 FFQVOLLK_15";;complete;compatible
 45;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-46;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;LISA_P1;"FFQCORN_15; 
-FFQMUES_15";operation;"FFQCORN_15 +
+46;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;LISA_P1;"FFQCORN_15;FFQMUES_15";operation;"FFQCORN_15 +
 FFQMUES_15";;complete;compatible
 47;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 48;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;LISA_P1;FFQCROIS_15;direct_mapping;direct_mapping;;complete;identical
 49;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;LISA_P1;FFQSGRUREDMEAT_15;direct_mapping;direct_mapping;;complete;identical
-50;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;LISA_P1;"FFQRIND_15;
-FFQSCHW_15";operation;"FFQRIND_15 +
+50;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;LISA_P1;"FFQRIND_15;FFQSCHW_15";operation;"FFQRIND_15 +
 FFQSCHW_15";;complete;compatible
 51;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;LISA_P1;FFQRIND_15;operation;FFQRIND_15 * 0.5;Gruppe FFQRind beinhaltet auch Kalbsfleisch, deshalb Gewichtung á 50%;partial;tentative
 52;VEAL_070102;Intake of calf fresh meat [g/d];decimal;LISA_P1;FFQRIND_15;operation;FFQRIND_15 * 0.5;Gruppe FFQRind beinhaltet auch Kalbsfleisch, deshalb Gewichtung á 50%;partial;tentative
@@ -168,44 +120,25 @@ FFQSCHW_15";;complete;compatible
 62;GOOSE_070204;Intake of goose meat [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 63;RABBIT_070205;Intake of rabbit meat [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 64;GAME_0703;Intake of game [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;LISA_P1;"FFQAUFSCH_15; 
-FFQBOCK_15;
-FFQBRAT_15;
-FFQSALAM_15";operation;"FFQAUFSCH_15 +
+65;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;LISA_P1;"FFQAUFSCH_15;FFQBOCK_15;FFQBRAT_15;FFQSALAM_15";operation;"FFQAUFSCH_15 +
 FFQBOCK_15 +
 FFQBRAT_15 +
 FFQSALAM_15";;complete;compatible
 66;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;LISA_P1;FFQINNER_15;direct_mapping;direct_mapping;;complete;identical
-67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;LISA_P1;"FFQSEE_15; 
-FFQSUESS_15; 
-FFQBISM_15;
-FFQKONS_15;
-FFQSTAEB_15";operation;"FFQSEE_15 +
+67;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;LISA_P1;"FFQSEE_15;FFQSUESS_15;FFQBISM_15;FFQKONS_15;FFQSTAEB_15";operation;"FFQSEE_15 +
 FFQSUESS_15 + 
 FFQBISM_15 +
 FFQKONS_15 +
 FFQSTAEB_15";;complete;compatible
-68;FISH_0801;Intake of fish (meat) [g/d];decimal;LISA_P1;"FFQSEE_15; 
-FFQSUESS_15";operation;"FFQSEE_15 +
+68;FISH_0801;Intake of fish (meat) [g/d];decimal;LISA_P1;"FFQSEE_15;FFQSUESS_15";operation;"FFQSEE_15 +
 FFQSUESS_15";;complete;compatible
 69;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;LISA_P1;"FFQBISM_15;
-FFQKONS_15;
-FFQSTAEB_15";operation;"FFQBISM_15 +
+70;FISH_PROD_0803;Intake of processed fish [g/d];decimal;LISA_P1;"FFQBISM_15;FFQKONS_15;FFQSTAEB_15";operation;"FFQBISM_15 +
 FFQKONS_15 +
 FFQSTAEB_15";;complete;compatible
 71;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;LISA_P1;FFQEI_15;direct_mapping;direct_mapping;;complete;identical
 72;EGGS_0901;Intake of eggs [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;LISA_P1;"FFQPFLA_15;  
-FFQMAISK_15; 
-FFQSONN_15;
-FFQWAOEL_15;
-FFQBUTKO_15;
-FFQBUTT_15; 
-FFQMARG_15; 
-FFQMARKO_15; 
-FFQREFKO_15;
-FFQREFO_15";operation;"FFQPFLA_15 +
+73;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;LISA_P1;"FFQPFLA_15;FFQMAISK_15;FFQSONN_15;FFQWAOEL_15;FFQBUTKO_15;FFQBUTT_15;FFQMARG_15;FFQMARKO_15;FFQREFKO_15;FFQREFO_15";operation;"FFQPFLA_15 +
 FFQMAISK_15 +
 FFQSONN_15 +
 FFQWAOEL_15 +
@@ -215,38 +148,26 @@ FFQMARG_15 +
 FFQMARKO_15 +
 FFQREFKO_15 +
 FFQREFO_15";;complete;compatible
-74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;LISA_P1;"FFQPFLA_15; 
-FFQMAISK_15; 
-FFQSONN_15;
-FFQWAOEL_15";operation;"FFQPFLA_15 + 
+74;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;LISA_P1;"FFQPFLA_15;FFQMAISK_15;FFQSONN_15;FFQWAOEL_15";operation;"FFQPFLA_15 + 
 FFQMAISK_15 + 
 FFQSONN_15 +
 FFQWAOEL_15";;complete;compatible
-75;BUTTER_1002;Intake of butter [g/d];decimal;LISA_P1;"FFQBUTKO_15; 
-FFQBUTT_15";operation;"FFQBUTKO_15 +
+75;BUTTER_1002;Intake of butter [g/d];decimal;LISA_P1;"FFQBUTKO_15;FFQBUTT_15";operation;"FFQBUTKO_15 +
 FFQBUTT_15";;complete;compatible
-76;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;LISA_P1;"FFQMARG_15; 
-FFQMARKO_15; 
-FFQREFKO_15;
-FFQREFO_15";operation;"FFQMARG_15 +
+76;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;LISA_P1;"FFQMARG_15;FFQMARKO_15;FFQREFKO_15;FFQREFO_15";operation;"FFQMARG_15 +
 FFQMARKO_15 +
 FFQREFKO_15 +
 FFQREFO_15";;complete;compatible
 77;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 78;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 79;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;LISA_P1;"FFQSCHOKOL_15; 
-FFQSCHOKOR_15;
-FFQGUMMIB_15;
-FFQZUCK_15;
-FFQEIS_15";operation;"FFQSCHOKOL_15 +
+80;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;LISA_P1;"FFQSCHOKOL_15;FFQSCHOKOR_15;FFQGUMMIB_15;FFQZUCK_15;FFQEIS_15";operation;"FFQSCHOKOL_15 +
 FFQSCHOKOR_15 +
 FFQGUMMIB_15 +
 FFQZUCK_15 +
 FFQEIS_15";;complete;compatible
 81;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;LISA_P1;"FFQSCHOKOL_15; 
-FFQSCHOKOR_15";operation;"FFQSCHOKOL_15 +
+82;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;LISA_P1;"FFQSCHOKOL_15;FFQSCHOKOR_15";operation;"FFQSCHOKOL_15 +
 FFQSCHOKOR_15";;complete;compatible
 83;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;LISA_P1;FFQGUMMIB_15;direct_mapping;direct_mapping;;complete;identical
 84;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;LISA_P1;FFQZUCK_15;direct_mapping;direct_mapping;;complete;identical
@@ -254,31 +175,17 @@ FFQSCHOKOR_15";;complete;compatible
 86;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 87;SORBET_110502;Sorbet intake [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 88;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
-89;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;LISA_P1;"FFQKEKS_15;  
-FFQOBSTK_15;  
-FFQTORTE_15; 
-FFQGEBAE_15;
-FFQRUEHRK_15 ";operation;"FFQKEKS_15 +
+89;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;LISA_P1;"FFQKEKS_15;FFQOBSTK_15;FFQTORTE_15;FFQGEBAE_15;FFQRUEHRK_15";operation;"FFQKEKS_15 +
 FFQOBSTK_15 +
 FFQTORTE_15 + 
 FFQGEBAE_15 +
 FFQRUEHRK_15 ";;complete;compatible
-90;VARPASTRY_1201;Intake of various pastry [g/d];decimal;LISA_P1;"FFQKEKS_15;  
-FFQOBSTK_15;  
-FFQTORTE_15; 
-FFQGEBAE_15";operation;"FFQKEKS_15 +
+90;VARPASTRY_1201;Intake of various pastry [g/d];decimal;LISA_P1;"FFQKEKS_15;FFQOBSTK_15;FFQTORTE_15;FFQGEBAE_15";operation;"FFQKEKS_15 +
 FFQOBSTK_15 +
 FFQTORTE_15 +
 FFQGEBAE_15";;complete;compatible
 91;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;LISA_P1;FFQRUEHRK_15;direct_mapping;direct_mapping;;complete;identical
-92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;LISA_P1;"FFQNEKT_15;
-FFQFRSAFT_15;
-FFQGESAFT_15;
-FFQENERG_15; 
-FFQSCHOR_15; 
-FFQCOLA_15;
-FFQWASS_15;
-FFQTEE_15";operation;"FFQNEKT_15 +
+92;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;LISA_P1;"FFQNEKT_15;FFQFRSAFT_15;FFQGESAFT_15;FFQENERG_15;FFQSCHOR_15;FFQCOLA_15;FFQWASS_15;FFQTEE_15";operation;"FFQNEKT_15 +
 FFQFRSAFT_15 +
 FFQGESAFT_15 +
 FFQENERG_15 +
@@ -286,15 +193,11 @@ FFQSCHOR_15 +
 FFQCOLA_15 +
 FFQWASS_15 +
 FFQTEE_15";;complete;compatible
-93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;LISA_P1;"FFQNEKT_15;  
-FFQFRSAFT_15;  
-FFQGESAFT_15;  
-FFQSCHOR_15 ";operation;"FFQNEKT_15 +
+93;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;LISA_P1;"FFQNEKT_15;FFQFRSAFT_15;FFQGESAFT_15;FFQSCHOR_15";operation;"FFQNEKT_15 +
 FFQFRSAFT_15 +
 FFQGESAFT_15 +  
 FFQSCHOR_15 ";;complete;compatible
-94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;LISA_P1;"FFQENERG_15;  
-FFQCOLA_15 ";operation;"FFQENERG_15 +
+94;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;LISA_P1;"FFQENERG_15;FFQCOLA_15";operation;"FFQENERG_15 +
 FFQCOLA_15 ";;complete;compatible
 95;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;LISA_P1;FFQTEE_15;direct_mapping;direct_mapping;übergeordnete Gruppe gleich mit Untergruppe;partial;tentative
 96;COFFEE_130301;Coffee intake [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -309,8 +212,7 @@ FFQCOLA_15 ";;complete;compatible
 105;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 106;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 107;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;LISA_P1;K_FB_alkgetr_schnaps_15;direct_mapping;direct_mapping;;complete;identical
-108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;LISA_P1;"K_FB_alkgetr_cocktail_15;
-K_FB_alkgetr_alkopops_15;";operation;K_FB_alkgetr_cocktail_15 + K_FB_alkgetr_alkopops_15;"K_FB_alkgetr_cocktail_15 +
+108;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;LISA_P1;"K_FB_alkgetr_cocktail_15;K_FB_alkgetr_alkopops_15;";operation;K_FB_alkgetr_cocktail_15 + K_FB_alkgetr_alkopops_15;"K_FB_alkgetr_cocktail_15 +
 K_FB_alkgetr_alkopops_15";complete;compatible
 109;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
 110;SAUCES_1501;Intake of savoury sauces [g/d];decimal;LISA_P1;impossible;impossible;impossible;;impossible;unavailable
