@@ -66,14 +66,13 @@ aktivschwintn_15";operation;"(
 diabvat_15";case_when;"case_when (
   diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
   diabmut_15 == 0 & diabvat_15 == 0 ~ 0L,
-  (is.na(diabmut_15) | diabmut_15 == 3) & diabvat_15 == 0 ~ NA_integer_,
-  (is.na(diabvat_15) | diabvat_15 == 3) & diabmut_15 == 0 ~ NA_integer_,
-  (is.na(diabmut_15) | diabmut_15 == 3) & (is.na(diabvat_15) | diabvat_15 == 3) ~ NA_integer_, 
+   diabmut_15 == 3 & diabvat_15 == 0 ~ 2,
+  diabvat_15 == 3 & diabmut_15 == 0 ~ 2,
+  (is.na(diabmut_15)  &  diabvat_15 == 3 ~ 2,  (is.na(diabvat_15)  &  diabmut_15 == 3 ~ 2, 
   TRUE ~ NA_integer_
 )";"If either parent has diabetes, the family history is marked as 1.
-If both parents do not have diabetes, the family history is marked as 0.
-If one parent's status is missing or unknown (NA or 3), use the other parent’s status. If the known parent has diabetes, the family history is marked as 1, and if the known parent does not have diabetes, the family history is marked as NA.
-If both parents' statuses are missing -> """" or unknown -> 888, the family history is marked as NA (insufficient data).";partial;proximate
+If both parents do not have diabetes, the family history is marked as 0.                                                                                         If one parent's status is no or unknown (NA or 3), the family history is marked as 2. 
+If one parent's status is missing or unknown (NA or 3), the family history is marked as 2.";partial;proximate
 29;FAM1_CANCER;First degree family history of cancer;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 30;DRE_SCREEN;Screening, DRE;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
