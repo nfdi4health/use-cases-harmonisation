@@ -6,15 +6,15 @@ Index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 VATBILD_0;";case_when;"case_when(
       MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
       MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
-      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 2L, 
-      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 3L, 
+      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 3L, 
+      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 2L, 
       MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L, 
       MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,  
       TRUE ~ NA_integer_
     )";"""None"" (0): Both parents have 1 (no certificate).
 ""Primary School Completed"" (1): Either parent has 2.
-""Technical/Professional School"" (2): Either parent has 3.
-""Secondary School"" (3): Either parent has 4.
+""Technical/Professional School"" (2): Either parent has 4.
+""Secondary School"" (3): Either parent has 3.
 ""Longer Education"" (4): Either parent has 5 or 6.
 ""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
 5;EMPLOY;Employment;integer;LISA_P2;"mutberuztak3_15;
@@ -65,13 +65,13 @@ aktivschwintn_15";operation;"(
 28;FAM1_DIAB2;First degree family history of T2D;integer;LISA_P2;"diabmut_15;
 diabvat_15";case_when;"case_when (
       diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
+      diabmut_15 == 2 | diabvat_15 == 2 ~ 0L,
       diabmut_15 == 3 | diabvat_15 == 3 ~ 2L,
-      diabmut_15 == 2 & diabvat_15 == 2 ~ 0L,
       TRUE ~ NA_integer_
-)";"If either parent has diabetes(1), the family history is marked as yes(1).
-If one parent's status is unknown (3), the family history is marked as don't know (2). 
-If both parents do not have diabetes (2), the family history is marked as no (0).
-Everything else (e.g. 2+ NA, NA+NA) is marked as NA";partial;proximate
+)";"If either parent has diabetes (coded as 1), the family history is marked as Yes (1).
+If both parents do not have diabetes (coded as 2), and condition 1 does not apply, the family history is marked as No (0).
+If either parent's diabetes status is unknown (coded as 3), and conditions 1 and 2 do not apply, the family history is marked as Don't Know (2).
+All other cases are marked as NA.";partial;proximate
 29;FAM1_CANCER;First degree family history of cancer;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 30;DRE_SCREEN;Screening, DRE;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
