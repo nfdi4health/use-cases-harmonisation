@@ -1,0 +1,121 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;IDEFICS_P1;D19;direct_mapping;direct_mapping;"SACANA FGS D19 ""Potatoes and other starchy vegetables""";complete;identical
+;POTATOES_0101;Potato intake [g/d];decimal;IDEFICS_P1;"D19a; D19b;L47";operation;D19a + D19b + (weighting*L47);"SACANA FGS D19a "" Potatoes cooked (not deep fried) "" + SACANA FGS 19b "" Potatoes cooked (deep fried) "" + (Gewichtung* SACANA FGS L47 ""Based on potatoes"")";complete;compatible
+;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEGETABLES_02;Vegetable intake [g/d];decimal;IDEFICS_P1;D18;direct_mapping;direct_mapping;SACANA FGS D18 vegetables n.s.;complete;identical
+;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MUSHROOMS_0205;Mushroom intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;IDEFICS_P1;L44c;direct_mapping;direct_mapping;"SACANA FGS L44c ""Mixed salad""";complete;identical
+;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;IDEFICS_P1;"D17;L44;L46a";operation;D17 + (weighting *L44) + (weighting*L46a);"SACANA FGS D17 Pulses n.s. + (Gewichtung*L44 ""Legumes/Vegs n.s."") + (Gewichtung*L46a ""Fish and vegetables/legumes"")";complete;compatible
+;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;IDEFICS_P1;D20;direct_mapping;direct_mapping;"SACANA FGS D20 ""Fruits n.s.""";complete;identical
+;FRUITS_0401;Intake of fresh fruits [g/d];decimal;IDEFICS_P1;D20a;direct_mapping;direct_mapping;"SACANA FGS D20a ""Fresh fruits""";complete;identical
+;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;IDEFICS_P1;D16a;direct_mapping;direct_mapping;"SACANA FGS D16a ""Nuts and seeds""";complete;identical
+;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;OLIVES_0404;Intake of olives [g/d];decimal;IDEFICS_P1;D16b;operation;Weighting*D16b;"SACANA FGS D16b ""Olives and avocados"" (Gewichtung für Oliven?)";partial;tentative
+;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;IDEFICS_P1;J;direct_mapping;direct_mapping;"SACANA FGS J ""Dairy and similar""";complete;identical
+;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;IDEFICS_P1;"J37a;J37b";operation;J37a + J37b;"SACANA FGS J37a ""Milk plain whole"" + SACANA FGS J37b ""Milk plain reduced fat""";complete;compatible
+;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;IDEFICS_P1;J37c;direct_mapping;direct_mapping;"SACANA FGS J37c ""Chocolate milk, vanilla milk and sim""";complete;identical
+;YOGURT_0503;Intake of fermented milk products [g/d];decimal;IDEFICS_P1;"J37d;J37e;J37f;J37g";operation;J37d+J37e+J37f+J37g;"SACANA FGS J37d ""Yogurt, probiotic and other fermented milk unsweened, full fat"" + SACANA FGS J37e ""Yogurt, probiotic and other fermented milk unsweened, low fat"" + SACANA FGS J37f ""Sweet Yogurt, probiotic and other fermented milk , full fat"" + SACANA FGS J37g ""Sweet Yogurt, probiotic and other fermented milk, low fat""";complete;compatible
+;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;IDEFICS_P1;J38a;operation;weighting*J38a;"SACANA FGS J38a ""Cheese low fat and curd (unsweetened)"" (Gewichtung für Curd?)";partial;tentative
+;CHEESE_0505;Intake of cheese [g/d];decimal;IDEFICS_P1;J38;direct_mapping;direct_mapping;"SACANA FGS J38 ""Cheese n.s.""";complete;identical
+;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;IDEFICS_P1;"J39a;J38c";operation;J39a + J38c;"SACANA FGS J39a ""milk based ice-creams, desserts, (chocolate) pudding"" + SACANA FGS J38c ""Sweetened cheese and curd""";complete;compatible
+;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;IDEFICS_P1;"J39c;K40b";operation;J39c + K40b;"SACANA FGS J39c ""cream"" + SACANA FGS K40b ""Vegetal milk (soymilk, rice milk etc.)""";complete;compatible
+;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;IDEFICS_P1;J39c;direct_mapping;direct_mapping;"SACANA FGS J39c ""cream""";complete;identical
+;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;IDEFICS_P1;K40b;direct_mapping;direct_mapping;"SACANA FGS K40b ""Vegetal milk (soymilk, rice milk etc.)""";complete;identical
+;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;IDEFICS_P1;"A;L43;L45c";operation;A + L43 + (weighting*L45c);"SACANA FGS A "" Cereals and cereal products and starchy snacks ns"" + SACANA FGS L43 ""Based on Cereals ns"" + (Gewichtung*SACANA FGS L45c ""with vegs/potatoes/cereals"")";complete;compatible
+;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;IDEFICS_P1;"A04;A05;L43a;L43b";operation;A04 + A05 +(weighting*L43a) + (weighting*L43b);"SACANA FGS A04 ""Pasta (any kind)"" + SACANA FGS A05 "" rice and other cereal grains (not ready to eat) - ns"" + (Gewichtung*SACANA FGS L43a ""Pasta/rice/cereals + meat/fish/eggs/cheese"") + (Gewichtung*SACANA FGS L43b ""Pasta/rice/cereals + legumes /vegetables/potatoes"")";complete;compatible
+;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;IDEFICS_P1;A01;direct_mapping;direct_mapping;"SACANA FGS A01 ""bread,rolls and sim. ns""";complete;identical
+;BREAD_060301;Intake of bread [g/d];decimal;IDEFICS_P1;"A01a;A01b";operation;(A01a + A01b) * weighting;"SACANA FGS A01a "" bread, crispbread, rusks, roll (refined, fiber <5%)"" + SACANA FGS A01b ""bread, crispbread, rusks, roll (wholemeal fiber>5%)"" (Gewichtung?)";complete;compatible
+;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;IDEFICS_P1;"A01a;A01b";operation;(A01a + A01b) * weighting;"SACANA FGS A01a "" bread, crispbread, rusks, roll (refined, fiber <5%)"" + SACANA FGS A01b ""bread, crispbread, rusks, roll (wholemeal fiber>5%)"" (Gewichtung?)";complete;compatible
+;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;IDEFICS_P1;A02;direct_mapping;direct_mapping;"SACANA FGS A02 ""breakfast cereals, corn flakes, muesli ns""";complete;identical
+;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;IDEFICS_P1;"G;L42;L45b";operation;G + L42 + (weighting* L45b);"SACANA FGS G ""Meat and meat products"" + SACANA FGS L42 ""based on meat"" + (Gewichtung* SACANA FGS L45b ""with meat/fish"")";complete;compatible
+;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;IDEFICS_P1;G29;direct_mapping;direct_mapping;"SACANA FGS G29 ""meat (other than poultry)-ns""";complete;identical
+;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEAL_070102;Intake of calf fresh meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;PORK_070103;Intake of pig fresh meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HORSE_070105;Intake of horse meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GOAT_070106;Intake of goat meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;POULTRY_0702;Intake of poultry meat [g/d];decimal;IDEFICS_P1;G30;direct_mapping;direct_mapping;"SACANA FGS G30 ""poultry-ns""";complete;identical
+;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CHICKEN_070201;Intake of chicken meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;TURKEY_070202;Intake of turkey meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DUCK_070203;Intake of duck meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;GOOSE_070204;Intake of goose meat [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;RABBIT_070205;Intake of rabbit meat [g/d];decimal;IDEFICS_P1;G31;operation;weighting*G31;"SACANA FGS G31 ""rabbit and game"" (Gewichtung?)";partial;tentative
+;GAME_0703;Intake of game [g/d];decimal;IDEFICS_P1;G31;operation;weighting*G32;"SACANA FGS G31 ""rabbit and game"" (Gewichtung?)";partial;tentative
+;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;IDEFICS_P1;G33;direct_mapping;direct_mapping;"SACANA FGS G33 "" Processed meat,salami, processed poultry products , meat salad- ns""";complete;identical
+;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;IDEFICS_P1;G32;direct_mapping;direct_mapping;"SACANA FGS G32 ""Offals""";complete;identical
+;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;IDEFICS_P1;"H;L45b;L46";operation;H + (weighting*L45b) + (weighting*L46);"SACANA FGS H""Finfish, shelfish and their products"" + (Gewichtung*SACANA FGS L45b ""with meat/fish"") + (Gewichtung*SACANA FGS L46 ""Based on fish"")";complete;compatible
+;FISH_0801;Intake of fish (meat) [g/d];decimal;IDEFICS_P1;H34;operation;weighting*H34;"SACANA FGS H34 ""Fish and seafood"" (Gewichtung?)";partial;tentative
+;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;IDEFICS_P1;H34;operation;weighting*H34;"SACANA FGS H34 ""Fish and seafood"" (Gewichtung?)";partial;tentative
+;FISH_PROD_0803;Intake of processed fish [g/d];decimal;IDEFICS_P1;H35;direct_mapping;direct_mapping;"SACANA FGS H35 ""Processed fish products""";complete;identical
+;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;IDEFICS_P1;"I;L45";operation;I+ (weighting*L45);"SACANA FGS I ""Eggs"" + (Gewichtung*L45 ""based on eggs"")";complete;compatible
+;EGGS_0901;Intake of eggs [g/d];decimal;IDEFICS_P1;I;direct_mapping;direct_mapping;"SACANA FGS I ""Eggs""";complete;identical
+;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;IDEFICS_P1;"C12;C13;C14";operation;C12 + C13 + C14;"SACANA FGS C12 ""vegetable oils ns"" + SACANA FGS C13 ""margarines and lipids of mixed origin"" + SACANA FGS C14 ""butter and animal fats""";complete;compatible
+;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;IDEFICS_P1;C12;direct_mapping;direct_mapping;"SACANA FGS C12 ""vegetable oils ns""";complete;identical
+;BUTTER_1002;Intake of butter [g/d];decimal;IDEFICS_P1;C14;operation;weighting*C14;"SACANA FGS C14 ""butter and animal fats"" (Gewichtung für Butter?)";partial;tentative
+;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;IDEFICS_P1;C13;direct_mapping;direct_mapping;"SACANA FGS C13 ""margarines and lipids of mixed origin""";complete;identical
+;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;IDEFICS_P1;C14;operation;weighting*C14;"SACANA FGS C14 ""butter and animal fats"" (Gewichtung für animal fat?)";partial;tentative
+;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;IDEFICS_P1;B;direct_mapping;direct_mapping;"SACANA FGS B ""Sugar and sugar products""";complete;identical
+;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;IDEFICS_P1;B08;direct_mapping;direct_mapping;"SACANA FGS B08 ""Sugar, honey, jam and sweet sauces or dessert sauces """;complete;identical
+;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;IDEFICS_P1;B10;direct_mapping;direct_mapping;"SACANA FGS B10 ""Chocolate ns""";complete;identical
+;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;IDEFICS_P1;B09;direct_mapping;direct_mapping;"SACANA FGS B09 ""Confectionery (non chocolate)""";complete;identical
+;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;IDEFICS_P1;J39a;operation;weighting*J39a;"SACANA FGS J39a ""milk based ice-creams, desserts, (chocolate) pudding"" (Gewichtung für Milcheis?)";partial;tentative
+;SORBET_110502;Sorbet intake [g/d];decimal;IDEFICS_P1;B11b;operation;weighting*B11b;"SACANA FGS B11b ""water ice, sorbet (excluding ice cream)"" (Gewichtung für Sorbet?)";partial;tentative
+;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;IDEFICS_P1;B11b;operation;weighting*B11b;"SACANA FGS B11b ""water ice, sorbet (excluding ice cream)"" (Gewichtung für Wassereis?)";partial;tentative
+;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;IDEFICS_P1;A06;direct_mapping;direct_mapping;"SACANA FGS A06 "" Sweet bakery, biscuits, pies (sweet), cakes , sweet fritters and other confectionery""";complete;identical
+;VARPASTRY_1201;Intake of various pastry [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;IDEFICS_P1;"E22;E23;E24;E25";operation;E22 + E23 + E24 + E25;"SACANA FGS E22 ""water"" + SACANA FGS E23 ""coffee, tea, coffee surrogate, decafe, herbal - ns"" + SACANA FGS E24 ""fruit, vegetable juices and smoothies - ns"" + SACANA FGS E25 ""Soft and sweetened drinks""";complete;compatible
+;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;IDEFICS_P1;E24;direct_mapping;direct_mapping;"SACANA FGS E24 ""fruit, vegetable juices and smoothies - ns""";complete;identical
+;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;IDEFICS_P1;E25;direct_mapping;direct_mapping;"SACANA FGS E25 ""Soft and sweetened drinks""";complete;identical
+;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;IDEFICS_P1;E23;direct_mapping;direct_mapping;"SACANA FGS E23 ""coffee, tea, coffee surrogate, decafe, herbal - ns""";complete;identical
+;COFFEE_130301;Coffee intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;TEA_130302;Tea intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;WATER_1304;Intake of water and water-based beverages [g/d];decimal;IDEFICS_P1;E22;direct_mapping;direct_mapping;"SACANA FGS 22 ""water""";complete;identical
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;IDEFICS_P1;F;direct_mapping;direct_mapping;"SACANA FGS F ""Alcoholic beverages ns""";complete;identical
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;IDEFICS_P1;F27;direct_mapping;direct_mapping;"SACANA FGS F27 ""Wine""";complete;identical
+;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;IDEFICS_P1;F26;direct_mapping;direct_mapping;"SACANA FGS F26 ""Beer and cider""";complete;identical
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;IDEFICS_P1;C15;direct_mapping;direct_mapping;SACANA FGS C15 Sauces, dressing and condiments - ns;complete;identical
+;SAUCES_1501;Intake of savoury sauces [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DRESSINGS_150102;Dressing intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;YEAST_1502;Intake of yeast cultures [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;CONDIMENTS_1504;Condiments intake [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;IDEFICS_P1;"E21;L44a;L44b";operation;E21 + L44a + L44b;"SACANA FGS E21 "" Bouillon - meat/fish/vegetable"" + SACANA FGS L44a ""Soup, veloutè, LIQUID"" + SACANA FGS L44b ""Soup, veloutè, NOT LIQUID""";complete;compatible
+;SOUP_1601;Intake of soups [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;IDEFICS_P1;K40a;direct_mapping;direct_mapping;"SACANA FGS K40a ""Vegetarian burgers, tempeh, tofu, seitan""";complete;identical
+;SOY_PROD_1701;Intake of soy products [g/d];decimal;IDEFICS_P1;K40c;direct_mapping;direct_mapping;"SACANA FGS K40c ""Soy based dessert, cakes,and similar""";complete;identical
+;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;IDEFICS_P1;impossible;impossible;impossible;;impossible;unavailable
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;IDEFICS_P1;_BLANK_;paste;2;2 (24HDR);complete;identical

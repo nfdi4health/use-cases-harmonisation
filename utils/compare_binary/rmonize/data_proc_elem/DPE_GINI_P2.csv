@@ -57,13 +57,13 @@ If one parent's status is NA, use the other parent's status to determine the cat
 If both are NA, assign 7L (""other"").";partial;proximate
 6;IMMIGRATION;Immigration background;integer;GINI_P2;NAT_VM;recode;"recode(1 = 0; 2= 1)";"NAT_VM == 1 becomes 0 (no immigration background).
 NAT_VM == 2 becomes 1 (yes, immigration background).";partial;proximate
-7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;GINI_P2;;impossible;impossible;;impossible;unavailable
-8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;GINI_P2;"aktivleiisommn_15;
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;GINI_P2;"aktivleiisommn_15;
 aktivleiwintn_15;
 aktivmitsommn_15;
 aktivmitwintn_15;
 aktivschsommn_15;
 aktivschwintn_15";operation;(1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) + 3 * ((aktivmitsommn_15 + aktivmitwintn_15) / 2) + 6 * ((aktivschsommn_15 + aktivschwintn_15) / 2)) / 7;;complete;compatible
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;GINI_P2;;impossible;impossible;;impossible;unavailable
 9;SMOKE_ST;Smoking status;integer;GINI_P2;K_FB_rauchkind_15;recode;"recode(1= 1; 2 = 3; 3=3; 4 = 3; 5=3)";;partial;proximate
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;GINI_P2;;impossible;impossible;;impossible;unavailable
 11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;GINI_P2;;impossible;impossible;;impossible;unavailable
@@ -86,14 +86,13 @@ aktivschwintn_15";operation;(1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) 
 28;FAM1_DIAB2;First degree family history of T2D;integer;GINI_P2;"diabmut_15;diabvat_15";case_when;"case_when (
   diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
   diabmut_15 == 0 & diabvat_15 == 0 ~ 0L,
-  (is.na(diabmut_15) | diabmut_15 == 3) & diabvat_15 == 0 ~ NA_integer_,
-  (is.na(diabvat_15) | diabvat_15 == 3) & diabmut_15 == 0 ~ NA_integer_,
-  (is.na(diabmut_15) | diabmut_15 == 3) & (is.na(diabvat_15) | diabvat_15 == 3) ~ NA_integer_, 
+   diabmut_15 == 3 & diabvat_15 == 0 ~ 2,
+  diabvat_15 == 3 & diabmut_15 == 0 ~ 2,
+  (is.na(diabmut_15)  &  diabvat_15 == 3 ~ 2,                                                                          (is.na(diabvat_15)  &  diabmut_15 == 3 ~ 2, 
   TRUE ~ NA_integer_
 )";"If either parent has diabetes, the family history is marked as 1.
-If both parents do not have diabetes, the family history is marked as 0.
-If one parent's status is missing or unknown (NA or 3), use the other parent’s status. If the known parent has diabetes, the family history is marked as 1, and if the known parent does not have diabetes, the family history is marked as NA.
-If both parents' statuses are missing -> """" or unknown -> 888, the family history is marked as NA (insufficient data).";partial;proximate
+If both parents do not have diabetes, the family history is marked as 0.                                                                                                                       If one parent's status is no or unknown (NA or 3), the family history is marked as 2. 
+If one parent's status is missing or unknown (NA or 3), the family history is marked as 2.";partial;proximate
 29;FAM1_CANCER;First degree family history of cancer;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
 30;DRE_SCREEN;Screening, DRE;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
