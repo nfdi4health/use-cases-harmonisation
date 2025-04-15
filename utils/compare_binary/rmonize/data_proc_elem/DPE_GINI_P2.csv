@@ -85,13 +85,13 @@ aktivschwintn_15";operation;(1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) 
 27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
 28;FAM1_DIAB2;First degree family history of T2D;integer;GINI_P2;"diabmut_15;diabvat_15";case_when;"case_when (
       diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
+      diabmut_15 == 2 | diabvat_15 == 2 ~ 0L,
       diabmut_15 == 3 | diabvat_15 == 3 ~ 2L,
-      diabmut_15 == 2 & diabvat_15 == 2 ~ 0L,
       TRUE ~ NA_integer_
-)";"If either parent has diabetes(1), the family history is marked as yes(1).
-If one parent's status is unknown (3), the family history is marked as don't know (2). 
-If both parents do not have diabetes (2), the family history is marked as no (0).
-Everything else (e.g. 2+ NA, NA+NA) is marked as NA";partial;proximate
+)";"If either parent has diabetes (coded as 1), the family history is marked as Yes (1).
+If both parents do not have diabetes (coded as 2), and condition 1 does not apply, the family history is marked as No (0).
+If either parent's diabetes status is unknown (coded as 3), and conditions 1 and 2 do not apply, the family history is marked as Don't Know (2).
+All other cases are marked as NA.";partial;proximate
 29;FAM1_CANCER;First degree family history of cancer;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
 30;DRE_SCREEN;Screening, DRE;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;GINI_P2;;impossible;impossible;;impossible;unavailable
