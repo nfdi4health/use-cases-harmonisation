@@ -4,18 +4,16 @@ Index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P2;KIALTER_15;direct_mapping;direct_mapping;;complete;compatible
 4;EDU_LEVEL;Education;integer;LISA_P2;"MUTBILD_0;
 VATBILD_0;";case_when;"case_when(
-      MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
-      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
-      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 2L, 
-      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 3L, 
-      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L, 
-      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,  
+      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L,
+      MUTBILD_0 %in% c(3,4) | VATBILD_0 %in% c(3,4) ~ 3L,
+      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,
+      MUTBILD_0 == 1 | VATBILD_0 == 1 ~ 0L,
+      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,
       TRUE ~ NA_integer_
-    )";"""None"" (0): Both parents have 1 (no certificate).
+    )";"""Longer Education"" (4): Either parent has 5 or 6.
+""Secondary School"" (3): Either parent has 3 or 4.
 ""Primary School Completed"" (1): Either parent has 2.
-""Technical/Professional School"" (2): Either parent has 3.
-""Secondary School"" (3): Either parent has 4.
-""Longer Education"" (4): Either parent has 5 or 6.
+""None"" (0): Either parent has 1 (no certificate).
 ""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
 5;EMPLOY;Employment;integer;LISA_P2;"mutberuztak3_15;
 vatberuztak3_15";case_when;"case_when(
@@ -64,15 +62,14 @@ aktivschwintn_15";operation;"(
 27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;LISA_P2;;impossible;impossible;;impossible;incompatible
 28;FAM1_DIAB2;First degree family history of T2D;integer;LISA_P2;"diabmut_15;
 diabvat_15";case_when;"case_when (
-  diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
-  diabmut_15 == 0 & diabvat_15 == 0 ~ 0L,
-   diabmut_15 == 3 & diabvat_15 == 0 ~ 2,
-  diabvat_15 == 3 & diabmut_15 == 0 ~ 2,
-  (is.na(diabmut_15)  &  diabvat_15 == 3 ~ 2,  (is.na(diabvat_15)  &  diabmut_15 == 3 ~ 2, 
-  TRUE ~ NA_integer_
-)";"If either parent has diabetes, the family history is marked as 1.
-If both parents do not have diabetes, the family history is marked as 0.                                                                                         If one parent's status is no or unknown (NA or 3), the family history is marked as 2. 
-If one parent's status is missing or unknown (NA or 3), the family history is marked as 2.";partial;proximate
+      diabmut_15 == 1 | diabvat_15 == 1 ~ 1L,
+      diabmut_15 == 2 | diabvat_15 == 2 ~ 0L,
+      diabmut_15 == 3 | diabvat_15 == 3 ~ 2L,
+      TRUE ~ NA_integer_
+)";"If either parent has diabetes (coded as 1), the family history is marked as Yes (1).
+If both parents do not have diabetes (coded as 2), and condition 1 does not apply, the family history is marked as No (0).
+If either parent's diabetes status is unknown (coded as 3), and conditions 1 and 2 do not apply, the family history is marked as Don't Know (2).
+All other cases are marked as NA.";partial;proximate
 29;FAM1_CANCER;First degree family history of cancer;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 30;DRE_SCREEN;Screening, DRE;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
 31;PSA_SCREEN;Screening, PSA;integer;LISA_P2;;impossible;impossible;impossible;impossible;unavailable
@@ -138,8 +135,8 @@ If one parent's status is missing or unknown (NA or 3), the family history is ma
 91;FRUC;Fructose intake [g/d];decimal;LISA_P2;FFQKMF_15;operation;FFQKMF_15/1000;;complete;identical
 92;GI;Daily glycaemic index;decimal;LISA_P2;FFQGI_15;direct_mapping;direct_mapping; ;complete;identical
 93;GL;Daily glycaemic load;decimal;LISA_P2;FFQGL_15;direct_mapping;direct_mapping; ;complete;identical
-94;SODIUM;Sodium intake [g/d];decimal;LISA_P2;FFQMNA_15;operation;FFQMNA_15/1000;;complete;identical
-95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;LISA_P2;"FFQMK_15;
+94;SODIUM;Sodium intake [mg/d];decimal;LISA_P2;FFQMNA_15;direct_mapping;direct_mapping;;complete;identical
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;LISA_P2;"FFQMK_15;
 FFQMNA_15";operation;FFQMK_15/FFQMNA_15;;complete;identical
 96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;LISA_P2;"FFQSCHOKOL_15;
 FFQSCHOKOR_15;

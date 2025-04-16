@@ -3,44 +3,41 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 2;SEX;Sex;integer;GINI_P1;GESCHL;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;GINI_P1;KIALTER_15;direct_mapping;direct_mapping;compatible, because it is integer and we want decimal;complete;compatible
 4;EDU_LEVEL;Education;integer;GINI_P1;"gsc09m; gsc08v";case_when;"case_when(
-      is.na(gsc09m) & is.na(gsc08v) ~ 5L,
-      gsc09m == 5 & !is.na(gsc08v) ~ case_when(
-        gsc08v == 6 ~ 0L,
-        gsc08v == 1 ~ 1L,
-        gsc08v == 2 ~ 2L,
-        gsc08v == 3 ~ 3L,
-        gsc08v >= 4 ~ 4L
-      ),
-      gsc08v == 5 & !is.na(gsc09m) ~ case_when(
-        gsc09m == 6 ~ 0L,
-        gsc09m == 1 ~ 1L,
-        gsc09m == 2 ~ 2L,
-        gsc09m == 3 ~ 3L,
-        gsc09m >= 4 ~ 4L
-      ),
-      gsc09m == 5 & gsc08v == 5 ~ 5L,
-      is.na(gsc09m) & gsc08v == 6 ~ 0L,
-      is.na(gsc09m) & gsc08v == 1 ~ 1L,
-      is.na(gsc09m) & gsc08v == 2 ~ 2L,
-      is.na(gsc09m) & gsc08v == 3 ~ 3L,
-      is.na(gsc09m) & gsc08v >= 4 ~ 4L,
-      is.na(gsc08v) & gsc09m == 6 ~ 0L,
-      is.na(gsc08v) & gsc09m == 1 ~ 1L,
-      is.na(gsc08v) & gsc09m == 2 ~ 2L,
-      is.na(gsc08v) & gsc09m == 3 ~ 3L,
-      is.na(gsc08v) & gsc09m >= 4 ~ 4L,
-      pmax(gsc09m, gsc08v, na.rm = TRUE) == 6 ~ 0L,
-      pmax(gsc09m, gsc08v, na.rm = TRUE) == 1 ~ 1L,
-      pmax(gsc09m, gsc08v, na.rm = TRUE) == 2 ~ 2L,
-      pmax(gsc09m, gsc08v, na.rm = TRUE) == 3 ~ 3L,
-      pmax(gsc09m, gsc08v, na.rm = TRUE) >= 4 ~ 4L,
-      TRUE ~ NA_integer_
-    )";"If both gsc09m (mother) and gsc08v (father) are NA, assign 5L (""not specified"").
-If one parent has ""other degree"" (5) and the other parent has a valid level, use the valid level.
-If both have ""other degree"" (5), assign 5L.
-If one parent is NA, use the other parent’s value and map it directly.
-Both Present: Use the maximum value between the two parents (pmax), then map it to the appropriate category.
-Default: Assign NA_integer_ for unexpected cases (should not occur).";partial;proximate
+  is.na(gsc09m) & is.na(gsc08v) ~ NA_integer_,
+  gsc09m == 5 & gsc08v == 5 ~ 5L,
+  gsc09m == 5 & !is.na(gsc08v) ~ case_when(
+    gsc08v == 6 ~ 0L,
+    gsc08v %in% 1:3 ~ 3L,
+    gsc08v == 4 ~ 4L,
+    TRUE ~ 5L
+  ),
+  gsc08v == 5 & !is.na(gsc09m) ~ case_when(
+    gsc09m == 6 ~ 0L,
+    gsc09m %in% 1:3 ~ 3L,
+    gsc09m == 4 ~ 4L,
+    TRUE ~ 5L
+  ),
+  gsc09m == 5 & gsc08v != 5  ~ case_when(
+    gsc08v == 6 ~ 0L,
+    gsc08v %in% 1:3 ~ 3L,
+    gsc08v == 4 ~ 4L,
+    TRUE ~ 5L
+  ),
+  gsc08v == 5 & gsc09m != 5  ~ case_when(
+    gsc09m == 6 ~ 0L,
+    gsc09m %in% 1:3 ~ 3L,
+    gsc09m == 4 ~ 4L,
+    TRUE ~ 5L
+  ),
+  gsc09m == 6 | gsc08v == 6  ~ 0L,
+  gsc09m %in% 1:3 | gsc08v %in% 1:3 ~ 3L,
+  gsc09m == 4 | gsc08v == 4 ~ 4L,
+  TRUE ~ 5L
+)";"Missing values: If both gsc09m and gsc08v are missing, it returns NA.
+Both are ""not specified"": If both are 5, it returns 5.
+One is ""not specified"": If one of the variables is 5 (i.e., ""Sonstiger Abschluss""), it uses the other parent’s value (if valid) to determine the education level.
+One is missing: If one of the parents has a missing value (NA), it checks the valid level of the other parent.
+Max of both: If neither is missing, it will return the highest level between both parents (0L for none, 3L for secondary school, 4L for longer education).";partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;GINI_P1;"aktivleiisommn_15;aktivleiwintn_15;aktivmitsommn_15;aktivmitwintn_15;aktivschsommn_15;aktivschwintn_15";operation;"(
   1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) +
   3 * ((aktivmitsommn_15 + aktivmitwintn_15) / 2) +

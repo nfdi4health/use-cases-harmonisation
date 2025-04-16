@@ -3,18 +3,16 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 2;SEX;Sex;integer;LISA_P1;GESCHL;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P1;KIALTER_15;direct_mapping;direct_mapping;compatible, because it is integer in the study and we want decimal;complete;compatible
 4;EDU_LEVEL;Education;integer;LISA_P1;"MUTBILD_0;VATBILD_0;";case_when;"case_when(
-      MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
-      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
-      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 2L, 
-      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 3L, 
-      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L, 
-      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,  
-      TRUE ~ NA_integer_ 
-    )";"""None"" (0): Both parents have 1 (no certificate).
+      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L,
+      MUTBILD_0 %in% c(3,4) | VATBILD_0 %in% c(3,4) ~ 3L,
+      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,
+      MUTBILD_0 == 1 | VATBILD_0 == 1 ~ 0L,
+      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,
+      TRUE ~ NA_integer_
+    )";"""Longer Education"" (4): Either parent has 5 or 6.
+""Secondary School"" (3): Either parent has 3 or 4.
 ""Primary School Completed"" (1): Either parent has 2.
-""Technical/Professional School"" (2): Either parent has 3.
-""Secondary School"" (3): Either parent has 4.
-""Longer Education"" (4): Either parent has 5 or 6.
+""None"" (0): Either parent has 1 (no certificate).
 ""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;LISA_P1;"aktivleiisommn_15;aktivleiwintn_15;aktivmitsommn_15;aktivmitwintn_15;aktivschsommn_15;aktivschwintn_15";operation;"(
   1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) +

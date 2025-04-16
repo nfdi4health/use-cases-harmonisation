@@ -1,13 +1,13 @@
 variable;name;label
 GESCHL;1;male
 GESCHL;2;female
-MUTBILD_0;1;No secondary school or elementary school certificate (Mother)
-MUTBILD_0;2;Lower secondary school or elementary school certificate (Mother)
-MUTBILD_0;3;Secondary school certificate (middle school leaving certificate)(Mother)
-MUTBILD_0;4;Completion of Polytechnic. high school (Mother)
-MUTBILD_0;5;Advanced technical college entrance qualification (Mother)
-MUTBILD_0;6;General or specialist university entrance qualification (Mother)
-MUTBILD_0;7;Other degree (Mother)
+MUTBILD_0;1;No secondary school or elementary school certificate
+MUTBILD_0;2;Lower secondary school or elementary school certificate
+MUTBILD_0;3;Secondary school certificate (middle school leaving certificate)
+MUTBILD_0;4;Completion of Polytechnic. high school
+MUTBILD_0;5;Advanced technical college entrance qualification
+MUTBILD_0;6;General or specialist university entrance qualification
+MUTBILD_0;7;Other degree
 VATBILD_0;1;No secondary school or elementary school certificate
 VATBILD_0;2;Lower secondary school or elementary school certificate
 VATBILD_0;3;Secondary school certificate (middle school leaving certificate)
