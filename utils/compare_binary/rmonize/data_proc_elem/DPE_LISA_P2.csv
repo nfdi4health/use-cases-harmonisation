@@ -4,18 +4,16 @@ Index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P2;KIALTER_15;direct_mapping;direct_mapping;;complete;compatible
 4;EDU_LEVEL;Education;integer;LISA_P2;"MUTBILD_0;
 VATBILD_0;";case_when;"case_when(
-      MUTBILD_0 == 1 & VATBILD_0 == 1 ~ 0L,
-      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,  
-      MUTBILD_0 %in% c(3) | VATBILD_0 %in% c(3) ~ 3L, 
-      MUTBILD_0 %in% c(4) | VATBILD_0 %in% c(4) ~ 2L, 
-      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L, 
-      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,  
+      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L,
+      MUTBILD_0 %in% c(3,4) | VATBILD_0 %in% c(3,4) ~ 3L,
+      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,
+      MUTBILD_0 == 1 | VATBILD_0 == 1 ~ 0L,
+      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,
       TRUE ~ NA_integer_
-    )";"""None"" (0): Both parents have 1 (no certificate).
+    )";"""Longer Education"" (4): Either parent has 5 or 6.
+""Secondary School"" (3): Either parent has 3 or 4.
 ""Primary School Completed"" (1): Either parent has 2.
-""Technical/Professional School"" (2): Either parent has 4.
-""Secondary School"" (3): Either parent has 3.
-""Longer Education"" (4): Either parent has 5 or 6.
+""None"" (0): Either parent has 1 (no certificate).
 ""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
 5;EMPLOY;Employment;integer;LISA_P2;"mutberuztak3_15;
 vatberuztak3_15";case_when;"case_when(
