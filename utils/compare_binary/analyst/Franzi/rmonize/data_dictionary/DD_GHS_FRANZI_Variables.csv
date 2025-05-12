@@ -1,0 +1,45 @@
+index;name;label;valueType
+;qu_nutr_potato_c;Wie oft konsumierten Sie in den letzten 12 Monaten gekochte Kartoffeln;integer
+;qu_nutr_fries_c;Wie oft konsumierten Sie in den letzten 12 Monaten frittierte Kartoffeln (Bratkartoffeln, Kroketten, Pommes frites);integer
+;qu_nutr_salad_c;Wie oft konsumierten Sie in den letzten 12 Monaten Salat oder Gemüse, roh zubereitet (Karotte, Kohlrabi, Tomate, Oliven, Gurke, Paprika);integer
+;qu_nutr_veggie_c;Wie oft konsumierten Sie in den letzten 12 Monaten  gekochtes Gemüse  (Karotte, Kohlrabi, Tomate, Oliven, Gurke, Paprika);integer
+;qu_nutr_pulse_c;Wie oft konsumierten Sie in den letzten 12 Monaten Hülsenfrüchte (Bohnen, Erbsen, Linsen);integer
+;qu_nutr_fruit_c;Wie oft konsumierten Sie in den letzten 12 Monaten Frisches Obst (Apfel, Banane, Pfirsich, Beerenobst);integer
+;qu_nutr_nuts_c;Wie oft konsumierten Sie in den letzten 12 Monaten ungesalzene Nüsse (Walnuss, Erdnuss, Mandel, Pistazie);integer
+;qu_nutr_cheese_c;Wie oft konsumierten Sie in den letzten 12 Monaten Käse (Schnittkäse, Weichkäse oder anderer Käse);integer
+;qu_nutr_cream_c;Wie oft konsumierten Sie in den letzten 12 Monaten Sahne/Creme fraiche;integer
+;qu_nutr_normalfatmilk_c;Wie oft konsumierten Sie in den letzten 12 Monaten Milchprodukte mit normalem FettgehaltMilchprodukte mit normalem Fettgehalt (Quark, Joghurt, Dickmilch);integer
+;qu_nutr_lowfatmilk_c;Wie oft konsumierten Sie in den letzten 12 Monaten fettarme Milchprodukte bis 1,5%Fettgehalt (Joghurt, Milch, Quark);integer
+;qu_nutr_buttermilk_c;Wie oft konsumierten Sie in den letzten 12 Monaten Milch einschließlich Buttermilch;integer
+;qu_nutr_cereals_c;Wie oft konsumierten Sie in den letzten 12 Monaten Müsli, Cornflakes;integer
+;qu_nutr_oats_c;Wie oft konsumierten Sie in den letzten 12 Monaten Haferflocken;integer
+;qu_nutr_pasta_c;Wie oft konsumierten Sie in den letzten 12 Monaten Teigwaren (Nudeln, Spaghetti);integer
+;qu_nutr_reis_c;Wie oft konsumierten Sie in den letzten 12 Monaten Reis;integer
+;qu_nutr_wbread_c;Wie oft konsumierten Sie in den letzten 12 Monaten Graubrot, Mischbrot;integer
+;qu_nutr_bbread_c;Wie oft konsumierten Sie in den letzten 12 Monaten Graubrot, Mischbrot;integer
+;qu_nutr_blackbread_c;Wie oft konsumierten Sie in den letzten 12 Monaten Vollkornbrot, Schwarzbrot, Knäckebrot;integer
+;qu_nutr_meat_c;Wie oft konsumierten Sie in den letzten 12 Monaten Fleisch (Schwein, Rind, Lamm, Wild, keine Wurstwaren);integer
+;qu_nutr_poultry_c;Wie oft konsumierten Sie in den letzten 12 Monaten Geflügel (Huhn, Pute, Ente);integer
+;qu_nutr_sausage_c;Wie oft konsumierten Sie in den letzten 12 Monaten Wurstwaren, Schinken (Aufschnitt, Frikadelle);integer
+;qu_nutr_fish_c;Wie oft konsumierten Sie in den letzten 12 Monaten Fisch oder Meeresfrüchte (Hering, Lachs, Forelle, Shrimps, Muscheln);integer
+;qu_nutr_egg_c;Wie oft konsumierten Sie in den letzten 12 Monaten Eier;integer
+;qu_nutr_butter_c;Wie oft konsumierten Sie in den letzten 12 Monaten Butter;integer
+;qu_nutr_margarine_c;Wie oft konsumierten Sie in den letzten 12 Monaten Margarine;integer
+;qu_nutr_oliveoil_c;Wie oft konsumierten Sie in den letzten 12 Monaten Olivenöl;integer
+;qu_nutr_vegetableoil_c;Wie oft konsumierten Sie in den letzten 12 Monaten andere pflanzliche Öle;integer
+;qu_nutr_sweets_c;Wie oft konsumierten Sie in den letzten 12 Monaten Süßwaren (Bonbons, Schokolade, Pralinen, etc.);integer
+;qu_nutr_cake_c;Wie oft konsumierten Sie in den letzten 12 Monaten Kuchen, Gebäck, Kekse;integer
+;qu_nutr_regimensoftdrink_c;Wie oft konsumierten Sie in den letzten 12 Monaten Diätlimonade, sonst. Diätgetränke;integer
+;qu_nutr_fruitjuice_c;Wie oft konsumierten Sie in den letzten 12 Monaten Obstsäfte und Gemüsesäfte;integer
+;qu_nutr_softdrink_c;Wie oft konsumierten Sie in den letzten 12 Monaten Erfrischungsgetränke (Limonaden, Cola-Getränke);integer
+;qu_nutr_water_c;Wie oft konsumierten Sie in den letzten 12 Monaten Mineralwasser/Leitungswasser;integer
+;qu_nutr_coffee_d;Wie viele Tassen Kaffee trinken Sie gewöhnlich am Tag?;integer
+;qu_nutr_tea_d;Wie viele Tassen schwarzen oder grünen Tee trinken Sie gewöhnlich am Tag?;integer
+;sacapi_sm019_i_4;Wie viel Wein oder Sekt trinken Sie in der Regel am Wochenende, also am Samstag und Sonntag?;decimal
+;sacapi_sm020_i_4;Wie viel Wein oder Sekt trinken Sie in der Regel an einem Werktag?;decimal
+;sacapi_sm019_i_1;Wie viel Bier trinken Sie in der Regel am Wochenende, also am Samstag und Sonntag?;decimal
+;sacapi_sm020_i_1;Wie viel Bier trinken Sie in der Regel an einem Werktag?;decimal
+;sacapi_sm019_i_5;Wie viel Schnaps trinken Sie in der Regel am Wochenende, also am Samstag und Sonntag?;decimal
+;sacapi_sm020_i_5;Wie viel Schnaps trinken Sie in der Regel an einem Werktag?;decimal
+;sacapi_sm019_i_6;Wie viel alkoholhaltige Mischgetränke trinken Sie in der Regel am Wochenende, also am Samstag und Sonntag?;decimal
+;sacapi_sm020_i_6;Wie viel alkoholhaltige Mischgetränke trinken Sie in der Regel an einem Werktag?;decimal

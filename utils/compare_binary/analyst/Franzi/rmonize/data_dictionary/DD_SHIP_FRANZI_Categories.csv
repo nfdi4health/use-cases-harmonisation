@@ -1,0 +1,264 @@
+variable;name;label
+food_6;1;daily or almost daily
+food_6;2;several times a week
+food_6;3;about once a week
+food_6;4;several times a month
+food_6;5;once a month or less often
+food_6;6;never or almost never
+food_6;8;do not know
+food_6;9;Refusal to answer
+food_7;1;daily or almost daily
+food_7;2;several times a week
+food_7;3;about once a week
+food_7;4;several times a month
+food_7;5;once a month or less often
+food_7;6;never or almost never
+food_7;8;do not know
+food_7;9;Refusal to answer
+food_10;1;daily or almost daily
+food_10;2;several times a week
+food_10;3;about once a week
+food_10;4;several times a month
+food_10;5;once a month or less often
+food_10;6;never or almost never
+food_10;8;do not know
+food_10;9;Refusal to answer
+food_12;1;daily or almost daily
+food_12;2;several times a week
+food_12;3;about once a week
+food_12;4;several times a month
+food_12;5;once a month or less often
+food_12;6;never or almost never
+food_12;8;do not know
+food_12;9;Refusal to answer
+food_23;1;daily or almost daily
+food_23;2;several times a week
+food_23;3;about once a week
+food_23;4;several times a month
+food_23;5;once a month or less often
+food_23;6;never or almost never
+food_23;8;do not know
+food_23;9;Refusal to answer
+food_24;1;daily or almost daily
+food_24;2;several times a week
+food_24;3;about once a week
+food_24;4;several times a month
+food_24;5;once a month or less often
+food_24;6;never or almost never
+food_24;8;do not know
+food_24;9;Refusal to answer
+food_25;1;daily or almost daily
+food_25;2;several times a week
+food_25;3;about once a week
+food_25;4;several times a month
+food_25;5;once a month or less often
+food_25;6;never or almost never
+food_25;8;do not know
+food_25;9;Refusal to answer
+food_21;1;daily or almost daily
+food_21;2;several times a week
+food_21;3;about once a week
+food_21;4;several times a month
+food_21;5;once a month or less often
+food_21;6;never or almost never
+food_21;8;do not know
+food_21;9;Refusal to answer
+food_8;1;daily or almost daily
+food_8;2;several times a week
+food_8;3;about once a week
+food_8;4;several times a month
+food_8;5;once a month or less often
+food_8;6;never or almost never
+food_8;8;do not know
+food_8;9;Refusal to answer
+food_9;1;daily or almost daily
+food_9;2;several times a week
+food_9;3;about once a week
+food_9;4;several times a month
+food_9;5;once a month or less often
+food_9;6;never or almost never
+food_9;8;do not know
+food_9;9;Refusal to answer
+food_13;1;daily or almost daily
+food_13;2;several times a week
+food_13;3;about once a week
+food_13;4;several times a month
+food_13;5;once a month or less often
+food_13;6;never or almost never
+food_13;8;do not know
+food_13;9;Refusal to answer
+food_14;1;daily or almost daily
+food_14;2;several times a week
+food_14;3;about once a week
+food_14;4;several times a month
+food_14;5;once a month or less often
+food_14;6;never or almost never
+food_14;8;do not know
+food_14;9;Refusal to answer
+food_15;1;daily or almost daily
+food_15;2;several times a week
+food_15;3;about once a week
+food_15;4;several times a month
+food_15;5;once a month or less often
+food_15;6;never or almost never
+food_15;8;do not know
+food_15;9;Refusal to answer
+food_16;1;daily or almost daily
+food_16;2;several times a week
+food_16;3;about once a week
+food_16;4;several times a month
+food_16;5;once a month or less often
+food_16;6;never or almost never
+food_16;8;do not know
+food_16;9;Refusal to answer
+food;1;daily or almost daily
+food;2;several times a week
+food;3;about once a week
+food;4;several times a month
+food;5;once a month or less often
+food;6;never or almost never
+food;8;do not know
+food;9;Refusal to answer
+food_4;1;daily or almost daily
+food_4;2;several times a week
+food_4;3;about once a week
+food_4;4;several times a month
+food_4;5;once a month or less often
+food_4;6;never or almost never
+food_4;8;do not know
+food_4;9;Refusal to answer
+food_2;1;daily or almost daily
+food_2;2;several times a week
+food_2;3;about once a week
+food_2;4;several times a month
+food_2;5;once a month or less often
+food_2;6;never or almost never
+food_2;8;do not know
+food_2;9;Refusal to answer
+food_3;1;daily or almost daily
+food_3;2;several times a week
+food_3;3;about once a week
+food_3;4;several times a month
+food_3;5;once a month or less often
+food_3;6;never or almost never
+food_3;8;do not know
+food_3;9;Refusal to answer
+food_5;1;daily or almost daily
+food_5;2;several times a week
+food_5;3;about once a week
+food_5;4;several times a month
+food_5;5;once a month or less often
+food_5;6;never or almost never
+food_5;8;do not know
+food_5;9;Refusal to answer
+food_26;1;daily or almost daily
+food_26;2;several times a week
+food_26;3;about once a week
+food_26;4;several times a month
+food_26;5;once a month or less often
+food_26;6;never or almost never
+food_26;8;do not know
+food_26;9;Refusal to answer
+food_19;1;daily or almost daily
+food_19;2;several times a week
+food_19;3;about once a week
+food_19;4;several times a month
+food_19;5;once a month or less often
+food_19;6;never or almost never
+food_19;8;do not know
+food_19;9;Refusal to answer
+food_20;1;daily or almost daily
+food_20;2;several times a week
+food_20;3;about once a week
+food_20;4;several times a month
+food_20;5;once a month or less often
+food_20;6;never or almost never
+food_20;8;do not know
+food_20;9;Refusal to answer
+food_17;1;daily or almost daily
+food_17;2;several times a week
+food_17;3;about once a week
+food_17;4;several times a month
+food_17;5;once a month or less often
+food_17;6;never or almost never
+food_17;8;do not know
+food_17;9;Refusal to answer
+food_18;1;daily or almost daily
+food_18;2;several times a week
+food_18;3;about once a week
+food_18;4;several times a month
+food_18;5;once a month or less often
+food_18;6;never or almost never
+food_18;8;do not know
+food_18;9;Refusal to answer
+food_28;1;daily or almost daily
+food_28;2;several times a week
+food_28;3;about once a week
+food_28;4;several times a month
+food_28;5;once a month or less often
+food_28;6;never or almost never
+food_28;8;do not know
+food_28;9;Refusal to answer
+food_27;1;daily or almost daily
+food_27;2;several times a week
+food_27;3;about once a week
+food_27;4;several times a month
+food_27;5;once a month or less often
+food_27;6;never or almost never
+food_27;8;do not know
+food_27;9;Refusal to answer
+food_30;1;daily or almost daily
+food_30;2;several times a week
+food_30;3;about once a week
+food_30;4;several times a month
+food_30;5;once a month or less often
+food_30;6;never or almost never
+food_30;8;do not know
+food_30;9;Refusal to answer
+food_31;1;daily or almost daily
+food_31;2;several times a week
+food_31;3;about once a week
+food_31;4;several times a month
+food_31;5;once a month or less often
+food_31;6;never or almost never
+food_31;8;do not know
+food_31;9;Refusal to answer
+kaffee;98;do not know
+kaffee;99;Refusal to answer
+tee;0;nothing
+tee;98;do not know
+tee;99;Refusal to answer
+food_32;1;daily or almost daily
+food_32;2;several times a week
+food_32;3;about once a week
+food_32;4;several times a month
+food_32;5;once a month or less often
+food_32;6;never or almost never
+food_32;8;do not know
+food_32;9;Refusal to answer
+weinwe;0;nothing
+weinwe;98;do not know
+weinwe;99;Refusal to answer
+weinwt;0;nothing
+weinwt;98;do not know
+weinwt;99;Refusal to answer
+bierwe;0;nothing
+bierwe;98;do not know
+bierwe;99;Refusal to answer
+bierwt;0;nothing
+bierwt;98;do not know
+bierwt;99;Refusal to answer
+schnwe;0;nothing
+schnwe;98;do not know
+schnwe;99;Refusal to answer
+schnwt;0;nothing
+schnwt;98;do not know
+schnwt;99;Refusal to answer
+food_29;1;daily or almost daily
+food_29;2;several times a week
+food_29;3;about once a week
+food_29;4;several times a month
+food_29;5;once a month or less often
+food_29;6;never or almost never
+food_29;8;do not know
+food_29;9;Refusal to answer
