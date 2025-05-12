@@ -1,0 +1,218 @@
+variable;name;label
+fe_ff9;1;(fast) Nie
+fe_ff9;2;1-3 mal im Monat
+fe_ff9;3;1-3 mal in der Woche
+fe_ff9;4;4-6 mal in der Woche
+fe_ff9;5;täglich
+fe_ff9;7;missing
+fe_ff9;8;missing
+fe_ff10;1;(fast) Nie
+fe_ff10;2;1-3 mal im Monat
+fe_ff10;3;1-3 mal in der Woche
+fe_ff10;4;4-6 mal in der Woche
+fe_ff10;5;täglich
+fe_ff10;7;missing
+fe_ff10;8;missing
+fe_ff11;1;(fast) Nie
+fe_ff11;2;1-3 mal im Monat
+fe_ff11;3;1-3 mal in der Woche
+fe_ff11;4;4-6 mal in der Woche
+fe_ff11;5;täglich
+fe_ff11;7;missing
+fe_ff11;8;missing
+fe_ff12;1;(fast) Nie
+fe_ff12;2;1-3 mal im Monat
+fe_ff12;3;1-3 mal in der Woche
+fe_ff12;4;4-6 mal in der Woche
+fe_ff12;5;täglich
+fe_ff12;7;missing
+fe_ff12;8;missing
+fe_ff13;1;(fast) Nie
+fe_ff13;2;1-3 mal im Monat
+fe_ff13;3;1-3 mal in der Woche
+fe_ff13;4;4-6 mal in der Woche
+fe_ff13;5;täglich
+fe_ff13;7;missing
+fe_ff13;8;missing
+fe_ff23;1;(fast) Nie
+fe_ff23;2;1-3 mal im Monat
+fe_ff23;3;1-3 mal in der Woche
+fe_ff23;4;4-6 mal in der Woche
+fe_ff23;5;täglich
+fe_ff23;7;missing
+fe_ff23;8;missing
+fe_ff7;1;(fast) Nie
+fe_ff7;2;1-3 mal im Monat
+fe_ff7;3;1-3 mal in der Woche
+fe_ff7;4;4-6 mal in der Woche
+fe_ff7;5;täglich
+fe_ff7;7;missing
+fe_ff7;8;missing
+fe_ff6;1;(fast) Nie
+fe_ff6;2;1-3 mal im Monat
+fe_ff6;3;1-3 mal in der Woche
+fe_ff6;4;4-6 mal in der Woche
+fe_ff6;5;täglich
+fe_ff6;7;missing
+fe_ff6;8;missing
+fe_ff15;1;(fast) Nie
+fe_ff15;2;1-3 mal im Monat
+fe_ff15;3;1-3 mal in der Woche
+fe_ff15;4;4-6 mal in der Woche
+fe_ff15;5;täglich
+fe_ff15;7;missing
+fe_ff15;8;missing
+fe_ff8;1;(fast) Nie
+fe_ff8;2;1-3 mal im Monat
+fe_ff8;3;1-3 mal in der Woche
+fe_ff8;4;4-6 mal in der Woche
+fe_ff8;5;täglich
+fe_ff8;7;missing
+fe_ff8;8;missing
+fe_ff14;1;(fast) Nie
+fe_ff14;2;1-3 mal im Monat
+fe_ff14;3;1-3 mal in der Woche
+fe_ff14;4;4-6 mal in der Woche
+fe_ff14;5;täglich
+fe_ff14;7;missing
+fe_ff14;8;missing
+fe_ff1;1;(fast) Nie
+fe_ff1;2;1-3 mal im Monat
+fe_ff1;3;1-3 mal in der Woche
+fe_ff1;4;4-6 mal in der Woche
+fe_ff1;5;täglich
+fe_ff1;7;missing
+fe_ff1;8;missing
+fe_ff2;1;(fast) Nie
+fe_ff2;2;1-3 mal im Monat
+fe_ff2;3;1-3 mal in der Woche
+fe_ff2;4;4-6 mal in der Woche
+fe_ff2;5;täglich
+fe_ff2;7;missing
+fe_ff2;8;missing
+fe_ff3;1;(fast) Nie
+fe_ff3;2;1-3 mal im Monat
+fe_ff3;3;1-3 mal in der Woche
+fe_ff3;4;4-6 mal in der Woche
+fe_ff3;5;täglich
+fe_ff3;7;missing
+fe_ff3;8;missing
+fe_ff16;1;(fast) Nie
+fe_ff16;2;1-3 mal im Monat
+fe_ff16;3;1-3 mal in der Woche
+fe_ff16;4;4-6 mal in der Woche
+fe_ff16;5;täglich
+fe_ff16;7;missing
+fe_ff16;8;missing
+fe_ff4;1;(fast) Nie
+fe_ff4;2;1-3 mal im Monat
+fe_ff4;3;1-3 mal in der Woche
+fe_ff4;4;4-6 mal in der Woche
+fe_ff4;5;täglich
+fe_ff4;7;missing
+fe_ff4;8;missing
+fe_ff5;1;(fast) Nie
+fe_ff5;2;1-3 mal im Monat
+fe_ff5;3;1-3 mal in der Woche
+fe_ff5;4;4-6 mal in der Woche
+fe_ff5;5;täglich
+fe_ff5;7;missing
+fe_ff5;8;missing
+fe_fe4;1;(fast) Nie
+fe_fe4;2;1-3 mal im Monat
+fe_fe4;3;1-3 mal in der Woche
+fe_fe4;4;4-6 mal in der Woche
+fe_fe4;5;täglich
+fe_fe4;7;missing
+fe_fe4;8;missing
+fe_fe5;1;(fast) Nie
+fe_fe5;2;1-3 mal im Monat
+fe_fe5;3;1-3 mal in der Woche
+fe_fe5;4;4-6 mal in der Woche
+fe_fe5;5;täglich
+fe_fe5;7;missing
+fe_fe5;8;missing
+fe_fe6;1;(fast) Nie
+fe_fe6;2;1-3 mal im Monat
+fe_fe6;3;1-3 mal in der Woche
+fe_fe6;4;4-6 mal in der Woche
+fe_fe6;5;täglich
+fe_fe6;7;missing
+fe_fe6;8;missing
+fe_fe1;1;(fast) Nie
+fe_fe1;2;1-3 mal im Monat
+fe_fe1;3;1-3 mal in der Woche
+fe_fe1;4;4-6 mal in der Woche
+fe_fe1;5;täglich
+fe_fe1;7;missing
+fe_fe1;8;missing
+fe_fe2;1;(fast) Nie
+fe_fe2;2;1-3 mal im Monat
+fe_fe2;3;1-3 mal in der Woche
+fe_fe2;4;4-6 mal in der Woche
+fe_fe2;5;täglich
+fe_fe2;7;missing
+fe_fe2;8;missing
+fe_fe3;1;(fast) Nie
+fe_fe3;2;1-3 mal im Monat
+fe_fe3;3;1-3 mal in der Woche
+fe_fe3;4;4-6 mal in der Woche
+fe_fe3;5;täglich
+fe_fe3;7;missing
+fe_fe3;8;missing
+fe_ff17;1;(fast) Nie
+fe_ff17;2;1-3 mal im Monat
+fe_ff17;3;1-3 mal in der Woche
+fe_ff17;4;4-6 mal in der Woche
+fe_ff17;5;täglich
+fe_ff17;7;missing
+fe_ff17;8;missing
+fe_ff22;1;(fast) Nie
+fe_ff22;2;1-3 mal im Monat
+fe_ff22;3;1-3 mal in der Woche
+fe_ff22;4;4-6 mal in der Woche
+fe_ff22;5;täglich
+fe_ff22;7;missing
+fe_ff22;8;missing
+fe_ff24;1;(fast) Nie
+fe_ff24;2;1-3 mal im Monat
+fe_ff24;3;1-3 mal in der Woche
+fe_ff24;4;4-6 mal in der Woche
+fe_ff24;5;täglich
+fe_ff24;7;missing
+fe_ff24;8;missing
+fe_ff25;1;(fast) Nie
+fe_ff25;2;1-3 mal im Monat
+fe_ff25;3;1-3 mal in der Woche
+fe_ff25;4;4-6 mal in der Woche
+fe_ff25;5;täglich
+fe_ff25;7;missing
+fe_ff25;8;missing
+fe_ff26;1;(fast) Nie
+fe_ff26;2;1-3 mal im Monat
+fe_ff26;3;1-3 mal in der Woche
+fe_ff26;4;4-6 mal in der Woche
+fe_ff26;5;täglich
+fe_ff26;7;missing
+fe_ff26;8;missing
+fe_ff27;1;(fast) Nie
+fe_ff27;2;1-3 mal im Monat
+fe_ff27;3;1-3 mal in der Woche
+fe_ff27;4;4-6 mal in der Woche
+fe_ff27;5;täglich
+fe_ff27;7;missing
+fe_ff27;8;missing
+fe_ff21;1;(fast) Nie
+fe_ff21;2;1-3 mal im Monat
+fe_ff21;3;1-3 mal in der Woche
+fe_ff21;4;4-6 mal in der Woche
+fe_ff21;5;täglich
+fe_ff21;7;missing
+fe_ff21;8;missing
+fe_ff18;1;(fast) Nie
+fe_ff18;2;1-3 mal im Monat
+fe_ff18;3;1-3 mal in der Woche
+fe_ff18;4;4-6 mal in der Woche
+fe_ff18;5;täglich
+fe_ff18;7;missing
+fe_ff18;8;missing

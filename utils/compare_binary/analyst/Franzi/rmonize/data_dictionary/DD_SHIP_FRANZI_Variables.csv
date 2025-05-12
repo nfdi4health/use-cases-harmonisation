@@ -1,0 +1,41 @@
+index;name;label;valueType
+;food_6;Gekochte Kartoffeln;integer
+;food_7;Bratkartoffeln, Kroketten, Pommes;integer
+;food_10;Salat, rohes Gemüse;integer
+;food_12;frisches Obst;integer
+;food_23;Fettarme Milchprodukte;integer
+;food_24;Normale Milch und Buttermilch;integer
+;food_25;Schnittkäse, Weichkäse;integer
+;food_21;Sahne;integer
+;food_8;Teigwaren;integer
+;food_9;Reis;integer
+;food_13;Weißbrot, Toastbrot, Brötchen;integer
+;food_14;Schwarzbrot, Knäckebrot;integer
+;food_15;Graubrot;integer
+;food_16;Haferflocken, Müsli;integer
+;food;Fleisch;integer
+;food_4;Geflügel;integer
+;food_2;Wurstwaren;integer
+;food_3;Bratwurst, Hamburger, Döner;integer
+;food_5;Fisch;integer
+;food_26;Eier;integer
+;food_19;Olivenöl;integer
+;food_20;andere pflanzliche Öle;integer
+;food_17;Butter;integer
+;food_18;Margarine;integer
+;food_28;Süßwaren;integer
+;food_27;Kuchen, Gebäck;integer
+;food_30;Obst- und Gemüsesäfte;integer
+;food_31;Erfrischungsgetränke;integer
+;kaffee;Wieviel Tassen koffeinhaltigen Kaffee trinken Sie im allgemeinen pro Tag?;integer
+;tee;Wieviel Tassen schwarzen Tee trinken Sie im allgemeinen pro Tag?;integer
+;food_32;Mineralwasser;integer
+;alcg7d_s0;alcohol consumption during the last 7 days;decimal
+;alcg30d_s0;alcohol consumption during the last 30 days;decimal
+;weinwe;Weinkonsum (0,2 Liter) (letztes Wochenende);integer
+;weinwt;Weinkonsum (0,2 Liter) (letzter Werktag);integer
+;bierwe;Bierkonsum (0,5 Liter) (letztes Wochenende);integer
+;bierwt;Bierkonsum (0,5 Liter) (letzter Werktag);integer
+;schnwe;Schnapskonsum (letztes Wochenende);integer
+;schnwt;Schnapskonsum (letzter Werktag);integer
+;food_29;Salzige Knabbereien;integer
