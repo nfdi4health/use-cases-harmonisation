@@ -1,0 +1,31 @@
+variable;name;label
+sex;1;male
+sex;2;female
+m_schulab;1;Volks-/Hauptschulabschluss
+m_schulab;2;Mittlere Reife, Realschulabschluss (Fachschulreife)
+m_schulab;3;Fachhochschulreife, Abschluss einer Fachoberschule etc.
+m_schulab;4;Abitur (Hochschulreife)
+m_schulab;5;keinen dieser Abschlüsse
+v_schulab;1;Volks-/Hauptschulabschluss
+v_schulab;2;Mittlere Reife, Realschulabschluss (Fachschulreife)
+v_schulab;3;Fachhochschulreife, Abschluss einer Fachoberschule etc.
+v_schulab;4;Abitur (Hochschulreife)
+v_schulab;5;keinen dieser Abschlüsse
+m_berufab;1;Lehre (beruflich-betriebliche Ausbildung)
+m_berufab;2;Berufsschule, Handelsschule (berufl.-schulische Ausbildung)
+m_berufab;3;Fachschule (z.B. Meister-Technikerschule, Berufs/Fachakademie)
+m_berufab;4;Fachhochschule, Ingenieurschule
+m_berufab;5;Universität, Hochschule
+m_berufab;6;anderer Abschluss (bis 3/2016 berufl. Praktikum)
+m_berufab;7;kein beruflicher Abschluss
+m_berufab;8;noch in beruflicher Ausbildung (Auszubildener / Student)
+v_berufab;1;Lehre (beruflich-betriebliche Ausbildung)
+v_berufab;2;Berufsschule, Handelsschule (berufl.-schulische Ausbildung)
+v_berufab;3;Fachschule (z.B. Meister-Technikerschule, Berufs/Fachakademie)
+v_berufab;4;Fachhochschule, Ingenieurschule
+v_berufab;5;Universität, Hochschule
+v_berufab;6;anderer Abschluss (bis 3/2016 berufl. Praktikum)
+v_berufab;7;kein beruflicher Abschluss
+v_berufab;8;noch in beruflicher Ausbildung (Auszubildener / Student)
+SMOKE_ST_HH;0;no
+SMOKE_ST_HH;1;yes
