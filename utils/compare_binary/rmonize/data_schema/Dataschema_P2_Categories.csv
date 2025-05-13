@@ -1,12 +1,16 @@
 variable;label;name
 SEX;male;1
 SEX;female;2
-EDU_LEVEL;none;0
-EDU_LEVEL;primary school completed;1
-EDU_LEVEL;technical/professional school completed;2
-EDU_LEVEL;secondary school;3
-EDU_LEVEL;longer education (incl. university);4
-EDU_LEVEL;not specified;5
+EDU_LEVEL;Early Childhood Education;0
+EDU_LEVEL;Primary Education;1
+EDU_LEVEL;Lower Secondary Education;2
+EDU_LEVEL;Upper Secondary Education;3
+EDU_LEVEL;Post-secondary non-tertiary education;4
+EDU_LEVEL;Short-Cycle Tertiary Education;5
+EDU_LEVEL;Bachelor's or equivalent level;6
+EDU_LEVEL;Master's or equivalent level;7
+EDU_LEVEL;Doctoral or equivalent level;8
+EDU_LEVEL;Other;9
 EMPLOY;employed-full time;1
 EMPLOY;employed-part time;2
 EMPLOY;housewife;3
