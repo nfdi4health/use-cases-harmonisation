@@ -5,11 +5,12 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;DONALD_P2;"m_schulab;v_schulab;m_berufab;v_berufab;";case_when;"case_when(
   m_berufab == 5 | v_berufab == 5 ~ 7,
   m_berufab %in% c(3, 4) | v_berufab %in% c(3, 4) ~ 6,
-  m_berufab %in% c(1, 2) | v_berufab %in% c(1, 2) ~ 5,
+  m_berufab %in% c(1, 2) | v_berufab %in% c(1, 2) ~ 4,
   m_schulab %in% c(3, 4) | v_schulab %in% c(3, 4) ~ 3,
   m_schulab %in% c(1, 2) | v_schulab %in% c(1, 2) ~ 2,
+  m_schulab == 5 | v_schulab == 5 | m_berufab %in% c(6, 7, 8)| v_berufab %in% c(6, 7, 8) ~ 9,
   TRUE ~ NA_real_
-  )";parental data;partial;proximate
+)";parental data;partial;proximate
 5;EMPLOY;Employment;integer;DONALD_P2;EMPLOY_P;direct_mapping;direct_mapping;parental data;partial;proximate
 6;IMMIGRATION;Immigration background;integer;DONALD_P2;;impossible;impossible;;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;DONALD_P2;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;compatible
@@ -101,16 +102,16 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 93;GL;Daily glycaemic load;decimal;DONALD_P2;GL;direct_mapping;direct_mapping;;complete;identical
 94;SODIUM;Sodium intake [mg/d];decimal;DONALD_P2;SODIUM;direct_mapping;direct_mapping;;complete;identical
 95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;DONALD_P2;SOD_POT_RATIO;direct_mapping;direct_mapping;;complete;identical
-96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;DONALD_P2;SUGAR_CONFECT_11;direct_mapping;direct_mapping;;complete;identical
-97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;DONALD_P2;CAKES_12;direct_mapping;direct_mapping;;complete;identical
-98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;DONALD_P2;FRUITVEG_JUICE_1301;direct_mapping;direct_mapping;;complete;identical
-99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;DONALD_P2;SOFTDRINKS_1302;direct_mapping;direct_mapping;;complete;identical
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;DONALD_P2;SUGAR_CONFECT_11;direct_mapping;direct_mapping;;complete;compatible
+97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;DONALD_P2;CAKES_12;direct_mapping;direct_mapping;;complete;compatible
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;DONALD_P2;FRUITVEG_JUICE_1301;direct_mapping;direct_mapping;;complete;compatible
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;DONALD_P2;SOFTDRINKS_1302;direct_mapping;direct_mapping;;complete;compatible
 100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;DONALD_P2;ART_SWEETENER_170201;direct_mapping;direct_mapping;;partial;proximate
-101;VEGETABLES_02;Vegetable intake [g/d];decimal;DONALD_P2;VEGETABLES_02;direct_mapping;direct_mapping;;complete;identical
-102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;DONALD_P2;LEGUMES_TOT_03;direct_mapping;direct_mapping;;complete;identical
-103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;DONALD_P2;FRUITS_TOT_04;direct_mapping;direct_mapping;;complete;identical
-104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;DONALD_P2;RED_MEAT_0701;direct_mapping;direct_mapping;;complete;identical
-105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;DONALD_P2;PROCMEAT_0704;direct_mapping;direct_mapping;;complete;identical
-106;COFFEE_130301;Coffee intake [g/d];decimal;DONALD_P2;COFFEE_130301;direct_mapping;direct_mapping;;complete;identical
-107;TEA_130302;Tea intake [g/d];decimal;DONALD_P2;TEA_130302;direct_mapping;direct_mapping;;complete;identical
-108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DONALD_P2;__BLANK__;paste;1;;complete;identical
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;DONALD_P2;VEGETABLES_02;direct_mapping;direct_mapping;;complete;compatible
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;DONALD_P2;LEGUMES_TOT_03;direct_mapping;direct_mapping;;complete;compatible
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;DONALD_P2;FRUITS_TOT_04;direct_mapping;direct_mapping;;complete;compatible
+104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;DONALD_P2;RED_MEAT_0701;direct_mapping;direct_mapping;;complete;compatible
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;DONALD_P2;PROCMEAT_0704;direct_mapping;direct_mapping;;complete;compatible
+106;COFFEE_130301;Coffee intake [g/d];decimal;DONALD_P2;COFFEE_130301;direct_mapping;direct_mapping;;complete;compatible
+107;TEA_130302;Tea intake [g/d];decimal;DONALD_P2;TEA_130302;direct_mapping;direct_mapping;;complete;compatible
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DONALD_P2;__BLANK__;paste;3;;complete;identical
