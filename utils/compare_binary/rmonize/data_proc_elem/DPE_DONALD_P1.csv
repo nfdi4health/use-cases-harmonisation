@@ -5,11 +5,12 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;DONALD_P1;"m_schulab;v_schulab;m_berufab;v_berufab;";case_when;"case_when(
   m_berufab == 5 | v_berufab == 5 ~ 7,
   m_berufab %in% c(3, 4) | v_berufab %in% c(3, 4) ~ 6,
-  m_berufab %in% c(1, 2) | v_berufab %in% c(1, 2) ~ 5,
+  m_berufab %in% c(1, 2) | v_berufab %in% c(1, 2) ~ 4,
   m_schulab %in% c(3, 4) | v_schulab %in% c(3, 4) ~ 3,
   m_schulab %in% c(1, 2) | v_schulab %in% c(1, 2) ~ 2,
+  m_schulab == 5 | v_schulab == 5 | m_berufab %in% c(6, 7, 8)| v_berufab %in% c(6, 7, 8) ~ 9,
   TRUE ~ NA_real_
-  )";parental data;partial;proximate
+)";parental data;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;DONALD_P1;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;compatible
 6;SMOKE_ST;Smoking status;integer;DONALD_P1;SMOKE_ST_HH;direct_mapping;direct_mapping;Smoking in household;partial;proximate
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;DONALD_P1;BMI;direct_mapping;direct_mapping;;complete;identical
@@ -133,4 +134,4 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 125;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;DONALD_P1;ART_SWEETENER_170201;direct_mapping;direct_mapping;only self added art. Sweeteners, no light products etc.;partial;proximate
 126;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;DONALD_P1;SNACKS_1703;direct_mapping;direct_mapping;;complete;compatible
 127;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;DONALD_P1;AMPHIBIANS_1704;direct_mapping;direct_mapping;;complete;compatible
-128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DONALD_P1;__BLANK__;paste;1;;complete;identical
+128;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;DONALD_P1;__BLANK__;paste;3;;complete;identical
