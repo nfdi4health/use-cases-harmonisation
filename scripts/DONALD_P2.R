@@ -7,6 +7,7 @@
 # install.packages("here")
 # install.packages("car")
 # install.packages("writexl")
+# install.packages("haven")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -15,6 +16,7 @@ library(tidyverse)
 library(here)
 library(car)
 library(writexl)
+library(haven)
 
 #### Step 0: Name of the study
 dataset_name <- "DONALD_P2"
@@ -27,13 +29,9 @@ dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
 
 #### Step 2: Import Datasets 
-#### Import check provided in case the csv file is in German style (delim = ";", dec.point = ",")
 
-input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
-if(dim(input_dataset)[2] == 1){
-  input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
-}
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
