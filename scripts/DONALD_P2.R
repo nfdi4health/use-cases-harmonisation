@@ -32,7 +32,6 @@ dataschema <- list(Variables = dataschema_1,
 
 input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
-
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
 dd_cat <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary/", paste0("DD_",dataset_name, ".xlsx")), sheet = 2))
