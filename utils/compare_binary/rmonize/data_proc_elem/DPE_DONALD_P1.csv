@@ -12,7 +12,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
   TRUE ~ NA_real_
 )";parental data;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;DONALD_P1;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;compatible
-6;SMOKE_ST;Smoking status;integer;DONALD_P1;SMOKE_ST_HH;direct_mapping;direct_mapping;Smoking in household;partial;proximate
+6;SMOKE_ST;Smoking status;integer;DONALD_P1;SMOKE_ST_HH;recode;"recode(1=3;0=1;)";Smoking in household;partial;proximate
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;DONALD_P1;BMI;direct_mapping;direct_mapping;;complete;identical
 8;ENERGY;Energy intake [kcal/d];decimal;DONALD_P1;ENERGY;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;DONALD_P1;POTATOES_TUB_01;direct_mapping;direct_mapping;;complete;compatible
