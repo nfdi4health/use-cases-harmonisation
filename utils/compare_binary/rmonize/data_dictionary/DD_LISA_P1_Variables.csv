@@ -4,93 +4,95 @@ index;name;label;valueType
 3;KIALTER_15;Age at completion of 15-year questionnaire [years];integer
 4;MUTBILD_0;highest education of the mother;integer
 5;VATBILD_0;highest education of the father;integer
-6;aktivleiisommn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in summer [hours];decimal
-7;aktivleiwintn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in winter [hours];decimal
-8;aktivmitsommn_15;Number of hours in a normal week (7 days) with moderate physical activity (a little sweating, slightly increased breathing e.g. cycling, swimming, skating) in summer [hours];decimal
-9;aktivmitwintn_15;Number of hours in a normal week (7 days) with moderate physical activity (some sweating, slightly increased breathing e.g. cycling, swimming, skating) in winter [hours];decimal
-10;aktivschsommn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in summer [hours];decimal
-11;aktivschwintn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in winter [hours];decimal
-12;K_FB_rauchkind_15;The participant currently smokes cigarettes;integer
-13;UB_bmi_15;measured BMI;decimal
-14;FFQGCAL_15;Energy intake (kilocalories) (kcal/day);decimal
-15;FFQKARTO_15;Boiled potatoes in g/d;decimal
-16;FFQPOMM_15;French fries, croquettes in g/d;decimal
-17;FFQSALAT_15;Lettuce in g/d;decimal
-18;FFQKOHL_15;Cabbage in g/d;decimal
-19;FFQSPIN_15;Spinach, chard in g/d;decimal
-20;FFQPAPR_15;Paprika intake in g/d;decimal
-21;FFQKAROT_15;Carrots intake in g/d;decimal
-22;FFQKERN_15;Pumpkin, pine, sunflower seeds in g/d;decimal
-23;FFQAPFEL_15;Apple, pear in g/d;decimal
-24;FFQBEERE_15;Soft fruit in g/d;decimal
-25;FFQSUED_15;Tropical fruits in g/d;decimal
-26;FFQNUSS_15;Nuts in g/d;decimal
-27;FFQMIL_15;Milk in g/d;decimal
-28;FFQMOLK_15;Buttermilk, whey in g/d;decimal
-29;FFQKAKAO_15;Cocoa, mixed milk drinks in g/d;decimal
-30;FFQJOGH_15;yoghurt, fruit yoghurt, fruit quark in g/d;decimal
-31;FFQQUARK_15;cream cheese, quark in g/d;decimal
-32;FFQWEICH_15;soft cheese in g/d;decimal
-33;FFQPUDD_15;Semolina porridge, pudding, rice pudding in g/d;decimal
-34;FFQSAHN_15;cream, creme fraiche in g/d;decimal
-35;FFQHARTK_15;hard cheese in g/d;decimal
-36;FFQNUD_15;pasta, noodles in g/d;decimal
-37;FFQREIS_15;rice in g/d;decimal
-38;FFQBROE_15;light roll, pretzel in g/d;decimal
-39;FFQROGGEN_15;mixed rye, multi grain bread in g/d;decimal
-40;FFQROSIN_15;milk roll, raisin roll in g/d;decimal
-41;FFQTOAST_15;white bread, toast in g/d;decimal
-42;FFQVOLLK_15;wholemeal bread, toast in g/d;decimal
-43;FFQCORN_15;Cornflakes, crisps in g/d;decimal
-44;FFQMUES_15;Muesli, cereal flakes in g/d;decimal
-45;FFQCROIS_15;Croissant, chocolate bun in g/d;decimal
-46;FFQSGRUREDMEAT_15;Total meat intake in g/d;decimal
-47;FFQHUHN_15;Poultry meat in g/d;decimal
-48;FFQAUFSCH_15;Cold cuts in g/d;decimal
-49;FFQBOCK_15;Bockwurst, Viennese sausage, meat sausage in g/d;decimal
-50;FFQBRAT_15;Bratwurst in g/d;decimal
-51;FFQSALAM_15;Salami in g/d;decimal
-52;FFQINNER_15;offal in g/d;decimal
-53;FFQRIND_15;Beef, veal in g/d;decimal
-54;FFQSCHW_15;Pork in g/d;decimal
-55;FFQSEE_15;sea fish in g/d;decimal
-56;FFQSUESS_15;freshwater fish in g/d;decimal
-57;FFQBISM_15;Pickled herring , Soused herring in g/d;decimal
-58;FFQKONS_15;canned fish in g/d;decimal
-59;FFQSTAEB_15;fish fingers in g/d;decimal
-60;FFQEI_15;Egg, scrambled egg, fried egg in g/d;decimal
-61;FFQPFLA_15;vegetable oil in g/d;decimal
-62;FFQMAISK_15;corn, wheat germ oil in g/d;decimal
-63;FFQSONN_15;sunflower oil in g/d;decimal
-64;FFQWAOEL_15;walnut oil in g/d;decimal
-65;FFQBUTKO_15;butter (cooking) in g/d;decimal
-66;FFQBUTT_15;butter (spread) in g/d;decimal
-67;FFQMARG_15;vegetable, sunflower margarine (spread) in g/d;decimal
-68;FFQMARKO_15;vegetable, sunflower margarine (cooking) in g/d;decimal
-69;FFQREFKO_15;reform, diet margarine (cooking) in g/d;decimal
-70;FFQREFO_15;reform, diet margarine (spread) in g/d;decimal
-71;FFQSCHOKOL_15;chocolate in g/d;decimal
-72;FFQSCHOKOR_15;chocolate bars in g/d;decimal
-73;FFQGUMMIB_15;gummy bears in g/d;decimal
-74;FFQZUCK_15;sugar beet syrup in g/d;decimal
-75;FFQEIS_15;ice cream in g/d;decimal
-76;FFQKEKS_15;biscuits in g/d;decimal
-77;FFQOBSTK_15;fruit cake in g/d;decimal
-78;FFQTORTE_15;cream cake in g/d;decimal
-79;FFQGEBAE_15;Pastry in g/d;decimal
-80;FFQRUEHRK_15;sponge cake in g/d;decimal
-81;FFQNEKT_15;Fruit juice drink, fruit nectar in g/d;decimal
-82;FFQFRSAFT_15;fruit juices in g/d;decimal
-83;FFQGESAFT_15;vegetable juices in g/d;decimal
-84;FFQENERG_15;sports, energy drinks in g/d;decimal
-85;FFQSCHOR_15;diluted juices, spritzers in g/d;decimal
-86;FFQCOLA_15;lemonade, cola, iced tea in g/d;decimal
-87;FFQWASS_15;mineral water, tap water in g/d;decimal
-88;FFQTEE_15;tea intake in g/d;decimal
-89;K_FB_alkgetr_15;Total intake of alcoholic drinks, ml/d - 15y;decimal
-90;K_FB_alkgetr_bier_15;Intake of beer in ml/d;decimal
-91;K_FB_alkgetr_wein_15;Intake of wine in ml/d;decimal
-92;K_FB_alkgetr_schnaps_15;Intake of schnaps in ml/d;decimal
-93;K_FB_alkgetr_cocktail_15;Intake of cocktails in ml/d;decimal
-94;K_FB_alkgetr_alkopops_15;Intake of alcopops in ml/d;decimal
-95;FFQCHIP_15;Snacks in g/d;decimal
+6;MUTBERU_0;highest job qualification of the mother;integer
+7;VATBERU_0;highest job qualification of the father;integer
+8;aktivleiisommn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in summer [hours];decimal
+9;aktivleiwintn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in winter [hours];decimal
+10;aktivmitsommn_15;Number of hours in a normal week (7 days) with moderate physical activity (a little sweating, slightly increased breathing e.g. cycling, swimming, skating) in summer [hours];decimal
+11;aktivmitwintn_15;Number of hours in a normal week (7 days) with moderate physical activity (some sweating, slightly increased breathing e.g. cycling, swimming, skating) in winter [hours];decimal
+12;aktivschsommn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in summer [hours];decimal
+13;aktivschwintn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in winter [hours];decimal
+14;K_FB_rauchkind_15;The participant currently smokes cigarettes;integer
+15;UB_bmi_15;measured BMI;decimal
+16;FFQGCAL_15;Energy intake (kilocalories) (kcal/day);decimal
+17;FFQKARTO_15;Boiled potatoes in g/d;decimal
+18;FFQPOMM_15;French fries, croquettes in g/d;decimal
+19;FFQSALAT_15;Lettuce in g/d;decimal
+20;FFQKOHL_15;Cabbage in g/d;decimal
+21;FFQSPIN_15;Spinach, chard in g/d;decimal
+22;FFQPAPR_15;Paprika intake in g/d;decimal
+23;FFQKAROT_15;Carrots intake in g/d;decimal
+24;FFQKERN_15;Pumpkin, pine, sunflower seeds in g/d;decimal
+25;FFQAPFEL_15;Apple, pear in g/d;decimal
+26;FFQBEERE_15;Soft fruit in g/d;decimal
+27;FFQSUED_15;Tropical fruits in g/d;decimal
+28;FFQNUSS_15;Nuts in g/d;decimal
+29;FFQMIL_15;Milk in g/d;decimal
+30;FFQMOLK_15;Buttermilk, whey in g/d;decimal
+31;FFQKAKAO_15;Cocoa, mixed milk drinks in g/d;decimal
+32;FFQJOGH_15;yoghurt, fruit yoghurt, fruit quark in g/d;decimal
+33;FFQQUARK_15;cream cheese, quark in g/d;decimal
+34;FFQWEICH_15;soft cheese in g/d;decimal
+35;FFQPUDD_15;Semolina porridge, pudding, rice pudding in g/d;decimal
+36;FFQSAHN_15;cream, creme fraiche in g/d;decimal
+37;FFQHARTK_15;hard cheese in g/d;decimal
+38;FFQNUD_15;pasta, noodles in g/d;decimal
+39;FFQREIS_15;rice in g/d;decimal
+40;FFQBROE_15;light roll, pretzel in g/d;decimal
+41;FFQROGGEN_15;mixed rye, multi grain bread in g/d;decimal
+42;FFQROSIN_15;milk roll, raisin roll in g/d;decimal
+43;FFQTOAST_15;white bread, toast in g/d;decimal
+44;FFQVOLLK_15;wholemeal bread, toast in g/d;decimal
+45;FFQCORN_15;Cornflakes, crisps in g/d;decimal
+46;FFQMUES_15;Muesli, cereal flakes in g/d;decimal
+47;FFQCROIS_15;Croissant, chocolate bun in g/d;decimal
+48;FFQSGRUREDMEAT_15;Total meat intake in g/d;decimal
+49;FFQHUHN_15;Poultry meat in g/d;decimal
+50;FFQAUFSCH_15;Cold cuts in g/d;decimal
+51;FFQBOCK_15;Bockwurst, Viennese sausage, meat sausage in g/d;decimal
+52;FFQBRAT_15;Bratwurst in g/d;decimal
+53;FFQSALAM_15;Salami in g/d;decimal
+54;FFQINNER_15;offal in g/d;decimal
+55;FFQRIND_15;Beef, veal in g/d;decimal
+56;FFQSCHW_15;Pork in g/d;decimal
+57;FFQSEE_15;sea fish in g/d;decimal
+58;FFQSUESS_15;freshwater fish in g/d;decimal
+59;FFQBISM_15;Pickled herring , Soused herring in g/d;decimal
+60;FFQKONS_15;canned fish in g/d;decimal
+61;FFQSTAEB_15;fish fingers in g/d;decimal
+62;FFQEI_15;Egg, scrambled egg, fried egg in g/d;decimal
+63;FFQPFLA_15;vegetable oil in g/d;decimal
+64;FFQMAISK_15;corn, wheat germ oil in g/d;decimal
+65;FFQSONN_15;sunflower oil in g/d;decimal
+66;FFQWAOEL_15;walnut oil in g/d;decimal
+67;FFQBUTKO_15;butter (cooking) in g/d;decimal
+68;FFQBUTT_15;butter (spread) in g/d;decimal
+69;FFQMARG_15;vegetable, sunflower margarine (spread) in g/d;decimal
+70;FFQMARKO_15;vegetable, sunflower margarine (cooking) in g/d;decimal
+71;FFQREFKO_15;reform, diet margarine (cooking) in g/d;decimal
+72;FFQREFO_15;reform, diet margarine (spread) in g/d;decimal
+73;FFQSCHOKOL_15;chocolate in g/d;decimal
+74;FFQSCHOKOR_15;chocolate bars in g/d;decimal
+75;FFQGUMMIB_15;gummy bears in g/d;decimal
+76;FFQZUCK_15;sugar beet syrup in g/d;decimal
+77;FFQEIS_15;ice cream in g/d;decimal
+78;FFQKEKS_15;biscuits in g/d;decimal
+79;FFQOBSTK_15;fruit cake in g/d;decimal
+80;FFQTORTE_15;cream cake in g/d;decimal
+81;FFQGEBAE_15;Pastry in g/d;decimal
+82;FFQRUEHRK_15;sponge cake in g/d;decimal
+83;FFQNEKT_15;Fruit juice drink, fruit nectar in g/d;decimal
+84;FFQFRSAFT_15;fruit juices in g/d;decimal
+85;FFQGESAFT_15;vegetable juices in g/d;decimal
+86;FFQENERG_15;sports, energy drinks in g/d;decimal
+87;FFQSCHOR_15;diluted juices, spritzers in g/d;decimal
+88;FFQCOLA_15;lemonade, cola, iced tea in g/d;decimal
+89;FFQWASS_15;mineral water, tap water in g/d;decimal
+90;FFQTEE_15;tea intake in g/d;decimal
+91;K_FB_alkgetr_15;Total intake of alcoholic drinks, ml/d - 15y;decimal
+92;K_FB_alkgetr_bier_15;Intake of beer in ml/d;decimal
+93;K_FB_alkgetr_wein_15;Intake of wine in ml/d;decimal
+94;K_FB_alkgetr_schnaps_15;Intake of schnaps in ml/d;decimal
+95;K_FB_alkgetr_cocktail_15;Intake of cocktails in ml/d;decimal
+96;K_FB_alkgetr_alkopops_15;Intake of alcopops in ml/d;decimal
+97;FFQCHIP_15;Snacks in g/d;decimal
