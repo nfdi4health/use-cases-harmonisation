@@ -1,0 +1,65 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;id;id_creation;id_creation;;complete;identical
+;SEX;Sex;integer;;sex;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;age;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Education;integer;;school;recode;"recode(1= 0; 2 = 1; 3=5;4=6;5=7;6=7;7=9;)";;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;met_we;operation;met_we/7;;complete;compatible
+;SMOKE_ST;Smoking status;integer;;smoker;recode;"recode(1= 3; 2 = 2; 3=1;)";;complete;compatible
+;EMPLOY;Employment;integer;;"work_status; employ";case_when;"case_when(
+work_status == 1 ~ 0; work_status == 2~ 1;work_status == 3~ 5;work_status == 4 ~ 6;
+work_status== 5 | work_status == 6 ~ 7;
+work_status == 7 ~ 9;
+employ== 1 ~ 1; employ == 2 ~ 2; employ == 3 ~ 2 ; employ== 4 ~ 7 ;";;complete;compatible
+;IMMIGRATION;Immigration background;integer;;birth_place;;;;partial;tentative
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unavailable
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;packyear_tabacco;direct_mapping;direct_mapping;;complete;identical
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;cignr_day;operation;cignr_day*1;Amount of tobacco smoked currently per day, at time of diet assessment (conversion into grams: 1 cigarette = 1 gram of tobacco);partial;tentative
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;smokestop;direct_mapping;direct_mapping;;complete;identical
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;vit_min;direct_mapping;direct_mapping;;complete;identical
+;MENOPAUSE;Menopause status;integer;;"Period_current; Ovariectomy";case_when;;;partial;proximate
+;HRT;Hormone replacement therapy;integer;;fr_hrt1;recode;"recode(1= 1; 2 = 0; 9=0;)";;complete;compatible
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;incompatible
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;No. biol. children;direct_mapping;direct_mapping;;partial;tentative
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
+;PREV_DIAB;History of diabetes;integer;;diabetes2;direct_mapping;direct_mapping;;partial;proximate
+;PREV_HYP;History of hypertension;integer;;hyp_i;recode;"recode(1= 1; 2 = 0;)";;partial;proximate
+;PREV_CVD;History of cardiovascular disease;integer;;cvd;recode;"recode(0= 0; 1 = 1; 2=1;)";;partial;proximate
+;PREV_CANCER;History of cancer;integer;;cancer;direct_mapping;direct_mapping;;partial;proximate
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;fam_stroke;recode;"recode(1= 1; 2 = 0; 3=2; 8=2;)";;complete;compatible
+;FAM1_DIAB2;First degree family history of T2D;integer;;fam_diab;recode;"recode(1= 1; 2 = 0; 3=2; 8=2;)";;complete;compatible
+;FAM1_CANCER;First degree family history of cancer;integer;;fam_cancer;recode;"recode(1= 1; 2 = 0; 3=2; 8=2;)";;complete;compatible
+;DRE_SCREEN;Screening, DRE;integer;;;impossible;impossible;;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;;impossible;impossible;;impossible;unavailable
+;FOBT_SCREEN;Screening, FOBT;integer;;;impossible;impossible;;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;;impossible;impossible;;impossible;unavailable
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;;impossible;impossible;;impossible;unavailable
+;MAMMO_SCREEN;Screening, mammography;integer;;;impossible;impossible;;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;;impossible;impossible;;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;;direct_mapping;direct_mapping;;complete;compatible
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;;direct_mapping;direct_mapping;;complete;compatible
+;INC_CVD;CVD event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_MI;Myocardial infarction during follow-up;integer;;"f1_mi_i_inc;   f2_mi_i_inc";recode;"recode (1= 1; 2 = 0;)";;partial;proximate
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;"f1_mi_1_year;";operation;"f1_mi_1_year-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";;partial;tentative
+;INC_STR;Stroke during follow-up;integer;;"f1_stroke_i_inc; f2_stoke_i_inc;";recode;"recode (1= 1; 2 = 0;)";;partial;proximate
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;f1_stroke_first_year_inc;operation;"f1_stroke_first_year_inc-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";;partial;tentative
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HYP;Essential hypertension during follow-up;integer;;;impossible;impossible;;impossible;incompatible
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;f1_hyp2;operation;"f1_hyp2-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";date of diagnose and the date of birth;partial;tentative
+;INC_HF;Heart failure during follow-up;integer;;f1_chf_total_inz;direct_mapping;direct_mapping;measured HF via echocardiography, symptoms and pBNP at FU1;partial;tentative
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;"f1_age; f2_insuff";operation;"f1_age-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";date of diagnose and the date of birth;partial;tentative
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;f2_diabetes2;impossible;impossible;;impossible;incompatible
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;f2_diabetes_year;operation;"f1_diabetes_year-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";date of diagnose and the date of birth;partial;tentative
+;INC_CANCER;Cancer during follow-up;integer;;f2_cancer1_inc;recode;"recode(1=1; 2 = 0;)";;partial;proximate
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;f2_cancer1_typ;;;;partial;proximate
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;f2_cancer1_date;operation;"f2_cancer1_date-format(as.Date(d_birth, format=""%d/%m/%Y""),""%Y"")";date of diagnose and the date of birth;partial;tentative
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;vit_stat;direct_mapping;direct_mapping;;complete;identical
+;AGE_DEATH;Age at time of death [years];decimal;;tod_dat;operation;;;partial;tentative
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_FUP;Age at end of follow-up [years];decimal;;;impossible;impossible;;impossible;unavailable

@@ -1,0 +1,56 @@
+variable;name;label
+sex;1;male
+sex;2;female
+school;1;no formal education
+school;2;elementary School
+school;3;secondary School (Realschule in FRG)
+school;4;polytechn.secondary school (POS in GDR)
+school;5;qualif. F.university of applied sciences (Fachholschulreife)
+school;6;A-levels/university entrance qualif.(Abitur)
+school;7;other
+smoker;1;Current Smoker
+smoker;2;Ex Smoker
+smoker;3;Never Smoker
+work_status;1;retired
+work_status;2;unemployed
+work_status;3;housewife/husband,
+work_status;4;in education/re-education
+work_status;5;student,
+work_status;6;maternity or other leave
+work_status;7;not full-time employed for other reasons
+work_status;8;partial retirement
+work_status;9;none of the above
+employ;1;full time
+employ;2;regular part time
+employ;3;marginal/irregular employed
+employ;4;none
+fr_hrt1;1;yes
+fr_hrt1;2;no
+fr_hrt1;9;no HRT because premenopause
+diabetes2;0;no
+diabetes2;1;yes
+cvd;0;no
+cvd;1;yes
+cvd;2;poss. by MI_final/CABG/PTCA/stroke/carotis-OP
+cancer;0;no
+cancer;1;yes
+fam_stroke;1;Yes
+fam_stroke;2;No
+fam_stroke;3;No / don't know
+fam_stroke;8;8= I don't know
+fam_diab;1;Yes
+fam_diab;2;No
+fam_diab;3;No / don't know
+fam_diab;8;8= I don't know
+fam_cancer;1;Yes
+fam_cancer;2;No
+fam_cancer;3;No / don't know
+fam_cancer;8;8= I don't know
+f1_stroke_i_inc;1;yes
+f1_stroke_i_inc;2;no
+"f2_stoke_i_inc;";1;yes
+"f2_stoke_i_inc;";2;no
+f1_chf_total_inz;0;no
+f1_chf_total_inz;1;yes
+f2_diabetes2;0;no
+f2_diabetes2;1;yes
