@@ -2,7 +2,18 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S3_P1;d_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S3_P1;dcsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S3_P1;dtalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S3_P1;dtbbild;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Education;integer;KORA_S3_P1;"DI13ABSC; DI14ABSC";case_when;"case_when(
+  DI13ABSC %in% c(4) | DI14ABSC %in% c(0) ~ 7L,
+  DI14ABSC %in% c(3,4) ~ 6L,
+  DI14ABSC %in% c(2) ~ 4L,
+  DI14ABSC %in% c(5) ~ 9L,
+  DI13ABSC %in% c(3) ~ 3L,
+  DI13ABSC %in% c(1,2) ~ 2L,
+  DI13ABSC %in% c(6) & DI14ABSC %in% c(1) ~ 0L,
+  is.na(DI13ABSC) & DI14ABSC %in% c(1) ~ 0L,
+  DI13ABSC %in% c(6) & is.na(DI14ABSC) ~ 0L,
+  DI13ABSC %in% c(5) ~ 9L,
+  TRUE ~ NA_integer_)";;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S3_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S3_P1;dtcigsmk;direct_mapping;direct_mapping;;complete;identical
 7;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S3_P1;dtbmi;direct_mapping;direct_mapping;;complete;identical
