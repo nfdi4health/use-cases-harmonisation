@@ -3,33 +3,33 @@ sex;1;male
 sex;2;female
 school;1;no formal education
 school;2;elementary School
-school;3;secondary School (Realschule in FRG)
-school;4;polytechn.secondary school (POS in GDR)
-school;5;qualif. F.university of applied sciences (Fachholschulreife)
+school;3;secondary School(Realschule in FRG)
+school;4;polytechn.secondary school(POS in GDR)
+school;5;qualif. F.university of applied sciences(Fachholschulreife)
 school;6;A-levels/university entrance qualif.(Abitur)
 school;7;other
 occup_edu;1;no vocational education
 occup_edu;2;training period
-occup_edu;3;apprenticeship (Lehre)
-occup_edu;4;vocational school (Berufsschule)
-occup_edu;5;technical school (Fachschule)
-occup_edu;6;university of applied sciences (Fachhochschule)
+occup_edu;3;apprenticeship(Lehre)
+occup_edu;4;vocational school(Berufsschule)
+occup_edu;5;technical school(Fachschule)
+occup_edu;6;university of applied sciences(Fachhochschule)
 occup_edu;7;university
 occup_edu;8;other
 occup_edu_2;1;no vocational education
 occup_edu_2;2;training period
-occup_edu_2;3;apprenticeship (Lehre)
-occup_edu_2;4;vocational school (Berufsschule)
-occup_edu_2;5;technical school (Fachschule)
-occup_edu_2;6;university of applied sciences (Fachhochschule)
+occup_edu_2;3;apprenticeship(Lehre)
+occup_edu_2;4;vocational school(Berufsschule)
+occup_edu_2;5;technical school(Fachschule)
+occup_edu_2;6;university of applied sciences(Fachhochschule)
 occup_edu_2;7;university
 occup_edu_2;8;other
 occup_edu_h;1;no vocational education
 occup_edu_h;2;training period
-occup_edu_h;3;apprenticeship (Lehre)
-occup_edu_h;4;vocational school (Berufsschule)
-occup_edu_h;5;technical school (Fachschule)
-occup_edu_h;6;university of applied sciences (Fachhochschule)
+occup_edu_h;3;apprenticeship(Lehre)
+occup_edu_h;4;vocational school(Berufsschule)
+occup_edu_h;5;technical school(Fachschule)
+occup_edu_h;6;university of applied sciences(Fachhochschule)
 occup_edu_h;7;university
 occup_edu_h;8;other
 educ;1;no school+un-,semiskilled,
@@ -39,9 +39,9 @@ educ;4;elem.sch.+apprenc./no school+apprenc,voc.,techn.sch.
 educ;5;elem.sch.+voc.,techn.sch./sec.,polytechn.sch.,qual.f.appl.uni+apprenc.,voc.,techn.sch.
 educ;6;A-level+max.techn.sch.
 educ;7;any sch.+appl.uni,uni
-educ3;1;Educ1,2,3 (max sec.school+no occup.training)
-educ3;2;Educ4,5 (sec.school+vocational school)
-educ3;3;Educ6,7 (A-level+any/any school+univ.)
+educ3;1;Educ1,2,3(max sec.school+no occup.training)
+educ3;2;Educ4,5(sec.school+vocational school)
+educ3;3;Educ6,7(A-level+any/any school+univ.)
 smoker;1;Current Smoker
 smoker;2;Ex Smoker
 smoker;3;Never Smoker
@@ -49,7 +49,7 @@ work_status;1;retired
 work_status;2;unemployed
 work_status;3;housewife/husband,
 work_status;4;in education/re-education
-work_status;5;student,
+work_status;5;student
 work_status;6;maternity or other leave
 work_status;7;not full-time employed for other reasons
 work_status;8;partial retirement
@@ -70,16 +70,16 @@ cancer;0;no
 cancer;1;yes
 fam_stroke;1;Yes
 fam_stroke;2;No
-fam_stroke;3;No / don't know
-fam_stroke;8;8= I don't know
+fam_stroke;3;No/don't know
+fam_stroke;8;I don't know
 fam_diab;1;Yes
 fam_diab;2;No
-fam_diab;3;No / don't know
-fam_diab;8;8= I don't know
+fam_diab;3;No/don't know
+fam_diab;8;don't know
 fam_cancer;1;Yes
 fam_cancer;2;No
-fam_cancer;3;No / don't know
-fam_cancer;8;8= I don't know
+fam_cancer;3;No/don't know
+fam_cancer;8;I don't know
 f2_mi_i_inc;1;yes
 f2_mi_i_inc;2;no
 "f2_stoke_i_inc;";1;yes
