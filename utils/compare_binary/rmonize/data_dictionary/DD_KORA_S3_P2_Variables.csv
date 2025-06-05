@@ -1,114 +1,115 @@
 index;name;label;valueType
 1;d_id;ID of the participant;integer
 2;dcsex;sex;integer
-4;dtbbild;level of education;integer
+3;DI13ABSC;highest school or university degree;integer
+4;DI14ABSC;highest vocational degree;integer
 5;dtemploy;employment status;integer
 6;dtcigsmk;smoking status;integer
-19;prev_dm_16;prevalent T2DM;integer
-20;dthyact;actual hypertension;integer
-21;dtcvd;History of cardiovascular disease;integer
-22;dtmvcvd;stroke or MI history of father or mother;integer
-23;dtmvdiab;diabetes history of father or mother;integer
-24;dtmvca;cancer history of father or mother;integer
-25;dtmstati;use of statins;integer
-26;inz_mi_16;validated incidence myocardial infarction;integer
-28;inz_apo_16;validated incidence stroke;integer
-30;inz_apo_isc_16;validated incidence ischaemic stroke;integer
-31;inz_apo_haem_16;validated incidence haemorrhagic stroke;integer
-32;inz_dm_16;haemorrhagic stroke;integer
-34;t_all_16;total mortality;integer
-36;t_cvd_16;CVD mortality;integer
-37;t_ca_16;cancer mortality;integer
-3;dtalteru;age;decimal
-7;dtpyrs;calculated pack years;decimal
-8;dtstsalt;Age quitting cigarette smoking;decimal
-9;dtbmi;BMI;decimal
-10;k4tbmi;Body Mass Index (BMI) at follow-up;decimal
-11;dttumf;waist circumference;decimal
-12;dthumf;hip circumference;decimal
-13;DTBFKG_K;Körperfett kg;decimal
-14;DTBFMI_K;Fettmassenindex  (kg/m²);decimal
-15;dl_trin;triglycerides;decimal
-16;dl_choln;total cholesterol;decimal
-17;dl_ldln;LDL cholesterol;decimal
-18;dl_hdln;HDL cholesterol;decimal
-27;mi_alter_16;age at end of follow-up for myocardial infarction;decimal
-29;apo_alter_16;age at end of follow-up or stroke;decimal
-33;dm_alter_16;age at end of follow-up for;decimal
-35;t_alter_16;Age at exit from mortality follow-up;decimal
-38;dkcal;energy;decimal
-39;dkohle;carbohydrate;decimal
-40;deiwei;protein;decimal
-41;dfette;fat;decimal
-42;dalk;alcohol;decimal
-43;dballa;diatary fiber;decimal
-44;dges;saturated fat;decimal
-45;deuf;monounsaturated fat;decimal
-46;dmuf;polyunsaturated fat;decimal
-47;dkmosa;monosaccharides;decimal
-48;dkdisa;disaccharides;decimal
-49;dkmt;glucose;decimal
-50;dkmf;fructose;decimal
-51;dnatr;sodium intake;decimal
-52;dkal;potassium intake;decimal
-53;DV610;sugar;decimal
-54;DV681;Honey;decimal
-55;DV684;Jam;decimal
-56;DV687;Other sweet spreads;decimal
-57;DV620;cacao products;decimal
-58;DV630;chocolate products;decimal
-59;DV650;confectionary;decimal
-60;DV670;all ice cream;decimal
-61;DV570;long-life baked goods;decimal
-62;DV540;Fine bakery products;decimal
-63;DV810;fruit/vegetable juice;decimal
-64;DV825;caffeinated lemonade;decimal
-65;DV829;other soft drinks;decimal
-66;DV431;cauliflower;decimal
-67;DV433;other cabbage;decimal
-68;DV440;leafy and stem vegetables;decimal
-69;DV451;tomatoes;decimal
-70;DV455;cucumbers;decimal
-71;DV459;other fruit vegetables;decimal
-72;DV461;onion vegetables;decimal
-73;DV465;carrots;decimal
-74;DV469;other fresh vegetables;decimal
-75;DV470;frozen vegetables;decimal
-76;DV480;canned vegetables;decimal
-77;DV499;other vegetable products;decimal
-78;DV491;dry legumes;decimal
-79;DV310;fruit without specification;decimal
-80;DV311;apples;decimal
-81;DV315;other pome fruits;decimal
-82;DV321;peaches;decimal
-83;DV323;cherries;decimal
-84;DV325;other stone fruits;decimal
-85;DV331;strawberries;decimal
-86;DV334;other berries;decimal
-87;DV337;grapes;decimal
-88;DV111;Beef;decimal
-89;DV112;Veal;decimal
-90;DV113;Pork meat;decimal
-91;DV115;Sheep or goat meat;decimal
-92;DV117;Game meat;decimal
-93;DV119;other meat;decimal
-94;DV120;Poultry meat;decimal
-95;DV141;Sausage;decimal
-96;DV145;Ham;decimal
-97;DV147;Bacon;decimal
-98;DV150;canned, frozen meat or meat products;decimal
-99;DV160;other meat products;decimal
-100;DV841;roasted coffee;decimal
-101;DV845;coffee extracts;decimal
-102;DV850;tea;decimal
-103;DV341;oranges, mandarins;decimal
-104;DV343;grapefruits;decimal
-105;DV344;other citrus fruits;decimal
-106;DV345;bananas;decimal
-107;DV346;other tropical fruits;decimal
-108;DV351;nuts;decimal
-109;DV357;dried fruit;decimal
-110;DV360;canned fruit;decimal
-111;DV370;frozen fruit;decimal
-112;DV390;other processed fruit;decimal
-113;DV131;all kinds of minced meat;decimal
+7;prev_dm_16;prevalent T2DM;integer
+8;dthyact;actual hypertension;integer
+9;dtcvd;History of cardiovascular disease;integer
+10;dtmvcvd;stroke or MI history of father or mother;integer
+11;dtmvdiab;diabetes history of father or mother;integer
+12;dtmvca;cancer history of father or mother;integer
+13;dtmstati;use of statins;integer
+14;inz_mi_16;validated incidence myocardial infarction;integer
+15;inz_apo_16;validated incidence stroke;integer
+16;inz_apo_isc_16;validated incidence ischaemic stroke;integer
+17;inz_apo_haem_16;validated incidence haemorrhagic stroke;integer
+18;inz_dm_16;haemorrhagic stroke;integer
+19;t_all_16;total mortality;integer
+20;t_cvd_16;CVD mortality;integer
+21;t_ca_16;cancer mortality;integer
+22;dtalteru;age;decimal
+23;dtpyrs;calculated pack years;decimal
+24;dtstsalt;Age quitting cigarette smoking;decimal
+25;dtbmi;BMI;decimal
+26;k4tbmi;Body Mass Index (BMI) at follow-up;decimal
+27;dttumf;waist circumference;decimal
+28;dthumf;hip circumference;decimal
+29;DTBFKG_K;Körperfett kg;decimal
+30;DTBFMI_K;Fettmassenindex  (kg/m²);decimal
+31;dl_trin;triglycerides;decimal
+32;dl_choln;total cholesterol;decimal
+33;dl_ldln;LDL cholesterol;decimal
+34;dl_hdln;HDL cholesterol;decimal
+35;mi_alter_16;age at end of follow-up for myocardial infarction;decimal
+36;apo_alter_16;age at end of follow-up or stroke;decimal
+37;dm_alter_16;age at end of follow-up for;decimal
+38;t_alter_16;Age at exit from mortality follow-up;decimal
+39;dkcal;energy;decimal
+40;dkohle;carbohydrate;decimal
+41;deiwei;protein;decimal
+42;dfette;fat;decimal
+43;dalk;alcohol;decimal
+44;dballa;diatary fiber;decimal
+45;dges;saturated fat;decimal
+46;deuf;monounsaturated fat;decimal
+47;dmuf;polyunsaturated fat;decimal
+48;dkmosa;monosaccharides;decimal
+49;dkdisa;disaccharides;decimal
+50;dkmt;glucose;decimal
+51;dkmf;fructose;decimal
+52;dnatr;sodium intake;decimal
+53;dkal;potassium intake;decimal
+54;DV610;sugar;decimal
+55;DV681;Honey;decimal
+56;DV684;Jam;decimal
+57;DV687;Other sweet spreads;decimal
+58;DV620;cacao products;decimal
+59;DV630;chocolate products;decimal
+60;DV650;confectionary;decimal
+61;DV670;all ice cream;decimal
+62;DV570;long-life baked goods;decimal
+63;DV540;Fine bakery products;decimal
+64;DV810;fruit/vegetable juice;decimal
+65;DV825;caffeinated lemonade;decimal
+66;DV829;other soft drinks;decimal
+67;DV431;cauliflower;decimal
+68;DV433;other cabbage;decimal
+69;DV440;leafy and stem vegetables;decimal
+70;DV451;tomatoes;decimal
+71;DV455;cucumbers;decimal
+72;DV459;other fruit vegetables;decimal
+73;DV461;onion vegetables;decimal
+74;DV465;carrots;decimal
+75;DV469;other fresh vegetables;decimal
+76;DV470;frozen vegetables;decimal
+77;DV480;canned vegetables;decimal
+78;DV499;other vegetable products;decimal
+79;DV491;dry legumes;decimal
+80;DV310;fruit without specification;decimal
+81;DV311;apples;decimal
+82;DV315;other pome fruits;decimal
+83;DV321;peaches;decimal
+84;DV323;cherries;decimal
+85;DV325;other stone fruits;decimal
+86;DV331;strawberries;decimal
+87;DV334;other berries;decimal
+88;DV337;grapes;decimal
+89;DV111;Beef;decimal
+90;DV112;Veal;decimal
+91;DV113;Pork meat;decimal
+92;DV115;Sheep or goat meat;decimal
+93;DV117;Game meat;decimal
+94;DV119;other meat;decimal
+95;DV120;Poultry meat;decimal
+96;DV141;Sausage;decimal
+97;DV145;Ham;decimal
+98;DV147;Bacon;decimal
+99;DV150;canned, frozen meat or meat products;decimal
+100;DV160;other meat products;decimal
+101;DV841;roasted coffee;decimal
+102;DV845;coffee extracts;decimal
+103;DV850;tea;decimal
+104;DV341;oranges, mandarins;decimal
+105;DV343;grapefruits;decimal
+106;DV344;other citrus fruits;decimal
+107;DV345;bananas;decimal
+108;DV346;other tropical fruits;decimal
+109;DV351;nuts;decimal
+110;DV357;dried fruit;decimal
+111;DV360;canned fruit;decimal
+112;DV370;frozen fruit;decimal
+113;DV390;other processed fruit;decimal
+114;DV131;all kinds of minced meat;decimal
