@@ -6,13 +6,12 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
   AI13ABSC %in% c(4) | AI14ABSC %in% c(0) ~ 7L,
   AI14ABSC %in% c(3,4) ~ 6L,
   AI14ABSC %in% c(2) ~ 4L,
-  AI14ABSC %in% c(5) ~ 9L,
   AI13ABSC %in% c(3) ~ 3L,
   AI13ABSC %in% c(1,2) ~ 2L,
   AI13ABSC %in% c(6) & AI14ABSC %in% c(1) ~ 0L,
   is.na(AI13ABSC) & AI14ABSC %in% c(1) ~ 0L,
   AI13ABSC %in% c(6) & is.na(AI14ABSC) ~ 0L,
-  AI13ABSC %in% c(5) ~ 9L,
+  AI14ABSC %in% c(5) | AI13ABSC %in% c(5) ~ 9L,
   TRUE ~ NA_integer_)";;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S1_P1;atcigsmk;direct_mapping;direct_mapping;;complete;identical
