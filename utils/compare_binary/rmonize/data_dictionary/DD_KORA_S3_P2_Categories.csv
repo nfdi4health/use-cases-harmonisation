@@ -1,11 +1,17 @@
 variable;name;label;missings
 dcsex;1;male;
-dtbbild;0;none;
-dtbbild;1;primary school completed;
-dtbbild;2;technical/professional school completed;
-dtbbild;3;secondary school;
-dtbbild;4;longer education (incl. university);
-dtbbild;5;not specified;
+DI13ABSC;1;Hauptschule/Volksschule;
+DI13ABSC;2;Mittlere Reife/Realschule;
+DI13ABSC;3;Abitur/Fachabitur;
+DI13ABSC;4;Hochschule/Fachhochschule/Universität;
+DI13ABSC;5;sonstiger Abschluss;
+DI13ABSC;6;kein Abschluss;
+DI14ABSC;0;Hochschule/Fachhochschule/Universität;
+DI14ABSC;1;kein Abschluss;
+DI14ABSC;2;Berufsschule (Lehre);
+DI14ABSC;3;Fachschule/Techniker-/Meisterschule;
+DI14ABSC;4;Ingenieur-Schule/Polytechnikum;
+DI14ABSC;5;sonstiger Abschluss;
 dtemploy;1;employed-full time;
 dtemploy;2;employed-part time;
 dtemploy;3;housewife;

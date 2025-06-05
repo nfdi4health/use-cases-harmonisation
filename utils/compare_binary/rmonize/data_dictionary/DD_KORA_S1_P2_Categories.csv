@@ -1,11 +1,17 @@
 variable;name;label;missings
 acsex;1;male;
-atbbild;0;none;
-atbbild;1;primary school completed;
-atbbild;2;technical/professional school completed;
-atbbild;3;secondary school;
-atbbild;4;longer education (incl. university);
-atbbild;5;not specified;
+AI13ABSC;1;Hauptschule/Volksschule;
+AI13ABSC;2;Mittlere Reife/Realschule;
+AI13ABSC;3;Abitur/Fachabitur;
+AI13ABSC;4;Hochschule/Fachhochschule/Universität;
+AI13ABSC;5;sonstiger Abschluss;
+AI13ABSC;6;kein Abschluss;
+AI14ABSC;0;Hochschule/Fachhochschule/Universität;
+AI14ABSC;1;kein Abschluss;
+AI14ABSC;2;Berufsschule (Lehre);
+AI14ABSC;3;Fachschule/Techniker-/Meisterschule;
+AI14ABSC;4;Ingenieur-Schule/Polytechnikum;
+AI14ABSC;5;sonstiger Abschluss;
 atcigsmk;1;never;
 atcigsmk;2;former;
 atcigsmk;3;current;

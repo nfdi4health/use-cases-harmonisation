@@ -2,7 +2,17 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S1_P2;a_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S1_P2;acsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S1_P2;atalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S1_P2;atbbild;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Education;integer;KORA_S1_P2;"AI13ABSC; AI14ABSC";case_when;"case_when(
+  AI13ABSC %in% c(4) | AI14ABSC %in% c(0) ~ 7L,
+  AI14ABSC %in% c(3,4) ~ 6L,
+  AI14ABSC %in% c(2) ~ 4L,
+  AI13ABSC %in% c(3) ~ 3L,
+  AI13ABSC %in% c(1,2) ~ 2L,
+  AI13ABSC %in% c(6) & AI14ABSC %in% c(1) ~ 0L,
+  is.na(AI13ABSC) & AI14ABSC %in% c(1) ~ 0L,
+  AI13ABSC %in% c(6) & is.na(AI14ABSC) ~ 0L,
+  AI14ABSC %in% c(5) | AI13ABSC %in% c(5) ~ 9L,
+  TRUE ~ NA_integer_)";;partial;proximate
 5;EMPLOY;Employment;integer;KORA_S1_P2;atemploy;direct_mapping;direct_mapping;ai16, ai17, ai28 --> atemploy;complete;identical
 6;IMMIGRATION;Immigration background;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -92,8 +102,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 91;FRUC;Fructose intake [g/d];decimal;KORA_S1_P2;akmf;direct_mapping;direct_mapping;;complete;identical
 92;GI;Daily glycaemic index;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 93;GL;Daily glycaemic load;decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
-94;SODIUM;Sodium intake [g/d];decimal;KORA_S1_P2;anatr;direct_mapping;direct_mapping;;complete;identical
-95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;KORA_S1_P2;"anatr; akal";operation;anatr/akal;;complete;identical
+94;SODIUM;Sodium intake [mg/d];decimal;KORA_S1_P2;anatr;direct_mapping;direct_mapping;;complete;identical
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;KORA_S1_P2;"anatr; akal";operation;anatr/akal;;complete;identical
 96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KORA_S1_P2;"AV610; AV681; AV684; AV687; AV620; AV630; AV650; AV670";operation;AV610 + AV681 + AV684 + AV687 + AV620 + AV630 + AV650 + AV670;AV610 (sugar) + AV681 (honey) + AV684 (jam) + AV687 (other sweet spreads) + AV620 (cacao products) + AV630 (chocolate products) + AV650 (confectionary) + AV670 (all ice cream);complete;compatible
 97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;KORA_S1_P2;"AV540; AV570";operation;AV540 + AV570;AV540 (fine bakery wares) + AV570 (long-life baked goods);complete;compatible
 98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KORA_S1_P2;AV810;direct_mapping;direct_mapping;AV810 (fruit / vegetable juice);complete;identical
