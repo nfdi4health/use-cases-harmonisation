@@ -1,0 +1,8 @@
+index;name;label;valueType
+;ID;ID of the participant;Integer
+;sex_child;Sex of the child;Integer
+;age;Age[years];decimal
+;isced_max;Isced level:Maximum of both parents;Integer
+;phys_activ;Physical activity[hours per week];decimal
+;migration_T3;Migration status of parents;Integer
+;atc_who_2010;child's drug use,last 7 days - ATC code of drug;Integer
