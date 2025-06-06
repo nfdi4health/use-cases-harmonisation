@@ -1,8 +1,8 @@
 index;name;label;valueType
 1;d_id;ID of the participant;integer
 2;dcsex;sex;integer
-3;DI13ABSC;highest school or university degree;integer
-4;DI14ABSC;highest vocational degree;integer
+3;di13absc;highest school or university degree;integer
+4;di14absc;highest vocational degree;integer
 5;dtemploy;employment status;integer
 6;dtcigsmk;smoking status;integer
 7;prev_dm_16;prevalent T2DM;integer

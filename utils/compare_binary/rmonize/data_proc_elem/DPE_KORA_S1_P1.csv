@@ -2,16 +2,16 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S1_P1;a_id;id_creation;id_creation;;complete;identical
 2;SEX;Sex;integer;KORA_S1_P1;acsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S1_P1;atalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S1_P1;"AI13ABSC; AI14ABSC";case_when;"case_when(
-  AI13ABSC %in% c(4) | AI14ABSC %in% c(0) ~ 7L,
-  AI14ABSC %in% c(3,4) ~ 6L,
-  AI14ABSC %in% c(2) ~ 4L,
-  AI13ABSC %in% c(3) ~ 3L,
-  AI13ABSC %in% c(1,2) ~ 2L,
-  AI13ABSC %in% c(6) & AI14ABSC %in% c(1) ~ 0L,
-  is.na(AI13ABSC) & AI14ABSC %in% c(1) ~ 0L,
-  AI13ABSC %in% c(6) & is.na(AI14ABSC) ~ 0L,
-  AI14ABSC %in% c(5) | AI13ABSC %in% c(5) ~ 9L,
+4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;KORA_S1_P1;"ai13absc; ai14absc";case_when;"case_when(
+  ai13absc %in% c(4) | ai14absc %in% c(0) ~ 7L,
+  ai14absc %in% c(3,4) ~ 6L,
+  ai14absc %in% c(2) ~ 4L,
+  ai13absc %in% c(3) ~ 3L,
+  ai13absc %in% c(1,2) ~ 2L,
+  ai13absc %in% c(6) & ai14absc %in% c(1) ~ 0L,
+  is.na(ai13absc) & ai14absc %in% c(1) ~ 0L,
+  ai13absc %in% c(6) & is.na(ai14absc) ~ 0L,
+  ai14absc %in% c(5) | ai13absc %in% c(5) ~ 9L,
   TRUE ~ NA_integer_)";;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 6;SMOKE_ST;Smoking status;integer;KORA_S1_P1;atcigsmk;direct_mapping;direct_mapping;;complete;identical
@@ -19,7 +19,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 8;ENERGY;Energy intake [kcal/d];decimal;KORA_S1_P1;akcal;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;KORA_S1_P1;"AV410;
 AV420";operation;AV410 + AV420;"AV410 (potato) + AV420 (potato products)
-in this case, this combined group only consists of potatoes and no other tubers";partial;tentative
+in this case, this combined group only consists of potatoes and no other tubers";partial;proximate
 10;POTATOES_0101;Potato intake [g/d];decimal;KORA_S1_P1;"AV410;
 AV420";operation;AV410 + AV420;AV410 (potato) + AV420 (potato products);complete;compatible
 11;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -30,7 +30,7 @@ AV499";operation;AV431 + AV433 + AV440 + AV451 + AV455 + AV459 + AV461 + AV465 +
 AV451 (tomatoes) + AV455 (cucumbers) + AV459 (other fruit vegetables) + AV461 (onion vegetables) +  AV465 (carrots) +
 AV469 (other fresh vegetables) + AV470 (frozen vegetables) + AV480 (canned vegetables) + 
 AV499 (other vegetable products)";complete;compatible
-13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;KORA_S1_P1;AV440;operation;0.5*AV440;AV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
+13;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;KORA_S1_P1;AV440;operation;0.5*AV440;AV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;proximate
 14;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;KORA_S1_P1;"AV451;
 AV455;
 AV459";operation;AV451 + AV455 + AV459;AV451 (Tomatoes) + AV455 (cucumbers) + AV459 (other fruit vegetables) ;complete;compatible
@@ -39,7 +39,7 @@ AV459";operation;AV451 + AV455 + AV459;AV451 (Tomatoes) + AV455 (cucumbers) + AV
 17;MUSHROOMS_0205;Mushroom intake [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 18;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 19;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;KORA_S1_P1;AV461;direct_mapping;direct_mapping;AV461 (onion vegetables) ;complete;identical
-20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S1_P1;AV440;operation;0.5*AV440;AV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;tentative
+20;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;KORA_S1_P1;AV440;operation;0.5*AV440;AV440 (leafy and stem vegetables) Gewichtung mit 0,5 sinnvoll?;partial;proximate
 21;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 22;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;KORA_S1_P1;AV491;operation;AV491*2;double the amount of AV491 (dry legumes) to be comparable to other studies;complete;compatible
 23;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -146,9 +146,9 @@ AV119 + AV131";AV111 (beef)+ AV112 (veal) + AV113 (pork meat) + AV115 (sheep or 
 51;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;KORA_S1_P1;AV111;direct_mapping;direct_mapping;AV111 (beef);complete;identical
 52;VEAL_070102;Intake of calf fresh meat [g/d];decimal;KORA_S1_P1;AV112;direct_mapping;direct_mapping;AV112 (veal);complete;identical
 53;PORK_070103;Intake of pig fresh meat [g/d];decimal;KORA_S1_P1;AV113;direct_mapping;direct_mapping;AV113 (pork meat);complete;identical
-54;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;KORA_S1_P1;AV115;operation;0.9 * AV115;AV115 (sheep or goat meat);partial;tentative
+54;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;KORA_S1_P1;AV115;operation;0.9 * AV115;AV115 (sheep or goat meat);partial;proximate
 55;HORSE_070105;Intake of horse meat [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
-56;GOAT_070106;Intake of goat meat [g/d];decimal;KORA_S1_P1;AV115;operation;0.1 * AV115;AV115 (sheep or goat meat);partial;tentative
+56;GOAT_070106;Intake of goat meat [g/d];decimal;KORA_S1_P1;AV115;operation;0.1 * AV115;AV115 (sheep or goat meat);partial;proximate
 57;POULTRY_0702;Intake of poultry meat [g/d];decimal;KORA_S1_P1;AV120;direct_mapping;direct_mapping;AV120 (poultry meat);complete;identical
 58;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable
 59;CHICKEN_070201;Intake of chicken meat [g/d];decimal;KORA_S1_P1;impossible;impossible;impossible;;impossible;unavailable

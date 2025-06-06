@@ -2,16 +2,16 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S3_P2;d_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S3_P2;dcsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S3_P2;dtalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S3_P2;"DI13ABSC; DI14ABSC";case_when;"case_when(
-  DI13ABSC %in% c(4) | DI14ABSC %in% c(0) ~ 7L,
-  DI14ABSC %in% c(3,4) ~ 6L,
-  DI14ABSC %in% c(2) ~ 4L,
-  DI13ABSC %in% c(3) ~ 3L,
-  DI13ABSC %in% c(1,2) ~ 2L,
-  DI13ABSC %in% c(6) & DI14ABSC %in% c(1) ~ 0L,
-  is.na(DI13ABSC) & DI14ABSC %in% c(1) ~ 0L,
-  DI13ABSC %in% c(6) & is.na(DI14ABSC) ~ 0L,
-  DI14ABSC %in% c(5) | DI13ABSC %in% c(5) ~ 9L,
+4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;KORA_S3_P2;"di13absc; di14absc";case_when;"case_when(
+  di13absc %in% c(4) | di14absc %in% c(0) ~ 7L,
+  di14absc %in% c(3,4) ~ 6L,
+  di14absc %in% c(2) ~ 4L,
+  di13absc %in% c(3) ~ 3L,
+  di13absc %in% c(1,2) ~ 2L,
+  di13absc %in% c(6) & di14absc %in% c(1) ~ 0L,
+  is.na(di13absc) & di14absc %in% c(1) ~ 0L,
+  di13absc %in% c(6) & is.na(di14absc) ~ 0L,
+  di14absc %in% c(5) | di13absc %in% c(5) ~ 9L,
   TRUE ~ NA_integer_)";;partial;proximate
 5;EMPLOY;Employment;integer;KORA_S3_P2;dtemploy;direct_mapping;direct_mapping;di16, di17, di28 --> dtemploy;complete;identical
 6;IMMIGRATION;Immigration background;integer;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -74,7 +74,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;KORA_S3_P2;t_ca_16;direct_mapping;direct_mapping;;complete;identical
 64;AGE_FUP;Age at end of follow-up [years];decimal;KORA_S3_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
 65;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S3_P2;dtbmi;direct_mapping;direct_mapping;;complete;identical
-66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S3_P2;k4tbmi;direct_mapping;direct_mapping;selfreported;proximate;tentative
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S3_P2;k4tbmi;direct_mapping;direct_mapping;selfreported;partial;proximate
 67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KORA_S3_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
 68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KORA_S3_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
 69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
