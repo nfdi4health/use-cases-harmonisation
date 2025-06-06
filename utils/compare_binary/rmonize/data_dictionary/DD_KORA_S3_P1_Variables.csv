@@ -2,8 +2,8 @@ index;name;label;valueType;...5;...6
 1;d_id;ID of the participant;integer;;
 2;dcsex;sex;integer;;
 3;dtalteru;age;decimal;;
-4;DI13ABSC;highest school or university degree;integer;;
-5;DI14ABSC;highest vocational degree;integer;;
+4;di13absc;highest school or university degree;integer;;
+5;di14absc;highest vocational degree;integer;;
 6;dtcigsmk;smoking status;integer;;
 7;dtbmi;BMI;decimal;;
 8;dkcal;energy;decimal;;
