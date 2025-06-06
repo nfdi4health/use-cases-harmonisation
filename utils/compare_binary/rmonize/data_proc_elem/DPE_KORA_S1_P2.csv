@@ -2,16 +2,16 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S1_P2;a_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S1_P2;acsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S1_P2;atalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S1_P2;"AI13ABSC; AI14ABSC";case_when;"case_when(
-  AI13ABSC %in% c(4) | AI14ABSC %in% c(0) ~ 7L,
-  AI14ABSC %in% c(3,4) ~ 6L,
-  AI14ABSC %in% c(2) ~ 4L,
-  AI13ABSC %in% c(3) ~ 3L,
-  AI13ABSC %in% c(1,2) ~ 2L,
-  AI13ABSC %in% c(6) & AI14ABSC %in% c(1) ~ 0L,
-  is.na(AI13ABSC) & AI14ABSC %in% c(1) ~ 0L,
-  AI13ABSC %in% c(6) & is.na(AI14ABSC) ~ 0L,
-  AI14ABSC %in% c(5) | AI13ABSC %in% c(5) ~ 9L,
+4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;KORA_S1_P2;"ai13absc; ai14absc";case_when;"case_when(
+  ai13absc %in% c(4) | ai14absc %in% c(0) ~ 7L,
+  ai14absc %in% c(3,4) ~ 6L,
+  ai14absc %in% c(2) ~ 4L,
+  ai13absc %in% c(3) ~ 3L,
+  ai13absc %in% c(1,2) ~ 2L,
+  ai13absc %in% c(6) & ai14absc %in% c(1) ~ 0L,
+  is.na(ai13absc) & ai14absc %in% c(1) ~ 0L,
+  ai13absc %in% c(6) & is.na(ai14absc) ~ 0L,
+  ai14absc %in% c(5) | ai13absc %in% c(5) ~ 9L,
   TRUE ~ NA_integer_)";;partial;proximate
 5;EMPLOY;Employment;integer;KORA_S1_P2;atemploy;direct_mapping;direct_mapping;ai16, ai17, ai28 --> atemploy;complete;identical
 6;IMMIGRATION;Immigration background;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -20,7 +20,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 9;SMOKE_ST;Smoking status;integer;KORA_S1_P2;atcigsmk;direct_mapping;direct_mapping;;complete;identical
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
 11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;incompatible
-12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;KORA_S1_P2;atstsalt;direct_mapping;direct_mapping;only for cigarettes;partial;identical
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;KORA_S1_P2;atstsalt;direct_mapping;direct_mapping;only for cigarettes;partial;proximate
 13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 14;MENOPAUSE;Menopause status;integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
 15;HRT;Hormone replacement therapy;integer;KORA_S1_P2;;impossible;impossible;Because it is a men study;impossible;unavailable
@@ -74,7 +74,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;KORA_S1_P2;t_ca_16;direct_mapping;direct_mapping;;complete;identical
 64;AGE_FUP;Age at end of follow-up [years];decimal;KORA_S1_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
 65;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S1_P2;atbmi;direct_mapping;direct_mapping;;complete;identical
-66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S1_P2;k4tbmi;direct_mapping;direct_mapping;self-reported;proximate;tentative
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S1_P2;k4tbmi;direct_mapping;direct_mapping;self-reported;partial;proximate
 67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
 69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KORA_S1_P2;;impossible;impossible;unavailable;impossible;unavailable
