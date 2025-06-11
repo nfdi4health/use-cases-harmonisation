@@ -2,12 +2,24 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ID;Participant identification number;integer;;ID;id_creation;id_creation;;complete;identical
 ;SEX;Sex;integer;;sex_child;direct_mapping;direct_mapping;;complete;identical
 ;AGE_BASE;Age at exposure measure [years];decimal;;age;direct_mapping;direct_mapping;;complete;identical
-;EDU_LEVEL;Education;integer;;isced_max;recode;"recode(0=0;1=1;2=2;3=3;4=4;5=5;6=6;)";;complete;compatible
-;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;phys_activ;operation;phys_activ/7;;complete;compatible
+;EDU_LEVEL;Education;integer;;isced_max;recode;"recode(0=0;1=1;2=2;3=3;4=4;5=5;6=7;)";;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"phys_activ;leis_activ";operation;(4 * phys_activ + 1.5 * leis_activ) / 7;;complete;compatible
 ;SMOKE_ST;Smoking status;integer;;;impossible;impossible;;impossible;unavailable
-;EMPLOY;Employment;integer;;;undetermined;undetermined;;undetermined;undetermined
+;EMPLOY;Employment;integer;;"occupst_1;occupst_2";case_when;"case_when(
+      occupst_1 == c(1)|occupst_2== c(1) ~ 1L,
+      occupst_1==c(2)|occupst_2==c(2) ~ 2L,  
+      occupst_1 == c(4)&occupst_2==(4)~ 3L,
+     occupst_1 == c(5)&occupst_2== c(5) ~ 4L,                                                                                                    occupst_1 %in% c(7,8,9) &occupst_2%in%c(7,8,9) ~ 5L,                                                                                            occupst_1 ==c(3)& occupst_2==c(3)~ 6L,                                                                                        occupst_1 ==c(6,10) &  occupst_2==c(6,10) ~ 7L,                                                                                  is.na(occupst_1)&occupst_2== c(5) ~ 5L,
+      is.na(occupst_2) & occupst_1== c(5) ~ 5L,
+      is.na(occupst_1) & is.na(occupst_2) ~ 7L,
+      TRUE ~ NA_integer_)";"
+If either parent is ""fully employed (100%),"" assign 1L.
+If either parent works ""more than half day,"" ""half day,"" or ""less than half day,""  assign 2L.
+If both parents are ""not at all employed,"" assign 5L.
+If one parent's status is NA, use the other parent's status to determine the category.
+If both are NA, assign 7L (""other"").";complete;compatible
 ;IMMIGRATION;Immigration background;integer;;migration_T3;recode;"recode(0=0;1=1;2=1;)";;complete;compatible
-;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60) / 7;;complete;compatible
 ;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;;impossible;impossible;;impossible;unavailable
 ;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;;impossible;impossible;;impossible;unavailable
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;impossible;impossible;;impossible;unavailable
@@ -17,7 +29,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;unavailable
 ;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;;impossible;impossible;;impossible;unavailable
 ;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
-;PREV_DIAB;History of diabetes;integer;;;undetermined;undetermined;;undetermined;undetermined
+;PREV_DIAB;History of diabetes;integer;;chdiabet;direct_mapping;direct_mapping;;complete;identical
 ;PREV_HYP;History of hypertension;integer;;;impossible;impossible;;impossible;unavailable
 ;PREV_CVD;History of cardiovascular disease;integer;;;impossible;impossible;;impossible;unavailable
 ;PREV_CANCER;History of cancer;integer;;;impossible;impossible;;impossible;unavailable

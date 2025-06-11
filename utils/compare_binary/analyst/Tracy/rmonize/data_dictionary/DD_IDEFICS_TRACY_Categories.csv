@@ -8,6 +8,28 @@ isced_max;3;Upper secondary education
 isced_max;4;Post-secondary non-tertiary education
 isced_max;5;Short-cycle tertiary education
 isced_max;6;Bachelors and higher levels
+occupst_1;1;Full-time job(30 hrs. or more a week)
+occupst_1;2;Part-time job(less than 30 hrs. a week)
+occupst_1;3;Attend school or university
+occupst_1;4;Homemaker
+occupst_1;5;Retired(also early retirement)
+occupst_1;6;Temporary company leave (e.g. maternity or paternity leave)
+occupst_1;7;Unemployed,for less than one year
+occupst_1;8;Unemployed,for a year or more
+occupst_1;9;On welfare(social assistance)
+occupst_1;10;Other
+occupst_2;1;Full-time job(30 hrs. or more a week)
+occupst_2;2;Part-time job(less than 30 hrs. a week)
+occupst_2;3;Attend school or university
+occupst_2;4;Homemaker
+occupst_2;5;Retired(also early retirement)
+occupst_2;6;Temporary company leave (e.g. maternity or paternity leave)
+occupst_2;7;Unemployed,for less than one year
+occupst_2;8;Unemployed,for a year or more
+occupst_2;9;On welfare(social assistance)
+occupst_2;10;Other
 migration_T3;0;Both parents non-migrant
 migration_T3;1;One parent migrant
 migration_T3;2;Both parents migrant
+chdiabet;1;yes
+chdiabet;0;no
