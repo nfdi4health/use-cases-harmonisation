@@ -19,7 +19,7 @@ If both parents are ""not at all employed,"" assign 5L.
 If one parent's status is NA, use the other parent's status to determine the category.
 If both are NA, assign 7L (""other"").";complete;compatible
 ;IMMIGRATION;Immigration background;integer;;migration_T3;recode;"recode(0=0;1=1;2=1;)";;complete;compatible
-;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60) / 7;;complete;compatible
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60);;complete;compatible
 ;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;;impossible;impossible;;impossible;unavailable
 ;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;;impossible;impossible;;impossible;unavailable
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;impossible;impossible;;impossible;unavailable
