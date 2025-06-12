@@ -1,0 +1,73 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;ID;id_creation;id_creation;;complete;identical
+;SEX;Sex;integer;;sex_child;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;age;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Education;integer;;isced_max;recode;"recode(0=0;1=1;2=2;3=3;4=4;5=5;6=7;)";;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"phys_activ;leis_activ";operation;(4 * phys_activ + 1.5 * leis_activ) / 7;;complete;compatible
+;SMOKE_ST;Smoking status;integer;;;impossible;impossible;;impossible;unavailable
+;EMPLOY;Employment;integer;;"occupst_1;occupst_2";case_when;"case_when(
+      occupst_1 == c(1)|occupst_2== c(1) ~ 1L,
+      occupst_1==c(2)|occupst_2==c(2) ~ 2L,  
+      occupst_1 == c(4)&occupst_2==(4)~ 3L,
+     occupst_1 == c(5)&occupst_2== c(5) ~ 4L,                                                                                                    occupst_1 %in% c(7,8,9) &occupst_2%in%c(7,8,9) ~ 5L,                                                                                            occupst_1 ==c(3)& occupst_2==c(3)~ 6L,                                                                                        occupst_1 ==c(6,10) &  occupst_2==c(6,10) ~ 7L,                                                                                  is.na(occupst_1)&occupst_2== c(5) ~ 5L,
+      is.na(occupst_2) & occupst_1== c(5) ~ 5L,
+      is.na(occupst_1) & is.na(occupst_2) ~ 7L,
+      TRUE ~ NA_integer_)";"
+If either parent is ""fully employed (100%),"" assign 1L.
+If either parent works ""more than half day,"" ""half day,"" or ""less than half day,""  assign 2L.
+If both parents are ""not at all employed,"" assign 5L.
+If one parent's status is NA, use the other parent's status to determine the category.
+If both are NA, assign 7L (""other"").";complete;compatible
+;IMMIGRATION;Immigration background;integer;;migration_T3;recode;"recode(0=0;1=1;2=1;)";;complete;compatible
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60);;complete;compatible
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;;impossible;impossible;;impossible;unavailable
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;;impossible;impossible;;impossible;unavailable
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;impossible;impossible;;impossible;unavailable
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;atc_who_2010;undetermined;undetermined;;undetermined;undetermined
+;MENOPAUSE;Menopause status;integer;;;impossible;impossible;;impossible;unavailable
+;HRT;Hormone replacement therapy;integer;;;impossible;impossible;;impossible;unavailable
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;unavailable
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;;impossible;impossible;;impossible;unavailable
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
+;PREV_DIAB;History of diabetes;integer;;chdiabet;direct_mapping;direct_mapping;;complete;identical
+;PREV_HYP;History of hypertension;integer;;;impossible;impossible;;impossible;unavailable
+;PREV_CVD;History of cardiovascular disease;integer;;;impossible;impossible;;impossible;unavailable
+;PREV_CANCER;History of cancer;integer;;;impossible;impossible;;impossible;unavailable
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;;impossible;impossible;;impossible;unavailable
+;FAM1_DIAB2;First degree family history of T2D;integer;;;impossible;impossible;;impossible;unavailable
+;FAM1_CANCER;First degree family history of cancer;integer;;;impossible;impossible;;impossible;unavailable
+;DRE_SCREEN;Screening, DRE;integer;;;impossible;impossible;;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;;impossible;impossible;;impossible;unavailable
+;FOBT_SCREEN;Screening, FOBT;integer;;;impossible;impossible;;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;;impossible;impossible;;impossible;unavailable
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;;impossible;impossible;;impossible;unavailable
+;MAMMO_SCREEN;Screening, mammography;integer;;;impossible;impossible;;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;;impossible;impossible;;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;;impossible;impossible;;impossible;unavailable
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;;impossible;impossible;;impossible;unavailable
+;INC_CVD;CVD event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_MI;Myocardial infarction during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_STR;Stroke during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HYP;Essential hypertension during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HF;Heart failure during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_CANCER;Cancer during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;;impossible;impossible;;impossible;unavailable
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;;impossible;impossible;;impossible;unavailable
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_DEATH;Age at time of death [years];decimal;;;impossible;impossible;;impossible;unavailable
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_FUP;Age at end of follow-up [years];decimal;;;impossible;impossible;;impossible;unavailable
