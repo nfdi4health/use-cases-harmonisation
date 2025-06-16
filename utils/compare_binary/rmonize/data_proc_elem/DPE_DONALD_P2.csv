@@ -15,7 +15,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 6;IMMIGRATION;Immigration background;integer;DONALD_P2;;impossible;impossible;;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;DONALD_P2;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;compatible
 8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;DONALD_P2;;impossible;impossible;;impossible;unavailable
-9;SMOKE_ST;Smoking status;integer;DONALD_P2;SMOKE_ST_HH;direct_mapping;direct_mapping;Smoking in household;partial;proximate
+9;SMOKE_ST;Smoking status;integer;DONALD_P2;SMOKE_ST_HH;recode;"recode(1=3;0=1;)";Smoking in household;partial;proximate
 10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;DONALD_P2;;impossible;impossible;;impossible;unavailable
 11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;DONALD_P2;;impossible;impossible;;impossible;unavailable
 12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;DONALD_P2;;impossible;impossible;;impossible;unavailable

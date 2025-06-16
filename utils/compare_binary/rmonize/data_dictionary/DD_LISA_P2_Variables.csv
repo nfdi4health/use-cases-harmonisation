@@ -4,84 +4,86 @@ index;name;label;valueType
 3;KIALTER_15;Age at completion of 15-year questionnaire [years];decimal
 4;MUTBILD_0;highest education of the mother;integer
 5;VATBILD_0;highest education of the father;integer
-6;mutberuztak3_15;Mother/partner is currently employed;integer
-7;vatberuztak3_15;Father/partner is currently employed;integer
-8;NAT_VM;Nationality of Parents;integer
-9;aktivleiisommn_15;"Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in summer [hours] 
+6;MUTBERU_0;highest job qualification of the mother;integer
+7;VATBERU_0;highest job qualification of the father;integer
+8;mutberuztak3_15;Mother/partner is currently employed;integer
+9;vatberuztak3_15;Father/partner is currently employed;integer
+10;NAT_VM;Nationality of Parents;integer
+11;aktivleiisommn_15;"Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in summer [hours] 
 ";integer
-10;aktivleiwintn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in winter [hours];integer
-11;aktivmitsommn_15;Number of hours in a normal week (7 days) with moderate physical activity (a little sweating, slightly increased breathing e.g. cycling, swimming, skating) in summer [hours];integer
-12;aktivmitwintn_15;Number of hours in a normal week (7 days) with moderate physical activity (some sweating, slightly increased breathing e.g. cycling, swimming, skating) in winter [hours];integer
-13;aktivschsommn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in summer [hours];integer
-14;aktivschwintn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in winter [hours];integer
-15;K_FB_rauchkind_15;The participant currently smokes cigarettes;integer
-16;FFQMULTI_15;Multivitamin supplements use;integer
-17;TG_15;triglycerides;decimal
-18;CHOL_15;cholesterol;decimal
-19;LDLC_15;LDL cholesterol [mmol/L];decimal
-20;HDL_15;HDL cholesterol [mmol/L];decimal
-21;maligjead_15;Malignant disease (cancer) in the child was diagnosed by the doctor;integer
-22;maligjeadalt_15;Age when the malignant disease (cancer) was diagnosed by the doctor;decimal
-23;diabmut_15;Doctor's diagnosis of diabetes in the birth mother;integer
-24;diabvat_15;Doctor's diagnosis of diabetes in the birth father;integer
-25;KIALTER_20;Age at 20 year follow-up;decimal
-26;UB_bmi_15;measured BMI;decimal
-27;KIbmi_20;self-reported BMI available;decimal
-28;UB_khszscore_15;BMI z-score according to Kromeyer-Hausschild in a 15-year examination;decimal
-29;UB_fmi_15;FMI [kg/ m2] calculated from BIA measurement at age 15;decimal
-30;UB_fbm_15;Body fat mass measured by BIA;decimal
-31;FFQGCAL_15;"Energy intake (kilocalories) (kcal/day)
+12;aktivleiwintn_15;Number of hours in a normal week (7 days) with light physical activity of the child (without sweating, normal breathing, e.g. walking) in winter [hours];integer
+13;aktivmitsommn_15;Number of hours in a normal week (7 days) with moderate physical activity (a little sweating, slightly increased breathing e.g. cycling, swimming, skating) in summer [hours];integer
+14;aktivmitwintn_15;Number of hours in a normal week (7 days) with moderate physical activity (some sweating, slightly increased breathing e.g. cycling, swimming, skating) in winter [hours];integer
+15;aktivschsommn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in summer [hours];integer
+16;aktivschwintn_15;Number of hours in a normal week (7 days) with heavy physical activity (a lot of sweating, rapid breathing, e.g. ball games, training) in winter [hours];integer
+17;K_FB_rauchkind_15;The participant currently smokes cigarettes;integer
+18;FFQMULTI_15;Multivitamin supplements use;integer
+19;TG_15;triglycerides;decimal
+20;CHOL_15;cholesterol;decimal
+21;LDLC_15;LDL cholesterol [mmol/L];decimal
+22;HDL_15;HDL cholesterol [mmol/L];decimal
+23;maligjead_15;Malignant disease (cancer) in the child was diagnosed by the doctor;integer
+24;maligjeadalt_15;Age when the malignant disease (cancer) was diagnosed by the doctor;decimal
+25;diabmut_15;Doctor's diagnosis of diabetes in the birth mother;integer
+26;diabvat_15;Doctor's diagnosis of diabetes in the birth father;integer
+27;KIALTER_20;Age at 20 year follow-up;decimal
+28;UB_bmi_15;measured BMI;decimal
+29;KIbmi_20;self-reported BMI available;decimal
+30;UB_khszscore_15;BMI z-score according to Kromeyer-Hausschild in a 15-year examination;decimal
+31;UB_fmi_15;FMI [kg/ m2] calculated from BIA measurement at age 15;decimal
+32;UB_fbm_15;Body fat mass measured by BIA;decimal
+33;FFQGCAL_15;"Energy intake (kilocalories) (kcal/day)
 ";decimal
-32;FFQZK_15;"absorbable Carbohydrates  intake (mg/day)
+34;FFQZK_15;"absorbable Carbohydrates  intake (mg/day)
 ";decimal
-33;FFQZE_15;"Protein intake (mg/day)
+35;FFQZE_15;"Protein intake (mg/day)
 ";decimal
-34;FFQZF_15;"Fat intake (mg/day)
+36;FFQZF_15;"Fat intake (mg/day)
 ";decimal
-35;FFQZA_15;"Alcohol intake(Ethanol) (mg/day)
+37;FFQZA_15;"Alcohol intake(Ethanol) (mg/day)
 ";decimal
-36;FFQZB_15;"Fiber intake (mg/day)
+38;FFQZB_15;"Fiber intake (mg/day)
 ";decimal
-37;FFQFS_15;"saturated fat intake(mg/day)
+39;FFQFS_15;"saturated fat intake(mg/day)
 ";decimal
-38;FFQFU_15;"monounsaturated fat intake(mg/day)
+40;FFQFU_15;"monounsaturated fat intake(mg/day)
 ";decimal
-39;FFQFP_15;Polyunsaturated Fatty Acids intake (mg/day);decimal
-40;FFQKMT_15;Glucose (dextrose) (mg);decimal
-41;FFQKMF_15;Fructose (fruit sugar) (mg);decimal
-42;FFQGI_15;Glycemic Index calculated from FFQ data;decimal
-43;FFQGL_15;Glycemic Load calculated from FFQ data;decimal
-44;FFQMNA_15;Sodium (mg/day);decimal
-45;FFQMK_15;Potassium intake(mg/day);decimal
-46;FFQSCHOKOL_15;chocolate in g/d;decimal
-47;FFQSCHOKOR_15;chocolate bars in g/d;decimal
-48;FFQGUMMIB_15;gummy bears in g/d;decimal
-49;FFQZUCK_15;sugar beet syrup in g/d;decimal
-50;FFQEIS_15;ice cream in g/d;decimal
-51;FFQKEKS_15;biscuits in g/d;decimal
-52;FFQOBSTK_15;fruit cake in g/d;decimal
-53;FFQTORTE_15;cream cake in g/d;decimal
-54;FFQGEBAE_15;Pastry in g/d;decimal
-55;FFQRUEHRK_15;sponge cake in g/d;decimal
-56;FFQNEKT_15;Fruit juice drink, fruit nectar in g/d;decimal
-57;FFQFRSAFT_15;fruit juices in g/d;decimal
-58;FFQGESAFT_15;vegetable juices in g/d;decimal
-59;FFQSCHOR_15;diluted juices, spritzers in g/d;decimal
-60;FFQENERG_15;sports, energy drinks in g/d;decimal
-61;FFQCOLA_15;lemonade, cola, iced tea in g/d;decimal
-62;FFQSALAT_15;Lettuce in g/d;decimal
-63;FFQKOHL_15;Cabbage in g/d;decimal
-64;FFQSPIN_15;Spinach, chard in g/d;decimal
-65;FFQPAPR_15;Paprika intake in g/d;decimal
-66;FFQKAROT_15;Carrots intake in g/d;decimal
-67;FFQAPFEL_15;Apple, pear in g/d;decimal
-68;FFQBEERE_15;Soft fruit in g/d;decimal
-69;FFQSUED_15;Tropical fruits in g/d;decimal
-70;FFQAUFSCH_15;Cold cuts in g/d;decimal
-71;FFQBOCK_15;Bockwurst, Viennese sausage, meat sausage in g/d;decimal
-72;FFQBRAT_15;Bratwurst in g/d;decimal
-73;FFQSALAM_15;Salami in g/d;decimal
-74;FFQTEE_15;tea intake in g/d;decimal
-75;FFQNUSS_15;Nuts in g/d;decimal
-76;FFQRIND_15;Beef, veal in g/d;decimal
-77;FFQSCHW_15;Pork in g/d;decimal
+41;FFQFP_15;Polyunsaturated Fatty Acids intake (mg/day);decimal
+42;FFQKMT_15;Glucose (dextrose) (mg);decimal
+43;FFQKMF_15;Fructose (fruit sugar) (mg);decimal
+44;FFQGI_15;Glycemic Index calculated from FFQ data;decimal
+45;FFQGL_15;Glycemic Load calculated from FFQ data;decimal
+46;FFQMNA_15;Sodium (mg/day);decimal
+47;FFQMK_15;Potassium intake(mg/day);decimal
+48;FFQSCHOKOL_15;chocolate in g/d;decimal
+49;FFQSCHOKOR_15;chocolate bars in g/d;decimal
+50;FFQGUMMIB_15;gummy bears in g/d;decimal
+51;FFQZUCK_15;sugar beet syrup in g/d;decimal
+52;FFQEIS_15;ice cream in g/d;decimal
+53;FFQKEKS_15;biscuits in g/d;decimal
+54;FFQOBSTK_15;fruit cake in g/d;decimal
+55;FFQTORTE_15;cream cake in g/d;decimal
+56;FFQGEBAE_15;Pastry in g/d;decimal
+57;FFQRUEHRK_15;sponge cake in g/d;decimal
+58;FFQNEKT_15;Fruit juice drink, fruit nectar in g/d;decimal
+59;FFQFRSAFT_15;fruit juices in g/d;decimal
+60;FFQGESAFT_15;vegetable juices in g/d;decimal
+61;FFQSCHOR_15;diluted juices, spritzers in g/d;decimal
+62;FFQENERG_15;sports, energy drinks in g/d;decimal
+63;FFQCOLA_15;lemonade, cola, iced tea in g/d;decimal
+64;FFQSALAT_15;Lettuce in g/d;decimal
+65;FFQKOHL_15;Cabbage in g/d;decimal
+66;FFQSPIN_15;Spinach, chard in g/d;decimal
+67;FFQPAPR_15;Paprika intake in g/d;decimal
+68;FFQKAROT_15;Carrots intake in g/d;decimal
+69;FFQAPFEL_15;Apple, pear in g/d;decimal
+70;FFQBEERE_15;Soft fruit in g/d;decimal
+71;FFQSUED_15;Tropical fruits in g/d;decimal
+72;FFQAUFSCH_15;Cold cuts in g/d;decimal
+73;FFQBOCK_15;Bockwurst, Viennese sausage, meat sausage in g/d;decimal
+74;FFQBRAT_15;Bratwurst in g/d;decimal
+75;FFQSALAM_15;Salami in g/d;decimal
+76;FFQTEE_15;tea intake in g/d;decimal
+77;FFQNUSS_15;Nuts in g/d;decimal
+78;FFQRIND_15;Beef, veal in g/d;decimal
+79;FFQSCHW_15;Pork in g/d;decimal

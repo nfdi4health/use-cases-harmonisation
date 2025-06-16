@@ -2,18 +2,18 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;LISA_P1;ID;id_creation;id_creation;;complete;identical
 2;SEX;Sex;integer;LISA_P1;GESCHL;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;LISA_P1;KIALTER_15;direct_mapping;direct_mapping;compatible, because it is integer in the study and we want decimal;complete;compatible
-4;EDU_LEVEL;Education;integer;LISA_P1;"MUTBILD_0;VATBILD_0;";case_when;"case_when(
-      MUTBILD_0 %in% c(5, 6) | VATBILD_0 %in% c(5, 6) ~ 4L,
-      MUTBILD_0 %in% c(3,4) | VATBILD_0 %in% c(3,4) ~ 3L,
-      MUTBILD_0 %in% c(2) | VATBILD_0 %in% c(2) ~ 1L,
-      MUTBILD_0 == 1 | VATBILD_0 == 1 ~ 0L,
-      MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 5L,
-      TRUE ~ NA_integer_
-    )";"""Longer Education"" (4): Either parent has 5 or 6.
-""Secondary School"" (3): Either parent has 3 or 4.
-""Primary School Completed"" (1): Either parent has 2.
-""None"" (0): Either parent has 1 (no certificate).
-""Not Specified"" (5): Either parent has 7 (other degree).";complete;compatible
+4;EDU_LEVEL;Education;integer;LISA_P1;"MUTBILD_0;VATBILD_0; MUTBERU_0; VATBERU_0";case_when;"case_when(
+  MUTBERU_0 %in% c(7) | VATBERU_0 %in% c(7) ~ 7L,
+  MUTBERU_0 %in% c(5,6) | VATBERU_0 %in% c(5,6) ~ 6L,
+  MUTBERU_0 %in% c(3,4) |VATBERU_0 %in% c(3,4) ~ 4L,
+  MUTBERU_0 %in% c(8) |VATBERU_0 %in% c(8) ~ 9L,
+  MUTBILD_0 %in% c(5,6) | VATBILD_0 %in% c(5,6) ~ 3L,
+  MUTBILD_0 %in% c(2,3,4) | VATBILD_0 %in% c(2,3,4) ~ 2L,
+  MUTBILD_0 %in% c(1) & VATBILD_0 %in% c(1) ~ 0L,
+  is.na(MUTBILD_0) & VATBILD_0 %in% c(1) ~ 0L,
+  MUTBILD_0 %in% c(1) & is.na(VATBILD_0) ~ 0L,
+  MUTBILD_0 %in% c(7) | VATBILD_0 %in% c(7) ~ 9L,
+  TRUE ~ NA_integer_)";Education according to the ISCED 2011 classification;partial;proximate
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;LISA_P1;"aktivleiisommn_15;aktivleiwintn_15;aktivmitsommn_15;aktivmitwintn_15;aktivschsommn_15;aktivschwintn_15";operation;"(
   1.5 * ((aktivleiisommn_15 + aktivleiwintn_15) / 2) +
   3 * ((aktivmitsommn_15 + aktivmitwintn_15) / 2) +

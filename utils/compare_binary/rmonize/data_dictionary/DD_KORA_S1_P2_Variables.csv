@@ -2,106 +2,107 @@ index;name;label;valueType
 1;a_id;ID of the participant;integer
 2;acsex;sex;integer
 3;atalteru;age;decimal
-4;atbbild;level of education;integer
-5;atemploy;employment status;integer
-6;atcigsmk;smoking status;integer
-7;atstsalt;Age quitting cigarette smoking;decimal
-8;atbmi;BMI;decimal
-9;k4tbmi;Body Mass Index (BMI) at follow-up;decimal
-10;al_choln;total cholesterol;decimal
-11;al_hdln;HDL cholesterol;decimal
-12;prev_dm_16;prevalent T2DM;integer
-13;athyact;actual hypertension;integer
-14;atcvd;history of CVD;integer
-15;atmvcvd;stroke or MI history of father or mother;integer
-16;atmvdiab;diabetes history of father or mother;integer
-17;atmvca;cancer history of father or mother;integer
-18;atmstati;use of statins;integer
-19;inz_mi_16;validated incidence myocardial infarction;integer
-20;mi_alter_16;age at end of follow-up for myocardial infarction;decimal
-21;inz_apo_16;validated incidence stroke;integer
-22;apo_alter_16;age at end of follow-up or stroke;decimal
-23;inz_apo_isc_16;validated incidence ischaemic stroke;integer
-24;inz_apo_haem_16;validatet incidence haemorrhagic stroke;integer
-25;inz_dm_16;validated incidence T2DM;integer
-26;dm_alter_16;age at end of  follow-up for T2DM;decimal
-27;t_all_16;total mortality;integer
-28;t_alter_16;Age at exit from mortality follow-up;decimal
-29;t_cvd_16;CVD mortality;integer
-30;t_ca_16;cancer mortality;integer
-31;akcal;energy;decimal
-32;akohle;carbohydrate;decimal
-33;aeiwei;protein;decimal
-34;afette;fat;decimal
-35;aalk;alcohol;decimal
-36;aballa;diatary fiber;decimal
-37;ages;saturated fat;decimal
-38;aeuf;monounsaturated fat;decimal
-39;amuf;polyunsaturated fat;decimal
-40;akmosa;monosaccharides;decimal
-41;akdisa;disaccharides;decimal
-42;akmt;glucose;decimal
-43;akmf;fructose;decimal
-44;anatr;sodium intake;decimal
-45;akal;potassium intake;decimal
-46;AV610;sugar;decimal
-47;AV681;Honey;decimal
-48;AV684;Jam;decimal
-49;AV687;Other sweet spreads;decimal
-50;AV620;cacao products;decimal
-51;AV630;chocolate products;decimal
-52;AV650;confectionary;decimal
-53;AV670;all ice cream;decimal
-54;AV570;long-life baked goods;decimal
-55;AV540;Fine bakery products;decimal
-56;AV810;fruit/vegetable juice;decimal
-57;AV825;caffeinated lemonade;decimal
-58;AV829;other soft drinks;decimal
-59;AV431;cauliflower;decimal
-60;AV433;other cabbage;decimal
-61;AV440;leafy and stem vegetables;decimal
-62;AV451;tomatoes;decimal
-63;AV455;cucumbers;decimal
-64;AV459;other fruit vegetables;decimal
-65;AV461;onion vegetables;decimal
-66;AV465;carrots;decimal
-67;AV469;other fresh vegetables;decimal
-68;AV470;frozen vegetables;decimal
-69;AV480;canned vegetables;decimal
-70;AV499;other vegetable products;decimal
-71;AV491;dry legumes;decimal
-72;AV310;fruit without specification;decimal
-73;AV311;apples;decimal
-74;AV315;other pome fruits;decimal
-75;AV321;peaches;decimal
-76;AV323;cherries;decimal
-77;AV325;other stone fruits;decimal
-78;AV331;strawberries;decimal
-79;AV334;other berries;decimal
-80;AV337;grapes;decimal
-81;AV111;Beef;decimal
-82;AV112;Veal;decimal
-83;AV113;Pork meat;decimal
-84;AV115;Sheep or goat meat;decimal
-85;AV117;Game meat;decimal
-86;AV119;other meat;decimal
-87;AV120;Poultry meat;decimal
-88;AV141;Sausage;decimal
-89;AV145;Ham;decimal
-90;AV147;Bacon;decimal
-91;AV150;canned, frozen meat or meat products;decimal
-92;AV160;other meat products;decimal
-93;AV841;roasted coffee;decimal
-94;AV845;coffee extracts;decimal
-95;AV850;tea;decimal
-96;AV341;oranges, mandarins;decimal
-97;AV343;grapefruits;decimal
-98;AV344;other citrus fruits;decimal
-99;AV345;bananas;decimal
-100;AV346;other tropical fruits;decimal
-101;AV351;nuts;decimal
-102;AV357;dried fruit;decimal
-103;AV360;canned fruit;decimal
-104;AV370;frozen fruit;decimal
-105;AV390;other processed fruit;decimal
-106;AV131;Minced meat;decimal
+4;ai13absc;highest school or university degree;integer
+5;ai14absc;highest vocational degree;integer
+6;atemploy;employment status;integer
+7;atcigsmk;smoking status;integer
+8;atstsalt;Age quitting cigarette smoking;decimal
+9;atbmi;BMI;decimal
+10;k4tbmi;Body Mass Index (BMI) at follow-up;decimal
+11;al_choln;total cholesterol;decimal
+12;al_hdln;HDL cholesterol;decimal
+13;prev_dm_16;prevalent T2DM;integer
+14;athyact;actual hypertension;integer
+15;atcvd;history of CVD;integer
+16;atmvcvd;stroke or MI history of father or mother;integer
+17;atmvdiab;diabetes history of father or mother;integer
+18;atmvca;cancer history of father or mother;integer
+19;atmstati;use of statins;integer
+20;inz_mi_16;validated incidence myocardial infarction;integer
+21;mi_alter_16;age at end of follow-up for myocardial infarction;decimal
+22;inz_apo_16;validated incidence stroke;integer
+23;apo_alter_16;age at end of follow-up or stroke;decimal
+24;inz_apo_isc_16;validated incidence ischaemic stroke;integer
+25;inz_apo_haem_16;validatet incidence haemorrhagic stroke;integer
+26;inz_dm_16;validated incidence T2DM;integer
+27;dm_alter_16;age at end of  follow-up for T2DM;decimal
+28;t_all_16;total mortality;integer
+29;t_alter_16;Age at exit from mortality follow-up;decimal
+30;t_cvd_16;CVD mortality;integer
+31;t_ca_16;cancer mortality;integer
+32;akcal;energy;decimal
+33;akohle;carbohydrate;decimal
+34;aeiwei;protein;decimal
+35;afette;fat;decimal
+36;aalk;alcohol;decimal
+37;aballa;diatary fiber;decimal
+38;ages;saturated fat;decimal
+39;aeuf;monounsaturated fat;decimal
+40;amuf;polyunsaturated fat;decimal
+41;akmosa;monosaccharides;decimal
+42;akdisa;disaccharides;decimal
+43;akmt;glucose;decimal
+44;akmf;fructose;decimal
+45;anatr;sodium intake;decimal
+46;akal;potassium intake;decimal
+47;AV610;sugar;decimal
+48;AV681;Honey;decimal
+49;AV684;Jam;decimal
+50;AV687;Other sweet spreads;decimal
+51;AV620;cacao products;decimal
+52;AV630;chocolate products;decimal
+53;AV650;confectionary;decimal
+54;AV670;all ice cream;decimal
+55;AV570;long-life baked goods;decimal
+56;AV540;Fine bakery products;decimal
+57;AV810;fruit/vegetable juice;decimal
+58;AV825;caffeinated lemonade;decimal
+59;AV829;other soft drinks;decimal
+60;AV431;cauliflower;decimal
+61;AV433;other cabbage;decimal
+62;AV440;leafy and stem vegetables;decimal
+63;AV451;tomatoes;decimal
+64;AV455;cucumbers;decimal
+65;AV459;other fruit vegetables;decimal
+66;AV461;onion vegetables;decimal
+67;AV465;carrots;decimal
+68;AV469;other fresh vegetables;decimal
+69;AV470;frozen vegetables;decimal
+70;AV480;canned vegetables;decimal
+71;AV499;other vegetable products;decimal
+72;AV491;dry legumes;decimal
+73;AV310;fruit without specification;decimal
+74;AV311;apples;decimal
+75;AV315;other pome fruits;decimal
+76;AV321;peaches;decimal
+77;AV323;cherries;decimal
+78;AV325;other stone fruits;decimal
+79;AV331;strawberries;decimal
+80;AV334;other berries;decimal
+81;AV337;grapes;decimal
+82;AV111;Beef;decimal
+83;AV112;Veal;decimal
+84;AV113;Pork meat;decimal
+85;AV115;Sheep or goat meat;decimal
+86;AV117;Game meat;decimal
+87;AV119;other meat;decimal
+88;AV120;Poultry meat;decimal
+89;AV141;Sausage;decimal
+90;AV145;Ham;decimal
+91;AV147;Bacon;decimal
+92;AV150;canned, frozen meat or meat products;decimal
+93;AV160;other meat products;decimal
+94;AV841;roasted coffee;decimal
+95;AV845;coffee extracts;decimal
+96;AV850;tea;decimal
+97;AV341;oranges, mandarins;decimal
+98;AV343;grapefruits;decimal
+99;AV344;other citrus fruits;decimal
+100;AV345;bananas;decimal
+101;AV346;other tropical fruits;decimal
+102;AV351;nuts;decimal
+103;AV357;dried fruit;decimal
+104;AV360;canned fruit;decimal
+105;AV370;frozen fruit;decimal
+106;AV390;other processed fruit;decimal
+107;AV131;Minced meat;decimal

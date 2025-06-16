@@ -1,0 +1,16 @@
+index;name;label;valueType
+;ID;ID of the participant;Integer
+;sex_child;Sex of the child;Integer
+;age;Age[years];decimal
+;isced_max;Isced level:Maximum of both parents;Integer
+;leis_activ;Leisure activity [hours per week];decimal
+;phys_activ;Physical activity[hours per week];decimal
+;occupst_1;Employment status of parent;Integer
+;occupst_2;Employment status of parent;Integer
+;migration_T3;Migration status of parents;Integer
+;atc_who_2010;child's drug use,last 7 days - ATC code of drug;Integer
+;SED;Avg Sedentary time (min./day);decimal
+;LPA;Avg time in light PA (min./day);decimal
+;MPA;Avg time in moderate PA (min./day);decimal
+;VPA;Average time in vigorous PA (min./day);decimal
+;chdiabet;History of Diabetes mellitus (ICD-10 2010 – E14);Integer
