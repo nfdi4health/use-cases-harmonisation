@@ -1,0 +1,29 @@
+variable;name;label
+sex;1;male
+sex;2;female
+school;1;no formal education
+school;2;elementary School
+school;3;secondary School(Realschule in FRG)
+school;4;polytechn.secondary school(POS in GDR)
+school;5;qualif. F.university of applied sciences(Fachholschulreife)
+school;6;A-levels/university entrance qualif.(Abitur)
+school;7;other
+occup_edu;1;no vocational education
+occup_edu;2;training period
+occup_edu;3;apprenticeship(Lehre)
+occup_edu;4;vocational school(Berufsschule)
+occup_edu;5;technical school(Fachschule)
+occup_edu;6;university of applied sciences(Fachhochschule)
+occup_edu;7;university
+occup_edu;8;other
+occup_edu_2;1;no vocational education
+occup_edu_2;2;training period
+occup_edu_2;3;apprenticeship(Lehre)
+occup_edu_2;4;vocational school(Berufsschule)
+occup_edu_2;5;technical school(Fachschule)
+occup_edu_2;6;university of applied sciences(Fachhochschule)
+occup_edu_2;7;university
+occup_edu_2;8;other
+smoker;1;Current Smoker
+smoker;2;Ex Smoker
+smoker;3;Never Smoker
