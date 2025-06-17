@@ -2,7 +2,17 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 1;ID;Participant identification number;integer;KORA_S3_P2;d_id;id_creation;id_creation;complete;complete;identical
 2;SEX;Sex;integer;KORA_S3_P2;dcsex;direct_mapping;direct_mapping;;complete;identical
 3;AGE_BASE;Age at exposure measure [years];decimal;KORA_S3_P2;dtalteru;direct_mapping;direct_mapping;;complete;identical
-4;EDU_LEVEL;Education;integer;KORA_S3_P2;dtbbild;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Highest level of education [ISCED 2011];integer;KORA_S3_P2;"di13absc; di14absc";case_when;"case_when(
+  di13absc %in% c(4) | di14absc %in% c(0) ~ 7L,
+  di14absc %in% c(3,4) ~ 6L,
+  di14absc %in% c(2) ~ 4L,
+  di13absc %in% c(3) ~ 3L,
+  di13absc %in% c(1,2) ~ 2L,
+  di13absc %in% c(6) & di14absc %in% c(1) ~ 0L,
+  is.na(di13absc) & di14absc %in% c(1) ~ 0L,
+  di13absc %in% c(6) & is.na(di14absc) ~ 0L,
+  di14absc %in% c(5) | di13absc %in% c(5) ~ 9L,
+  TRUE ~ NA_integer_)";;partial;proximate
 5;EMPLOY;Employment;integer;KORA_S3_P2;dtemploy;direct_mapping;direct_mapping;di16, di17, di28 --> dtemploy;complete;identical
 6;IMMIGRATION;Immigration background;integer;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
 7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;KORA_S3_P2;;impossible;impossible;unavailable;impossible;unavailable
@@ -64,7 +74,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;KORA_S3_P2;t_ca_16;direct_mapping;direct_mapping;;complete;identical
 64;AGE_FUP;Age at end of follow-up [years];decimal;KORA_S3_P2;t_alter_16;direct_mapping;direct_mapping;;complete;identical
 65;BMI;Body Mass Index at baseline [kg/m²];decimal;KORA_S3_P2;dtbmi;direct_mapping;direct_mapping;;complete;identical
-66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S3_P2;k4tbmi;direct_mapping;direct_mapping;selfreported;proximate;tentative
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;KORA_S3_P2;k4tbmi;direct_mapping;direct_mapping;selfreported;partial;proximate
 67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;KORA_S3_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
 68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;KORA_S3_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
 69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
@@ -92,8 +102,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 91;FRUC;Fructose intake [g/d];decimal;KORA_S3_P2;dkmf;direct_mapping;direct_mapping;;complete;identical
 92;GI;Daily glycaemic index;decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
 93;GL;Daily glycaemic load;decimal;KORA_S3_P2;;impossible;impossible;;impossible;unavailable
-94;SODIUM;Sodium intake [g/d];decimal;KORA_S3_P2;dnatr;direct_mapping;direct_mapping;;complete;identical
-95;SOD_POT_RATIO;Sodium to potassium intake ratio [g/d];decimal;KORA_S3_P2;"dnatr; dkal";operation;dnatr/dkal;;complete;identical
+94;SODIUM;Sodium intake [mg/d];decimal;KORA_S3_P2;dnatr;operation;dnatr*1000;;complete;compatible
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;KORA_S3_P2;"dnatr; dkal";operation;dnatr/dkal;;complete;identical
 96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;KORA_S3_P2;"DV610; DV681; DV684; DV687; DV620; DV630; DV650; DV670";operation;DV610 + DV681 + DV684 + DV687 + DV620 + DV630 + DV650 + DV670;DV610 (sugar) + DV681 (honey) + DV684 (jam) + DV687 (other sweet spreads) + DV620 (cacao products) + DV630 (chocolate products) + DV650 (confectionary) + DV670 (all ice cream);complete;compatible
 97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;KORA_S3_P2;"DV540; DV570";operation;DV540 + DV570;DV540 (fine bakery wares) + DV570 (long-life baked goods);complete;compatible
 98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;KORA_S3_P2;DV810;direct_mapping;direct_mapping;DV810 (fruit / vegetable juice);complete;identical

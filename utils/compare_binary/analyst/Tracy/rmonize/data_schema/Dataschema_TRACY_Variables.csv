@@ -2,7 +2,7 @@ index;name;label;valueType
 ;ID;Participant identification number;integer
 ;SEX;Sex;integer
 ;AGE_BASE;Age at exposure measure [years];decimal
-;EDU_LEVEL;Education;integer
+;EDU_LEVEL;Highest level of education [ISCED 2011];integer
 ;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal
 ;SMOKE_ST;Smoking status;integer
 ;EMPLOY;Employment;integer

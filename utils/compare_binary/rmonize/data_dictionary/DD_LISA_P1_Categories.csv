@@ -1,22 +1,38 @@
 variable;name;label
 GESCHL;1;male
 GESCHL;2;female
-MUTBILD_0;1;No secondary school or elementary school certificate (Mother)
-MUTBILD_0;2;Lower secondary school or elementary school certificate (Mother)
-MUTBILD_0;3;Secondary school certificate (middle school leaving certificate)(Mother)
-MUTBILD_0;4;Completion of Polytechnic. high school (Mother)
-MUTBILD_0;5;Advanced technical college entrance qualification (Mother)
-MUTBILD_0;6;General or specialist university entrance qualification (Mother)
-MUTBILD_0;7;Other degree (Mother)
-VATBILD_0;1;No secondary school or elementary school certificate
-VATBILD_0;2;Lower secondary school or elementary school certificate
-VATBILD_0;3;Secondary school certificate (middle school leaving certificate)
-VATBILD_0;4;Completion of Polytechnic. high school
-VATBILD_0;5;Advanced technical college entrance qualification
-VATBILD_0;6;general or specialist university entrance qualification
-VATBILD_0;7;other degree
+MUTBILD_0;1;kein Haupt- oder Volksschulabschluss
+MUTBILD_0;2;Haupt- oder Volksschulabschluss
+MUTBILD_0;3;Realschulabschluss (mittlere Reife)
+MUTBILD_0;4;Abschluss der Polytechn. Oberschule
+MUTBILD_0;5;Fachhochschulreife
+MUTBILD_0;6;allgem. oder fachgeb. Hochschulreife
+MUTBILD_0;7;anderer Abschluss
+VATBILD_0;1;kein Haupt- oder Volksschulabschluss
+VATBILD_0;2;Haupt- oder Volksschulabschluss
+VATBILD_0;3;Realschulabschluss (mittlere Reife)
+VATBILD_0;4;Abschluss der Polytechn. Oberschule
+VATBILD_0;5;Fachhochschulreife
+VATBILD_0;6;allgem. oder fachgeb. Hochschulreife
+VATBILD_0;7;anderer Abschluss
 K_FB_rauchkind_15;1;no
 K_FB_rauchkind_15;2;yes, daily
 K_FB_rauchkind_15;3;yes, several times a week
 K_FB_rauchkind_15;4;yes, once a week
 K_FB_rauchkind_15;5;yes, less often
+MUTBERU_0;1;Auszubildende/r, Student/in
+MUTBERU_0;2;kein beruflicher Abschluss
+MUTBERU_0;3;abgeschlossene beruflich-betriebliche Ausbildung
+MUTBERU_0;4;abgeschlossene beruflich-schulische Ausbildung
+MUTBERU_0;5;abgeschlossene Ausbildung an Fachschule
+MUTBERU_0;6;Fachhochschulabschluss
+MUTBERU_0;7;Hochschulabschluss
+MUTBERU_0;8;anderer beruflicher Abschluss
+VATBERU_0;1;Auszubildende/r, Student/in
+VATBERU_0;2;kein beruflicher Abschluss
+VATBERU_0;3;abgeschlossene beruflich-betriebliche Ausbildung
+VATBERU_0;4;abgeschlossene beruflich-schulische Ausbildung
+VATBERU_0;5;abgeschlossene Ausbildung an Fachschule
+VATBERU_0;6;Fachhochschulabschluss
+VATBERU_0;7;Hochschulabschluss
+VATBERU_0;8;anderer beruflicher Abschluss
