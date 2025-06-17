@@ -1,33 +1,33 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
 1;ID;Participant identification number;integer;ACTIVE_P1;id_dlw;id_creation;id_creation;;complete;identical
 2;SEX;Sex;integer;ACTIVE_P1;sex;direct_mapping;direct_mapping;;complete;identical
-3;AGE_BASE;Age at exposure measure [years];decimal;ACTIVE_P1;"gebdate; 
+3;AGE_BASE;Age at exposure measure [years];decimal;ACTIVE_P1;"gebdate; 
 int_date";operation;"as.numeric(difftime(as.Date(int_date, format=""%d/%m/%Y""), as.Date(gebdate, format=""%d/%m/%Y""), units=""weeks"")) / 52.25";;complete;compatible
-4;EDU_LEVEL;Education;integer;ACTIVE_P1;"schulab_corr;
-berufab1;
-berufab2;
-berufab3;
-berufab4;
-berufab5;
-berufab6;
-berufab7;
-berufab8;
-berufab9;
-berufab10;
-berufab11;
-berufab12";case_when;"case_when(
-  berufab11 == 1 ~ 8,
-  berufab10 == 1 ~ 7,
-  berufab9 == 1 | berufab8 == 1 | berufab7 == 1 | berufab6 == 1 ~ 6,
-  berufab4 == 1 ~ 4,
-  berufab5 == 1 | berufab2 == 1 |schulab_corr %in% c(7:9) ~ 3,
-  schulab_corr %in% c(3:6) ~ 2,
-  schulab_corr == 1 ~ 1,
-  berufab1 == 1 |berufab3 == 1 |berufab12 == 1 |schulab_corr %in% c(10,999,888) ~ 9
-)";;complete;compatible
+4;EDU_LEVEL;Education;integer;ACTIVE_P1;"schulab_corr;
+berufab1;
+berufab2;
+berufab3;
+berufab4;
+berufab5;
+berufab6;
+berufab7;
+berufab8;
+berufab9;
+berufab10;
+berufab11;
+berufab12";case_when;"case_when(
+  berufab11 == 1 ~ 8,
+  berufab10 == 1 ~ 7,
+  berufab9 == 1 | berufab8 == 1 | berufab7 == 1 | berufab6 == 1 ~ 6,
+  berufab4 == 1 ~ 4,
+  berufab5 == 1 | berufab2 == 1 |schulab_corr %in% c(7:9) ~ 3,
+  schulab_corr %in% c(3:6) ~ 2,
+  schulab_corr == 1 ~ 1,
+  berufab1 == 1 |berufab3 == 1 |berufab12 == 1 |schulab_corr %in% c(10,999,888) ~ 9
+)";;partial;compatible
 5;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;ACTIVE_P1;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;identical
 6;SMOKE_ST;Smoking status;integer;ACTIVE_P1;rauchstatus;recode;"recode(1 = 1; 2 = 3; 3 = 2; ELSE = NA)";;complete;compatible
-7;BMI;Body Mass Index at baseline [kg/m²];decimal;ACTIVE_P1;"t1_weight;
+7;BMI;Body Mass Index at baseline [kg/m²];decimal;ACTIVE_P1;"t1_weight;
 t1_height";operation;t1_weight / ((t1_height / 100)*2);;complete;compatible
 8;ENERGY;Energy intake [kcal/d];decimal;ACTIVE_P1;energie_kcal;direct_mapping;direct_mapping;;complete;identical
 9;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;ACTIVE_P1;POTATOES_TUB_01;direct_mapping;direct_mapping;;complete;compatible
