@@ -1,0 +1,11 @@
+index;name;label;valueType
+1;ID;ID of the participant;integer
+2;sex;sex;integer
+3;age;age;decimal
+4;school;School education;integer
+5;occup_edu;First professional qualification;integer
+6;occup_edu_2;Second professional qualification;integer
+7;met_we;MET per week;decimal
+8;smoker;smoker;integer
+9;bmi;bmi;decimal
+10;gj;total energy intake at baseline;decimal
