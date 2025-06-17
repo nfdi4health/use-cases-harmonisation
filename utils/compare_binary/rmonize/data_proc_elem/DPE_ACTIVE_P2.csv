@@ -1,0 +1,194 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;ID;Participant identification number;integer;ACTIVE_P2;id_dlw;id_creation;id_creation;;complete;identical
+2;SEX;Sex;integer;ACTIVE_P2;sex;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;ACTIVE_P2;"gebdate; 
+int_date";operation;"as.numeric(difftime(as.Date(int_date, format=""%d/%m/%Y""), as.Date(gebdate, format=""%d/%m/%Y""), units=""weeks"")) / 52.25";;complete;compatible
+4;EDU_LEVEL;Education;integer;ACTIVE_P2;"schulab_corr;
+berufab1;
+berufab2;
+berufab3;
+berufab4;
+berufab5;
+berufab6;
+berufab7;
+berufab8;
+berufab9;
+berufab10;
+berufab11;
+berufab12";case_when;"case_when(
+  berufab11 == 1 ~ 8,
+  berufab10 == 1 ~ 7,
+  berufab9 == 1 | berufab8 == 1 | berufab7 == 1 | berufab6 == 1 ~ 6,
+  berufab4 == 1 ~ 4,
+  berufab5 == 1 | berufab2 == 1 |schulab_corr %in% c(7:9) ~ 3,
+  schulab_corr %in% c(3:6) ~ 2,
+  schulab_corr == 1 ~ 1,
+  berufab1 == 1 |berufab3 == 1 |berufab12 == 1 |schulab_corr %in% c(10,999,888) ~ 9
+)";;complete;compatible
+5;EMPLOY;Employment;integer;ACTIVE_P2;"erwerb;
+situation";case_when;"case_when(
+  erwerb == 1 ~ 1,
+  erwerb %in% c(2,3,4,6) ~ 2,
+  erwerb %in% c(5,10) ~ 5,
+  erwerb %in% c(7,8) ~ 6,
+  erwerb %in% c(9,999,888) ~ 7,
+  erwerb == 11 & situation %in% c(1,2) ~ 6,
+  erwerb == 11 & situation == 3 ~ 4,
+  erwerb == 11 & situation == 4 ~ 5,
+  erwerb == 11 & situation %in% c(5,7,999, 888) ~ 7,
+  erwerb == 11 & situation == 6 ~ 3,
+)";;complete;compatible
+6;IMMIGRATION;Immigration background;integer;ACTIVE_P2;"stan_deu;
+gebland1";case_when;"case_when(
+    stan_deu == 1 & gebland1 == 1 ~ 0,
+    TRUE ~ 1
+  )";Persons are considered to have an immigration background if they were born abroad or do not hold German citizenship. Only those born in Germany and with German citizenship are classified as having no immigration background.;partial;proximate
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;ACTIVE_P2;TOT_PA_QX;operation;TOT_PA_QX/7;;complete;identical
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;ACTIVE_P2;"LPA_AC;MPA_AC;VPA_AC;";operation;"(
+  1.5 *  LPA_AC +
+  3 * MPA_AC +
+  6 * VPA_AC
+) /60";;complete;compatible
+9;SMOKE_ST;Smoking status;integer;ACTIVE_P2;rauchstatus;recode;"recode(1 = 1; 2 = 3; 3 = 2; ELSE = NA)";;complete;compatible
+10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;ACTIVE_P2;"tobacco;
+smoke_dur";operation;(tobacco/20)*smoke_dur;"tobacco derived from: rauch_zigzahl;rauch_zigperiod;exrauch_zigzahl;exrauch_zigperiod;exrauch_pipezahl;exrauch_pipeperiod
+smoke_dur derived 
+from:rauch_begjahr;rauch_begalter;exrauch_endalter;exrauch_endjahr1;exrauch_endjahr2;int_date; gebdate;";complete;compatible
+11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;ACTIVE_P2;"rauch_zigzahl;
+rauch_zigperiod;
+rauch_pipezahl;
+rauch_pipeperiod
+
+";other;"ifelse(
+  is.na(rauch_zigzahl) & is.na(rauch_pipezahl), 
+  NA,
+  (ifelse(is.na(rauch_zigzahl) | is.na(rauch_zigperiod), 0, 
+          rauch_zigzahl / ifelse(rauch_zigperiod == 1, 1, 
+                                 ifelse(rauch_zigperiod == 2, 7, 30)) * 1)) +
+  (ifelse(is.na(rauch_pipezahl) | is.na(rauch_pipeperiod), 0, 
+          rauch_pipezahl / ifelse(rauch_pipeperiod == 1, 1, 
+                                  ifelse(rauch_pipeperiod == 2, 7, 30)) * 5))
+)";;complete;compatible
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;ACTIVE_P2;smoke_quit;direct_mapping;direct_mapping;;complete;identical
+13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+14;MENOPAUSE;Menopause status;integer;ACTIVE_P2;"wechseljahre;
+zyk_rgm;
+zykaus_1;
+zykaus_2;
+zykaus_3";case_when;"case_when(
+    wechseljahre == 1 ~ 2,
+    wechseljahre == 2 | zykaus_1 == 1 ~ 1,
+    wechseljahre == 3 | zyk_rgm == 1 ~ 0,
+    zykaus_2 == 1 | zykaus_3 == 1 ~ 3
+  )";;complete;compatible
+15;HRT;Hormone replacement therapy;integer;ACTIVE_P2;hormonersatz;recode;"recode(1=1;2=0;ELSE=NA)";;complete;compatible
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;ACTIVE_P2;;undetermined;;Available upon request;;
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;TCHOL;direct_mapping;direct_mapping;;complete;identical
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;LDL;direct_mapping;direct_mapping;;complete;identical
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;HDL;direct_mapping;direct_mapping;;complete;identical
+23;PREV_DIAB;History of diabetes;integer;ACTIVE_P2;"diab_diagnose_m;
+diab_diagnose_f";case_when;"case_when(
+  dataset$diab_diagnose_m ==1 | dataset$diab_diagnose_f %in% c(1:3) ~ 1,
+  dataset$diab_diagnose_m ==2 | dataset$diab_diagnose_f == 4 ~ 0,
+  TRUE ~ NA_integer_
+)";;complete;compatible
+24;PREV_HYP;History of hypertension;integer;ACTIVE_P2;bhd_diagnose;;"recode(1=1;2=0;ELSE=NA)";;complete;compatible
+25;PREV_CVD;History of cardiovascular disease;integer;ACTIVE_P2;"hi_diagnose;
+hkg_diagnose;
+hschw_diagnose;
+schlag_diagnose;
+hrhyt_diagnose";case_when;"case_when(
+  hi_diagnose == 1| hkg_diagnose == 1| hschw_diagnose == 1| schlag_diagnose == 1| hrhyt_diagnose == 1 ~ 1,
+  hi_diagnose == 2| hkg_diagnose == 2| hschw_diagnose == 2| schlag_diagnose == 2| hrhyt_diagnose == 2 ~ 0,
+  TRUE ~ NA_integer_
+)";;complete;compatible
+26;PREV_CANCER;History of cancer;integer;ACTIVE_P2;kre_diagnose;recode;"recode(1=1;2=0;ELSE=NA)";;complete;compatible
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+28;FAM1_DIAB2;First degree family history of T2D;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+29;FAM1_CANCER;First degree family history of cancer;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+30;DRE_SCREEN;Screening, DRE;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+31;PSA_SCREEN;Screening, PSA;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+32;FOBT_SCREEN;Screening, FOBT;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+33;COL_SCREEN;Screening, colonoscopy;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+34;MELANOMA_SCREEN;Screening, skin cancer;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+35;MAMMO_SCREEN;Screening, mammography;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+36;CERVICAL_SCREEN;Screening cervical, smear test;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+37;MED_STAT;Regular use of statins;integer;ACTIVE_P2;ebf_behandl;recode;"recode(1=1;2=0;ELSE=NA)";;partial;proximate
+38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+39;INC_CVD;CVD event during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+40;AGE_CVD;Age at diagnosis of CVD [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+41;INC_ANGINA;Angina pectoris event during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+42;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+43;INC_MI;Myocardial infarction during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+44;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+45;INC_STR;Stroke during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+46;AGE_STR;Age at diagnosis of stroke [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+47;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+49;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+51;INC_HYP;Essential hypertension during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+52;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+53;INC_HF;Heart failure during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+54;AGE_HF;Age at diagnosis of heart failure [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+55;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+57;INC_CANCER;Cancer during follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+59;AGE_CANCER;Age at diagnosis of cancer [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+60;VITAL_ST;Vital status at the end of mortality follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+61;AGE_DEATH;Age at time of death [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+62;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+64;AGE_FUP;Age at end of follow-up [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+65;BMI;Body Mass Index at baseline [kg/m²];decimal;ACTIVE_P2;"t1_weight;
+t1_height";operation;t1_weight / ((t1_height / 100)*2);;complete;compatible
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+70;WAIST;Waist circumference at baseline [cm];decimal;ACTIVE_P2;t1_taille1;direct_mapping;direct_mapping;;complete;identical
+71;HIP;Hip circumference at baseline [cm];decimal;ACTIVE_P2;t1_hip1;direct_mapping;direct_mapping;;complete;identical
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+74;FMI;Fat mass index at baseline  [kg/m²];decimal;ACTIVE_P2;"bod_fm_kg;
+t1_height";operation;bod_fm_kg / ((t1_height / 100)*2);;complete;compatible
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;ACTIVE_P2;bod_fm_pc;direct_mapping;direct_mapping;;complete;identical
+77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+78;ENERGY;Energy intake [kcal/d];decimal;ACTIVE_P2;energie_kcal;direct_mapping;direct_mapping;;complete;identical
+79;CARB;Carbohydrate intake [g/d];decimal;ACTIVE_P2;kh_g;direct_mapping;direct_mapping;;complete;identical
+80;PROT;Protein intake [g/d];decimal;ACTIVE_P2;prot_g;direct_mapping;direct_mapping;;complete;identical
+81;FAT;Fat intake [g/d];decimal;ACTIVE_P2;fett_g;direct_mapping;direct_mapping;;complete;identical
+82;ALC;Alcohol intake [g/d];decimal;ACTIVE_P2;alko_g;direct_mapping;direct_mapping;;complete;identical
+83;FIBER;Dietary fiber intake [g/d];decimal;ACTIVE_P2;ballast;direct_mapping;direct_mapping;;complete;identical
+84;SFA;Saturated fat intake [g/d];decimal;ACTIVE_P2;sfa_g;direct_mapping;direct_mapping;;complete;identical
+85;MUFA;Monounsaturated fat intake [g/d];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
+86;PUFA;Polyunsaturated fat intake [g/d];decimal;ACTIVE_P2;"omega3_g;
+omega6_g";operation;omega3_g + omega6_g;;complete;compatible
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;ACTIVE_P2;sacch_g;direct_mapping;direct_mapping;;complete;identical
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+90;GLUC;Glucose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+91;FRUC;Fructose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+92;GI;Daily glycaemic index;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+93;GL;Daily glycaemic load;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+94;SODIUM;Sodium intake [mg/d];decimal;ACTIVE_P2;natrium;operation;natrium*1000;;complete;compatible
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;ACTIVE_P2;"natrium; 
+kalium";operation;natrium/kalium;;complete;compatible
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;ACTIVE_P2;SUGAR_CONFECT_11;direct_mapping;direct_mapping;;complete;compatible
+97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;ACTIVE_P2;CAKES_12;direct_mapping;direct_mapping;;complete;compatible
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;ACTIVE_P2;FRUITVEG_JUICE_1301;direct_mapping;direct_mapping;;complete;compatible
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;ACTIVE_P2;SOFTDRINKS_1302;direct_mapping;direct_mapping;;complete;compatible
+100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;ACTIVE_P2;ART_SWEETENER_170201;direct_mapping;direct_mapping;;complete;compatible
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;ACTIVE_P2;VEGETABLES_02;direct_mapping;direct_mapping;;complete;compatible
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;ACTIVE_P2;LEGUMES_TOT_03;direct_mapping;direct_mapping;;complete;compatible
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;ACTIVE_P2;FRUITS_TOT_04;direct_mapping;direct_mapping;;complete;compatible
+104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;ACTIVE_P2;RED_MEAT_0701;direct_mapping;direct_mapping;;complete;compatible
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;ACTIVE_P2;PROCMEAT_0704;direct_mapping;direct_mapping;;complete;compatible
+106;COFFEE_130301;Coffee intake [g/d];decimal;ACTIVE_P2;COFFEE_130301;direct_mapping;direct_mapping;;complete;compatible
+107;TEA_130302;Tea intake [g/d];decimal;ACTIVE_P2;TEA_130302;direct_mapping;direct_mapping;;complete;compatible
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;ACTIVE_P2;__BLANK__;paste;4;;complete;identical
