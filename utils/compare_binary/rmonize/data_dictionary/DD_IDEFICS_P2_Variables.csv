@@ -1,0 +1,38 @@
+index;name;label;valueType
+1;ID;ID of the participant;Integer
+2;sex_child;Sex of the child;Integer
+3;age;Age[years];decimal
+4;isced_max;Isced level:Maximum of both parents;Integer
+5;leis_activ;Leisure activity [hours per week];decimal
+6;phys_activ;Physical activity[hours per week];decimal
+7;occupst_1;Employment status of parent;Integer
+8;occupst_2;Employment status of parent;Integer
+9;migration_T3;Migration status of parents;Integer
+10;atc_who_2010;child's drug use,last 7 days - ATC code of drug;Integer
+11;SED;Avg Sedentary time (min./day);decimal
+12;LPA;Avg time in light PA (min./day);decimal
+13;MPA;Avg time in moderate PA (min./day);decimal
+14;VPA;Average time in vigorous PA (min./day);decimal
+15;chdiabet;History of Diabetes mellitus (ICD-10 2010 – E14);Integer
+16;trg;Triglyceride (cholestech) [mg/dl];decimal
+17;tc;Total Cholesterol (cholestech) [mg/dl];decimal
+18;ldl;LDL cholesterol (cholestech) [mg/dl];decimal
+19;hdl;HDL-Cholesterol (cholestech) [mg/dl];decimal
+20;bmi;Body Mass Index;decimal
+21;bmi_T3;Body Mass Index;decimal
+22;waist_T3;Waist circumference [cm];decimal
+23;waist;Waist circumference [cm];decimal
+24;hip_circ;Hip circumference [cm];decimal
+25;FMI;Fat mass index;decimal
+26;age_T3;Age [years];decimal
+27;D18;"SACANA FGS D18 ""Vegetables n.s.""";decimal
+28;D17;"SACANA FGS D17 ""Pulses n.s.""";decimal
+29;L44;"SACANA FGS L44 ""Legumes/Vegs n.s.""";decimal
+30;L46a;"SACANA FGS L46a ""Fish and vegetables/legumes""";decimal
+31;D20;"SACANA FGS D20 ""Fruits n.s.""";decimal
+32;G29;"SACANA FGS G29 ""meat (other than poultry)-ns""";decimal
+33;G33;"SACANA FGS G33 ""Processed meat,salami, processed poultry products , meat salad- ns""";decimal
+34;B;"SACANA FGS B ""Sugar and sugar products""";decimal
+35;A06;"SACANA FGS A06 ""Sweet bakery, biscuits, pies (sweet), cakes , sweet fritters and other confectionery""";decimal
+36;E24;"SACANA FGS E24 ""fruit, vegetable juices and smoothies - ns""";decimal
+37;E25;"SACANA FGS E25 ""Soft and sweetened drinks""";decimal
