@@ -1,0 +1,10 @@
+variable;name;label
+sex_child;1;male
+sex_child;2;female
+isced_max;0;Early childhood education (and on-going education or no graduation (yet))
+isced_max;1;Primary education
+isced_max;2;Lower secondary education
+isced_max;3;Upper secondary education
+isced_max;4;Post-secondary non-tertiary education
+isced_max;5;Short-cycle tertiary education
+isced_max;6;Bachelors and higher levels
