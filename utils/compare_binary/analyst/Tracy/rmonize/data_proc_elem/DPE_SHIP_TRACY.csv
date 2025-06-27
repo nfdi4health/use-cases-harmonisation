@@ -1,0 +1,76 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;col_id;id_creation;id_creation;complete;complete;identical
+;SEX;Sex;integer;;INT_sex;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;AGE;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Education;integer;;edlevel_s0;recode;"recode(0=0; 1=1; 2=2; 3=4; 4=7; 5=9;)";;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unvailable
+;SMOKE_ST;Smoking status;integer;;smoking_s0;recode;"recode(0=1; 1=2; 2=3;)";;complete;compatible
+;EMPLOY;Employment;integer;;erwerb;recode;"recode(1=5; 2=1; 3=2; 4=2; 5=6; 6=1;7=7;8=7;9=7;)";;complete;compatible
+;IMMIGRATION;Immigration background;integer;;__BLANK__;paste;1;This variable is not applicable, as the study targets specifically West Pomerania, so all participants can be assumed to be German.;complete;compatible
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unvailable
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;packyrs_s0;direct_mapping;direct_mapping;;complete;identical
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;ncig1;direct_mapping;direct_mapping;;complete;identical
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;;impossible;impossible;;impossible;unvailable
+;MENOPAUSE;Menopause status;integer;;menostat_s0;direct_mapping;direct_mapping;;complete;identical
+;HRT;Hormone replacement therapy;integer;;use_mht_s0;recode;"recode(0=0; 1=1; 97=1;)";;complete;compatible
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;ocyears;direct_mapping;direct_mapping;;complete;identical
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;babies;direct_mapping;direct_mapping;;partial;identical
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unvailable
+;PREV_DIAB;History of diabetes;integer;;diabetes_s0;direct_mapping;direct_mapping;;complete;identical
+;PREV_HYP;History of hypertension;integer;;hyp_s0;direct_mapping;direct_mapping;;complete;identical
+;PREV_CVD;History of cardiovascular disease;integer;;"mi; apoplex; herzop";case_when;case_when(                                                                                                                 any(c_across(c(mi, apoplex, herzop)) == 1) ~ 1,  all(c_across(c(mi, apoplex, herzop)) == 2) ~ 2, all(c_across(c(mi, apoplex, herzop)) %in% c(8, 9)) ~ 3, all(c_across(c(mi, apoplex, herzop)) %in% c(2, 8, 9)) & any(c_across(c(mi, apoplex, herzop)) == 2) ~ 2,                                                       TRUE ~ NA_real_ );If any one has one of these diseases then code diseases 1,                                                                                                                                                                            if all of them dont have any of this diseases then classify to 2.                                                                                                                                                                                      if all of dont know or refuse but one is no then classify as no.                                                                                                                                                                       if all of them refuse or dont know then classify as non applicable;complete;compatible
+;PREV_CANCER;History of cancer;integer;;cancer_s0;direct_mapping;direct_mapping;;complete;identical
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;"vat_3;vat_4; sib_3; sib_4";case_when;"case_when (
+vat_3== 1 | vat_4 == 1|sib_3==1|sib_4==1 ~ 1L,
+vat_3== 2 | vat_4 == 2|sib_3==2|sib_4==2 ~ 2L,    vat_3== 8 | vat_4 == 8|sib_3==8|sib_4==8 ~ 3L, vat_3== 1 & vat_4 == 2 &sib_3 ==8&sib_4==9~ 1L,
+vat_3== 2 | vat_4 == 2 &sib_3 ==8 & sib_4==9  ~ 1L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke, then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members has ""no"" and the rest do not know then classify as 2L";complete;compatible
+;FAM1_DIAB2;First degree family history of T2D;integer;;"vat;sib";case_when;"case_when (
+vat== 1 | sib==1 ~ 1L,
+vat== 2 | sib==2 ~ 2L,                                                          vat== 8 | sib==8 ~ 8L,                                                  vat== 1 & sib==8 &sib==9  ~ 1L,
+vat== 2 & sib==9  ~ 2L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either diabetes (parents) and diabetes (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have diabetes (parents) and diabetes (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have diabetes (parents) and diabetes (siblings), then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has diabetes (parents) and diabetes (siblings), then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members  has ""no"" and then rest do not know then classify as 2L";complete;compatible
+;FAM1_CANCER;First degree family history of cancer;integer;;"vat_11;sib_11";case_when;"case_when (
+vat_11== 1 | sib_11==1 ~ 1L,
+vat_11== 2 | sib_11==2 ~ 2L,                                                          vat_11== 8 | sib_11==8 ~ 8L,                                                  vat_11== 1 & sib_11==8 &sib_11==9  ~ 1L,
+vat_11== 2 & sib_11==9  ~ 2L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either cancer (parents) and cancer (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have cancer (parents) and cancer (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have cancer (parents) and cancer (siblings),, then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has diabetes (parents) and diabetes (siblings), then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members  has ""no"" and then rest do not know then classify as 2L";complete;compatible
+;DRE_SCREEN;Screening, DRE;integer;;;impossible;impossible;;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;psaf_re_s;direct_mapping;direct_mapping;;complete;identical
+;FOBT_SCREEN;Screening, FOBT;integer;;;impossible;impossible;;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;;impossible;impossible;;impossible;unavailable
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;;impossible;impossible;;impossible;unavailable
+;MAMMO_SCREEN;Screening, mammography;integer;;;impossible;impossible;;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;;impossible;impossible;;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;atc_c10aa_s0;direct_mapping;direct_mapping;;complete;identical
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;atc_m01a_s0;direct_mapping;direct_mapping;;complete;identical
+;INC_CVD;CVD event during follow-up;integer;;"mi_01; ang_01";case_when;case_when(                                                                                                                        mi_01 %in% 1 | ang_01 %in% 1 ~ 1,                                                                                    mi_01 %in% 0 & ang_01 %in% 0 ~ 0,                                                                    TRUE ~ NA_real_ );"# At least one ""Yes"" # Both ""No"" # All other cases (e.g., 998, 999)";complete;compatible
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;mi_03b5(START-4);direct_mapping;direct_mapping;;complete;identical
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;ang_01b(START-4);direct_mapping;direct_mapping;;complete;identical
+;INC_MI;Myocardial infarction during follow-up;integer;;inc_mi_s0;direct_mapping;direct_mapping;;complete;identical
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;INC_STR;Stroke during follow-up;integer;;inc_stroke_s0;direct_mapping;direct_mapping;;complete;identical
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+;INC_HYP;Essential hypertension during follow-up;integer;;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+;INC_HF;Heart failure during follow-up;integer;;herz_01;direct_mapping;direct_mapping;;complete;identical
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;inc_diab_s0;direct_mapping;direct_mapping;;complete;identical
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;INC_CANCER;Cancer during follow-up;integer;;krebs_01;direct_mapping;direct_mapping;;complete;identical
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;mort_all;direct_mapping;direct_mapping;;complete;identical
+;AGE_DEATH;Age at time of death [years];decimal;;mort_time_birth;direct_mapping;direct_mapping;;complete;identical
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;mort_cvd;direct_mapping;direct_mapping;;complete;identical
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;mort_ca;direct_mapping;direct_mapping;;complete;identical
+;AGE_FUP;Age at end of follow-up [years];decimal;;mort_time_birth;undetermined;undetermined;;undetermined;undetermined

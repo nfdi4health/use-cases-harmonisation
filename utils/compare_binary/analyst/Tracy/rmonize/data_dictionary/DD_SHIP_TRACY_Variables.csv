@@ -1,0 +1,43 @@
+index;name;label;valueType
+;col_id;ID;integer
+;INT_sex;gender identification;integer
+;AGE;age in years;integer
+;edlevel_s0;Level of education;integer
+;smoking_s0;smoking status;integer
+;erwerb;current employment status;integer
+;packyrs_s0;packyears[number of cigarettes per day * years smoked/20];decimal
+;ncig1;average number of cigarettes smoked per day;decimal
+;menostat_s0;Menopause status;integer
+;use_mht_s0;menopausal hormone therapy;integer
+;ocyears;How many years did you take the birth controll pill altogether?;decimal
+;babies;How many births did you have?;integer
+;diabetes_s0;Diabetes(known and diagnosed based on SHIP data);integer
+;hyp_s0;Hypertension;integer
+;mi;Have you ever been diagnosed with a heart attack by a doctor?;integer
+;apoplex;Have you ever been diagnosed with a stroke by adoctor?;integer
+;herzop;Have you ever had a heart surgery?;integer
+;cancer_s0;cancer as a chronic disease;integer
+;vat_3;Family history of heart attack (parents);integer
+;vat_4;Family history of apoplectic stroke (parents);integer
+;sib_3;Family history of heart attack (siblings);integer
+;sib_4;Family history of apoplectic stroke (siblings);integer
+;vat;Family history of diabetes (parents);integer
+;sib;Family history of diabetes (siblings);integer
+;vat_11;Family history of cancer (parents);integer
+;sib_11;Family history of cancer (siblings);integer
+;psaf_re_s;prostate-specific antigen, free;integer
+;atc_c10aa_s0;medication:statins;integer
+;atc_m01a_s0;NSAID;integer
+;mi_01;heart attack diagnosed by a doctor;integer
+;ang_01;feeling of pain or discomfort in the chest;integer
+;mi_03b5(START-4);age when the patient had a heart attack diagnosed by a doctor;decimal
+;ang_01b(START-4);age when the patient felt pain or discomfort in the chest;decimal
+;inc_mi_s0;Incident myocardial infarction;integer
+;inc_stroke_s0;Incident stroke;integer
+;herz_01;heart failure diagnose in lifetime;integer
+;inc_diab_s0;Incident type 2 diabetes;integer
+;krebs_01;cancer diagnose in lifetime;integer
+;mort_all;All-cause mortality;integer
+;mort_time_birth;time until death or time until censoring after date of birth;decimal
+;mort_cvd;Main cause of death CVD;integer
+;mort_ca;Main cause of death cancer;integer
