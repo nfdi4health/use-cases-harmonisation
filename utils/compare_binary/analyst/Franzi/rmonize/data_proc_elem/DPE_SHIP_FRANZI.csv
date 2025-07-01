@@ -1,6 +1,6 @@
 index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
-;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;SHIP_P1;"food_6; food_7";operation;food_6 +  food_7;only frequency;partial;tentative
-;POTATOES_0101;Potato intake [g/d];decimal;SHIP_P1;"food_6; food_7";operation;food_6 +  food_7;only frequency;partial;tentative
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;SHIP_P1;"food_6;food_7";operation;food_6 +  food_7;only frequency;partial;tentative
+;POTATOES_0101;Potato intake [g/d];decimal;SHIP_P1;"food_6;food_7";operation;food_6 +  food_7;only frequency;partial;tentative
 ;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;VEGETABLES_02;Vegetable intake [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -34,7 +34,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;SHIP_P1;"food_8;food_9";operation;food_8 + food_9;only frequency;partial;tentative
 ;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;SHIP_P1;"food_13;food_14;food_15";operation;food_13 + food_14 + food_15;only frequency;partial;tentative
-;BREAD_060301;Intake of bread [g/d];decimal;SHIP_P1;"food_13; food_15";operation;food_13 + food_15;only frequency;partial;tentative
+;BREAD_060301;Intake of bread [g/d];decimal;SHIP_P1;"food_13;food_15";operation;food_13 + food_15;only frequency;partial;tentative
 ;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;SHIP_P1;food_14;direct_mapping;direct_mapping;only frequency;partial;tentative
 ;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;SHIP_P1;food_16;direct_mapping;direct_mapping;only frequency;partial;tentative
 ;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -92,10 +92,10 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;WATER_1304;Intake of water and water-based beverages [g/d];decimal;SHIP_P1;food_32;direct_mapping;direct_mapping;only frequency;partial;tentative
 ;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;SHIP_P1;alcg7d_s0 oder alcg30d_s0;direct_mapping;direct_mapping;ethanol intake in last 7 days oder ethanol ibtake in the last 30 days;complete;identical
-;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;SHIP_P1;"weinwe;weinwt";operation;weinwe + weinwt;;complete;compatible
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;SHIP_P1;"weinwe;weinwt";operation;(weinwe + weinwt)/2;average intake from exemplary weekday and weekend;complete;compatible
 ;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
-;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;SHIP_P1;"bierwe;bierwt";operation;bierwe + bierwt;;complete;compatible
-;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;SHIP_P1;"schnwe; schnwt";operation;schnwe + schnwt;;complete;compatible
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;SHIP_P1;"bierwe;bierwt";operation;(bierwe + bierwt)/2;average intake from exemplary weekday and weekend;complete;compatible
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;SHIP_P1;"schnwe;schnwt";operation;(schnwe + schnwt)/2;average intake from exemplary weekday and weekend;complete;compatible
 ;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
@@ -118,4 +118,4 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
 ;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;SHIP_P1;food_29;direct_mapping;direct_mapping;only frequency;partial;tentative
 ;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;SHIP_P1;impossible;impossible;impossible;;impossible;unavailable
-;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;SHIP_P1;_BLANK_;paste;1;1 (FFQ);complete;identical
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;SHIP_P1;_BLANK_;paste;0;0 (FPQ);complete;identical
