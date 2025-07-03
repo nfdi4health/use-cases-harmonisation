@@ -2,8 +2,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ID;Participant identification number;integer;;col_id;id_creation;id_creation;complete;complete;identical
 ;SEX;Sex;integer;;INT_sex;direct_mapping;direct_mapping;;complete;identical
 ;AGE_BASE;Age at exposure measure [years];decimal;;AGE;direct_mapping;direct_mapping;;complete;identical
-;EDU_LEVEL;Education;integer;;edlevel_s0;recode;"recode(0=0; 1=1; 2=2; 3=4; 4=7; 5=9;)";;complete;compatible
-;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unvailable
+;EDU_LEVEL;Education;integer;;edlevel_s0;undetermined;undetermined;;undetermined;undetermined
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"sportwi1;sportwi3;sportso1;sportso3";undetermined;undetermined;;undetermined;undetermined
 ;SMOKE_ST;Smoking status;integer;;smoking_s0;recode;"recode(0=1; 1=2; 2=3;)";;complete;compatible
 ;EMPLOY;Employment;integer;;"erwerb;nojob";case_when;"case_when(
 erwerb == 2 ~ 1,
