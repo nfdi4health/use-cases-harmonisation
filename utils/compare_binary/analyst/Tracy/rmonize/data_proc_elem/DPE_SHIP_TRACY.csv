@@ -5,14 +5,23 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;EDU_LEVEL;Education;integer;;edlevel_s0;recode;"recode(0=0; 1=1; 2=2; 3=4; 4=7; 5=9;)";;complete;compatible
 ;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unvailable
 ;SMOKE_ST;Smoking status;integer;;smoking_s0;recode;"recode(0=1; 1=2; 2=3;)";;complete;compatible
-;EMPLOY;Employment;integer;;erwerb;recode;"recode(1=5; 2=1; 3=2; 4=2; 5=6; 6=1;7=7;8=7;9=7;)";;complete;compatible
-;IMMIGRATION;Immigration background;integer;;__BLANK__;paste;1;This variable is not applicable, as the study targets specifically West Pomerania, so all participants can be assumed to be German.;complete;compatible
+;EMPLOY;Employment;integer;;"erwerb;nojob";case_when;"case_when(
+erwerb == 2 ~ 1,
+  erwerb %in% c(3, 4, 5, 6) ~ 2,
+  erwerb == 1 & nojob == 7 ~ 3,
+  erwerb == 1 & nojob == 1 ~ 4,
+  erwerb == 1 & nojob %in% c(4, 5, 6) ~ 5,
+  erwerb == 1 & nojob %in% c(2, 3) ~ 6,
+  erwerb %in% c(7, 8, 9) | (erwerb == 1 & nojob %in% c(8, 9)) ~ 7,
+  TRUE ~ NA_real_
+)";"If someone reports working full time, then level =1, If someone reports working part-time, hourly, then level=2,                                                                                                                               If someone is not working and says they are a housewife or househusband,then level=3,                                                                                                                                                                                                                    If someone is not working and says they are retired, then level=4,                                                                                                                                       If someone is not working and says they are unemployed, in retraining, or on short-time work, level=5 If someone is not working and says they are a student or professional student, then level=6,Other; On leave like maternity o/Gave no answer or said ""don't know""/ said their reason for not working is something like civil service, then level=7";complete;compatible
+;IMMIGRATION;Immigration background;integer;;__BLANK__;paste;0;;complete;compatible
 ;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;;impossible;impossible;;impossible;unvailable
 ;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;packyrs_s0;direct_mapping;direct_mapping;;complete;identical
-;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;ncig1;direct_mapping;direct_mapping;;complete;identical
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;"ncig1;ncigard;npipes";operation;ncig1*1+ncigard*5+npipes*5;;complete;compatible
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;;impossible;impossible;;impossible;unvailable
-;MENOPAUSE;Menopause status;integer;;menostat_s0;direct_mapping;direct_mapping;;complete;identical
+;MENOPAUSE;Menopause status;integer;;menostat_s0;recode;"recode(0=0; 1=1; 2=3;)";;complete;compatible
 ;HRT;Hormone replacement therapy;integer;;use_mht_s0;recode;"recode(0=0; 1=1; 97=1;)";;complete;compatible
 ;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;ocyears;direct_mapping;direct_mapping;;complete;identical
 ;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;babies;direct_mapping;direct_mapping;;partial;identical
@@ -49,9 +58,9 @@ vat_11== 2 & sib_11==9  ~ 2L,  TRUE ~ NA_integer_
 ;MED_STAT;Regular use of statins;integer;;atc_c10aa_s0;direct_mapping;direct_mapping;;complete;identical
 ;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;atc_m01a_s0;direct_mapping;direct_mapping;;complete;identical
 ;INC_CVD;CVD event during follow-up;integer;;"mi_01; ang_01";case_when;case_when(                                                                                                                        mi_01 %in% 1 | ang_01 %in% 1 ~ 1,                                                                                    mi_01 %in% 0 & ang_01 %in% 0 ~ 0,                                                                    TRUE ~ NA_real_ );"# At least one ""Yes"" # Both ""No"" # All other cases (e.g., 998, 999)";complete;compatible
-;AGE_CVD;Age at diagnosis of CVD [years];decimal;;mi_03b5(START-4);direct_mapping;direct_mapping;;complete;identical
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;mi_03b5_4;direct_mapping;direct_mapping;;complete;identical
 ;INC_ANGINA;Angina pectoris event during follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
-;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;ang_01b(START-4);direct_mapping;direct_mapping;;complete;identical
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;ang_01b_4;direct_mapping;direct_mapping;;complete;identical
 ;INC_MI;Myocardial infarction during follow-up;integer;;inc_mi_s0;direct_mapping;direct_mapping;;complete;identical
 ;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;INC_STR;Stroke during follow-up;integer;;inc_stroke_s0;direct_mapping;direct_mapping;;complete;identical

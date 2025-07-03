@@ -19,6 +19,15 @@ erwerb;6;ABM
 erwerb;7;maternity leave, other leave
 erwerb;8;do not know
 erwerb;9;Refusal to answer
+nojob;1;Retired
+nojob;2;Student
+nojob;3;professional student
+nojob;4;unemployed
+nojob;5;unemployed, in retraining
+nojob;6;Zero short-time work
+nojob;7;housewife/househusband
+nojob;8;Wher-/Civilian service
+nojob;9;Other
 menostat_s0;0;premenopausal
 menostat_s0;1;natural menopause
 menostat_s0;2;induced menopause (surgery,disease, other)

@@ -5,8 +5,11 @@ index;name;label;valueType
 ;edlevel_s0;Level of education;integer
 ;smoking_s0;smoking status;integer
 ;erwerb;current employment status;integer
+;nojob;group of job;integer
 ;packyrs_s0;packyears[number of cigarettes per day * years smoked/20];decimal
 ;ncig1;average number of cigarettes smoked per day;decimal
+;ncigard;How many cigars or cigarillos/ day do you smoke on average?;decimal
+;npipes;How many pipes/ day do you smoke on average?;decimal
 ;menostat_s0;Menopause status;integer
 ;use_mht_s0;menopausal hormone therapy;integer
 ;ocyears;How many years did you take the birth controll pill altogether?;decimal
@@ -30,8 +33,8 @@ index;name;label;valueType
 ;atc_m01a_s0;NSAID;integer
 ;mi_01;heart attack diagnosed by a doctor;integer
 ;ang_01;feeling of pain or discomfort in the chest;integer
-;mi_03b5(START-4);age when the patient had a heart attack diagnosed by a doctor;decimal
-;ang_01b(START-4);age when the patient felt pain or discomfort in the chest;decimal
+;mi_03b5_4;age when the patient had a heart attack diagnosed by a doctor;decimal
+;ang_01b_4;age when the patient felt pain or discomfort in the chest;decimal
 ;inc_mi_s0;Incident myocardial infarction;integer
 ;inc_stroke_s0;Incident stroke;integer
 ;herz_01;heart failure diagnose in lifetime;integer
