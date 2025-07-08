@@ -1,0 +1,83 @@
+index;name;label;valueType
+1;id_dlw;Participant ID;integer
+2;sex;SES01 Geschlecht;integer
+3;gebdate;SES02 Geburtsdatum;datetime
+4;int_date;Beginn der Befragung - Datum;datetime
+5;schulab_corr;SES18corr Höchster allgemeinbildender Schulabschluss;integer
+6;berufab1;SES19_1 noch in beruflicher Ausbildung (Berufsvorbereitung, Auszubildende/r, Praktikant/in, Student/in);integer
+7;berufab2;SES19_2 Schüler/in und Besuch berufsorientierter Aufbau-, Fachschule o.ä.;integer
+8;berufab3;SES19_3 keinen beruflichen Abschluss und nicht in beruflicher Ausbildung;integer
+9;berufab4;SES19_4 Beruflich-betriebliche Berufsausbildung (Lehre) abgeschlossen;integer
+10;berufab5;SES19_5 Beruflich-schulische Ausbildung [Berufsfachschule, Handelsschule, Vorbereitungsdienst für den mittleren Dienst in der öffentlichen Verwaltung] abgeschlossen;integer
+11;berufab6;SES19_6 Ausbildung an einer Fachschule der DDR abgeschlossen;integer
+12;berufab7;SES19_7 Ausbildung an einer Fach-, Meister-, Technikerschule, Berufs- oder Fachakademie abgeschlossen;integer
+13;berufab8;SES19_8 Bachelor an (Fach-)Hochschule abgeschlossen;integer
+14;berufab9;SES19_9 Fachhochschulabschluss [z. B. Diplom, Master];integer
+15;berufab10;SES19_10 Universitätsabschluss [z. B. Diplom, Magister, Staatsexamen, Master];integer
+16;berufab11;SES19_11 Promotion;integer
+17;berufab12;SES19_12 Einen anderen beruflichen Abschluss;integer
+18;erwerb;SES20 Erwerbstatus;integer
+19;situation;SES21 derzeitige Situation;integer
+20;gebland1;SES03 Geburtsland Deutschland;integer
+21;stan_deu;SES08 Staatsangehörigkeit 1 Ja/Nein;integer
+22;TOT_PA_QX;total physical activity in MET-hours/day (without sedentary or sleeping time) derived from questionnaire data;decimal
+23;LPA_AC;time spent in light physical activity in minutes/day derived from accelerometer data;decimal
+24;MPA_AC;time in moderate PA from accelerometer data (triaxial);decimal
+25;VPA_AC;time in vigorous PA from accelerometer data (triaxial);decimal
+26;rauchstatus;TGF1 Jemals geraucht;integer
+27;rauch_zigzahl;TRK2 Anzahl Zigaretten zurzeit;integer
+28;rauch_zigperiod;TRK2 Zeitraum, Anzahl Zigaretten zurzeit;integer
+29;rauch_pipezahl;TRK3 Anzahl Zigarren / Zigarillos / Pfeifen zurzeit;integer
+30;rauch_pipeperiod;TRK3 Zeitraum, Anzahl Zigarren / Zigarillos / Pfeiffen zurzeit;integer
+31;smoke_dur;"Duration of smoking (years) derived from rauch_begjahr;rauch_begalter;exrauch_endalter;exrauch_endjahr1;exrauch_endjahr2;int_date; gebdate;";decimal
+32;tobacco;"Tobacco consumption (g/d) derived from rauch_zigzahl;rauch_zigperiod;exrauch_zigzahl;exrauch_zigperiod;exrauch_pipezahl;exrauch_pipeperiod";decimal
+33;smoke_quit;"Age at time of quitting smoking [years] derived from exrauch_endalter;exrauch_endjahr1;exrauch_endjahr2;int_date;gebdate";decimal
+34;wechseljahre;FM1 Wechseljahre;integer
+35;zyk_rgm;FR4_1 Regelblutung vorhanden-ja/nein;integer
+36;zykaus_1;FR6_1 Ursache Ausbleiben Regel - natürliches Ende;integer
+37;zykaus_2;FR6_2 Ursache Ausbleiben Regel - Entfernung Eierstöcke;integer
+38;zykaus_3;FR6_3 Ursache Ausbleiben Regel - Gebärmutterentfernung/-eingriff;integer
+39;hormonersatz;FM5 Einnahme Hormonersatzpräparate;integer
+40;t1_weight;Anthro1-Gewicht;decimal
+41;t1_height;Anthro1-Körpergröße;decimal
+42;t1_taille1;Anthro1-Taillenumfang1;decimal
+43;t1_hip1;Anthro1-Hüftumfang1;decimal
+44;bod_fm_kg;BodPod-Fettmasse in Kilogramm;decimal
+45;bod_fm_pc;Body fat mass %;decimal
+46;TCHOL;Cholesterin - Blut (mmol/l);decimal
+47;LDL;LDL-Cholesterin (berechnet) - Blut (mmol/l);decimal
+48;HDL;HDL-Cholsterin - Blut (mmol/l);decimal
+49;diab_diagnose_m;AN10_m Diagnose Diabetes Männer;integer
+50;diab_diagnose_f;AN10_f Diagnose Diabetes Frauen;integer
+51;bhd_diagnose;AN08 Diagnose Bluthochdruck;integer
+52;hi_diagnose;AN01 Diagnose Herzinfarkt;integer
+53;hkg_diagnose;AN02 Diagnose Erkrankung Herzkranzgefäße;integer
+54;hschw_diagnose;AN03 Diagnose Herzschwäche;integer
+55;schlag_diagnose;AN05 Diagnose Schlaganfall;integer
+56;hrhyt_diagnose;AN07 Diagnose Herzrhythmusstörungen;integer
+57;kre_diagnose;AN56 Diagnose Krebserkrankung;integer
+58;ebf_behandl;AN11c Behandlung erhöhte Blutfette letzte 12 Monate;integer
+59;energie_kcal;Energie - kcal;integer
+60;kh_g;Kohlenhydrate, absolut - g;integer
+61;prot_g;Eiweiß, absolut - g;integer
+62;fett_g;Fett, absolut - g;decimal
+63;alko_g;Alkohol - g;decimal
+64;ballast;Ballaststoffe - g;decimal
+65;sfa_g;Gesättigte Fettsäuren - g;decimal
+66;omega3_g;n-3 Fettsäuren - g;decimal
+67;omega6_g;n-6 Fettsäuren - g;decimal
+68;sacch_g;Saccharose (Rübenzucker) - g;decimal
+69;natrium;Natrium - g;decimal
+70;kalium;Kalium - g;decimal
+71;VEGETABLES_02;Vegetable intake [g/d];decimal
+72;LEGUMES_TOT_03;Total legumes intake [g/d];decimal
+73;FRUITS_TOT_04;Total fruit intake [g/d];decimal
+74;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal
+75;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal
+76;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal
+77;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal
+78;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal
+79;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal
+80;COFFEE_130301;Coffee intake [g/d];decimal
+81;TEA_130302;Tea intake [g/d];decimal
+82;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal

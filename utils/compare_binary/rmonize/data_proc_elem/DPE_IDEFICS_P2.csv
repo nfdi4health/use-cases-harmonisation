@@ -1,0 +1,132 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;ID;Participant identification number;integer;IDEFICS_P2;ID;id_creation;id_creation;;complete;identical
+2;SEX;Sex;integer;IDEFICS_P2;sex_child;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;IDEFICS_P2;age;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Education;integer;IDEFICS_P2;isced_max;recode;"recode(0=0;1=1;2=2;3=3;4=4;5=5;6=7;)";;complete;compatible
+5;EMPLOY;Employment;integer;IDEFICS_P2;"occupst_1;occupst_2";case_when;"case_when(
+      occupst_1 == c(1)|occupst_2== c(1) ~ 1L,
+      occupst_1==c(2)|occupst_2==c(2) ~ 2L,  
+      occupst_1 == c(4)&occupst_2==(4)~ 3L,
+     occupst_1 == c(5)&occupst_2== c(5) ~ 4L,                                                                                                    occupst_1 %in% c(7,8,9) &occupst_2%in%c(7,8,9) ~ 5L,                                                                                            occupst_1 ==c(3)& occupst_2==c(3)~ 6L,                                                                                        occupst_1 ==c(6,10) &  occupst_2==c(6,10) ~ 7L,                                                                                  is.na(occupst_1)&occupst_2== c(5) ~ 5L,
+      is.na(occupst_2) & occupst_1== c(5) ~ 5L,
+      is.na(occupst_1) & is.na(occupst_2) ~ 7L,
+      TRUE ~ NA_integer_)";"
+If either parent is ""fully employed (100%),"" assign 1L.
+If either parent works ""more than half day,"" ""half day,"" or ""less than half day,""  assign 2L.
+If both parents are ""not at all employed,"" assign 5L.
+If one parent's status is NA, use the other parent's status to determine the category.
+If both are NA, assign 7L (""other"").";complete;compatible
+6;IMMIGRATION;Immigration background;integer;IDEFICS_P2;migration_T3;recode;"recode(0=0;1=1;2=1;)";;complete;compatible
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;IDEFICS_P2;"phys_activ;leis_activ";operation;(4 * phys_activ + 1.5 * leis_activ) / 7;;complete;compatible
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;IDEFICS_P2;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60);;complete;compatible
+9;SMOKE_ST;Smoking status;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;IDEFICS_P2;atc_who_2010;undetermined;undetermined;;undetermined;undetermined
+14;MENOPAUSE;Menopause status;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+15;HRT;Hormone replacement therapy;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;IDEFICS_P2;trg;operation;trg * 0.0113;;complete;compatible
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;IDEFICS_P2;tc;operation;tc * 0.0259;;complete;compatible
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;IDEFICS_P2;ldl;operation;ldl * 0.0259;;complete;compatible
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;IDEFICS_P2;hdl;operation;hdl* 0.0259;;complete;compatible
+23;PREV_DIAB;History of diabetes;integer;IDEFICS_P2;chdiabet;direct_mapping;direct_mapping;;complete;identical
+24;PREV_HYP;History of hypertension;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+25;PREV_CVD;History of cardiovascular disease;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+26;PREV_CANCER;History of cancer;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+28;FAM1_DIAB2;First degree family history of T2D;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+29;FAM1_CANCER;First degree family history of cancer;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+30;DRE_SCREEN;Screening, DRE;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+31;PSA_SCREEN;Screening, PSA;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+32;FOBT_SCREEN;Screening, FOBT;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+33;COL_SCREEN;Screening, colonoscopy;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+34;MELANOMA_SCREEN;Screening, skin cancer;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+35;MAMMO_SCREEN;Screening, mammography;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+36;CERVICAL_SCREEN;Screening cervical, smear test;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+37;MED_STAT;Regular use of statins;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+39;INC_CVD;CVD event during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+40;AGE_CVD;Age at diagnosis of CVD [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+41;INC_ANGINA;Angina pectoris event during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+42;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+43;INC_MI;Myocardial infarction during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+44;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+45;INC_STR;Stroke during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+46;AGE_STR;Age at diagnosis of stroke [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+47;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+49;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+51;INC_HYP;Essential hypertension during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+52;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+53;INC_HF;Heart failure during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+54;AGE_HF;Age at diagnosis of heart failure [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+55;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+57;INC_CANCER;Cancer during follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+59;AGE_CANCER;Age at diagnosis of cancer [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+60;VITAL_ST;Vital status at the end of mortality follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+61;AGE_DEATH;Age at time of death [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+62;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+64;AGE_FUP;Age at end of follow-up [years];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+65;BMI;Body Mass Index at baseline [kg/m²];decimal;IDEFICS_P2;bmi;direct_mapping;direct_mapping;;complete;identical
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;IDEFICS_P2;bmi_T3;direct_mapping;direct_mapping;;complete;identical
+67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;IDEFICS_P2;?;;;;;
+68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;IDEFICS_P2;?;;;;;
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;IDEFICS_P2;waist_T3;direct_mapping;direct_mapping;;complete;identical
+70;WAIST;Waist circumference at baseline [cm];decimal;IDEFICS_P2;waist;direct_mapping;direct_mapping;;complete;identical
+71;HIP;Hip circumference at baseline [cm];decimal;IDEFICS_P2;hip_circ;direct_mapping;direct_mapping;;complete;identical
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+74;FMI;Fat mass index at baseline  [kg/m²];decimal;IDEFICS_P2;FMI;direct_mapping;direct_mapping;;complete;identical
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;IDEFICS_P2;;;;;;
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;IDEFICS_P2;;;;;;
+77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;IDEFICS_P2;age_T3;direct_mapping;direct_mapping;;complete;identical
+78;ENERGY;Energy intake [kcal/d];decimal;IDEFICS_P2;"energy_kcal (foodcoll_calc_alldays_bls)
+energy_kcal_day (Core)";direct_mapping;direct_mapping;;complete;identical
+79;CARB;Carbohydrate intake [g/d];decimal;IDEFICS_P2;"carb (foodcoll_calc_alldays_bls)
+carb_day (Core)";direct_mapping;direct_mapping;;complete;identical
+80;PROT;Protein intake [g/d];decimal;IDEFICS_P2;"protein (foodcoll_calc_alldays_bls)
+protein_day (Core)";direct_mapping;direct_mapping;;complete;identical
+81;FAT;Fat intake [g/d];decimal;IDEFICS_P2;"fat (foodcoll_calc_alldays_bls)
+fat_day (Core)";direct_mapping;direct_mapping;;complete;identical
+82;ALC;Alcohol intake [g/d];decimal;IDEFICS_P2;"alcohol (foodcoll_calc_alldays_bls)
+alcohol_day (Core)";direct_mapping;direct_mapping;;complete;identical
+83;FIBER;Dietary fiber intake [g/d];decimal;IDEFICS_P2;"fiber (foodcoll_calc_alldays_bls)
+fiber_day (Core)";direct_mapping;direct_mapping;;complete;identical
+84;SFA;Saturated fat intake [g/d];decimal;IDEFICS_P2;"sfa (foodcoll_calc_alldays_bls)
+sfa_day (Core)";direct_mapping;direct_mapping;;complete;identical
+85;MUFA;Monounsaturated fat intake [g/d];decimal;IDEFICS_P2;"mufa (foodcoll_calc_alldays_bls)
+mufa_day (Core)";direct_mapping;direct_mapping;;complete;identical
+86;PUFA;Polyunsaturated fat intake [g/d];decimal;IDEFICS_P2;"pufa (foodcoll_calc_alldays_bls)
+pufa_day (Core)";direct_mapping;direct_mapping;;complete;identical
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;IDEFICS_P2;"sugars (foodcoll_calc_alldays_bls)
+sugars_day (Core)";direct_mapping;direct_mapping;;complete;identical
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+90;GLUC;Glucose intake [g/d];decimal;IDEFICS_P2;gluc (foodcoll_calc_alldays_bls);direct_mapping;complete;;complete;identical
+91;FRUC;Fructose intake [g/d];decimal;IDEFICS_P2;fruc (foodcoll_calc_alldays_bls);direct_mapping;complete;;complete;identical
+92;GI;Daily glycaemic index;decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+93;GL;Daily glycaemic load;decimal;IDEFICS_P2;;impossible;impossible;;impossible;unavailable
+94;SODIUM;Sodium intake [mg/d];decimal;IDEFICS_P2;"na (foodcoll_calc_alldays_bls)
+na_day (Core)";direct_mapping;direct_mapping;;complete;identical
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;IDEFICS_P2;?;;;;;
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;IDEFICS_P2;B;direct_mapping;direct_mapping;"SACANA FGS B ""Sugar and sugar products""";complete;identical
+97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;IDEFICS_P2;A06;direct_mapping;direct_mapping;"SACANA FGS A06 "" Sweet bakery, biscuits, pies (sweet), cakes , sweet fritters and other confectionery""";complete;identical
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;IDEFICS_P2;E24;direct_mapping;direct_mapping;"SACANA FGS E24 ""fruit, vegetable juices and smoothies - ns""";complete;identical
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;IDEFICS_P2;E25;direct_mapping;direct_mapping;"SACANA FGS E25 ""Soft and sweetened drinks""";complete;identical
+100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;IDEFICS_P2;impossible;impossible;impossible;;impossible;unavailable
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;IDEFICS_P2;D18;direct_mapping;direct_mapping;SACANA FGS D18 vegetables n.s.;complete;identical
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;IDEFICS_P2;"D17;L44;L46a";operation;D17 + (weighting *L44) + (weighting*L46a);"SACANA FGS D17 Pulses n.s. + (Gewichtung*L44 ""Legumes/Vegs n.s."") + (Gewichtung*L46a ""Fish and vegetables/legumes"")";complete;compatible
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;IDEFICS_P2;D20;direct_mapping;direct_mapping;"SACANA FGS D20 ""Fruits n.s.""";complete;identical
+104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;IDEFICS_P2;G29;direct_mapping;direct_mapping;"SACANA FGS G29 ""meat (other than poultry)-ns""";complete;identical
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;IDEFICS_P2;G33;direct_mapping;direct_mapping;"SACANA FGS G33 "" Processed meat,salami, processed poultry products , meat salad- ns""";complete;identical
+106;COFFEE_130301;Coffee intake [g/d];decimal;IDEFICS_P2;impossible;impossible;impossible;;impossible;unavailable
+107;TEA_130302;Tea intake [g/d];decimal;IDEFICS_P2;impossible;impossible;impossible;;impossible;unavailable
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;IDEFICS_P2;_BLANK_;paste;2;2 (24HDR);complete;identical

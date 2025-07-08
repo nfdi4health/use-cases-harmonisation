@@ -1,0 +1,80 @@
+index;name;label;valueType
+1;ID;ID of the participant;Integer
+2;sex_child;Sex of the child;Integer
+3;age;Age[years];decimal
+4;isced_max;Isced level:Maximum of both parents;Integer
+5;leis_activ;Leisure activity [hours per week];decimal
+6;phys_activ;Physical activity[hours per week];decimal
+7;bmi;Body Mass Index;decimal
+8;D19;"SACANA FGS D19 ""Potatoes and other starchy vegetables""";decimal
+9;L47;"SACANA FGS L47 ""Based on potatoes""";decimal
+10;D18;"SACANA FGS D18 ""Vegetables n.s.""";decimal
+11;L44c;"SACANA FGS L44c ""Mixed salad""";decimal
+12;D17;"SACANA FGS D17 ""Pulses n.s.""";decimal
+13;L44;"SACANA FGS L44 ""Legumes/Vegs n.s.""";decimal
+14;L46a;"SACANA FGS L46a ""Fish and vegetables/legumes""";decimal
+15;D20;"SACANA FGS D20 ""Fruits n.s.""";decimal
+16;D20a;"SACANA FGS D20a ""Fresh fruits""";decimal
+17;D16a;"SACANA FGS D16a ""Nuts and seeds""";decimal
+18;D16b;"SACANA FGS D16b ""Olives and avocados""";decimal
+19;J;"SACANA FGS J ""Dairy and similar""";decimal
+20;J37a;"SACANA FGS J37a ""Milk plain whole""";decimal
+21;J37b;"SACANA FGS J37b ""Milk plain reduced fat""";decimal
+22;J37c;"SACANA FGS J37c ""Chocolate milk, vanilla milk and sim""";decimal
+23;J37d;"SACANA FGS  J37d ""Yogurt, probiotic and other fermented milk unsweened, full fat""";decimal
+24;J37e;"SACANA FGS J37e ""Yogurt, probiotic and other fermented milk unsweened, low fat""";decimal
+25;J37f;"SACANA FGS J37f ""Sweet Yogurt, probiotic and other fermented milk , full fat""";decimal
+26;J37g;"SACANA FGS J37g ""Sweet Yogurt, probiotic and other fermented milk, low fat""";decimal
+27;J38a;"SACANA FGS J38a ""Cheese low fat and curd (unsweetened)""";decimal
+28;J38;"SACANA FGS  J38 ""Cheese n.s.""";decimal
+29;J39a;"SACANA FGS J39a ""milk based ice-creams, desserts, (chocolate) pudding""";decimal
+30;J38c;"SACANA FGS J38c ""Sweetened cheese and curd""";decimal
+31;J39c;"SACANA FGS J39c ""cream""";decimal
+32;K40b;"SACANA FGS  K40b ""Vegetal milk (soymilk, rice milk etc.)""";decimal
+33;A;"SACANA FGS A ""Cereals and cereal products and starchy snacks ns""";decimal
+34;L43;"SACANA FGS L43 ""Based on Cereals ns""";decimal
+35;L45c;"SACANA FGS L45c ""with vegs/potatoes/cereals""";decimal
+36;A04;"SACANA FGS A04 ""Pasta (any kind)""";decimal
+37;A05;"SACANA FGS A05 ""rice and other cereal grains (not ready to eat) - ns""";decimal
+38;L43a;"SACANA FGS L43a ""Pasta/rice/cereals + meat/fish/eggs/cheese""";decimal
+39;L43b;"SACANA FGS L43b ""Pasta/rice/cereals + legumes /vegetables/potatoes""";decimal
+40;A01;"SACANA FGS A01 ""bread,rolls and sim. ns""";decimal
+41;A01a;"SACANA FGS A01a ""bread, crispbread, rusks, roll (refined, fiber <5%)""";decimal
+42;A01b;"SACANA FGS A01b ""bread, crispbread, rusks, roll (wholemeal fiber>5%)""";decimal
+43;A02;"SACANA FGS A02 ""breakfast cereals, corn flakes, muesli ns""";decimal
+44;G;"SACANA FGS G ""Meat and meat products""";decimal
+45;L42;"SACANA FGS L42 ""based on meat""";decimal
+46;L45b;"SACANA FGS L45b ""with meat/fish""";decimal
+47;G29;"SACANA FGS G29 ""meat (other than poultry)-ns""";decimal
+48;G30;"SACANA FGS G30 ""poultry-ns""";decimal
+49;G31;"SACANA FGS G31 ""rabbit and game""";decimal
+50;G32;"SACANA FGS G32 ""Offals""";decimal
+51;G33;"SACANA FGS G33 ""Processed meat,salami, processed poultry products , meat salad- ns""";decimal
+52;H;"SACANA FGS H""Finfish, shelfish and their products""";decimal
+53;L46;"SACANA FGS L46 ""Based on fish""";decimal
+54;H34;"SACANA FGS H34 ""Fish and seafood""";decimal
+55;H35;"SACANA FGS H35 ""Processed fish products""";decimal
+56;I;"SACANA FGS  I ""Eggs""";decimal
+57;L45;"SACANA FGS L45 ""based on eggs""";decimal
+58;C12;"SACANA FGS C12 ""vegetable oils ns""";decimal
+59;C13;"SACANA FGS C13 ""margarines and lipids of mixed origin""";decimal
+60;C14;"SACANA FGS C14 ""butter and animal fats""";decimal
+61;B;"SACANA FGS B ""Sugar and sugar products""";decimal
+62;B08;"SACANA FGS B08 ""Sugar, honey, jam and sweet sauces or dessert sauces""";decimal
+63;B10;"SACANA FGS B10 ""Chocolate ns""";decimal
+64;B09;"SACANA FGS B09 ""Confectionery (non chocolate)""";decimal
+65;B11b;"SACANA FGS B11b ""water ice, sorbet (excluding ice cream)""";decimal
+66;A06;"SACANA FGS A06 ""Sweet bakery, biscuits, pies (sweet), cakes , sweet fritters and other confectionery""";decimal
+67;E22;"SACANA FGS E22 ""water""";decimal
+68;E23;"SACANA FGS E23 ""coffee, tea, coffee surrogate, decafe, herbal - ns""";decimal
+69;E24;"SACANA FGS E24 ""fruit, vegetable juices and smoothies - ns""";decimal
+70;E25;"SACANA FGS E25 ""Soft and sweetened drinks""";decimal
+71;F;"SACANA FGS F ""Alcoholic beverages ns""";decimal
+72;F27;"SACANA FGS F27 ""Wine""";decimal
+73;F26;"SACANA FGS F26 ""Beer and cider""";decimal
+74;C15;"SACANA FGS C15 ""Sauces, dressing and condiments - ns""";decimal
+75;E21;"SACANA FGS E21 ""Bouillon - meat/fish/vegetable""";decimal
+76;L44a;"SACANA FGS L44a ""Soup, veloutè, LIQUID""";decimal
+77;L44b;"SACANA FGS L44b ""Soup, veloutè, NOT LIQUID""";decimal
+78;K40a;"SACANA FGS K40a ""Vegetarian burgers, tempeh, tofu, seitan""";decimal
+79;K40c;"SACANA FGS K40c ""Soy based dessert, cakes,and similar""";decimal
