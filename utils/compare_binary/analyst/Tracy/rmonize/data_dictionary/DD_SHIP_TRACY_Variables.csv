@@ -2,7 +2,13 @@ index;name;label;valueType
 ;col_id;ID;integer
 ;INT_sex;gender identification;integer
 ;AGE;age in years;integer
-;edlevel_s0;Level of education;integer
+;ausbild7;university degree;integer
+;ausbild6;degree/ graduation in a vocational college, school of engineering, polytechnic institute;integer
+;ausbild5;certificate/degree in a technical or vocational school, e.g.commercial school, business school;integer
+;ausbild8;any other vocational education;integer
+;ausbild4;apprenticeship / vocational traineeship with final examination;integer
+;ausbild;I’m still a vocational trainee / student;integer
+;Schule1;What is your highest education level?;integer
 ;sportwi1;How often do you do sport in winter time?;integer
 ;sportwi3;Which of the following items best describes your sports activity in winter time?;integer
 ;sportso1;How often do you do sport in summer time?;integer
@@ -37,8 +43,8 @@ index;name;label;valueType
 ;atc_m01a_s0;NSAID;integer
 ;mi_01;heart attack diagnosed by a doctor;integer
 ;ang_01;feeling of pain or discomfort in the chest;integer
-;mi_03b5_4;age when the patient had a heart attack diagnosed by a doctor;decimal
-;ang_01b_4;age when the patient felt pain or discomfort in the chest;decimal
+;mi_03b5;age when the patient had a heart attack diagnosed by a doctor;decimal
+;ang_01b;age when the patient felt pain or discomfort in the chest;decimal
 ;inc_mi_s0;Incident myocardial infarction;integer
 ;inc_stroke_s0;Incident stroke;integer
 ;herz_01;heart failure diagnose in lifetime;integer

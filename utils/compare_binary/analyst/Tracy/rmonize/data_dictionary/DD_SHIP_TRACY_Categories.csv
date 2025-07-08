@@ -1,12 +1,27 @@
 variable;name;label
 INT_sex;1;male
 INT_sex;2;female
-edlevel_s0;0;none
-edlevel_s0;1;primary school completed
-edlevel_s0;2;technical/professional school completed
-edlevel_s0;3;secondary school
-edlevel_s0;4;longer education(incl. university)
-edlevel_s0;5;not specified
+ausbild7;0;no
+ausbild7;1;yes
+ausbild6;0;no
+ausbild6;1;yes
+ausbild5;0;no
+ausbild5;1;yes
+ausbild8;0;no
+ausbild8;1;yes
+ausbild4;0;no
+ausbild4;1;yes
+ausbild;0;no
+ausbild;1;yes
+Schule1;1;currently a student
+Schule1;2;without graduation
+Schule1;3;Elementary school, secondary school
+Schule1;4;Secondary school, Realschule. Technical school
+Schule1;5;Polytechnic high school
+Schule1;7;High school diploma, EOS with skilled worker diploma
+Schule1;8;Fachhochschulreife/Skilled worker with Abitur (high school diploma)
+Schule1;6;Technical school
+Schule1;9;Other, not specified
 smoking_s0;0;Never Smoker
 smoking_s0;1;Ex-Smoker
 smoking_s0;2;Current Smoker

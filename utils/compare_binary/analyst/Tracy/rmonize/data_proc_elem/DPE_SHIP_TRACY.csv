@@ -2,7 +2,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ID;Participant identification number;integer;;col_id;id_creation;id_creation;complete;complete;identical
 ;SEX;Sex;integer;;INT_sex;direct_mapping;direct_mapping;;complete;identical
 ;AGE_BASE;Age at exposure measure [years];decimal;;AGE;direct_mapping;direct_mapping;;complete;identical
-;EDU_LEVEL;Education;integer;;edlevel_s0;undetermined;undetermined;;undetermined;undetermined
+;EDU_LEVEL;Education;integer;;"ausbild7 ;ausbild6 ; ausbild5;Schule1; ausbild8;ausbild; ausbild4";case_when;case_when(                                                                               ausbild7 %in% c(1) ~ 7L,                                                        ausbild6 %in% c(1) ~ 6L,                                       ausbild5 %in% c(1) | ausbild4 %in% c(1) ~ 4L,                            Schule1 %in% c(7,8) ~ 3L,                                              Schule1 %in% c(3,4,5,6) ~ 2L,                               Schule1 %in% c(2) ~ 0L,                                                  ausbild8 %in% c(1) | ausbild %in% c(1) | Schule1 %in% c(1,9) ~ 9L,                                                                       TRUE ~ NA_integer_);;partial;proximate
 ;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"sportwi1;sportwi3;sportso1;sportso3";undetermined;undetermined;;undetermined;undetermined
 ;SMOKE_ST;Smoking status;integer;;smoking_s0;recode;"recode(0=1; 1=2; 2=3;)";;complete;compatible
 ;EMPLOY;Employment;integer;;"erwerb;nojob";case_when;"case_when(
@@ -58,9 +58,9 @@ vat_11== 2 & sib_11==9  ~ 2L,  TRUE ~ NA_integer_
 ;MED_STAT;Regular use of statins;integer;;atc_c10aa_s0;direct_mapping;direct_mapping;;complete;identical
 ;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;atc_m01a_s0;direct_mapping;direct_mapping;;complete;identical
 ;INC_CVD;CVD event during follow-up;integer;;"mi_01; ang_01";case_when;case_when(                                                                                                                        mi_01 %in% 1 | ang_01 %in% 1 ~ 1,                                                                                    mi_01 %in% 0 & ang_01 %in% 0 ~ 0,                                                                    TRUE ~ NA_real_ );"# At least one ""Yes"" # Both ""No"" # All other cases (e.g., 998, 999)";complete;compatible
-;AGE_CVD;Age at diagnosis of CVD [years];decimal;;mi_03b5_4;direct_mapping;direct_mapping;;complete;identical
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;mi_03b5;direct_mapping;direct_mapping;;complete;identical
 ;INC_ANGINA;Angina pectoris event during follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
-;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;ang_01b_4;direct_mapping;direct_mapping;;complete;identical
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;ang_01b;direct_mapping;direct_mapping;;complete;identical
 ;INC_MI;Myocardial infarction during follow-up;integer;;inc_mi_s0;direct_mapping;direct_mapping;;complete;identical
 ;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;INC_STR;Stroke during follow-up;integer;;inc_stroke_s0;direct_mapping;direct_mapping;;complete;identical
