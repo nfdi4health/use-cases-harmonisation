@@ -1,0 +1,203 @@
+variable;name;label
+INT_sex;1;male
+INT_sex;2;female
+ausbild7;0;no
+ausbild7;1;yes
+ausbild6;0;no
+ausbild6;1;yes
+ausbild5;0;no
+ausbild5;1;yes
+ausbild8;0;no
+ausbild8;1;yes
+ausbild4;0;no
+ausbild4;1;yes
+ausbild;0;no
+ausbild;1;yes
+Schule1;1;currently a student
+Schule1;2;without graduation
+Schule1;3;Elementary school, secondary school
+Schule1;4;Secondary school, Realschule. Technical school
+Schule1;5;Polytechnic high school
+Schule1;7;High school diploma, EOS with skilled worker diploma
+Schule1;8;Fachhochschulreife/Skilled worker with Abitur (high school diploma)
+Schule1;6;Technical school
+Schule1;9;Other, not specified
+smoking_s0;0;Never Smoker
+smoking_s0;1;Ex-Smoker
+smoking_s0;2;Current Smoker
+erwerb;1;not employed
+erwerb;2;full time
+erwerb;3;part-time
+erwerb;4;part-time/hourly
+erwerb;5;trainee, apprentice
+erwerb;6;ABM
+erwerb;7;maternity leave, other leave
+erwerb;8;do not know
+erwerb;9;Refusal to answer
+nojob;1;Retired
+nojob;2;Student
+nojob;3;professional student
+nojob;4;unemployed
+nojob;5;unemployed, in retraining
+nojob;6;Zero short-time work
+nojob;7;housewife/househusband
+nojob;8;Wher-/Civilian service
+nojob;9;Other
+menostat_s0;0;premenopausal
+menostat_s0;1;natural menopause
+menostat_s0;2;induced menopause (surgery,disease, other)
+menostat_s0;99;uncertain status (not yet 12 months without menstruation and natural menopause)
+use_mht_s0;0;no
+use_mht_s0;1;Yes
+use_mht_s0;97;is taking oral contraceptives
+ocyears;98;do not know
+ocyears;99;Refusal to answer
+diabetes_s0;0;No
+diabetes_s0;1;Yes
+hyp_s0;0;No
+hyp_s0;1;Yes
+mi;1;yes
+mi;2;no
+mi;8;do not know
+mi;9;Refusal to answer
+apoplex;1;yes
+apoplex;2;no
+apoplex;8;do not know
+apoplex;9;Refusal to answer
+herzop;1;yes
+herzop;2;no
+herzop;8;do not know
+herzop;9;Refusal to answer
+cancer_s0;1;yes
+cancer_s0;2;no
+cancer_s0;8;do not know
+cancer_s0;9;Refusal to answer
+vat_3;1;yes
+vat_3;2;no
+vat_3;8;do not know
+vat_3;9;Refusal to answer
+vat_4;1;yes
+vat_4;2;no
+vat_4;8;do not know
+vat_4;9;Refusal to answer
+sib_3;1;yes
+sib_3;2;no
+sib_3;8;do not know
+sib_3;9;Refusal to answer
+sib_4;1;yes
+sib_4;2;no
+sib_4;8;do not know
+sib_4;9;Refusal to answer
+vat;1;yes
+vat;2;no
+vat;8;do not know
+vat;9;Refusal to answer
+sib;1;yes
+sib;2;no
+sib;8;do not know
+sib;9;Refusal to answer
+vat_11;1;yes
+vat_11;2;no
+vat_11;8;do not know
+vat_11;9;Refusal to answer
+sib_11;1;yes
+sib_11;2;no
+sib_11;8;do not know
+sib_11;9;Refusal to answer
+psaf_re_s;0;no
+psaf_re_s;1;yes
+atc_c10aa_s0;0;"No
+"
+atc_c10aa_s0;1;Yes
+atc_m01a_s0;0;"No
+"
+atc_m01a_s0;1;Yes
+mi_01;1;Yes
+mi_01;0;No
+mi_01;998;Do not know
+mi_01;999;Answer refused
+ang_01;1;Yes
+ang_01;0;No
+ang_01;998;Do not know
+ang_01;999;Answer refused
+inc_mi_s0;0;No
+inc_mi_s0;1;Yes
+inc_stroke_s0;0;No
+inc_stroke_s0;1;Yes
+herz_01;1;Yes
+herz_01;0;No
+herz_01;998;Do not know
+herz_01;999;Answer refused
+inc_diab_s0;0;No
+inc_diab_s0;1;Yes
+krebs_01;1;Yes
+krebs_01;0;No
+krebs_01;998;Do not know
+krebs_01;999;Answer refused
+mort_all;0;alive
+mort_all;1;deceased
+mort_cvd;0;No
+mort_cvd;1;Yes
+mort_ca;0;No
+mort_ca;1;Yes
+food;1;daily or almost daily
+food;2;several times a week
+food;3;about once a week
+food;4;several times a month
+food;5;once a month or less often
+food;6;never or almost never
+food;8;do not know
+food;9;Refusal to answer
+food_2;1;daily or almost daily
+food_2;2;several times a week
+food_2;3;about once a week
+food_2;4;several times a month
+food_2;5;once a month or less often
+food_2;6;never or almost never
+food_2;8;do not know
+food_2;9;Refusal to answer
+food_3;1;daily or almost daily
+food_3;2;several times a week
+food_3;3;about once a week
+food_3;4;several times a month
+food_3;5;once a month or less often
+food_3;6;never or almost never
+food_3;8;do not know
+food_3;9;Refusal to answer
+food_28;1;daily or almost daily
+food_28;2;several times a week
+food_28;3;about once a week
+food_28;4;several times a month
+food_28;5;once a month or less often
+food_28;6;never or almost never
+food_28;8;do not know
+food_28;9;Refusal to answer
+food_27;1;daily or almost daily
+food_27;2;several times a week
+food_27;3;about once a week
+food_27;4;several times a month
+food_27;5;once a month or less often
+food_27;6;never or almost never
+food_27;8;do not know
+food_27;9;Refusal to answer
+food_30;1;daily or almost daily
+food_30;2;several times a week
+food_30;3;about once a week
+food_30;4;several times a month
+food_30;5;once a month or less often
+food_30;6;never or almost never
+food_30;8;do not know
+food_30;9;Refusal to answer
+food_31;1;daily or almost daily
+food_31;2;several times a week
+food_31;3;about once a week
+food_31;4;several times a month
+food_31;5;once a month or less often
+food_31;6;never or almost never
+food_31;8;do not know
+food_31;9;Refusal to answer
+kaffee;98;do not know
+kaffee;99;Refusal to answer
+tee;0;nothing
+tee;98;do not know
+tee;99;Refusal to answer

@@ -1,0 +1,55 @@
+index;name;label;valueType
+1;col_id;ID;integer
+2;INT_sex;gender identification;integer
+3;AGE;age in years;integer
+4;ausbild7;university degree;integer
+5;ausbild6;degree/ graduation in a vocational college, school of engineering, polytechnic institute;integer
+6;ausbild5;certificate/degree in a technical or vocational school, e.g.commercial school, business school;integer
+7;ausbild8;any other vocational education;integer
+8;ausbild4;apprenticeship / vocational traineeship with final examination;integer
+9;ausbild;I’m still a vocational trainee / student;integer
+10;Schule1;What is your highest education level?;integer
+11;sportwi1;How often do you do sport in winter time?;integer
+12;sportwi3;Which of the following items best describes your sports activity in winter time?;integer
+13;sportso1;How often do you do sport in summer time?;integer
+14;sportso3;Which of the following items best describes your sports activity in summer time?;integer
+15;smoking_s0;smoking status;integer
+16;bmi_s0;body mass index;decimal
+17;food_6;Gekochte Kartoffeln;integer
+18;food_7;Bratkartoffeln, Kroketten, Pommes;integer
+19;food_10;Salat, rohes Gemüse;integer
+20;food_12;frisches Obst;integer
+21;food_23;Fettarme Milchprodukte;integer
+22;food_24;Normale Milch und Buttermilch;integer
+23;food_25;Schnittkäse, Weichkäse;integer
+24;food_21;Sahne;integer
+25;food_8;Teigwaren;integer
+26;food_9;Reis;integer
+27;food_13;Weißbrot, Toastbrot, Brötchen;integer
+28;food_14;Schwarzbrot, Knäckebrot;integer
+29;food_15;Graubrot;integer
+30;food_16;Haferflocken, Müsli;integer
+31;food;Fleisch;integer
+32;food_4;Geflügel;integer
+33;food_2;Wurstwaren;integer
+34;food_3;Bratwurst, Hamburger, Döner;integer
+35;food_5;Fisch;integer
+36;food_26;Eier;integer
+37;food_19;Olivenöl;integer
+38;food_20;andere pflanzliche Öle;integer
+39;food_17;Butter;integer
+40;food_18;Margarine;integer
+41;food_28;Süßwaren;integer
+42;food_27;Kuchen, Gebäck;integer
+43;food_30;Obst- und Gemüsesäfte;integer
+44;food_31;Erfrischungsgetränke;integer
+45;kaffee;Wieviel Tassen koffeinhaltigen Kaffee trinken Sie im allgemeinen pro Tag?;integer
+46;tee;Wieviel Tassen schwarzen Tee trinken Sie im allgemeinen pro Tag?;integer
+47;food_32;Mineralwasser;integer
+48;weinwe;Weinkonsum (0,2 Liter) (letztes Wochenende);integer
+49;weinwt;Weinkonsum (0,2 Liter) (letzter Werktag);integer
+50;bierwe;Bierkonsum (0,5 Liter) (letztes Wochenende);integer
+51;bierwt;Bierkonsum (0,5 Liter) (letzter Werktag);integer
+52;schnwe;Schnapskonsum (letztes Wochenende);integer
+53;schnwt;Schnapskonsum (letzter Werktag);integer
+54;food_29;Salzige Knabbereien;integer
