@@ -58,11 +58,21 @@ employ;1;full time
 employ;2;regular part time
 employ;3;marginal/irregular employed
 employ;4;none
+fr_period1;1;yes (regular)
+fr_period1;2;yes (irregular)(age range between 45-55)
+fr_period1;3;no (under 45 premeno.)
+fr_op7;1;yes, one
+fr_op7;2;yes, both(surgical ova.)
+fr_op7;3;no
 fr_hrt1;1;yes
 fr_hrt1;2;no
 fr_hrt1;9;no HRT because premenopause
 diabetes2;0;no
 diabetes2;1;yes
+hyp_i;1;Yes
+hyp_i;2;No
+htn_kora;0;no
+htn_kora;1;yes
 cvd;0;no
 cvd;1;yes
 cvd;2;poss. by MI_final/CABG/PTCA/stroke/carotis-OP
@@ -80,22 +90,15 @@ fam_cancer;1;Yes
 fam_cancer;2;No
 fam_cancer;3;No/don't know
 fam_cancer;8;I don't know
-f2_mi_i_inc;1;yes
-f2_mi_i_inc;2;no
-"f2_stoke_i_inc;";1;yes
-"f2_stoke_i_inc;";2;no
+MED_STAT;0;no
+MED_STAT;1;yes
+MED_NSAID;0;no
+MED_NSAID;1;yes
+f1_htn_kora;0;no
+f1_htn_kora;1;yes
+f2_htn_kora;0;no
+f2_htn_kora;1;yes
 f1_chf_total_inz;0;no
 f1_chf_total_inz;1;yes
-f2_cancer1_inc;1;yes
-f2_cancer1_inc;2;no
-f2_cancer1_typ;1;Brustkrebs
-f2_cancer1_typ;2;Darmkrebs
-f2_cancer1_typ;3;Prostatakrebs
-f2_cancer1_typ;4;Gebärmutterkrebs
-f2_cancer1_typ;5;Gebärmutterhalskrebs
-f2_cancer1_typ;6;Unterleibskrebs
-f2_cancer1_typ;7;Hautkrebs
-f2_cancer1_typ;8;Schilddrüsenkrebs
-f2_cancer1_typ;9;Sonstige
 vit_stat;0;no
 vit_stat;1;yes
