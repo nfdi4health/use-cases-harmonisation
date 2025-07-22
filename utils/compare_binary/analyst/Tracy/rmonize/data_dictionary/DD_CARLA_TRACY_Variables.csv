@@ -3,11 +3,7 @@ index;name;label;valueType
 ;sex;sex;integer
 ;age;age;decimal
 ;school;School education;integer
-;occup_edu;First professional qualification;integer
-;occup_edu_2;Second professional qualification;integer
 ;occup_edu_h;Highest professional qualification;integer
-;educ;School+occupational education;integer
-;educ3;School+occupational education(3 groups);integer
 ;met_we;MET per week;decimal
 ;smoker;smoker;integer
 ;work_status;Current status of occupation;integer
