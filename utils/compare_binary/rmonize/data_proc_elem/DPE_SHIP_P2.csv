@@ -1,0 +1,133 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+1;ID;Participant identification number;integer;SHIP_P2;col_id;id_creation;id_creation;complete;complete;identical
+2;SEX;Sex;integer;SHIP_P2;INT_sex;direct_mapping;direct_mapping;;complete;identical
+3;AGE_BASE;Age at exposure measure [years];decimal;SHIP_P2;AGE;direct_mapping;direct_mapping;;complete;identical
+4;EDU_LEVEL;Education;integer;SHIP_P2;"ausbild7;ausbild6;ausbild5;Schule1;ausbild8;ausbild;ausbild4";case_when;case_when(                                                                               ausbild7 %in% c(1) ~ 7L,                                                        ausbild6 %in% c(1) ~ 6L,                                       ausbild5 %in% c(1) | ausbild4 %in% c(1) ~ 4L,                            Schule1 %in% c(7,8) ~ 3L,                                              Schule1 %in% c(3,4,5,6) ~ 2L,                               Schule1 %in% c(2) ~ 0L,                                                  ausbild8 %in% c(1) | ausbild %in% c(1) | Schule1 %in% c(1,9) ~ 9L,                                                                       TRUE ~ NA_integer_);;partial;proximate
+5;EMPLOY;Employment;integer;SHIP_P2;"erwerb;nojob";case_when;"case_when(
+erwerb == 2 ~ 1,
+  erwerb %in% c(3, 4, 5, 6) ~ 2,
+  erwerb == 1 & nojob == 7 ~ 3,
+  erwerb == 1 & nojob == 1 ~ 4,
+  erwerb == 1 & nojob %in% c(4, 5, 6) ~ 5,
+  erwerb == 1 & nojob %in% c(2, 3) ~ 6,
+  erwerb %in% c(7, 8, 9) | (erwerb == 1 & nojob %in% c(8, 9)) ~ 7,
+  TRUE ~ NA_real_
+)";"If someone reports working full time, then level =1, If someone reports working part-time, hourly, then level=2,                                                                                                                               If someone is not working and says they are a housewife or househusband,then level=3,                                                                                                                                                                                                                    If someone is not working and says they are retired, then level=4,                                                                                                                                       If someone is not working and says they are unemployed, in retraining, or on short-time work, level=5 If someone is not working and says they are a student or professional student, then level=6,Other; On leave like maternity o/Gave no answer or said ""don't know""/ said their reason for not working is something like civil service, then level=7";complete;compatible
+6;IMMIGRATION;Immigration background;integer;SHIP_P2;__BLANK__;paste;0;;complete;compatible
+7;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;SHIP_P2;"sportwi1;sportwi3;sportso1;sportso3";undetermined;undetermined;;undetermined;undetermined
+8;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;SHIP_P2;;impossible;impossible;;impossible;unvailable
+9;SMOKE_ST;Smoking status;integer;SHIP_P2;smoking_s0;recode;"recode(0=1; 1=2; 2=3;)";;complete;compatible
+10;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;SHIP_P2;packyrs_s0;direct_mapping;direct_mapping;;complete;identical
+11;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;SHIP_P2;"ncig1;ncigard;npipes";operation;ncig1*1+ncigard*5+npipes*5;;complete;compatible
+12;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+13;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;SHIP_P2;;impossible;impossible;;impossible;unvailable
+14;MENOPAUSE;Menopause status;integer;SHIP_P2;menostat_s0;recode;"recode(0=0; 1=1; 2=3;)";;complete;compatible
+15;HRT;Hormone replacement therapy;integer;SHIP_P2;use_mht_s0;recode;"recode(0=0; 1=1; 97=1;)";;complete;compatible
+16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;SHIP_P2;ocyears;direct_mapping;direct_mapping;;complete;identical
+17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;SHIP_P2;babies;direct_mapping;direct_mapping;;partial;identical
+18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;SHIP_P2;;impossible;impossible;;impossible;unvailable
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;SHIP_P2;tg_s;direct_mapping;direct_mapping;;complete;identical
+20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;SHIP_P2;chol_s;direct_mapping;direct_mapping;;complete;identical
+21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;SHIP_P2;ldl_s;direct_mapping;direct_mapping;;complete;identical
+22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;SHIP_P2;hdl_s;direct_mapping;direct_mapping;;complete;identical
+23;PREV_DIAB;History of diabetes;integer;SHIP_P2;diabetes_s0;direct_mapping;direct_mapping;;complete;identical
+24;PREV_HYP;History of hypertension;integer;SHIP_P2;hyp_s0;direct_mapping;direct_mapping;;complete;identical
+25;PREV_CVD;History of cardiovascular disease;integer;SHIP_P2;"mi;apoplex;herzop";case_when;case_when(                                                                                                                 any(c_across(c(mi, apoplex, herzop)) == 1) ~ 1,  all(c_across(c(mi, apoplex, herzop)) == 2) ~ 2, all(c_across(c(mi, apoplex, herzop)) %in% c(8, 9)) ~ 3, all(c_across(c(mi, apoplex, herzop)) %in% c(2, 8, 9)) & any(c_across(c(mi, apoplex, herzop)) == 2) ~ 2,                                                       TRUE ~ NA_real_ );If any one has one of these diseases then code diseases 1,                                                                                                                                                                            if all of them dont have any of this diseases then classify to 2.                                                                                                                                                                                      if all of dont know or refuse but one is no then classify as no.                                                                                                                                                                       if all of them refuse or dont know then classify as non applicable;complete;compatible
+26;PREV_CANCER;History of cancer;integer;SHIP_P2;cancer_s0;direct_mapping;direct_mapping;;complete;identical
+27;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;SHIP_P2;"vat_3;vat_4;sib_3;sib_4";case_when;"case_when (
+vat_3== 1 | vat_4 == 1|sib_3==1|sib_4==1 ~ 1L,
+vat_3== 2 | vat_4 == 2|sib_3==2|sib_4==2 ~ 2L,    vat_3== 8 | vat_4 == 8|sib_3==8|sib_4==8 ~ 3L, vat_3== 1 & vat_4 == 2 &sib_3 ==8&sib_4==9~ 1L,
+vat_3== 2 | vat_4 == 2 &sib_3 ==8 & sib_4==9  ~ 1L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke (siblings), then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has heart attack (parents),apoplectic stroke (parents), heart attack (siblings),apoplectic stroke, then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members has ""no"" and the rest do not know then classify as 2L";complete;compatible
+28;FAM1_DIAB2;First degree family history of T2D;integer;SHIP_P2;"vat;sib";case_when;"case_when (
+vat== 1 | sib==1 ~ 1L,
+vat== 2 | sib==2 ~ 2L,                                                          vat== 8 | sib==8 ~ 8L,                                                  vat== 1 & sib==8 &sib==9  ~ 1L,
+vat== 2 & sib==9  ~ 2L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either diabetes (parents) and diabetes (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have diabetes (parents) and diabetes (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have diabetes (parents) and diabetes (siblings), then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has diabetes (parents) and diabetes (siblings), then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members  has ""no"" and then rest do not know then classify as 2L";complete;compatible
+29;FAM1_CANCER;First degree family history of cancer;integer;SHIP_P2;"vat_11;sib_11";case_when;"case_when (
+vat_11== 1 | sib_11==1 ~ 1L,
+vat_11== 2 | sib_11==2 ~ 2L,                                                          vat_11== 8 | sib_11==8 ~ 8L,                                                  vat_11== 1 & sib_11==8 &sib_11==9  ~ 1L,
+vat_11== 2 & sib_11==9  ~ 2L,  TRUE ~ NA_integer_
+) 
+";"If all the family members have either cancer (parents) and cancer (siblings), then classify as 1L                                                                                                                                                                                                                                                                          If all the family members do not have cancer (parents) and cancer (siblings), then classify as 2L                                                                                                                                                                                                                                                               If all the family members do not know they have cancer (parents) and cancer (siblings),, then classify as 8L                                                                                                                                                                                                                                          If at least one of the family has diabetes (parents) and diabetes (siblings), then the classify as 1L.                                                                                                                                                                                                                                                                                              If all family members do not know and at least one level is no then classify as 2L . If at least one of the family members  has ""no"" and then rest do not know then classify as 2L";complete;compatible
+30;DRE_SCREEN;Screening, DRE;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+31;PSA_SCREEN;Screening, PSA;integer;SHIP_P2;psaf_re_s;direct_mapping;direct_mapping;;complete;identical
+32;FOBT_SCREEN;Screening, FOBT;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+33;COL_SCREEN;Screening, colonoscopy;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+34;MELANOMA_SCREEN;Screening, skin cancer;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+35;MAMMO_SCREEN;Screening, mammography;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+36;CERVICAL_SCREEN;Screening cervical, smear test;integer;SHIP_P2;;impossible;impossible;;impossible;unavailable
+37;MED_STAT;Regular use of statins;integer;SHIP_P2;atc_c10aa_s0;direct_mapping;direct_mapping;;complete;identical
+38;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;SHIP_P2;atc_m01a_s0;direct_mapping;direct_mapping;;complete;identical
+39;INC_CVD;CVD event during follow-up;integer;SHIP_P2;"mi_01;ang_01";case_when;case_when(                                                                                                                        mi_01 %in% 1 | ang_01 %in% 1 ~ 1,                                                                                    mi_01 %in% 0 & ang_01 %in% 0 ~ 0,                                                                    TRUE ~ NA_real_ );"# At least one ""Yes"" # Both ""No"" # All other cases (e.g., 998, 999)";complete;compatible
+40;AGE_CVD;Age at diagnosis of CVD [years];decimal;SHIP_P2;mi_03b5;direct_mapping;direct_mapping;;complete;identical
+41;INC_ANGINA;Angina pectoris event during follow-up;integer;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+42;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;SHIP_P2;ang_01b;direct_mapping;direct_mapping;;complete;identical
+43;INC_MI;Myocardial infarction during follow-up;integer;SHIP_P2;inc_mi_s0;direct_mapping;direct_mapping;;complete;identical
+44;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+45;INC_STR;Stroke during follow-up;integer;SHIP_P2;inc_stroke_s0;direct_mapping;direct_mapping;;complete;identical
+46;AGE_STR;Age at diagnosis of stroke [years];decimal;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+47;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;SHIP_P2;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+48;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;SHIP_P2;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+49;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;SHIP_P2;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+50;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;SHIP_P2;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+51;INC_HYP;Essential hypertension during follow-up;integer;SHIP_P2;;impossible;impossible;Fatal cases could be confirmed using mort_icd10;impossible;unavailable
+52;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;SHIP_P2;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+53;INC_HF;Heart failure during follow-up;integer;SHIP_P2;herz_01;direct_mapping;direct_mapping;;complete;identical
+54;AGE_HF;Age at diagnosis of heart failure [years];decimal;SHIP_P2;;impossible;impossible;Fatal cases could be included using mort_time_birth;impossible;unavailable
+55;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;SHIP_P2;inc_diab_s0;direct_mapping;direct_mapping;;complete;identical
+56;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+57;INC_CANCER;Cancer during follow-up;integer;SHIP_P2;krebs_01;direct_mapping;direct_mapping;;complete;identical
+58;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+59;AGE_CANCER;Age at diagnosis of cancer [years];decimal;SHIP_P2;;undetermined;undetermined;;undetermined;undetermined
+60;VITAL_ST;Vital status at the end of mortality follow-up;integer;SHIP_P2;mort_all;direct_mapping;direct_mapping;;complete;identical
+61;AGE_DEATH;Age at time of death [years];decimal;SHIP_P2;mort_time_birth;direct_mapping;direct_mapping;;complete;identical
+62;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;SHIP_P2;mort_cvd;direct_mapping;direct_mapping;;complete;identical
+63;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;SHIP_P2;mort_ca;direct_mapping;direct_mapping;;complete;identical
+64;AGE_FUP;Age at end of follow-up [years];decimal;SHIP_P2;mort_time_birth;undetermined;undetermined;;undetermined;undetermined
+65;BMI;Body Mass Index at baseline [kg/m²];decimal;SHIP_P2;bmi_s0;direct_mapping;direct_mapping;;complete;identical
+66;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;SHIP_P2;bmi_s4;direct_mapping;direct_mapping;;complete;identical
+67;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+68;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+69;WAIST_FUP;Waist circumference at follow-up [cm];decimal;SHIP_P2;som_tail;direct_mapping;direct_mapping;;complete;identical
+70;WAIST;Waist circumference at baseline [cm];decimal;SHIP_P2;som_tail;direct_mapping;direct_mapping;;complete;identical
+71;HIP;Hip circumference at baseline [cm];decimal;SHIP_P2;som_huef;direct_mapping;direct_mapping;;complete;identical
+72;HIP_FUP;Hip circumference at follow-up [cm];decimal;SHIP_P2;som_huef;direct_mapping;direct_mapping;;complete;identical
+73;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+74;FMI;Fat mass index at baseline  [kg/m²];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+75;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;SHIP_P2;;?;;;;
+76;BODY_FAT;Body fat precent at baseline  [%];decimal;SHIP_P2;;?;;;;
+77;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;SHIP_P2;AGE;direct_mapping;direct_mapping;;complete;identical
+78;ENERGY;Energy intake [kcal/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+79;CARB;Carbohydrate intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+80;PROT;Protein intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+81;FAT;Fat intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+82;ALC;Alcohol intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+83;FIBER;Dietary fiber intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+84;SFA;Saturated fat intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+85;MUFA;Monounsaturated fat intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+86;PUFA;Polyunsaturated fat intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+87;TOT_SUGARS;Total sugar intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+90;GLUC;Glucose intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+91;FRUC;Fructose intake [g/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+92;GI;Daily glycaemic index;decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+93;GL;Daily glycaemic load;decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+94;SODIUM;Sodium intake [mg/d];decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;SHIP_P2;;impossible;impossible;;impossible;unavailable
+96;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;SHIP_P2;food_28;direct_mapping;direct_mapping;only frequency;partial;tentative
+97;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;SHIP_P2;food_27;direct_mapping;direct_mapping;only frequency;partial;tentative
+98;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;SHIP_P2;food_30;direct_mapping;direct_mapping;only frequency;partial;tentative
+99;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;SHIP_P2;food_31;direct_mapping;direct_mapping;only frequency;partial;tentative
+100;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;SHIP_P2;impossible;impossible;impossible;;impossible;unavailable
+101;VEGETABLES_02;Vegetable intake [g/d];decimal;SHIP_P2;impossible;impossible;impossible;;impossible;unavailable
+102;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;SHIP_P2;impossible;impossible;impossible;;impossible;unavailable
+103;FRUITS_TOT_04;Total fruit intake [g/d];decimal;SHIP_P2;impossible;impossible;impossible;;impossible;unavailable
+104;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;SHIP_P2;food;direct_mapping;direct_mapping;only frequency;partial;tentative
+105;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;SHIP_P2;"food_2;food_3";operation;food_2 + food_3;only frequency;partial;tentative
+106;COFFEE_130301;Coffee intake [g/d];decimal;SHIP_P2;kaffee;operation;kaffee*(Portion size);;complete;compatible
+107;TEA_130302;Tea intake [g/d];decimal;SHIP_P2;tee;operation;tee*(Portion size);;complete;compatible
+108;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;SHIP_P2;__BLANK__;paste;0;0 (FPQ);complete;identical
