@@ -1,6 +1,11 @@
 #### Script for harmonizing data for NFDI4Health
 
-####Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
+#### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
+#### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
+# install.packages("remotes")
+# library(remotes)
+# remotes::install_github("cran/madshapR@1.1.0")
+# remotes::install_github("cran/Rmonize@1.1.0")
 # install.packages("Rmonize")
 # install.packages("readxl")
 # install.packages("tidyverse")
