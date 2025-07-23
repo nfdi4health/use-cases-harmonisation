@@ -8,8 +8,8 @@ school  %in% c(7)|occup_edu_h%in% c(8)~ 9L,                                     
 ;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;met_we;operation;met_we/7;;complete;compatible
 ;SMOKE_ST;Smoking status;integer;;smoker;recode;"recode(1= 3; 2 = 2; 3=1;)";;complete;compatible
 ;EMPLOY;Employment;integer;;"work_status; employ";case_when;"case_when(
-work_status == 1 ~ 0,                                                                                                                                work_status == 2~ 1,                                                                                                                                 work_status == 3~ 5,                                                                                                                                  work_status == 4 ~ 6,
-work_status== 5 | work_status == 6 ~ 7,
+work_status == 1 ~ 4,                                                                                                                                work_status == 2~ 5,                                                                                                                                 work_status == 3~ 3,                                                                                                                                  work_status == 4 ~ 6,
+work_status == 5~ 6,                                                                                                                 work_status== 6 | work_status == 7 | work_status == 8| work_status == 9~ 7,
 work_status == 9 ~ 7,
 employ== 1 ~ 1,                                                                                                                                                   employ == 2 ~ 2,                                                                                                                                                     employ == 3 ~ 2,                                                                                                                                              employ== 4 ~ 7, TRUE ~ NA_integer_)";;complete;compatible
 ;IMMIGRATION;Immigration background;integer;;__BLANK__;paste;0;;partial;proximate
@@ -18,7 +18,7 @@ employ== 1 ~ 1,                                                                 
 ;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;"cignr_day;cigarnr_day;pipe_day;tabacconr_day";operation;cignr_day*1+cigarnr_day*5+pipe_day*5+tabacconr_day;;partial;tentative
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;smokestop;direct_mapping;direct_mapping;;complete;identical
 ;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;vit_min;direct_mapping;direct_mapping;;complete;identical
-;MENOPAUSE;Menopause status;integer;;"fr_period1;fr_op7";case_when;"case_when(
+;MENOPAUSE;Menopause status;integer;;"fr_period1;fr_op7;age";case_when;"case_when(
 fr_op7 == 2 ~ 3, 
 fr_period1 == 3 & age >= 45 ~ 1,
 fr_period1 == 2 & age >= 45 & age <= 55 ~ 2,
@@ -28,7 +28,7 @@ fr_period1 == 2 & age >= 45 & age <= 55 ~ 2,
     )";;complete;compatible
 ;HRT;Hormone replacement therapy;integer;;fr_hrt1;recode;"recode(1= 1; 2 = 0; 9=0;)";;complete;compatible
 ;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;incompatible
-;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;children;direct_mapping;direct_mapping;;partial;tentative
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;children;direct_mapping;direct_mapping;;partial;proximate
 ;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
 ;PREV_DIAB;History of diabetes;integer;;diabetes2;direct_mapping;direct_mapping;;partial;proximate
 ;PREV_HYP;History of hypertension;integer;;"hyp_i; htn_kora";case_when(                                                                                                                                                                                                                                                                                                                                                                                                                                !is.na(hyp_i) & hyp_i == 1 ~ 1,                                                                                                                                                   !is.na(hyp_i) & hyp_i == 2 ~ 0,                                                                                is.na(hyp_i) & htn_kora == 1 ~ 1,                                                            is.na(hyp_i) & htn_kora == 0 ~ 0,  TRUE ~ NA_real_  );;;partial;proximate
@@ -44,8 +44,8 @@ fr_period1 == 2 & age >= 45 & age <= 55 ~ 2,
 ;MELANOMA_SCREEN;Screening, skin cancer;integer;;;impossible;impossible;;impossible;unavailable
 ;MAMMO_SCREEN;Screening, mammography;integer;;;impossible;impossible;;impossible;unavailable
 ;CERVICAL_SCREEN;Screening cervical, smear test;integer;;;impossible;impossible;;impossible;unavailable
-;MED_STAT;Regular use of statins;integer;;MED_STAT;direct_mapping;direct_mapping;;complete;identical
-;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;MED_NSAID;direct_mapping;direct_mapping;;complete;identical
+;MED_STAT;Regular use of statins;integer;;MED_STAT;direct_mapping;direct_mapping;Expected to be generated by the DHO;complete;identical
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;MED_NSAID;direct_mapping;direct_mapping;Expected to be generated by the DHO;complete;identical
 ;INC_CVD;CVD event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
 ;AGE_CVD;Age at diagnosis of CVD [years];decimal;;;impossible;impossible;;impossible;unavailable
 ;INC_ANGINA;Angina pectoris event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
@@ -63,7 +63,7 @@ fr_period1 == 2 & age >= 45 & age <= 55 ~ 2,
       f1_htn_kora == 0 & f2_htn_kora == 0 ~ 0,
       TRUE ~ NA_real_
     )";;complete;compatible
-;AGE_HYP;Age at diagnosis of essential hypertension [years];years;;AGE_HYP;direct_mapping;direct_mapping;;complete;identical
+;AGE_HYP;Age at diagnosis of essential hypertension [years];years;;AGE_HYP;direct_mapping;direct_mapping;AGE_HYP, expected to be derived by the DHO;complete;identical
 ;INC_HF;Heart failure during follow-up;integer;;f1_chf_total_inz;direct_mapping;direct_mapping;measured HF via echocardiography, symptoms and pBNP at FU1;complete;identical
 ;AGE_HF;Age at diagnosis of heart failure [years];date;;"f2_insuff_date;gebdat";operation;f2_insuff_date-gebdat;date of diagnose and the date of birth;complete;compatible
 ;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;;impossible;impossible;;impossible;incompatible

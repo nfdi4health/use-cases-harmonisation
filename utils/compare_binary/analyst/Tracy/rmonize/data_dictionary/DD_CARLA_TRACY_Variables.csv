@@ -33,7 +33,7 @@ index;name;label;valueType
 ;f1_htn_kora;measured blood pressure >=140/90;integer
 ;f2_htn_kora;medication if known htn at FU2;integer
 ;f1_chf_total_inz;inc. chronic heart failure Carla_1;integer
-;f2_insuff_date;Wann wurde die Herzinsuffizienz zum ersten Mal diagnostiziert (Monat/Jahr)? - Carla_2;date
+;f2_insuff_date;Wann wurde die Herzinsuffizienz zum ersten Mal diagnostiziert;date
 ;vit_stat;Vital status(1=dead/0=alive));integer
 ;tod_dat;Date of death;datetime
-;gebdat;the year of birth;datetime
+;gebdat;Date of birth;datetime
