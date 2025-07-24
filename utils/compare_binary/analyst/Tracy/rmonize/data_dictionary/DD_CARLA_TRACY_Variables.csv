@@ -12,7 +12,6 @@ index;name;label;valueType
 ;cignr_day;Currently nr. smoked cigarettes/day;decimal
 ;cigarnr_day;Currently nr. smoked cigars/day;decimal
 ;pipe_day;Currently nr. smoked pipes/day;decimal
-;tabacconr_day;Currently nr. smoked cigarettes,cigars,pipes /day;decimal
 ;smokestop;Age at stop Smoking;decimal
 ;vit_min;Vitamine, Mineralstoffe(J/N);integer
 ;fr_period1;Period_current;integer
@@ -35,5 +34,5 @@ index;name;label;valueType
 ;f1_chf_total_inz;inc. chronic heart failure Carla_1;integer
 ;f2_insuff_date;Wann wurde die Herzinsuffizienz zum ersten Mal diagnostiziert;date
 ;vit_stat;Vital status(1=dead/0=alive));integer
-;tod_dat;Date of death;datetime
-;gebdat;Date of birth;datetime
+;tod_dat;Date of death;date
+;gebdat;Date of birth;date

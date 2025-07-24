@@ -34,11 +34,11 @@ employ;3;marginal/irregular employed
 employ;4;none
 vit_min;0;no
 vit_min;1;yes
-fr_period1;1;yes
-fr_period1;2;yes
+fr_period1;1;yes (regular)
+fr_period1;2;yes (irregular)
 fr_period1;3;no
-fr_op7;1;yes
-fr_op7;2;yes
+fr_op7;1;yes, one
+fr_op7;2;yes, both(surgical ova.)
 fr_op7;3;no
 fr_hrt1;1;yes
 fr_hrt1;2;no
