@@ -1,0 +1,37 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;TG;Triglycerides measured from blood samples [mmol/L];decimal;CARLA_P2;tg;direct_mapping;direct_mapping;;complete;identical
+;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;CARLA_P2;chol;direct_mapping;direct_mapping;;complete;identical
+;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;CARLA_P2;ldlc;direct_mapping;direct_mapping;;complete;identical
+;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;CARLA_P2;hdl;direct_mapping;direct_mapping;;complete;identical
+;BMI;Body Mass Index at baseline [kg/m²];decimal;CARLA_P2;bmi;direct_mapping;direct_mapping;;complete;identical
+;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;CARLA_P2;f1_bmi;direct_mapping;direct_mapping;;complete;identical
+;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;CARLA_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
+;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;CARLA_P2;;impossible;impossible;N/A adult participants;impossible;unavailable
+;WAIST_FUP;Waist circumference at follow-up [cm];decimal;CARLA_P2;f1_taillenumfang;direct_mapping;direct_mapping;;complete;identical
+;WAIST;Waist circumference at baseline [cm];decimal;CARLA_P2;taillenumfang;direct_mapping;direct_mapping;;complete;identical
+;HIP;Hip circumference at baseline [cm];decimal;CARLA_P2;hueftumfang;direct_mapping;direct_mapping;;complete;identical
+;HIP_FUP;Hip circumference at follow-up [cm];decimal;CARLA_P2;f1_hueftumfang;direct_mapping;direct_mapping;;complete;identical
+;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;FMI;Fat mass index at baseline  [kg/m²];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;BODY_FAT;Body fat precent at baseline  [%];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;CARLA_P2;f1_age;direct_mapping;direct_mapping;;complete;identical
+;ENERGY;Energy intake [kcal/d];decimal;CARLA_P2;gj;operation;gj/4.2;change unit from KJ to kcal;complete;compatible
+;CARB;Carbohydrate intake [g/d];decimal;CARLA_P2;zk;direct_mapping;direct_mapping;;complete;identical
+;PROT;Protein intake [g/d];decimal;CARLA_P2;ze;direct_mapping;direct_mapping;;complete;identical
+;FAT;Fat intake [g/d];decimal;CARLA_P2;zf;direct_mapping;direct_mapping;;complete;identical
+;ALC;Alcohol intake [g/d];decimal;CARLA_P2;za;direct_mapping;direct_mapping;;complete;identical
+;FIBER;Dietary fiber intake [g/d];decimal;CARLA_P2;zb;direct_mapping;direct_mapping;;complete;identical
+;SFA;Saturated fat intake [g/d];decimal;CARLA_P2;fs;direct_mapping;direct_mapping;;complete;identical
+;MUFA;Monounsaturated fat intake [g/d];decimal;CARLA_P2;fu;direct_mapping;direct_mapping;;complete;identical
+;PUFA;Polyunsaturated fat intake [g/d];decimal;CARLA_P2;fp;direct_mapping;direct_mapping;;complete;identical
+;TOT_SUGARS;Total sugar intake [g/d];decimal;CARLA_P2;"kd,
+km";operation;kd+km;;complete;identical
+;ADD_SUGARS;Added sugar intake [g/d];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;FREE_SUGARS;Free sugar intake [g/d];decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;GLUC;Glucose intake [g/d];decimal;CARLA_P2;kmt;direct_mapping;direct_mapping;;complete;identical
+;FRUC;Fructose intake [g/d];decimal;CARLA_P2;kmf;direct_mapping;direct_mapping;;complete;identical
+;GI;Daily glycaemic index;decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;GL;Daily glycaemic load;decimal;CARLA_P2;;impossible;impossible;;impossible;unavailable
+;SODIUM;Sodium intake [mg/d];decimal;CARLA_P2;mna;direct_mapping;direct_mapping;;complete;identical
+;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;CARLA_P2;mna, mk;operation;mna/mk;;complete;compatible
