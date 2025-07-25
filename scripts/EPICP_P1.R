@@ -1,12 +1,17 @@
 #### Script for harmonizing KORA_S1_P1 for NFDI4Health
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
-# install.packages("Rmonize")
+#### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
+# install.packages("remotes")
+# library(remotes)
+# remotes::install_github("cran/madshapR@1.1.0")
+# remotes::install_github("cran/Rmonize@1.1.0")
 # install.packages("readxl")
 # install.packages("tidyverse")
 # install.packages("here")
 # install.packages("car")
 # install.packages("writexl")
+# install.packages("haven")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -15,7 +20,9 @@ library(tidyverse)
 library(here)
 library(car)
 library(writexl)
+library(haven)
 
+#### all needs to be SAS files!!! => just switch after finish testing
 
 #### Step 0: Name of the study
 dataset_name <- "EPICP_P1"
@@ -31,6 +38,9 @@ dataschema <- list(Variables = dataschema_1,
 #### Step 2: Import Datasets 
 #### Import check provided in case the csv file is in German style (delim = ";", dec.point = ",")
 
+
+# input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
+
 input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
 
 if(dim(input_dataset)[2] == 1){
@@ -38,6 +48,10 @@ if(dim(input_dataset)[2] == 1){
 }
 
 #### Step 2a: Special Import of second data file containing FFQ data
+
+# input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_FFQ.sas7bdat")))
+
+
 input_dataset_FFQ <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, "_FFQ.csv")))
 
 if(dim(input_dataset_FFQ)[2] == 1){
@@ -53,40 +67,42 @@ filter2 <- input_dataset_FFQ_Info$subgroup1
 filter3 <- input_dataset_FFQ_Info$subgroup2
 name <- input_dataset_FFQ_Info$Name
 
-ffq_result_study <- data.frame(matrix(ncol = 1, nrow = 4))
-colnames(ffq_result_study) <- c("id")
-ffq_result_study$id <- c(1,2,3,4)
+
+unique_participants <- unique(input_dataset_FFQ$ident_ffq)
+ffq_result_study <- data.frame(matrix(ncol = 1, nrow = length(unique_participants)))
+colnames(ffq_result_study) <- c("ident_ffq")
+ffq_result_study$ident_ffq <- unique_participants
+
 
 variable1 <- data.frame()
 
 
 for (i in 1:length(input_dataset_FFQ_Info$Name)){
-  
-  
+
   if(is.na(filter2[i])){
     
     variable1 <- input_dataset_FFQ  |> 
       dplyr::filter(GROUP == filter1[i]) |> 
-      dplyr::group_by(id)  |> 
+      dplyr::group_by(ident_ffq)  |> 
       summarise(variable = sum(quant_grp17)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "id")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident_ffq")
     
   } else if(is.na(filter3[i])){
     
     variable1 <- input_dataset_FFQ  |> 
       dplyr::filter(GROUP == filter1[i],
                     subgroup1 == filter2[i]) |> 
-      dplyr::group_by(id)  |> 
+      dplyr::group_by(ident_ffq)  |> 
       summarise(variable = sum(quant_grp17)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "id")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident_ffq")
     
   } else {
     
@@ -94,22 +110,22 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
       dplyr::filter(GROUP == filter1[i],
                     subgroup1 == filter2[i],
                     subgroup2 == filter3[i]) |> 
-      dplyr::group_by(id)  |> 
+      dplyr::group_by(ident_ffq)  |> 
       summarise(variable = sum(quant_grp17)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "id")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident_ffq")
     
   }
+  
+  variable1 <- data.frame()
+  
 }
 
-input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "id")
-
-
-
-
+##################################################### DELETE ident_ffq after merger?? => Franzi
+input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "ident_ffq")
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
