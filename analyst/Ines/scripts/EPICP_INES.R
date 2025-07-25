@@ -6,6 +6,7 @@
 # library(remotes)
 # remotes::install_github("cran/madshapR@1.1.0")
 # remotes::install_github("cran/Rmonize@1.1.0")
+# install.packages("Rmonize")
 # install.packages("readxl")
 # install.packages("tidyverse")
 # install.packages("here")
@@ -17,8 +18,8 @@ library(Rmonize)
 library(readxl)
 library(tidyverse)
 library(here)
-library(car)
-library(writexl)
+dataset_name <- 'EPICP_INES'
+folder_name <- 'analyst/Ines'
 
 
 #### Step 0: Name of the study and creation of mock data
