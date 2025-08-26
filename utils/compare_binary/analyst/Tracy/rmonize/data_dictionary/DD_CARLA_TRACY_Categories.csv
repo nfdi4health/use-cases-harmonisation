@@ -2,7 +2,7 @@ variable;name;label
 sex;1;male
 sex;2;female
 school;1;no formal education
-school;2;elementary School
+school;2;Hauptschule
 school;3;secondary School(Realschule in FRG)
 school;4;polytechn.secondary school(POS in GDR)
 school;5;qualif. F.university of applied sciences(Fachholschulreife)
