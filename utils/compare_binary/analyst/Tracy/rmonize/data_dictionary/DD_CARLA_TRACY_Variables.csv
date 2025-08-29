@@ -1,40 +1,38 @@
 index;name;label;valueType
-;ID;ID of the participant;integer
+;ID;ID;integer
 ;sex;sex;integer
 ;age;age;decimal
 ;school;School education;integer
-;occup_edu;First professional qualification;integer
-;occup_edu_2;Second professional qualification;integer
 ;occup_edu_h;Highest professional qualification;integer
-;educ;School+occupational education;integer
-;educ3;School+occupational education(3 groups);integer
 ;met_we;MET per week;decimal
 ;smoker;smoker;integer
 ;work_status;Current status of occupation;integer
 ;employ;Currently employed;integer
-;birth_place;Place of birth;integer
 ;packyear_tabacco;Packyears(cigarettes/cigars/pipes);decimal
 ;cignr_day;Currently nr. smoked cigarettes/day;decimal
+;cigarnr_day;Currently nr. smoked cigars/day;decimal
+;pipe_day;Currently nr. smoked pipes/day;decimal
 ;smokestop;Age at stop Smoking;decimal
 ;vit_min;Vitamine, Mineralstoffe(J/N);integer
+;fr_period1;Period_current;integer
+;fr_op7;Ovariectomy;integer
 ;fr_hrt1;fr_hrt1;integer
 ;children;Number of biological children;integer
 ;diabetes2;Diabetes(interview or antidiabetic med);integer
 ;hyp_i;Physician diagnosed hypertension(self reported);integer
 ;htn_kora;Hypertension:>=140/90 or drugs(ATC) if known htn;integer
+;AGE_HYP;Age at diagnosis of essential hypertension;decimal
 ;cvd;CVD 1=yes 0=no 2=poss. by MI_final/CABG/PTCA/stroke/carotis-OP;integer
 ;cancer;Cancer ever(interview);integer
 ;fam_stroke;Family history of stroke(parents or sibling);integer
 ;fam_diab;Family history of dm(parents or sibling);integer
 ;fam_cancer;Family history of cancer(parents or sibling);integer
-;f2_mi_i_inc;Myocard.infarct since Carla_1-Carla_2(interview);integer
-;f2_mi_year;Year of myocard.infarction since Carla_1-Carla_2(interview);datetime
-;"f2_stoke_i_inc;";Stroke since Carla_1-Carla_2(interview);integer
-;f1_stroke_first_year_inc;Year of 1st Stroke since Carla_0-Carla_1(interview);datetime
+;MED_STAT;Regular use of statins;integer
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer
+;f1_htn_kora;measured blood pressure >=140/90;integer
+;f2_htn_kora;medication if known htn at FU2;integer
 ;f1_chf_total_inz;inc. chronic heart failure Carla_1;integer
-;f1_age;Age at follow-up;datetime
-;f2_cancer1_inc;Ist bei Ihnen seit Carla_1 eine Krebserkrankung neu aufgetreten?-Carla_2;integer
-;f2_cancer1_typ;Welche Krebserkrankung war das(I)?-Carla_2;integer
-;f2_cancer1_date;Wann ist diese Krebserkrankung zum ersten Mal diagnostiziert worden[Monat/Jahr](I)-Carla_2;datetime
+;f2_insuff_date;Wann wurde die Herzinsuffizienz zum ersten Mal diagnostiziert;date
 ;vit_stat;Vital status(1=dead/0=alive));integer
-;tod_dat;Date of death;datetime
+;tod_dat;Date of death;date
+;gebdat;Date of birth;date
