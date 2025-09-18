@@ -1,6 +1,7 @@
-on: [push, pull_request]
-  paths: 
-    - config.yml
+on: 
+  push:
+    paths: 
+      - config.yml
 
 jobs:
   Dispatch:
