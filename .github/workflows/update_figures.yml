@@ -12,6 +12,6 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.HARMO_FIGURES }}
           repository: nfdi4health/studies-variables
           event-type: dispatch-event
