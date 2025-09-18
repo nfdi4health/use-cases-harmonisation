@@ -1,2 +1,2 @@
 default:
-  studies_completed: [KORA_S1, KORA_S3, GINI, LISA, KARMEN, DONALD, ACTIVE, EPICP]
+  studies_completed: [KORA_S1, KORA_S3, GINI, LISA, KARMEN, DONALD, ACTIVE]
