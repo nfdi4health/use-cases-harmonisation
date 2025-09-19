@@ -1,0 +1,17 @@
+on: 
+  push:
+    paths: 
+      - rmonize/data_proc_elem/*
+
+jobs:
+  Dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.HARMO_FIGURES }}
+          repository: nfdi4health/studies-variables
+          event-type: dpe-event
