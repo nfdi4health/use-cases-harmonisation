@@ -1,0 +1,21 @@
+on: 
+  push:
+    paths: 
+      - rmonize/data_proc_elem/*
+
+jobs:
+  Dispatch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Push to another repository
+        uses: nkoppel/push-files-to-another-repository@v1.1.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.HARMO_FIGURES }}
+        with:
+          source-files: 'rmonize/data_proc_elem/'
+          destination-username: 'nfdi4health'
+          destination-repository: 'studies-variables'
+          destination-directory: 'rmonize'
+          commit-email: 'Florian.Schwarz@dife.de'
