@@ -4,7 +4,7 @@ on:
       - rmonize/data_proc_elem/*
 
 jobs:
-  Dispatch:
+  Copy_Folder:
     runs-on: ubuntu-latest
     permissions:
       contents: write
