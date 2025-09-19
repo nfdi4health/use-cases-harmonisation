@@ -18,4 +18,6 @@ jobs:
           destination-username: 'nfdi4health'
           destination-repository: 'studies-variables'
           destination-directory: 'rmonize'
+          destination-branch: 'main'
+          commit-username: 'FlorianSchw'
           commit-email: 'Florian.Schwarz@dife.de'
