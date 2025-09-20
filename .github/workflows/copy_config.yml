@@ -1,7 +1,7 @@
 on: 
   push:
     paths: 
-      - rmonize/data_proc_elem/*
+      - config.yml
 
 jobs:
   Copy_Folder:
@@ -14,10 +14,10 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.HARMO_FIGURES }}
         with:
-          source-files: 'rmonize/data_proc_elem/'
+          source-files: 'config.yml'
           destination-username: 'nfdi4health'
           destination-repository: 'studies-variables'
-          destination-directory: 'rmonize'
+          destination-directory: 'config'
           destination-branch: 'main'
           commit-username: 'FlorianSchw'
           commit-email: 'Florian.Schwarz@dife.de'
