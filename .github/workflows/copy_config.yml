@@ -16,7 +16,7 @@ jobs:
         with:
           source-files: 'config.yml'
           destination-username: 'nfdi4health'
-          destination-repository: 'studies-variables'
+          destination-repository: 'harmonisation-results'
           destination-directory: 'config'
           destination-branch: 'main'
           commit-username: 'FlorianSchw'
