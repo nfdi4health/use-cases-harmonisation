@@ -16,7 +16,7 @@ jobs:
         with:
           source-files: 'rmonize/data_proc_elem/'
           destination-username: 'nfdi4health'
-          destination-repository: 'studies-variables'
+          destination-repository: 'harmonisation-results'
           destination-directory: 'rmonize'
           destination-branch: 'main'
           commit-username: 'FlorianSchw'
