@@ -1,0 +1,27 @@
+index;name;label;valueType
+;tg;Triglyceride (mmol/l);decimal
+;chol;Cholesterol (mmol/l);decimal
+;ldlc;LDL measured (mmol/l);decimal
+;hdl;HDL (mmol/l);decimal
+;bmi;bmi;decimal
+;f1_bmi;f1_bmi;decimal
+;f1_taillenumfang;f1_taillenumfang;decimal
+;taillenumfang;taillenumfang;decimal
+;hueftumfang;hueftumfang;decimal
+;f1_hueftumfang;f1_hueftumfang;decimal
+;f1_age;Age at follow-up;decimal
+;gj;total energy intake at baseline;decimal
+;zk;total carbohydrates at baseline;decimal
+;ze;total protein intake at baseline;decimal
+;zf;total fat intake at baseline;decimal
+;za;total alcohol intake at baseline;decimal
+;zb;dietary fiber intake at baseline;decimal
+;fs;total saturated fatty acids intake at baseline;decimal
+;fu;total monounsaturated fatty acids intake at baseline;decimal
+;fp;total polyunsaturated fatty acids intake at baseline;decimal
+;kd;total daily dissaccharides intake at baseline;decimal
+;km;total daily monosaccharides intake at baseline;decimal
+;kmt;glucose;decimal
+;kmf;fructose;decimal
+;mna;natrium;decimal
+;mk;kalium;decimal
