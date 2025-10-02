@@ -25,7 +25,7 @@ library(haven)
 #### all needs to be SAS files!!! => just switch after finish testing
 
 #### Step 0: Name of the study
-dataset_name <- "EPICP_P1"
+dataset_name <- "EPICP_P2"
 
 #### Step 1: Import overall DataSchema
 dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
@@ -38,8 +38,8 @@ dataschema <- list(Variables = dataschema_1,
 #### Step 2: Import Datasets 
 #### Import check provided in case the csv file is in German style (delim = ";", dec.point = ",")
 
-input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
 #### Step 2a: Special Import of second data file containing FFQ data
 
@@ -65,7 +65,7 @@ variable1 <- data.frame()
 
 
 for (i in 1:length(input_dataset_FFQ_Info$Name)){
-
+  
   if(is.na(filter2[i])){
     
     variable1 <- input_dataset_FFQ  |> 
@@ -111,7 +111,18 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
   
 }
 
-input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "ident")
+#### Create matching IDs: only P2
+id_matching <- haven::read_sas(here::here("data", paste0("matchtab_p1119_ffqquant_bygroup.sas7bdat"))) |> 
+  rename(ident_ffq = id_p1122)
+
+ffq_result_study <- ffq_result_study |> 
+  rename(ident_ffq = ident)
+
+input_dataset <- input_dataset |> 
+  left_join(id_matching, by = "ident")
+
+input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "ident_ffq") |> 
+  select(-ident_ffq)
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))

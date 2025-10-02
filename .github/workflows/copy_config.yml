@@ -1,0 +1,23 @@
+on: 
+  push:
+    paths: 
+      - config.yml
+
+jobs:
+  Copy_Folder:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Push to another repository
+        uses: nkoppel/push-files-to-another-repository@v1.1.4
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.HARMO_FIGURES }}
+        with:
+          source-files: 'config.yml'
+          destination-username: 'nfdi4health'
+          destination-repository: 'harmonisation-results'
+          destination-directory: 'config'
+          destination-branch: 'main'
+          commit-username: 'FlorianSchw'
+          commit-email: 'Florian.Schwarz@dife.de'
