@@ -7,7 +7,10 @@ library(paletteer)
 plot_studies <- c("KORA",
                   "GINI", 
                   "LISA", 
-                  "KARMEN")
+                  "KARMEN",
+                  "DONALD",
+                  "ACTIVE",
+                  "EPICP")
 
 pilot_project <- c("P1", "P2")
 
@@ -17,7 +20,8 @@ existing_files <- data.frame(list.files(path = here::here("rmonize", "data_proc_
 colnames(existing_files) <- "files"
 wanted_files <- existing_files |> 
   filter(str_detect(files, paste(plot_studies, collapse = "|"))) |> 
-  filter(str_detect(files, paste(pilot_project, collapse = "|")))
+  filter(str_detect(files, paste(pilot_project, collapse = "|"))) |> 
+  filter(!grepl("Information",files))
 
 #### Step 2: Create data.frame for ggplot
 
@@ -66,6 +70,9 @@ if(length(pilot_project) == 2){
   comparison_object$KORA_S1 <- comparison_object$KORA_S1_P1
   comparison_object$KORA_S3 <- comparison_object$KORA_S3_P1
   comparison_object$KARMEN <- comparison_object$KARMEN_P1
+  comparison_object$DONALD <- comparison_object$DONALD_P1
+  comparison_object$ACTIVE <- comparison_object$ACTIVE_P1
+  comparison_object$EPICP <- comparison_object$EPICP_P1
   
   
   for (k in 1:length(comparison_object$dataschema_variable)){
@@ -90,10 +97,22 @@ if(length(pilot_project) == 2){
       comparison_object$KARMEN[k] <- comparison_object$KARMEN_P2[k]
     }
     
+    if(is.na(comparison_object$DONALD[k])){
+      comparison_object$DONALD[k] <- comparison_object$DONALD_P2[k]
+    }
+    
+    if(is.na(comparison_object$ACTIVE[k])){
+      comparison_object$ACTIVE[k] <- comparison_object$ACTIVE_P2[k]
+    }
+    
+    if(is.na(comparison_object$EPICP[k])){
+      comparison_object$EPICP[k] <- comparison_object$EPICP_P2[k]
+    }
+    
   }
   
   
-  comparison_object <- comparison_object[,c(1,12:16)]
+  comparison_object <- comparison_object[,c(1,18:25)]
   
 }
 
@@ -124,13 +143,16 @@ data_for_plot <- within(data_for_plot, KORA_S3[KORA_S3 == "proximate"] <- "parti
 
 
 plot <- data_for_plot |> 
-  select(c(dataschema_variable, group, KORA_S1, KORA_S3, GINI, LISA, KARMEN)) |> 
+  select(c(dataschema_variable, group, KORA_S1, KORA_S3, GINI, LISA, KARMEN, DONALD, ACTIVE, EPICP)) |> 
   pivot_longer(!(c(dataschema_variable, group)), names_to = "Study", values_to = "Status") |> 
   mutate(Study = factor(Study, levels = c("KORA_S1",
                                           "KORA_S3",
                                           "GINI",
                                           "LISA",
-                                          "KARMEN"))) |> 
+                                          "KARMEN",
+                                          "DONALD",
+                                          "ACTIVE",
+                                          "EPICP"))) |> 
   mutate(Status = factor(Status, levels = c("impossible",
                                             "partial",
                                             "complete"))) |>
@@ -139,21 +161,25 @@ plot <- data_for_plot |>
   ggplot(aes(fill = Status, x = Study, y = Variables)) +
   geom_bar(position = "stack", stat = "identity", colour = "black") +
   scale_fill_paletteer_d("MexBrewer::Aurora") +
+  scale_y_continuous(limits = c(0, NA), expand = c(0,0)) +
   labs(title = "Harmonisation Potential across studies") +
   theme_classic() +
-  theme(axis.text.x=element_text(colour="black"),
-        axis.text.y=element_text(colour="black"),
-        axis.title=element_text(size=12,face="bold"),
+  theme(axis.text.x=element_text(colour="black", size=20),
+        axis.text.y=element_text(colour="black", size=20),
+        axis.title=element_text(size=24,face="bold"),
         axis.ticks.x=element_line(colour="black"),
         axis.ticks.y=element_line(colour="black"),
-        plot.title = element_text(color="black", size=18, face="bold.italic", hjust = 0.5))
+        plot.title = element_text(color="black", size=40, face="bold.italic", hjust = 0.5),
+        legend.text = element_text(size=20),
+        legend.title = element_text(size=30))
 
 plot
 
 
 #### Step 4: Save figures in a folder
 
-ggsave(filename = here::here("utils/plots/figures", "Harmonisation_Overview.png"))
+ggsave(filename = here::here("utils/plots/figures", "Harmonisation_Overview.png"),
+       width = 15, height = 15)
 
 
 my_colors <- paletteer::paletteer_d("PrettyCols::Beach")
