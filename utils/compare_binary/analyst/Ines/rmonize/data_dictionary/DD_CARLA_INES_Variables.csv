@@ -10,18 +10,18 @@ index;name;label;valueType
 ;hueftumfang;hueftumfang;decimal
 ;f1_hueftumfang;f1_hueftumfang;decimal
 ;f1_age;Age at follow-up;decimal
-;gj;total energy intake at baseline;decimal
-;zk;total carbohydrates at baseline;decimal
-;ze;total protein intake at baseline;decimal
-;zf;total fat intake at baseline;decimal
-;za;total alcohol intake at baseline;decimal
-;zb;dietary fiber intake at baseline;decimal
-;fs;total saturated fatty acids intake at baseline;decimal
-;fu;total monounsaturated fatty acids intake at baseline;decimal
-;fp;total polyunsaturated fatty acids intake at baseline;decimal
-;kd;total daily dissaccharides intake at baseline;decimal
-;km;total daily monosaccharides intake at baseline;decimal
-;kmt;glucose;decimal
-;kmf;fructose;decimal
-;mna;natrium;decimal
-;mk;kalium;decimal
+;gj;Gesamtenergie [kJ/Tag];decimal
+;zk;Kohlenhydrate [g/Tag];decimal
+;ze;Eiweiß [g/Tag];decimal
+;zf;Fett [g/Tag];decimal
+;za;Alkohol [g/Tag];decimal
+;zb;Ballaststoffe [g/Tag];decimal
+;fs;Gesättigte Fettsäuren [g/Tag];decimal
+;fu;Einfach ungesättigte Fettsaeuren [g/Tag];decimal
+;fp;Mehrfach ungesättigte Fettsaeuren [g/Tag];decimal
+;kd;Disaccharide [g/Tag];decimal
+;km;Monosaccharide [g/Tag];decimal
+;kmt;Glucose [g/Tag];decimal
+;kmf;Fructose [g/Tag];decimal
+;mna;Natrium [g/Tag];decimal
+;mk;Kalium [g/Tag];decimal
