@@ -1,0 +1,41 @@
+index;name;label;valueType
+;ident;participant identifier;integer
+;SEX;sex;integer
+;age0;Age at recruitment;decimal
+;educc7;Accomplished vocational training [7 cat.];integer
+;abschlus;Highest school degree;integer
+;pal;Physical activity level;decimal
+;smkst0i;Smoking status at baseline(imputed);integer
+;occstat6;Current occupation [6cat.];integer
+;zt3;On average, how many cigarettes do you smoke on average per day?;integer
+;zr3;On average, how many cigars/cigarillos do you smoke per day?;integer
+;pf3;On average, how many whole pipes do you smoke per day?;integer
+;d_recrui;Recruitment date;date
+;ysmkces0;Year when stopped smoking (imputed);integer
+;vitamin;Intake of vitamin tablets?;integer
+;radmeno;Menopausal status (excl. operations+hormones);integer
+;horheute;Are you still taking menopausal hormones?;integer
+;zeitraum;How many years have you been on the contraceptive 'pill' in total?;integer
+;kinder;How many children have you born?;integer
+;ff10;Total number of stillbirths;integer
+;kind1;How old were you when you gave birth to your first child?;integer
+;prevcanc;prevalent cancer;integer
+;lipidlower;Lipid-lowering drugs;integer
+;nsar_excl_ASS;non-steroidal anti-inflammatory drug (excl.ASS);integer
+;casemi_fup5;case status of myocardial infarction at FUP5;integer
+;casestroke_fup5;case status of stroke at FUP5;integer
+;dd_incmi;date of diagnosis of myocardial infarction;date
+;dd_incstroke;date of diagnosis of stroke;date
+;caseI63_fup5;ischaemic insult (ICD-10 I63);integer
+;caseI61_fup5;intracerebral hemorrhage (ICD-10 I61);integer
+;casehyp_fup5;case status of essential hypertension at FUP5;integer
+;dd_inchyp;date of diagnosis of essential hypertension;date
+;casehf_fup5;case status of heart failure at FUP5;integer
+;dd_inchf;date of diagnosis of heart failure;date
+;casediab_fup5;case status of diabetes at FUP5;integer
+;dd_incdiab;date of diagnosis of diabetes;date
+;inccanc_fup5;incident first occuring cancer at FUP5;integer
+;dd_inccanc;date of diagnosis of first occuring cancer;date
+;vitstat5;vital status at FUP5;integer
+;age_death;age of death;decimal
+;age_fup5;age at FUP5;decimal
