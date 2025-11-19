@@ -40,6 +40,16 @@ dataschema <- list(Variables = dataschema_1,
 
 input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
+#### missing abschlus variable in P1 dataset, can be deleted when dataset is updated
+id_matching <- haven::read_sas(here::here("data", paste0("matchtab_p1119_ffqquant_bygroup.sas7bdat")))
+dataset_P2 <- haven::read_sas(here::here("data", paste0("DATA_", "EPICP_P2",".sas7bdat"))) |> 
+  left_join(id_matching, by = "ident") |> 
+  select(id_p1122, abschlus) |> 
+  rename(ident = id_p1122)
+
+input_dataset <- input_dataset |> 
+  left_join(dataset_P2, by = "ident") |> 
+  relocate(abschlus, .after = educc7)
 
 #### Step 2a: Special Import of second data file containing FFQ data
 
@@ -49,9 +59,15 @@ input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_
 #### Step 2b: Resolve FFQ data
 input_dataset_FFQ_Info <- tibble(readxl::read_excel(here::here(paste0("rmonize/data_proc_elem/", dataset_name,"_FFQ_Information.xlsx")), sheet = 1)) 
 
+input_dataset_FFQ_Info <- input_dataset_FFQ_Info |> 
+  mutate(across(c("GROUP", "subgroup1", "subgroup2"), ~ ifelse(is.na(.),NA,
+                                                               ifelse(nchar(.) == 2, .,paste0("0",.))))) |> 
+  rename(subgr1 = subgroup1,
+         subgr2 = subgroup2)
+
 filter1 <- input_dataset_FFQ_Info$GROUP
-filter2 <- input_dataset_FFQ_Info$subgroup1
-filter3 <- input_dataset_FFQ_Info$subgroup2
+filter2 <- input_dataset_FFQ_Info$subgr1
+filter3 <- input_dataset_FFQ_Info$subgr2
 name <- input_dataset_FFQ_Info$Name
 
 
@@ -59,6 +75,7 @@ unique_participants <- unique(input_dataset_FFQ$ident)
 ffq_result_study <- data.frame(matrix(ncol = 1, nrow = length(unique_participants)))
 colnames(ffq_result_study) <- c("ident")
 ffq_result_study$ident <- unique_participants
+
 
 
 variable1 <- data.frame()
@@ -70,8 +87,8 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
     
     variable1 <- input_dataset_FFQ  |> 
       dplyr::filter(GROUP == filter1[i]) |> 
-      dplyr::group_by(ident_ffq)  |> 
-      summarise(variable = sum(quant_grp17)) 
+      dplyr::group_by(ident)  |> 
+      summarise(variable = sum(cons_qty_fg)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
@@ -82,9 +99,9 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
     
     variable1 <- input_dataset_FFQ  |> 
       dplyr::filter(GROUP == filter1[i],
-                    subgroup1 == filter2[i]) |> 
-      dplyr::group_by(ident_ffq)  |> 
-      summarise(variable = sum(quant_grp17)) 
+                    subgr1 == filter2[i]) |> 
+      dplyr::group_by(ident)  |> 
+      summarise(variable = sum(cons_qty_fg)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
@@ -95,10 +112,10 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
     
     variable1 <- input_dataset_FFQ  |> 
       dplyr::filter(GROUP == filter1[i],
-                    subgroup1 == filter2[i],
-                    subgroup2 == filter3[i]) |> 
-      dplyr::group_by(ident_ffq)  |> 
-      summarise(variable = sum(quant_grp17)) 
+                    subgr1 == filter2[i],
+                    subgr2 == filter3[i]) |> 
+      dplyr::group_by(ident)  |> 
+      summarise(variable = sum(cons_qty_fg)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
@@ -112,6 +129,12 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
 }
 
 input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "ident")
+
+maelstrom_id_match <- data.frame(DIFE = input_dataset$ident,
+                                 MAEL = 1:length(input_dataset$ident))
+
+input_dataset <- input_dataset |> 
+  mutate(ident = row_number())
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
@@ -181,6 +204,11 @@ fabR::bookdown_open(bookdown_path)
 
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
+harmonized_dataset <- left_join(harmonized_dataset, maelstrom_id_match, by = c("ID" = "MAEL")) |> 
+  select(-ID) |> 
+  mutate(ID = DIFE) |> 
+  select(-DIFE) |> 
+  relocate(ID, .before = SEX)
 
 ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
 
