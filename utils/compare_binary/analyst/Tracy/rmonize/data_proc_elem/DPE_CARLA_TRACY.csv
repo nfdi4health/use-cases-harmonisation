@@ -72,8 +72,18 @@ fr_period1 == 2 & age >= 45 & age <= 55 ~ 2,
       f1_htn_kora == 1 | f2_htn_kora == 1 ~ 1,
       f1_htn_kora == 0 & f2_htn_kora == 0 ~ 0,
       TRUE ~ NA_real_
-    )";;complete;compatible
-;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;AGE_HYP;direct_mapping;direct_mapping;Variable will be calculated by DHO;complete;identical
+    )";"# if f1_htn_kora or  f2_htn_kora is yes(1) then map to 1
+# both No(0) then map to 0
+# everything else(NA)";complete;compatible
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;"f1_htn_kora ;f2_htn_kora;F1_untdat;F2_untdat;gebdat";case_when;"case_when(
+  f1_htn_kora == 1 ~ F1_untdat - gebdat,              
+  f1_htn_kora != 1 & f2_htn_kora == 1 ~ F2_untdat - gebdat,  
+  TRUE ~ NA_real_
+)";"#If f1_htn_kora(measurement of presure) =(yes)1, use F1_untdat - gebdat 
+#Else if f2_htn_kora(medical use) = (yes)1, use F2_untdat - gebdat
+#If both are 1, the first condition already takes the F1 value
+
+#If neither are 1, return NA";complete;identical
 ;INC_HF;Heart failure during follow-up;integer;;f1_chf_total_inz;direct_mapping;direct_mapping;measured HF via echocardiography, symptoms and pBNP at FU1;complete;identical
 ;AGE_HF;Age at diagnosis of heart failure [years];decimal;;"f2_insuff_date;gebdat";operation;f2_insuff_date-gebdat;date of diagnose and the date of birth;complete;compatible
 ;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;;impossible;impossible;;impossible;incompatible

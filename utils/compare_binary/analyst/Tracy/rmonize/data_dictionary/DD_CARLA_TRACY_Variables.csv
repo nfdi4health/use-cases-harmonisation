@@ -36,3 +36,5 @@ index;name;label;valueType
 ;vit_stat;Vital status(1=dead/0=alive));integer
 ;tod_dat;Date of death;date
 ;gebdat;Date of birth;date
+;F1_untdat;baseline examination for follow-up 1;date
+;F2_untdat;baseline examination for follow-up 2;date
