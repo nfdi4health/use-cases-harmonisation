@@ -1,0 +1,27 @@
+index;name;label;valueType
+;tg;Triglyceride (mmol/l);decimal
+;chol;Cholesterol (mmol/l);decimal
+;ldlc;LDL measured (mmol/l);decimal
+;hdl;HDL (mmol/l);decimal
+;bmi;bmi;decimal
+;f1_bmi;f1_bmi;decimal
+;f1_taillenumfang;f1_taillenumfang;decimal
+;taillenumfang;taillenumfang;decimal
+;hueftumfang;hueftumfang;decimal
+;f1_hueftumfang;f1_hueftumfang;decimal
+;f1_age;Age at follow-up;decimal
+;gj;Gesamtenergie [kJ/Tag];decimal
+;zk;Kohlenhydrate [g/Tag];decimal
+;ze;Eiweiß [g/Tag];decimal
+;zf;Fett [g/Tag];decimal
+;za;Alkohol [g/Tag];decimal
+;zb;Ballaststoffe [g/Tag];decimal
+;fs;Gesättigte Fettsäuren [g/Tag];decimal
+;fu;Einfach ungesättigte Fettsaeuren [g/Tag];decimal
+;fp;Mehrfach ungesättigte Fettsaeuren [g/Tag];decimal
+;kd;Disaccharide [g/Tag];decimal
+;km;Monosaccharide [g/Tag];decimal
+;kmt;Glucose [g/Tag];decimal
+;kmf;Fructose [g/Tag];decimal
+;mna;Natrium [g/Tag];decimal
+;mk;Kalium [g/Tag];decimal
