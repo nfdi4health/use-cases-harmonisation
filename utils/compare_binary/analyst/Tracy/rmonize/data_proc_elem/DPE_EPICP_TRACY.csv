@@ -1,0 +1,107 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;ident;id_creation;id_creation;;complete;identical
+;SEX;Sex;integer;;SEX;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;age0;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Highest level of education [ISCED 2011];integer;;"educc7;abschlus";case_when;"case_when(
+educc7 %in% c(7) ~ 7L,
+educc7 %in% c(5,6) ~ 6L,
+educc7 %in% c(3,4) ~ 4L,
+abschlus %in% c(3,4) ~ 3L,
+abschlus %in% c(1,2) ~ 2L,
+abschlus %in% c(5) ~ 0L,
+TRUE ~ NA_integer_)";;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;pal;direct_mapping;direct_mapping;;complete;identical
+;SMOKE_ST;Smoking status;integer;;smkst0i;direct_mapping;direct_mapping;;complete;identical
+;EMPLOY;Employment;integer;;occstat6;recode;"recode(1=1; 2=2; 3=7; 4=7; 5=4; 6=5)";;complete;compatible
+;IMMIGRATION;Immigration background;integer;;impossible;impossible;impossible;;impossible;unavailable
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;"zt3;zr3;pf3";operation;"ifelse(is.na(zt3),
+                      ifelse(is.na(zr3), 
+                             ifelse(is.na(pf3),0,pf3*5),
+                             ifelse(is.na(pf3),zr3*5,zr3*5+pf3*5)),
+                      ifelse(is.na(zr3),
+                             ifelse(is.na(pf3),zt3*1,zt3*1+pf3*5),
+                             ifelse(is.na(pf3),zt3*1+zr3*5, zt3*1+ zr3*5 + pf3*5)))";;complete;compatible
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;"age0;d_recrui;ysmkces0";operation;"age0 + (as.numeric(as.Date(paste0(ysmkces0, ""-06-30"")))-as.numeric(d_recrui))/365.25";;complete;compatible
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;vitamin;direct_mapping;direct_mapping;;complete;identical
+;MENOPAUSE;Menopause status;integer;;radmeno;recode;"recode(0=3; 1=0; 2=1; 9=NA)";no distinction between pre- and perimenopausal possible, hence this was mapped to premenopausal category in harmonized variable;partial;proximate
+;HRT;Hormone replacement therapy;integer;;horheute;direct_mapping;direct_mapping;;complete;identical
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;zeitraum;direct_mapping;direct_mapping;;complete;identical
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;kinder;direct_mapping;direct_mapping;number of children as proxy for number of pregnancies;partial;proximate
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;kind1;direct_mapping;direct_mapping;;complete;identical
+;PREV_DIAB;History of diabetes;integer;;casediab_fup5;case_when;"case_when(
+casediab_fup5 == 1 ~ 1L,
+TRUE ~ 0)";;complete;compatible
+;PREV_HYP;History of hypertension;integer;;casehyp_fup5;case_when;"case_when(
+casehyp_fup5 == 1 ~ 1L,
+TRUE ~ 0)";;complete;compatible
+;PREV_CVD;History of cardiovascular disease;integer;;"casemi_fup5;casestroke_fup5";case_when;"case_when(
+casemi_fup5 == 1 | casestroke_fup5 == 1 | casehf_fup5 == 1 ~ 1L,
+TRUE ~ 0L)";;complete;compatible
+;PREV_CANCER;History of cancer;integer;;prevcanc;direct_mapping;direct_mapping;;complete;identical
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;impossible;impossible;impossible;;impossible;unavailable
+;FAM1_DIAB2;First degree family history of T2D;integer;;impossible;impossible;impossible;;impossible;unavailable
+;FAM1_CANCER;First degree family history of cancer;integer;;impossible;impossible;impossible;;impossible;unavailable
+;DRE_SCREEN;Screening, DRE;integer;;impossible;impossible;impossible;;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;impossible;impossible;impossible;;impossible;unavailable
+;FOBT_SCREEN;Screening, FOBT;integer;;impossible;impossible;impossible;;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;impossible;impossible;impossible;;impossible;unavailable
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;impossible;impossible;impossible;;impossible;unavailable
+;MAMMO_SCREEN;Screening, mammography;integer;;impossible;impossible;impossible;;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;impossible;impossible;impossible;;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;lipidlower;direct_mapping;direct_mapping;;complete;identical
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;nsar_excl_ASS;direct_mapping;direct_mapping;;complete;identical
+;INC_CVD;CVD event during follow-up;integer;;"casemi_fup5;casestroke_fup5;casehf_fup5";case_when;"case_when(
+  casemi_fup5 %in% c(2,5) | casestroke_fup5 %in% c(2,6) | casehf_fup5 == 2 ~ 1L,
+  casemi_fup5 %in% c(0) | casestroke_fup5 %in% c(0) | casehf_fup5 %in% c(0) ~ 0L,
+  TRUE ~ NA_integer_)";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15 (Sekundärhypertonie, aufgrund einer anderen Erkrankung); 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified); 1, 3, 8 (nur Totenschein, nicht verifiziert; aber für Mortalitätsanalyse verwendbar), 9";complete;compatible
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;"age0;d_recrui;dd_incmi;dd_incstroke;dd_inchf";operation;"as.numeric(pmin(age0 + ((dd_inchf - d_recrui)/365.25),
+                     age0 + ((dd_incstroke - d_recrui)/365.25),
+                     age0 + ((dd_incmi - d_recrui)/365.25), na.rm = TRUE))";;complete;compatible
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;impossible;impossible;impossible;not verified, only self-report;impossible;unavailable
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;impossible;impossible;impossible;;impossible;unavailable
+;INC_MI;Myocardial infarction during follow-up;integer;;casemi_fup5;case_when;"case_when(
+casemi_fup5 %in% c(2,5) ~ 1L,
+casemi_fup5 %in% c(0) ~ 0L,
+TRUE ~ NA_integer_)";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified); 1,3, 6, 8, 9 should be excluded";complete;compatible
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;"age0;d_recrui;dd_incmi";operation;age0 + ((dd_incmi - d_recrui)/365.25);;complete;compatible
+;INC_STR;Stroke during follow-up;integer;;casestroke_fup5;case_when;"case_when(
+casestroke_fup5 %in% c(2,6) ~ 1L,
+casestroke_fup5 %in% c(0) ~ 0L,
+TRUE ~ NA_integer_)";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified); 1, 3, 5, 8, 9 should be excluded";complete;compatible
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;"age0;d_recrui;dd_incstroke";operation;age0 + ((dd_incstroke - d_recrui)/365.25);;complete;compatible
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;caseI63_fup5;case_when;"case_when(caseI63_fup5 == 1 ~ 1L,
+                          caseI63_fup5 == 0 ~ 0L,
+                          is.na(caseI63_fup5) ~ 0L)";nur yes/no kodiert (abgeleitet aus dem ICD-10 Code);complete;identical
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;"age0;d_recrui;dd_incstroke";operation;age0 + ((dd_incstroke - d_recrui)/365.25);;complete;compatible
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;caseI61_fup5;case_when;"case_when(caseI61_fup5 == 1 ~ 1L,
+                          caseI61_fup5 == 0 ~ 0L,
+                          is.na(caseI61_fup5) ~ 0L)";;complete;identical
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;"age0;d_recrui;dd_incstroke";operation;age0 + ((dd_incstroke - d_recrui)/365.25);;complete;compatible
+;INC_HYP;Essential hypertension during follow-up;integer;;casehyp_fup5;case_when;"case_when(
+casehyp_fup5 == 2 ~ 1L,
+casehyp_fup5 == 0 ~ 0L,
+TRUE ~ NA_integer_)";"0=not diseased; 1= prevalent; 2=incident; 3= incident I15; 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified); 1, 3, 8, 9 should be excluded";complete;compatible
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;"age0;d_recrui;dd_inchyp";operation;age0 + ((dd_inchyp - d_recrui)/365.25);;complete;compatible
+;INC_HF;Heart failure during follow-up;integer;;casehf_fup5;case_when;"case_when(
+casehf_fup5 == 2 ~ 1L,
+casehf_fup5 == 0 ~ 0L,
+TRUE ~ NA_integer_)";;complete;compatible
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;"age0;d_recrui;dd_inchf";operation;age0 + ((dd_inchf - d_recrui)/365.25);;complete;compatible
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;casediab_fup5;case_when;"case_when(
+casediab_fup5 == 2 ~ 1L,
+casediab_fup5 == 0 ~ 0L,
+TRUE ~ NA_integer_)";"0=not diseased; 1= prevalent; 2=incident;3= incident I15; 4=inc. Diabetes (other types); 5=I252 old MI, date of diagnosis unknown; 6=I64Y old stroke, date of diagnosis unknown; 8=incident DCO; 9= incident (not yet verified); 1, 3, 5, 6, 8, 9 should be excluded";complete;compatible
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;"age0;d_recrui;dd_incdiab";operation;age0 + ((dd_incdiab - d_recrui)/365.25);;complete;compatible
+;INC_CANCER;Cancer during follow-up;integer;;inccanc_fup5;direct_mapping;direct_mapping;"first occuring tumor (derived from ICDO2 or ICDO3 code); yes/no coded";complete;identical
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;impossible;impossible;impossible;;impossible;unavailable
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;"age0;d_recrui;dd_inccanc";operation;age0 + ((dd_inccanc - d_recrui)/365.25);"if inccanc_fup5=1, then take dd_inccanc; if inccanc_fup5 = 0, then take dcens_canc";impossible;unavailable
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;vitstat5;recode;"recode(1=1; 2= 0; 6= 1)";"vital status at follow-up 5: 
+1= alive;
+2= dead;
+6=dropped out";complete;compatible
+;AGE_DEATH;Age at time of death [years];decimal;;age_death;direct_mapping;direct_mapping;;complete;identical
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;impossible;impossible;impossible;vitstat5 is used in all cases;impossible;unavailable
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;impossible;impossible;impossible;vitstat5 is used in all cases;impossible;unavailable
+;AGE_FUP;Age at end of follow-up [years];decimal;;age_fup5;direct_mapping;direct_mapping;;complete;identical

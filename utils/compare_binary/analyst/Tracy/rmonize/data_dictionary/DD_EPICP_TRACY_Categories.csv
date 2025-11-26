@@ -1,0 +1,72 @@
+variable;name;label
+SEX;1;men
+SEX;2;women
+educc7;1;Still in vocational training
+educc7;2;No vocational degree
+educc7;3;Accredited semi-skilled worker
+educc7;4;Vocational training completed
+educc7;5;Degree of a technical school, trade school or technical
+educc7;6;Degree of an university of applied sciences
+educc7;7;University degree
+abschlus;1;Graduation 8th grade
+abschlus;2;Graduated from 10th grade
+abschlus;3;advanced technical college entrance qualification
+abschlus;4;university entrance qualification
+abschlus;5;no school leaving certificate
+smkst0i;1;never smoker
+smkst0i;2;former smoker
+smkst0i;3;smoker
+occstat6;1;full time (>=35h/week)
+occstat6;2;part time (15-<35h/week))
+occstat6;3;hourly (<15h/week)
+occstat6;4;jobless/retraining
+occstat6;5;(early) retirement/invalidity pension
+occstat6;6;unemployed
+vitamin;0;No
+vitamin;1;Yes
+radmeno;0;Surgically induced menopause
+radmeno;1;pre- or perimenopausal
+radmeno;2;postmenopausal
+radmeno;9;undefinable
+horheute;0;No
+horheute;1;Yes
+prevcanc;0;No
+prevcanc;1;Yes
+lipidlower;0;No
+lipidlower;1;Yes
+nsar_excl_ASS;0;No
+nsar_excl_ASS;1;Yes
+casemi_fup5;0;not diseased
+casemi_fup5;1;prevalent
+casemi_fup5;2;incident (verif.)
+casemi_fup5;5;I252 (old MI, unknown date of occurence)
+casemi_fup5;9;incident (not verif.)
+casestroke_fup5;0;not diseased
+casestroke_fup5;1;prevalent
+casestroke_fup5;2;incident (verif.)
+casestroke_fup5;6;I64Y old stroke, date of diagnosis unknown
+casestroke_fup5;9;incident (not verif.)
+caseI63_fup5;0;No
+caseI63_fup5;1;Yes
+caseI61_fup5;0;No
+caseI61_fup5;1;Yes
+casehyp_fup5;0;not diseased
+casehyp_fup5;1;prevalent
+casehyp_fup5;2;incident (verif.)
+casehyp_fup5;3;incident I15
+casehyp_fup5;9;incident (not verif.)
+casehf_fup5;0;not diseased
+casehf_fup5;1;prevalent
+casehf_fup5;2;incident (verif.)
+casehf_fup5;9;incident (not verif.)
+casediab_fup5;0;not diseased
+casediab_fup5;1;prevalent
+casediab_fup5;2;incident (verif.)
+casediab_fup5;4;inc. Diabetes (other types)
+casediab_fup5;9;incident (not verif.)
+inccanc_fup5;0;No
+inccanc_fup5;1;Yes
+inccanc_fup5;9;incident (not verif.)
+vitstat5;1;alive
+vitstat5;2;dead
+vitstat5;6;dropped out
