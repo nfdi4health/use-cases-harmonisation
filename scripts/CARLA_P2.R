@@ -25,11 +25,11 @@ library(haven)
 #### all needs to be SAS files!!! => just switch after finish testing
 
 #### Step 0: Name of the study
-dataset_name <- "CARLA_P1"
+dataset_name <- "CARLA_P2"
 
 #### Step 1: Import overall DataSchema
-dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
-dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2))
+dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1))
+dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 2))
 
 dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
@@ -103,7 +103,7 @@ variable1 <- data.frame()
 
 
 for (i in 1:length(input_dataset_FFQ_Info$Name)){
-
+  
   if(is.na(filter2[i])){
     
     variable1 <- input_dataset_FFQ  |> 
@@ -148,6 +148,23 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
   variable1 <- data.frame()
   
 }
+
+
+ffq_result_study <- ffq_result_study |> 
+  select(c(frgb_id,
+           SUGAR_CONFECT_11,
+           CAKES_12,
+           FRUITVEG_JUICE_1301,
+           SOFTDRINKS_1302,
+           ART_SWEETENER_170201,
+           VEGETABLES_02,
+           LEGUMES_TOT_03,
+           FRUITS_TOT_04,
+           RED_MEAT_0701,
+           PROCMEAT_0704,
+           COFFEE_130301,
+           TEA_130302))
+
 
 input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "frgb_id") |> 
   select(-frgb_id)
