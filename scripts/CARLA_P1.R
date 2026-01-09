@@ -3,7 +3,6 @@
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 #### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
 # install.packages("remotes")
-# library(remotes)
 # remotes::install_github("cran/madshapR@1.1.0")
 # remotes::install_github("cran/Rmonize@1.1.0")
 # install.packages("readxl")
@@ -38,25 +37,13 @@ dataschema <- list(Variables = dataschema_1,
 #### Step 2: Import Datasets 
 
 #### this refers to the main dataset containing information from Baseline, FU1 and FU2
-# input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
-# input_dataset <- rename_with(input_dataset, tolower)
-
-################# test
-input_dataset <- readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,".xlsx")))
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 input_dataset <- rename_with(input_dataset, tolower)
-################# test ende
-
 
 
 #### this refers to the Nutrintake Dataset
-# input_dataset_nutrients <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.sas7bdat")))
-# input_dataset_nutrients <- rename_with(input_dataset_nutrients, tolower)
-
-
-################# test
-input_dataset_nutrients <- readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.xlsx")))
+input_dataset_nutrients <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.sas7bdat")))
 input_dataset_nutrients <- rename_with(input_dataset_nutrients, tolower)
-################# test ende
 
 
 #### Merging the main dataset with the nutrintake dataset
@@ -65,19 +52,11 @@ input_dataset <- dplyr::left_join(input_dataset, input_dataset_nutrients, by = "
 
 #### Step 2a: Special Import of second data file containing FFQ data
 
-# input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
-# input_dataset_FFQ <- rename_with(input_dataset_FFQ, tolower)
-
-
-
-################# test
-input_dataset_FFQ <- readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.xlsx")))
+input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
 input_dataset_FFQ <- rename_with(input_dataset_FFQ, tolower)
 input_dataset_FFQ <- input_dataset_FFQ |> 
   mutate(across(c("group", "subgroup1", "subgroup2"), ~ ifelse(is.na(.),NA,
                                                                ifelse(nchar(.) == 2, .,paste0("0",.))))) 
-################# test ende
-
 
 
 #### Step 2b: Resolve FFQ data
@@ -152,9 +131,9 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
 input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "frgb_id") |> 
   select(-frgb_id)
 
+
 #### storing and replacing original ID numbers for the Maelstrom harmonisation process as they are sometimes too large
 #### which can cause problems as the columns are not interpreted as integer anymore
-
 maelstrom_id_match <- data.frame(CARLA = input_dataset$id,
                                  MAEL = 1:length(input_dataset$id))
 
@@ -236,6 +215,7 @@ harmonized_dataset <- left_join(harmonized_dataset, maelstrom_id_match, by = c("
   mutate(ID = CARLA) |>
   select(-CARLA) |>
   select(ID, everything())
+
 
 ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
 
