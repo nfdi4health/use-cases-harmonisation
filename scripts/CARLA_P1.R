@@ -21,8 +21,6 @@ library(car)
 library(writexl)
 library(haven)
 
-#### all needs to be SAS files!!! => just switch after finish testing
-
 #### Step 0: Name of the study
 dataset_name <- "CARLA_P1"
 
@@ -50,7 +48,7 @@ input_dataset_nutrients <- rename_with(input_dataset_nutrients, tolower)
 input_dataset <- dplyr::left_join(input_dataset, input_dataset_nutrients, by = "frgb_id")
 
 
-#### Step 2a: Special Import of second data file containing FFQ data
+#### Step 2a: Special Import of third data file containing FFQ data
 
 input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
 input_dataset_FFQ <- rename_with(input_dataset_FFQ, tolower)
