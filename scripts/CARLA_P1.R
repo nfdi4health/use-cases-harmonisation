@@ -1,4 +1,4 @@
-#### Script for harmonizing KORA_S1_P1 for NFDI4Health
+#### Script for harmonizing CARLA_P1 for NFDI4Health
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 #### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
