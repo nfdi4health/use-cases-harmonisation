@@ -17,7 +17,7 @@ jobs:
           source-files: 'rmonize/data_proc_elem/'
           destination-username: 'nfdi4health'
           destination-repository: 'harmonisation-results'
-          destination-directory: 'rmonize'
+          destination-directory: 'utils/rmonize'
           destination-branch: 'main'
           commit-username: 'FlorianSchw'
           commit-email: 'Florian.Schwarz@dife.de'

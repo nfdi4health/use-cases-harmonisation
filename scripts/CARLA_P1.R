@@ -1,9 +1,8 @@
-#### Script for harmonizing KORA_S1_P1 for NFDI4Health
+#### Script for harmonizing CARLA_P1 for NFDI4Health
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 #### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
 # install.packages("remotes")
-# library(remotes)
 # remotes::install_github("cran/madshapR@1.1.0")
 # remotes::install_github("cran/Rmonize@1.1.0")
 # install.packages("readxl")
@@ -22,10 +21,8 @@ library(car)
 library(writexl)
 library(haven)
 
-#### all needs to be SAS files!!! => just switch after finish testing
-
 #### Step 0: Name of the study
-dataset_name <- "EPICP_P1"
+dataset_name <- "CARLA_P1"
 
 #### Step 1: Import overall DataSchema
 dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
@@ -36,46 +33,47 @@ dataschema <- list(Variables = dataschema_1,
 
 
 #### Step 2: Import Datasets 
-#### Import check provided in case the csv file is in German style (delim = ";", dec.point = ",")
 
+#### this refers to the main dataset containing information from Baseline, FU1 and FU2
 input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
+input_dataset <- rename_with(input_dataset, tolower)
 
-#### missing abschlus variable in P1 dataset, can be deleted when dataset is updated
-id_matching <- haven::read_sas(here::here("data", paste0("matchtab_p1119_ffqquant_bygroup.sas7bdat")))
-dataset_P2 <- haven::read_sas(here::here("data", paste0("DATA_", "EPICP_P2",".sas7bdat"))) |> 
-  left_join(id_matching, by = "ident") |> 
-  select(id_p1122, abschlus) |> 
-  rename(ident = id_p1122)
 
-input_dataset <- input_dataset |> 
-  left_join(dataset_P2, by = "ident") |> 
-  relocate(abschlus, .after = educc7)
+#### this refers to the Nutrintake Dataset
+input_dataset_nutrients <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.sas7bdat")))
+input_dataset_nutrients <- rename_with(input_dataset_nutrients, tolower)
 
-#### Step 2a: Special Import of second data file containing FFQ data
 
-input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_FFQ.sas7bdat")))
+#### Merging the main dataset with the nutrintake dataset
+input_dataset <- dplyr::left_join(input_dataset, input_dataset_nutrients, by = "frgb_id")
+
+
+#### Step 2a: Special Import of third data file containing FFQ data
+
+input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
+input_dataset_FFQ <- rename_with(input_dataset_FFQ, tolower)
+input_dataset_FFQ <- input_dataset_FFQ |> 
+  mutate(across(c("group", "subgroup1", "subgroup2"), ~ ifelse(is.na(.),NA,
+                                                               ifelse(nchar(.) == 2, .,paste0("0",.))))) 
 
 
 #### Step 2b: Resolve FFQ data
 input_dataset_FFQ_Info <- tibble(readxl::read_excel(here::here(paste0("rmonize/data_proc_elem/", dataset_name,"_FFQ_Information.xlsx")), sheet = 1)) 
 
+
 input_dataset_FFQ_Info <- input_dataset_FFQ_Info |> 
   mutate(across(c("GROUP", "subgroup1", "subgroup2"), ~ ifelse(is.na(.),NA,
-                                                               ifelse(nchar(.) == 2, .,paste0("0",.))))) |> 
-  rename(subgr1 = subgroup1,
-         subgr2 = subgroup2)
+                                                               ifelse(nchar(.) == 2, .,paste0("0",.))))) 
 
 filter1 <- input_dataset_FFQ_Info$GROUP
-filter2 <- input_dataset_FFQ_Info$subgr1
-filter3 <- input_dataset_FFQ_Info$subgr2
+filter2 <- input_dataset_FFQ_Info$subgroup1
+filter3 <- input_dataset_FFQ_Info$subgroup2
 name <- input_dataset_FFQ_Info$Name
 
-
-unique_participants <- unique(input_dataset_FFQ$ident)
+unique_participants <- unique(input_dataset_FFQ$frgb_id)
 ffq_result_study <- data.frame(matrix(ncol = 1, nrow = length(unique_participants)))
-colnames(ffq_result_study) <- c("ident")
-ffq_result_study$ident <- unique_participants
-
+colnames(ffq_result_study) <- c("frgb_id")
+ffq_result_study$frgb_id <- unique_participants
 
 
 variable1 <- data.frame()
@@ -86,41 +84,41 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
   if(is.na(filter2[i])){
     
     variable1 <- input_dataset_FFQ  |> 
-      dplyr::filter(GROUP == filter1[i]) |> 
-      dplyr::group_by(ident)  |> 
-      summarise(variable = sum(cons_qty_fg)) 
+      dplyr::filter(group == filter1[i]) |> 
+      dplyr::group_by(frgb_id)  |> 
+      summarise(variable = sum(gramm)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "frgb_id")
     
   } else if(is.na(filter3[i])){
     
     variable1 <- input_dataset_FFQ  |> 
-      dplyr::filter(GROUP == filter1[i],
-                    subgr1 == filter2[i]) |> 
-      dplyr::group_by(ident)  |> 
-      summarise(variable = sum(cons_qty_fg)) 
+      dplyr::filter(group == filter1[i],
+                    subgroup1 == filter2[i]) |> 
+      dplyr::group_by(frgb_id)  |> 
+      summarise(variable = sum(gramm)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "frgb_id")
     
   } else {
     
     variable1 <- input_dataset_FFQ  |> 
-      dplyr::filter(GROUP == filter1[i],
-                    subgr1 == filter2[i],
-                    subgr2 == filter3[i]) |> 
-      dplyr::group_by(ident)  |> 
-      summarise(variable = sum(cons_qty_fg)) 
+      dplyr::filter(group == filter1[i],
+                    subgroup1 == filter2[i],
+                    subgroup2 == filter3[i]) |> 
+      dplyr::group_by(frgb_id)  |> 
+      summarise(variable = sum(gramm)) 
     
     variable1[[paste0(name[i])]] <- variable1$variable 
     variable1 <- variable1[c(1,3)]
     
-    ffq_result_study <- left_join(ffq_result_study, variable1, by = "ident")
+    ffq_result_study <- left_join(ffq_result_study, variable1, by = "frgb_id")
     
   }
   
@@ -128,13 +126,17 @@ for (i in 1:length(input_dataset_FFQ_Info$Name)){
   
 }
 
-input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "ident")
+input_dataset <- dplyr::left_join(input_dataset, ffq_result_study, by = "frgb_id") |> 
+  select(-frgb_id)
 
-maelstrom_id_match <- data.frame(DIFE = input_dataset$ident,
-                                 MAEL = 1:length(input_dataset$ident))
 
-input_dataset <- input_dataset |> 
-  mutate(ident = row_number())
+#### storing and replacing original ID numbers for the Maelstrom harmonisation process as they are sometimes too large
+#### which can cause problems as the columns are not interpreted as integer anymore
+maelstrom_id_match <- data.frame(CARLA = input_dataset$id,
+                                 MAEL = 1:length(input_dataset$id))
+
+input_dataset <- input_dataset |>
+  mutate(id = row_number())
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
@@ -204,11 +206,14 @@ fabR::bookdown_open(bookdown_path)
 
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
-harmonized_dataset <- left_join(harmonized_dataset, maelstrom_id_match, by = c("ID" = "MAEL")) |> 
-  select(-ID) |> 
-  mutate(ID = DIFE) |> 
-  select(-DIFE) |> 
-  relocate(ID, .before = SEX)
+
+#### re-attaching correct ID's
+harmonized_dataset <- left_join(harmonized_dataset, maelstrom_id_match, by = c("ID" = "MAEL")) |>
+  select(-ID) |>
+  mutate(ID = CARLA) |>
+  select(-CARLA) |>
+  select(ID, everything())
+
 
 ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
 
