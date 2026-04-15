@@ -3,27 +3,45 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;SEX;Sex;integer;;sex_child;direct_mapping;direct_mapping;;complete;identical
 ;AGE_BASE;Age at exposure measure [years];decimal;;age;direct_mapping;direct_mapping;;complete;identical
 ;EDU_LEVEL;Education;integer;;isced_max;recode;"recode(0=0;1=1;2=2;3=3;4=4;5=5;6=7;)";;complete;compatible
-;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"phys_activ;leis_activ";operation;(4 * phys_activ + 1.5 * leis_activ) / 7;;complete;compatible
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;"phys_activ;leis_activ";operation;6.17 * (phys_activ + leis_activ) / 7;The average MET value of children between 6 to 15years was determined according to NCCOR Compendium.METy Values (Smoothed) – View All Categories - NCCOR Youth Compendium of Physical Activities;complete;compatible
 ;SMOKE_ST;Smoking status;integer;;;impossible;impossible;;impossible;unavailable
-;EMPLOY;Employment;integer;;"occupst_1;occupst_2";case_when;"case_when(
-      occupst_1 == c(1)|occupst_2== c(1) ~ 1L,
-      occupst_1==c(2)|occupst_2==c(2) ~ 2L,  
-      occupst_1 == c(4)&occupst_2==(4)~ 3L,
-     occupst_1 == c(5)&occupst_2== c(5) ~ 4L,                                                                                                    occupst_1 %in% c(7,8,9) &occupst_2%in%c(7,8,9) ~ 5L,                                                                                            occupst_1 ==c(3)& occupst_2==c(3)~ 6L,                                                                                        occupst_1 ==c(6,10) &  occupst_2==c(6,10) ~ 7L,                                                                                  is.na(occupst_1)&occupst_2== c(5) ~ 5L,
-      is.na(occupst_2) & occupst_1== c(5) ~ 5L,
-      is.na(occupst_1) & is.na(occupst_2) ~ 7L,
-      TRUE ~ NA_integer_)";"
-If either parent is ""fully employed (100%),"" assign 1L.
-If either parent works ""more than half day,"" ""half day,"" or ""less than half day,""  assign 2L.
-If both parents are ""not at all employed,"" assign 5L.
-If one parent's status is NA, use the other parent's status to determine the category.
-If both are NA, assign 7L (""other"").";complete;compatible
+;EMPLOY;Employment;integer;;"occupst_1;occupst_2";case_when;"occupation_level <- case_when(
+  occupst_1 %in% 1 | occupst_2 %in% 1 ~ 1L, 
+  occupst_1 %in% 2 | occupst_2 %in% 2 ~ 2L, 
+  occupst_1 %in% 4 & occupst_2 %in% 4 ~ 3L, 
+  occupst_1 %in% 5 & occupst_2 %in% 5 ~ 4L,        
+  is.na(occupst_1) & occupst_2 %in% 5 ~ 4L, 
+  is.na(occupst_2) & occupst_1 %in% 5 ~ 4L,  
+  (occupst_1 %in% 4 & occupst_2 %in% 3) | (occupst_1 %in% 3 & occupst_2 %in% 4)  ~ 4L,
+  (occupst_1 %in% 4 & occupst_2 %in% 5) | (occupst_1 %in% 5 & occupst_2 %in% 4) ~ 4L, 
+  (occupst_1 %in% 4 & occupst_2 %in% 6) | (occupst_1 %in% 6 & occupst_2 %in% 4) ~ 4L,
+  occupst_1 %in% c(7,8,9) & occupst_2 %in% c(7,8,9) ~ 5L, 
+  is.na(occupst_1) & occupst_2 %in% c(7,8,9) ~ 5L,
+  is.na(occupst_2) & occupst_1 %in% c(7,8,9) ~ 5L,  
+  (occupst_1 %in% 3 & occupst_2 %in% 5) | (occupst_1 %in% 5 & occupst_2 %in% 3) ~ 5L,     
+  (occupst_1 %in% 6 & occupst_2 %in% 5) | (occupst_1 %in% 5 & occupst_2 %in% 6) ~ 5L,   
+  occupst_1 %in% 3 & occupst_2 %in% 3 ~ 6L,   
+  is.na(occupst_1) & occupst_2 %in% 3 ~ 6L,   
+  is.na(occupst_2) & occupst_1 %in% 3 ~ 6L,   
+  (occupst_1 %in% 3 & occupst_2 %in% 6) | (occupst_1 %in% 6 & occupst_2 %in% 3) ~ 6L, 
+  occupst_1 %in% c(6,10) | occupst_2 %in% c(6,10) ~ 7L,         
+  is.na(occupst_1) & is.na(occupst_2) ~ 7L,
+  (occupst_1 %in% 3 & occupst_2 %in% 10) | (occupst_1 %in% 10 & occupst_2 %in% 3) ~ 7L, 
+  (occupst_1 %in% 6 & occupst_2 %in% 10) | (occupst_1 %in% 10 & occupst_2 %in% 6) ~ 7L,  
+  (occupst_1 %in% 5 & occupst_2 %in% 10) | (occupst_1 %in% 10 & occupst_2 %in% 5) ~ 7L,  
+  TRUE ~ NA_integer_
+)";"
+# If either parent is ""fully employed (100%),"" assign 1L.
+# If either parent works ""more than half day,"" ""half day,"" or ""less than half day,""  assign 2L.
+# If both parents are ""are home markers,"" assign 3L.                                                                   # If both parents are ""retired,"" assign 4L.                                                                  # If both parents are ""not at all employed,"" assign 5L.
+# If one parent's status is NA, use the other parent's status to determine the category. # If one parent's status is lower, use the other parent's higher-status to determine the category. 
+# If both are NA, assign 7L (""other"").";complete;compatible
 ;IMMIGRATION;Immigration background;integer;;migration_T3;recode;"recode(0=0;1=1;2=1;)";;complete;compatible
-;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"SED;LPA;MPA;VPA";operation;((1.5 * SED)/60 + (1.5 * LPA)/60 + (3 * MPA)/60 + (6 * VPA)/60);;complete;compatible
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;"LPA;MPA;VPA";operation;(1.5 * LPA + 3 * MPA + 6 * VPA) / 60;;complete;compatible
 ;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;;impossible;impossible;;impossible;unavailable
 ;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;;impossible;impossible;;impossible;unavailable
 ;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;;impossible;impossible;;impossible;unavailable
-;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;atc_who_2010;undetermined;undetermined;;undetermined;undetermined
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;;impossible;impossible;;impossible;unavailable
 ;MENOPAUSE;Menopause status;integer;;;impossible;impossible;;impossible;unavailable
 ;HRT;Hormone replacement therapy;integer;;;impossible;impossible;;impossible;unavailable
 ;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;unavailable

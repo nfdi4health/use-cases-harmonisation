@@ -1,0 +1,28 @@
+index;name;label;valueType
+;trg;Triglyceride (cholestech) [mg/dl];decimal
+;tc;Total Cholesterol (cholestech) [mg/dl];decimal
+;ldl;LDL cholesterol (cholestech) [mg/dl];decimal
+;hdl;HDL-Cholesterol (cholestech) [mg/dl];decimal
+;bmi;Body Mass Index;decimal
+;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal
+;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal
+;bmi_T3;Body Mass Index;decimal
+;waist_T3;Waist circumference [cm];decimal
+;waist;Waist circumference [cm];decimal
+;hip_circ;Hip circumference [cm];decimal
+;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal
+;BODY_FAT;Body fat precent at baseline  [%];decimal
+;FMI;Fat mass index;decimal
+;age_T3;Age [years];decimal
+;ENERGY;Energy intake [kcal/d];decimal
+;CARB;Carbohydrate intake [g/d];decimal
+;PROT;Protein intake [g/d];decimal
+;FAT;Fat intake [g/d];decimal
+;ALC;Alcohol intake [g/d];decimal
+;FIBER;Dietary fiber intake [g/d];decimal
+;SFA;Saturated fat intake [g/d];decimal
+;MUFA;Monounsaturated fat intake [g/d];decimal
+;PUFA;Polyunsaturated fat intake [g/d];decimal
+;TOT_SUGARS;Total sugar intake [g/d];decimal
+;NA;Sodium intake [mg/d];decimal
+;K;Potassium;decimal
