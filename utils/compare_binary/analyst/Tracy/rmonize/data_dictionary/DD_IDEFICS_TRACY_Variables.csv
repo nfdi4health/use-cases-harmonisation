@@ -7,7 +7,7 @@ index;name;label;valueType
 ;phys_activ;Physical activity[hours per week];decimal
 ;occupst_1;employment status of the first person filled in the questionnaire;Integer
 ;occupst_2;employment status of the second person filled in the questionnaire;Integer
-;migration_T3;Migration status of parents;Integer
+;migration_T3;Migration status of parents at follow up;Integer
 ;LPA;Avg time in light PA (min./day);decimal
 ;MPA;Avg time in moderate PA (min./day);decimal
 ;VPA;Average time in vigorous PA (min./day);decimal
