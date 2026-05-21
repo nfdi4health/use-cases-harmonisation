@@ -16,3 +16,4 @@ output/rmonize_summary/*
 
 output/harmonised_dataset/*
 !output/harmonised_dataset/placeholder.txt
+.positai
