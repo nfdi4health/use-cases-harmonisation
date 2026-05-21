@@ -85,7 +85,7 @@ zykaus_3";case_when;"case_when(
 16;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
 17;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
 18;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;ACTIVE_P2;;impossible;impossible;;impossible;unavailable
-19;TG;Triglycerides measured from blood samples [mmol/L];decimal;ACTIVE_P2;;undetermined;;Available upon request;;
+19;TG;Triglycerides measured from blood samples [mmol/L];decimal;ACTIVE_P2;;undetermined;;Available upon request;impossible;
 20;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;TCHOL;direct_mapping;direct_mapping;;complete;identical
 21;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;LDL;direct_mapping;direct_mapping;;complete;identical
 22;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;ACTIVE_P2;HDL;direct_mapping;direct_mapping;;complete;identical
@@ -170,12 +170,12 @@ t1_height";operation;bod_fm_kg / ((t1_height / 100)*2);;complete;compatible
 86;PUFA;Polyunsaturated fat intake [g/d];decimal;ACTIVE_P2;"omega3_g;
 omega6_g";operation;omega3_g + omega6_g;;complete;compatible
 87;TOT_SUGARS;Total sugar intake [g/d];decimal;ACTIVE_P2;sacch_g;direct_mapping;direct_mapping;;complete;identical
-88;ADD_SUGARS;Added sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
-89;FREE_SUGARS;Free sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
-90;GLUC;Glucose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
-91;FRUC;Fructose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
-92;GI;Daily glycaemic index;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
-93;GL;Daily glycaemic load;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;;
+88;ADD_SUGARS;Added sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
+89;FREE_SUGARS;Free sugar intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
+90;GLUC;Glucose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
+91;FRUC;Fructose intake [g/d];decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
+92;GI;Daily glycaemic index;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
+93;GL;Daily glycaemic load;decimal;ACTIVE_P2;;undetermined;;Could be derived from food record data;impossible;
 94;SODIUM;Sodium intake [mg/d];decimal;ACTIVE_P2;natrium;operation;natrium*1000;;complete;compatible
 95;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;ACTIVE_P2;"natrium; 
 kalium";operation;natrium/kalium;;complete;compatible
