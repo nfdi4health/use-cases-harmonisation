@@ -1,56 +1,77 @@
 index;name;label;valueType
-1;ID;ID of the participant;integer
+1;id;ID;integer
 2;sex;sex;integer
 3;age;age;decimal
 4;school;School education;integer
-5;occup_edu;First professional qualification;integer
-6;occup_edu_2;Second professional qualification;integer
-7;met_we;MET per week;decimal
-8;smoker;smoker;integer
-9;work_status;Current status of occupation;integer
-10;birth_place;Place of birth;integer
-11;packyear_tabacco;Packyears(cigarettes/cigars/pipes);decimal
-12;cignr_day;Currently nr. smoked cigarettes/day;decimal
-13;smokestop;Age at stop Smoking;decimal
-14;vit_min;Vitamine, Mineralstoffe(J/N);integer
-15;fr_hrt1;fr_hrt1;integer
-16;children;Number of biological children;integer
-17;diabetes2;Diabetes(interview or antidiabetic med);integer
-18;hyp_i;Physician diagnosed hypertension(self reported);integer
-19;cvd;CVD 1=yes 0=no 2=poss. by MI_final/CABG/PTCA/stroke/carotis-OP;integer
-20;cancer;Cancer ever(interview);integer
-21;fam_stroke;Family history of stroke(parents or sibling);integer
-22;fam_diab;Family history of dm(parents or sibling);integer
-23;fam_cancer;Family history of cancer(parents or sibling);integer
-24;f2_mi_i_inc;Myocard.infarct since Carla_1-Carla_2(interview);integer
-25;f2_mi_year;Year of myocard.infarction since Carla_1-Carla_2(interview);datetime
-26;f1_stroke_first_year_inc;Year of 1st Stroke since Carla_0-Carla_1(interview);datetime
-27;f1_chf_total_inz;inc. chronic heart failure Carla_1;integer
-28;f1_age;Age at follow-up;datetime
-29;f2_cancer1_inc;Ist bei Ihnen seit Carla_1 eine Krebserkrankung neu aufgetreten?-Carla_2;integer
-30;f2_cancer1_typ;Welche Krebserkrankung war das(I)?-Carla_2;integer
-31;f2_cancer1_date;Wann ist diese Krebserkrankung zum ersten Mal diagnostiziert worden[Monat/Jahr](I)-Carla_2;datetime
-32;vit_stat;Vital status(1=dead/0=alive));integer
-33;tod_dat;Date of death;datetime
-34;tg;Triglyceride (mmol/l);decimal
-35;chol;Cholesterol (mmol/l);decimal
-36;ldlc;LDL measured (mmol/l);decimal
-37;hdl;HDL (mmol/l);decimal
-38;bmi;bmi;decimal
-39;f1_bmi;f1_bmi;decimal
-40;f1_taillenumfang;f1_taillenumfang;decimal
-41;taillenumfang;taillenumfang;decimal
-42;hueftumfang;hueftumfang;decimal
-43;f1_hueftumfang;f1_hueftumfang;decimal
-44;gj;total energy intake at baseline;decimal
-45;zk;total carbohydrates at baseline;decimal
-46;ze;total protein intake at baseline;decimal
-47;zf;total fat intake at baseline;decimal
-48;za;total alcohol intake at baseline;decimal
-49;zb;dietary fiber intake at baseline;decimal
-50;fs;total saturated fatty acids intake at baseline;decimal
-51;fu;total monounsaturated fatty acids intake at baseline;decimal
-52;fp;total polyunsaturated fatty acids intake at baseline;decimal
-53;kmt;glucose;decimal
-54;kmf;fructose;decimal
-55;mna;natrium;decimal
+5;occup_edu_h;Highest professional qualification;integer
+6;met_we;MET per week;decimal
+7;smoker;smoker;integer
+8;work_status;Current status of occupation;integer
+9;employ;Currently employed;integer
+10;packyear_tabacco;Packyears(cigarettes/cigars/pipes);decimal
+11;cignr_day;Currently nr. smoked cigarettes/day;decimal
+12;cigarnr_day;Currently nr. smoked cigars/day;decimal
+13;pipe_day;Currently nr. smoked pipes/day;decimal
+14;smokestop;Age at stop Smoking;decimal
+15;vit_min;Vitamine, Mineralstoffe(J/N);integer
+16;fr_period1;Period_current;integer
+17;fr_op7;Ovariectomy;integer
+18;fr_hrt1;fr_hrt1;integer
+19;children;Number of biological children;integer
+20;diabetes2;Diabetes(interview or antidiabetic med);integer
+21;hyp_i;Physician diagnosed hypertension(self reported);integer
+22;htn_kora;Hypertension:>=140/90 or drugs(ATC) if known htn;integer
+23;cvd;CVD 1=yes 0=no 2=poss. by MI_final/CABG/PTCA/stroke/carotis-OP;integer
+24;cancer;Cancer ever(interview);integer
+25;fam_stroke;Family history of stroke(parents or sibling);integer
+26;fam_diab;Family history of dm(parents or sibling);integer
+27;fam_cancer;Family history of cancer(parents or sibling);integer
+28;med_stat;Regular use of statins;integer
+29;med_nsaid;Regular use of non-steroidal anti-inflammatory drugs;integer
+30;f1_htn_kora;measured blood pressure >=140/90;integer
+31;f2_htn_kora;medication if known htn at FU2;integer
+32;f1_chf_total_inz;inc. chronic heart failure Carla_1;integer
+33;f2_insuff_date;Wann wurde die Herzinsuffizienz zum ersten Mal diagnostiziert;integer
+34;vit_stat;Vital status(1=dead/0=alive));integer
+35;tod_dat;Date of death;date
+36;gebdat;Date of birth;date
+37;f1_untdat;baseline examination for follow-up 1;date
+38;f2_untdat;baseline examination for follow-up 2;date
+39;tg;Triglyceride (mmol/l);decimal
+40;chol;Cholesterol (mmol/l);decimal
+41;ldlc;LDL measured (mmol/l);decimal
+42;hdl;HDL (mmol/l);decimal
+43;bmi;bmi;decimal
+44;f1_bmi;f1_bmi;decimal
+45;f1_taillenumfang;f1_taillenumfang;decimal
+46;taillenumfang;taillenumfang;decimal
+47;hueftumfang;hueftumfang;decimal
+48;f1_hueftumfang;f1_hueftumfang;decimal
+49;f1_age;Age at follow-up;decimal
+50;gj;Gesamtenergie [kJ/Tag];decimal
+51;zk;Kohlenhydrate [g/Tag];decimal
+52;ze;Eiweiß [g/Tag];decimal
+53;zf;Fett [g/Tag];decimal
+54;za;Alkohol [g/Tag];decimal
+55;zb;Ballaststoffe [g/Tag];decimal
+56;fs;Gesättigte Fettsäuren [g/Tag];decimal
+57;fu;Einfach ungesättigte Fettsaeuren [g/Tag];decimal
+58;fp;Mehrfach ungesättigte Fettsaeuren [g/Tag];decimal
+59;kd;Disaccharide [g/Tag];decimal
+60;km;Monosaccharide [g/Tag];decimal
+61;kmt;Glucose [g/Tag];decimal
+62;kmf;Fructose [g/Tag];decimal
+63;mna;Natrium [g/Tag];decimal
+64;mk;Kalium [g/Tag];decimal
+65;VEGETABLES_02;Vegetable intake [g/d];decimal
+66;LEGUMES_TOT_03;Total legumes intake [g/d];decimal
+67;FRUITS_TOT_04;Total fruit intake [g/d];decimal
+68;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal
+69;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal
+70;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal
+71;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal
+72;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal
+73;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal
+74;COFFEE_130301;Coffee intake [g/d];decimal
+75;TEA_130302;Tea intake [g/d];decimal
+76;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal
