@@ -1,0 +1,14 @@
+index;name;label;valueType
+;id;ID;integer
+;basis_sex;Geschlecht;integer
+;basis_age;Alter am Erhebungsdatum;decimal
+;a_ses_isced11_level;Bildungsniveau nach ISCED 2011;integer
+;a_gpaq_ptotalmet;MET-Min./Woche kärperl. Aktivität gesamt;decimal
+;a_smok_stat_qn;Rauchstatus;integer
+;a_packyears;Smoking intensity as number of packyears;decimal
+;a_f_smok_quit_age;Alter Rauchende;decimal
+;d_sn1;Wie viele Kinder haben Sie;integer
+;d_f_mp1;Haben Sie jemals Hormonersatzpräparate aufgrund Ihrer Wechseljahre oder aufgrund des Ausbleibens Ihrer Regelblutung eingenommen;integer
+;d_an_ca;Wurde bei Ihnen jemals von einem Arzt eine Krebserkrankung diagnostiziert?;integer
+;d_fa_m3_dm;Diabetes mellitus (Zuckerkrankheit);integer
+;d_an_cv_6;Bluthochdruck;integer

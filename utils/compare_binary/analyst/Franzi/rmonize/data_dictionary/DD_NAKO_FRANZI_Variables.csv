@@ -1,0 +1,14 @@
+index;name;label;valueType
+;a_ui_m11;main group sugar, sweets[g/d];decimal
+;a_ui_m12;Main group cake[g/d];decimal
+;a_ui_f1301;Fruit and vegetable juices[g/d];decimal
+;a_ui_f1302;Soft drinks[g/d];decimal
+;a_ui_m02;Main group vegetables[g/d];decimal
+;a_ui_m03;Main group pulses[g/d];decimal
+;a_ui_f0401;Fruits[g/d];decimal
+;a_ui_f070100;Fresh meat unclassified[g/d];decimal
+;a_ui_f070101;Beef[g/d];decimal
+;a_ui_f070103;Pork[g/d];decimal
+;a_ui_f0704;process meat[g/d];decimal
+;a_ui_f130301;Coffee[g/d];decimal
+;a_ui_f130302;Tea[g/d];decimal
