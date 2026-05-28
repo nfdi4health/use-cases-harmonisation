@@ -14,11 +14,8 @@ a_smok_stat_qn;1;Kein Raucher, auch nicht ehemalig
 a_smok_stat_qn;2;Ehemaliger Raucher
 a_smok_stat_qn;3;Raucher
 a_smok_stat_qn;4;Rauchstatus unbekannt
-d_fa_m3_dm;2;Nein
-d_fa_m3_dm;11;Ja, aber Alter unbekannt
-d_fa_m3_dm;12;Ja, jÃ¼nger als 40 Jahre
-d_fa_m3_dm;13;Ja, zwischen 40 und 59 Jahren
-d_fa_m3_dm;14;Ja, 60 Jahre und Ãlter
+a_diab;1;Ja
+a_diab;0;Nein
 d_f_mp1;1;Ja
 d_f_mp1;2;Nein
 d_an_ca;1;Ja

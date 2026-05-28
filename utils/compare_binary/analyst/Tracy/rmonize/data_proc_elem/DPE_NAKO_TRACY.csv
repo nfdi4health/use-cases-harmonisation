@@ -17,7 +17,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;unavailable
 ;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;d_sn1;direct_mapping;direct_mapping;;partial;proximate
 ;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
-;PREV_DIAB;History of diabetes;integer;;d_fa_m3_dm;recode;"recode(2= 0; 11= 1;12=1;13=1;14=1;ELSE=NA;)";;complete;compatible
+;PREV_DIAB;History of diabetes;integer;;a_diab;direct_mapping;direct_mapping;;complete;identical
 ;PREV_HYP;History of hypertension;integer;;d_an_cv_6;recode;"recode(1= 1; 2 = 0;ELSE=NA;)";;complete;compatible
 ;PREV_CVD;History of cardiovascular disease;integer;;;impossible;impossible;;impossible;unavailable
 ;PREV_CANCER;History of cancer;integer;;d_an_ca;recode;"recode(1= 1; 2 = 0;ELSE=NA)";;complete;compatible

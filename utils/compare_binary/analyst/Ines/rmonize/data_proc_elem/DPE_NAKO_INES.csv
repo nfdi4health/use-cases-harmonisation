@@ -7,12 +7,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;NAKO_P2;anthro_bmi;direct_mapping;direct_mapping;Measured;complete;identical
 ;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
 ;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
-;WAIST_FUP;Waist circumference at follow-up [cm];decimal;NAKO_P2;"anthro_taillenumfang_fup
-
-";direct_mapping;direct_mapping;Measured;complete;identical
-;WAIST;Waist circumference at baseline [cm];decimal;NAKO_P2;"anthro_taillenumfang
-
-";direct_mapping;direct_mapping;Measured;complete;identical
+;WAIST_FUP;Waist circumference at follow-up [cm];decimal;NAKO_P2;anthro_taillenumfang_fup;direct_mapping;direct_mapping;Measured;complete;identical
+;WAIST;Waist circumference at baseline [cm];decimal;NAKO_P2;anthro_taillenumfang;direct_mapping;direct_mapping;Measured;complete;identical
 ;HIP;Hip circumference at baseline [cm];decimal;NAKO_P2;anthro_hueftumfang;direct_mapping;direct_mapping;Measured;complete;identical
 ;HIP_FUP;Hip circumference at follow-up [cm];decimal;NAKO_P2;anthro_hueftumfang_fup;direct_mapping;direct_mapping;Measured;complete;identical
 ;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
@@ -33,8 +29,7 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;ADD_SUGARS;Added sugar intake [g/d];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
 ;FREE_SUGARS;Free sugar intake [g/d];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
 ;GLUC;Glucose intake [g/d];decimal;NAKO_P2;a_nu_kmt;operation;a_nu_kmt/1000;;complete;compatible
-;FRUC;Fructose intake [g/d];decimal;NAKO_P2;"
-a_nu_kmf";operation;a_nu_kmf/1000;;complete;compatible
+;FRUC;Fructose intake [g/d];decimal;NAKO_P2;a_nu_kmf;operation;a_nu_kmf/1000;;complete;compatible
 ;GI;Daily glycaemic index;decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
 ;GL;Daily glycaemic load;decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
 ;SODIUM;Sodium intake [mg/d];decimal;NAKO_P2;a_nu_mna;direct_mapping;direct_mapping;;complete;identical

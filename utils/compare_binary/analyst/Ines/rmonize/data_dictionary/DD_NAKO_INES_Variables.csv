@@ -5,12 +5,8 @@ index;name;label;valueType
 ;sa_hdlc;HDL-Cholesterin (hdlc): Messwert (mmol/l);decimal
 ;a_anthro_bmi;BMI (aus bereinigten Messwerten);decimal
 ;anthro_bmi;BMI_follow up (at U2);decimal
-;"anthro_taillenumfang
-
-";Taillenumfang (cm);decimal
-;"anthro_taillenumfang_fup
-
-";Taillenumfang_follow up(cm);decimal
+;anthro_taillenumfang;Taillenumfang (cm);decimal
+;anthro_taillenumfang_fup;Taillenumfang_follow up(cm);decimal
 ;anthro_hueftumfang;Hüftumfang(cm);decimal
 ;anthro_hueftumfang_fup;Hüftumfang_follow up (cm);decimal
 ;a_anthro_fettmasse;Bereinigter Körperfettanteil in % gemessen und automatisch oder manuell eingetragen;decimal
@@ -25,7 +21,6 @@ index;name;label;valueType
 ;a_nu_kp;Polysaccharide [mg/d];decimal
 ;a_nu_kmd;Zucker (gesamt)  [mg/d];decimal
 ;a_nu_kmt;Glucose (Traubenzucker)  [mg/d];decimal
-;"
-a_nu_kmf";Fructose (Fruchtzucker)  [mg/d];decimal
+;a_nu_kmf;Fructose (Fruchtzucker)  [mg/d];decimal
 ;a_nu_mna;Natrium  [mg/d];decimal
 ;a_nu_mk;Kalium  [mg/d];decimal
