@@ -1,0 +1,36 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;TG;Triglycerides measured from blood samples [mmol/L];decimal;NAKO_P2;sa_trig;direct_mapping;direct_mapping;;complete;identical
+;CHOL;Total cholesterol measured from blood samples [mmol/L];decimal;NAKO_P2;sa_chol;direct_mapping;direct_mapping;;complete;identical
+;LDL;LDL cholesterol measured from blood samples [mmol/L];decimal;NAKO_P2;sa_ldlc;direct_mapping;direct_mapping;;complete;identical
+;HDL;HDL cholesterol measured from blood samples [mmol/L];decimal;NAKO_P2;sa_hdlc;direct_mapping;direct_mapping;;complete;identical
+;BMI;Body Mass Index at baseline [kg/m²];decimal;NAKO_P2;a_anthro_bmi;direct_mapping;direct_mapping;Measured;complete;identical
+;BMI_FUP;Body Mass Index at follow-up [kg/m²];decimal;NAKO_P2;anthro_bmi;direct_mapping;direct_mapping;Measured;complete;identical
+;BMI_SDS;Body Mass Index Standard Deviation Score at baseline (children studies);decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;BMI_SDS_FUP;Body Mass Index Standard Deviation Score at follow-up (children studies);decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;WAIST_FUP;Waist circumference at follow-up [cm];decimal;NAKO_P2;anthro_taillenumfang_fup;direct_mapping;direct_mapping;Measured;complete;identical
+;WAIST;Waist circumference at baseline [cm];decimal;NAKO_P2;anthro_taillenumfang;direct_mapping;direct_mapping;Measured;complete;identical
+;HIP;Hip circumference at baseline [cm];decimal;NAKO_P2;anthro_hueftumfang;direct_mapping;direct_mapping;Measured;complete;identical
+;HIP_FUP;Hip circumference at follow-up [cm];decimal;NAKO_P2;anthro_hueftumfang_fup;direct_mapping;direct_mapping;Measured;complete;identical
+;FMI_FUP;Fat mass index at follow-up  [kg/m²];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;FMI;Fat mass index at baseline  [kg/m²];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;BODY_FAT_FUP;Body fat precent at follow-up [%];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;BODY_FAT;Body fat precent at baseline  [%];decimal;NAKO_P2;a_anthro_fettmasse;direct_mapping;direct_mapping;Measured;complete;identical
+;AGE_ANTH_FUP;Age at anthropometric measurement at follow-up [years];decimal;NAKO_P2;age_anth_fup;direct_mapping;direct_mapping;;complete;identical
+;ENERGY;Energy intake [kcal/d];decimal;NAKO_P2;gcal;direct_mapping;direct_mapping;;complete;identical
+;CARB;Carbohydrate intake [g/d];decimal;NAKO_P2;a_nu_zk;operation;a_nu_zk/1000;;complete;compatible
+;PROT;Protein intake [g/d];decimal;NAKO_P2;a_nu_ze;operation;a_nu_ze/1000;;complete;compatible
+;FAT;Fat intake [g/d];decimal;NAKO_P2;a_nu_zf;operation;a_nu_zf/1000;;complete;compatible
+;ALC;Alcohol intake [g/d];decimal;NAKO_P2;a_nu_za;operation;a_nu_za/1000;;complete;compatible
+;FIBER;Dietary fiber intake [g/d];decimal;NAKO_P2;a_nu_zb;operation;a_nu_zb/1000;;complete;compatible
+;SFA;Saturated fat intake [g/d];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;MUFA;Monounsaturated fat intake [g/d];decimal;NAKO_P2;a_nu_km;operation;a_nu_km/1000;;complete;compatible
+;PUFA;Polyunsaturated fat intake [g/d];decimal;NAKO_P2;a_nu_kp;operation;a_nu_kp/1000;;complete;compatible
+;TOT_SUGARS;Total sugar intake [g/d];decimal;NAKO_P2;a_nu_kmd;operation;a_nu_kmd/1000;;complete;compatible
+;ADD_SUGARS;Added sugar intake [g/d];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;FREE_SUGARS;Free sugar intake [g/d];decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;GLUC;Glucose intake [g/d];decimal;NAKO_P2;a_nu_kmt;operation;a_nu_kmt/1000;;complete;compatible
+;FRUC;Fructose intake [g/d];decimal;NAKO_P2;a_nu_kmf;operation;a_nu_kmf/1000;;complete;compatible
+;GI;Daily glycaemic index;decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;GL;Daily glycaemic load;decimal;NAKO_P2;;impossible;impossible;;impossible;unavailable
+;SODIUM;Sodium intake [mg/d];decimal;NAKO_P2;a_nu_mna;direct_mapping;direct_mapping;;complete;identical
+;SOD_POT_RATIO;Sodium to potassium intake ratio;decimal;NAKO_P2;"a_nu_mna; a_nu_mk";operation;a_nu_mna/a_nu_mk;;complete;compatible

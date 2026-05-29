@@ -1,0 +1,121 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;POTATOES_TUB_01;Intake of starchy roots or tubers [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;POTATOES_0101;Potato intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;OTHERTUB_0102;Other roots and tuber intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VEGETABLES_02;Vegetable intake [g/d];decimal;;a_ui_m02;direct_mapping;direct_mapping;;complete;identical
+;LEAFYVEG_0201;Leafy vegetable intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FRUITINGVEG_0202;Fruiting vegetable intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ROOTVEG_0203;Root and tuber vegetable intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CABBAGE_0204;Head cabbages and similar intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MUSHROOMS_0205;Mushroom intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;GRAINPODVEG_0206;Intake of legumes with pod [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ONION_GARLIC_0207;Bulb vegetables (onions, garlic) intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;STALKVEG_0208;Intake of stems/stalks eaten as vegetables [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;;a_ui_m03;direct_mapping;direct_mapping;;complete;identical
+;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FRUITS_0401;Intake of fresh fruits [g/d];decimal;;a_ui_f0401;direct_mapping;direct_mapping;;complete;identical
+;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;OLIVES_0404;Intake of olives [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DAIRY_05;Intake of milk and dairy products and milk and milk products (dairy) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MILK_0501;Intake of (whole) cow and cattle milk [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MILKBEV_0502;Intake of buttermilk, traditional buttermilk, flavoured milk, flavoured whey and milk-based drinks (as part-nature) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;YOGURT_0503;Intake of fermented milk products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CURD_0504;Intake of cheese curd, quark and cottage [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CHEESE_0505;Intake of cheese [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DAIRYDESSERT_0506;Intake of dairy dessert and similar starchy pudding [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CREAM_PROD_0507;Intake of cream and cream products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DAIRYCREAM_050701;Cream intake (as part-nature) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;NONDAIRYCREAM_050702;Intake of imitation cream, non-dairy coffee creamers and dairy imitates other than milk [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MILK_FOR_COFFEE_0508;Intake of condensed milk (sometimes with added sugars) and milk and dairy powders and concentrates [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CEREAL_PROD_06;Intake of cereals and cereal primary derivatives, cereal grains (and cereal-like grains) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FLOUR_FLAKES_0601;Intake of flours and other milled products and starches [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;PASTA_RICE_0602;Intake of pastas and rice [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BREAD_PROD_0603;Intake of bread and bread products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BREAD_060301;Intake of bread [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CRISPBREAD_060302;Intake of crisp bread and rusk [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BREAKF_CEREALS_0604;Intake of breakfast cereals [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SALT_BISCUIT_0605;Intake of crackers and breadsticks [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DOUGH_PASTRY_0606;Intake of fine bakery products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MEAT_PROD_07;Intake of meat and meat products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal;;"a_ui_f070100;a_ui_f070101;a_ui_f070103";operation;a_ui_f070100+a_ui_f070101+a_ui_f070103;;complete;compatible
+;BEEF_070101;Intake of cow, ox or bull fresh meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VEAL_070102;Intake of calf fresh meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;PORK_070103;Intake of pig fresh meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MUTTON_LAMB_070104;Intake of lamb and sheep meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;HORSE_070105;Intake of horse meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;GOAT_070106;Intake of goat meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;POULTRY_0702;Intake of poultry meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;OTHERPOULTRY_070200;Intake of other poultry meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CHICKEN_070201;Intake of chicken meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;TURKEY_070202;Intake of turkey meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DUCK_070203;Intake of duck meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;GOOSE_070204;Intake of goose meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;RABBIT_070205;Intake of rabbit meat [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;GAME_0703;Intake of game [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal;;a_ui_f0704;direct_mapping;direct_mapping;;complete;identical
+;OFFALS_0705;Intake of animal offal and other slaughtering [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FISH_SHELLFISH_08;Intake of fish and seafood and products thereof [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FISH_0801;Intake of fish (meat) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CRUSTACEANS_0802;Intake of seafood and products thereof [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FISH_PROD_0803;Intake of processed fish [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;EGG_PROD_09;Intake of eggs and egg products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;EGGS_0901;Intake of eggs [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FAT_10;Intake of animal and vegetable fats and oils [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VEGOILS_1001;Intake of vegetable fats and oils [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BUTTER_1002;Intake of butter [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MARGARINE_1003;Intake of margarines and similar [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FRYFAT_1004;Intake of blended frying oil/fats [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MARINEOILS_1005;Intake of fats and oils from marine sources [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;OTHER_ANIMALFAT_1006;Intake of animal fats (processed fat from animal tissue) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal;;a_ui_m11;direct_mapping;direct_mapping;;complete;identical
+;HONEY_JAM_1101;Intake of sugars, syrups, honey and table-top sweeteners [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CHOCOLATE_1102;Intake of chocolate, chocolate products and chocolate coated confectionary [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;NONCHOC_SWEETS_1103;Intake of sweet bars and other formed sweet masses, candies (soft and hard) and other confectionery including breath refreshening microsweets [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SYRUP_1104;Intake of corn syrup and sugar beet syrup [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ICECREAM_1105;Intake of spoonable desserts and ice creams [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ICECREAM_MILK_110501;Intake of milk-based ice cream [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SORBET_110502;Sorbet intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;WATER_ICE_110503;Intake of water-based ice creams [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal;;a_ui_m12;direct_mapping;direct_mapping;;complete;identical
+;VARPASTRY_1201;Intake of various pastry [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DRYCAKE_1202;Intake of sponge biscuits and plain cakes [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;NONALC_BEV_13;Intake of non-alcoholic beverages [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal;;a_ui_f1301;direct_mapping;direct_mapping;;complete;identical
+;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal;;a_ui_f1302;direct_mapping;direct_mapping;;complete;identical
+;HOTDRINKS_1303;Intake of hot drinks and similar (coffee, cocoa, tea and herbal infusions) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;COFFEE_130301;Coffee intake [g/d];decimal;;a_ui_f130301;direct_mapping;direct_mapping;;complete;identical
+;TEA_130302;Tea intake [g/d];decimal;;a_ui_f130302;direct_mapping;direct_mapping;;complete;identical
+;HERBALTEA_130303;Intake of herbal and other non-tea infusions [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;COFFEE_IMITATE_130304;Intake of chicory coffee infusion and coffee imitate beverages [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;WATER_1304;Intake of water and water-based beverages [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ALC_BEV_14;Alcoholic beverage intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;WINE_1401;Intake of wine and wine-like drinks [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;FORTWINE_1402;Intake of fortified/liqueur wine [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BEER_1403;Intake of beer and beer-like beverage [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SPIRITS_1404;Intake of unsweetened spirits [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;HERBLIQUEUR_1405;Intake of herb liqueur [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;LIQUEURS_1406;Intake of liqueurs [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;COCKTAILS_1407;Intake of mixed alcoholic drinks [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CONDIMENT_SAUCES_15;Intake of seasoning, sauces and condiments [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SAUCES_1501;Intake of savoury sauces [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;TOMATOSAUCE_150101;Intake of tomato-containing cooked sauces [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DRESSINGS_150102;Dressing intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MAYONNAISE_150103;Intake of mayonnaise [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DESSERTSAUCE_150104;Intakes of dessert sauces/toppings [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;YEAST_1502;Intake of yeast cultures [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;HERBS_SPICES_1503;Intakes of berbs, spices and similar [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;CONDIMENTS_1504;Condiments intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SOUP_BOUILLON_16;Intake of soups and broths [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SOUP_1601;Intake of soups [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;BOUILLON_1602;Intake of mixed vegetables soup, clear meat soup [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;MISCELLANEOUS_17;Intake of miscellaneous [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VEG_DISHES_1700;Intake of vegetarian products and dishes [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;SOY_PROD_1701;Intake of soy products [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DIET_PROD_1702;Intake of food for weight reduction [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal;;;impossible;impossible;;impossible;unavailable
+;SNACKS_1703;Intake of snacks other than chips and similar [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;AMPHIBIANS_1704;Intake of amphibians, reptiles, snails, insects [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;DIETARY_ASSESS_INSTR;Dietary Assessment Instrument;integer;;__BLANK__;paste;6;;complete;identical

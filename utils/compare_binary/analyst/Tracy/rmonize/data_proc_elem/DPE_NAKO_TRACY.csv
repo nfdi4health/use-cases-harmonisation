@@ -1,0 +1,61 @@
+index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_harmo::rule_category;Mlstr_harmo::algorithm;Mlstr_harmo::comment;Mlstr_harmo::status;Mlstr_harmo::status_detail
+;ID;Participant identification number;integer;;id;id_creation;id_creation;;complete;identical
+;SEX;Sex;integer;;basis_sex;direct_mapping;direct_mapping;;complete;identical
+;AGE_BASE;Age at exposure measure [years];decimal;;basis_age;direct_mapping;direct_mapping;;complete;identical
+;EDU_LEVEL;Education;integer;;a_ses_isced11_level;direct_mapping;direct_mapping;;complete;identical
+;TOT_PA_QX;Physical activity from questionnaire data [MET-hr/day];decimal;;a_gpaq_ptotalmet;operation;(a_gpaq_ptotalmet/60)/7;;complete;compatible
+;SMOKE_ST;Smoking status;integer;;a_smok_stat_qn;direct_mapping;direct_mapping;;complete;identical
+;EMPLOY;Employment;integer;;;undetermined;undetermined;;undetermined;undetermined
+;IMMIGRATION;Immigration background;integer;;;impossible;impossible;No migration background;impossible;unavailable
+;TOT_PA_AC;Physical activity from accelerometry data [MET-hr/day];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;TOBACCO_PY;Cumulative lifetime tobacco exposure  [pack years];decimal;;a_packyears;direct_mapping;direct_mapping;;complete;identical
+;TOBACCO_D;Amount of daily tobacco smoked [g/day];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_SMOKE_QUIT;Age at time of quitting smoking [years];decimal;;a_f_smok_quit_age;direct_mapping;direct_mapping;;complete;identical
+;MED_SUPPL;Regular use of  vitamin/multivitamin supplements;integer;;;undetermined;undetermined;;undetermined;undetermined
+;MENOPAUSE;Menopause status;integer;;;undetermined;undetermined;;undetermined;undetermined
+;HRT;Hormone replacement therapy;integer;;d_f_mp1;recode;"recode(1= 1; 2 = 0;ELSE=NA;)";;complete;compatible
+;CONTRACEPTIVE;Use of contraceptive pills or injections [years];integer;;;impossible;impossible;;impossible;unavailable
+;LIVE_BIRTHS;Number of live births given [Nr. of birth];integer;;d_sn1;direct_mapping;direct_mapping;;partial;proximate
+;AGE_FIRST_BIRTH;Age at the first given birth [years];decimal;;;impossible;impossible;;impossible;unavailable
+;PREV_DIAB;History of diabetes;integer;;a_diab;direct_mapping;direct_mapping;;complete;identical
+;PREV_HYP;History of hypertension;integer;;d_an_cv_6;recode;"recode(1= 1; 2 = 0;ELSE=NA;)";;complete;compatible
+;PREV_CVD;History of cardiovascular disease;integer;;;undetermined;undetermined;;undetermined;undetermined
+;PREV_CANCER;History of cancer;integer;;d_an_ca;recode;"recode(1= 1; 2 = 0;ELSE=NA)";;complete;compatible
+;FAM1_CHD_STROKE;First degree family history of premature CHD and stroke;integer;;;undetermined;undetermined;;undetermined;undetermined
+;FAM1_DIAB2;First degree family history of T2D;integer;;;undetermined;undetermined;;undetermined;undetermined
+;FAM1_CANCER;First degree family history of cancer;integer;;;undetermined;undetermined;;undetermined;undetermined
+;DRE_SCREEN;Screening, DRE;integer;;;impossible;impossible;;impossible;unavailable
+;PSA_SCREEN;Screening, PSA;integer;;;impossible;impossible;;impossible;unavailable
+;FOBT_SCREEN;Screening, FOBT;integer;;;impossible;impossible;;impossible;unavailable
+;COL_SCREEN;Screening, colonoscopy;integer;;;undetermined;undetermined;;undetermined;undetermined
+;MELANOMA_SCREEN;Screening, skin cancer;integer;;;undetermined;undetermined;;undetermined;undetermined
+;MAMMO_SCREEN;Screening, mammography;integer;;;impossible;impossible;;impossible;unavailable
+;CERVICAL_SCREEN;Screening cervical, smear test;integer;;;impossible;impossible;;impossible;unavailable
+;MED_STAT;Regular use of statins;integer;;;impossible;impossible;;impossible;unavailable
+;MED_NSAID;Regular use of non-steroidal anti-inflammatory drugs;integer;;;impossible;impossible;;impossible;unavailable
+;INC_CVD;CVD event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_CVD;Age at diagnosis of CVD [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_ANGINA;Angina pectoris event during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ANGINA;Age at diagnosis of angina pectoris [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_MI;Myocardial infarction during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_MI;Age at diagnosis of myocardial infarction [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_STR;Stroke during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_STR;Age at diagnosis of stroke [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_ISC_STR;Cerebral infarction (ischaemic stroke) during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_ISC_STR;Age at diagnosis of cerebral infarction (ischaemic stroke) [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HAEMO_STR;Haemorrhagic stroke during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HAEMO_STR;Age at diagnosis of haemorrhagic stroke [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HYP;Essential hypertension during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HYP;Age at diagnosis of essential hypertension [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_HF;Heart failure during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_HF;Age at diagnosis of heart failure [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_DIAB2;Diabetes mellitus type 2 during follow-up;integer;;;impossible;impossible;;impossible;unavailable
+;AGE_DIAB2;Age at diagnosis of diabetes mellitus type 2 [years];decimal;;;impossible;impossible;;impossible;unavailable
+;INC_CANCER;Cancer during follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
+;TYPE_CANCER;Type of Cancer (ICD 10, 3 digits,e.g. C18.3);text;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_CANCER;Age at diagnosis of cancer [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VITAL_ST;Vital status at the end of mortality follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_DEATH;Age at time of death [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
+;VITAL_ST_CVD;Vital status at the end of CVD mortality follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
+;VITAL_ST_CANCER;Vital status at the end of cancer mortality follow-up;integer;;;undetermined;undetermined;;undetermined;undetermined
+;AGE_FUP;Age at end of follow-up [years];decimal;;;undetermined;undetermined;;undetermined;undetermined
