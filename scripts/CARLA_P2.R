@@ -2,15 +2,15 @@
 
 #### Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 #### To keep consistency and avoid using renv now, we install the Rmonize package and dependency directly from GitHub
-# install.packages("remotes")
-# remotes::install_github("cran/madshapR@1.1.0")
-# remotes::install_github("cran/Rmonize@1.1.0")
-# install.packages("readxl")
-# install.packages("tidyverse")
-# install.packages("here")
-# install.packages("car")
-# install.packages("writexl")
-# install.packages("haven")
+#install.packages("remotes")
+pak::pkg_install("cran/madshapR@1.1.0")
+pak::pkg_install("cran/Rmonize@1.1.0")
+pak::pkg_install("readxl")
+pak::pkg_install("tidyverse")
+pak::pkg_install("here")
+pak::pkg_install("car")
+pak::pkg_install("writexl")
+pak::pkg_install("haven")
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -35,12 +35,15 @@ dataschema <- list(Variables = dataschema_1,
 #### Step 2: Import Datasets 
 
 #### this refers to the main dataset containing information from Baseline, FU1 and FU2
-input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
+input_dataset <- tibble::tibble(readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,".xlsx"))))
+#input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 input_dataset <- rename_with(input_dataset, tolower)
 
 
 #### this refers to the Nutrintake Dataset
-input_dataset_nutrients <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.sas7bdat")))
+input_dataset_nutrients <- tibble::tibble(readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.xlsx"))))
+#input_dataset_nutrients <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake.sas7bdat")))
+
 input_dataset_nutrients <- rename_with(input_dataset_nutrients, tolower)
 
 
@@ -50,7 +53,9 @@ input_dataset <- dplyr::left_join(input_dataset, input_dataset_nutrients, by = "
 
 #### Step 2a: Special Import of third data file containing FFQ data
 
-input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
+#input_dataset_FFQ <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.sas7bdat")))
+input_dataset_FFQ <-tibble::tibble(readxl::read_excel(here::here("data", paste0("DATA_", dataset_name,"_Nutrintake_by_group.xlsx"))))
+
 input_dataset_FFQ <- rename_with(input_dataset_FFQ, tolower)
 input_dataset_FFQ <- input_dataset_FFQ |> 
   mutate(across(c("group", "subgroup1", "subgroup2"), ~ ifelse(is.na(.),NA,

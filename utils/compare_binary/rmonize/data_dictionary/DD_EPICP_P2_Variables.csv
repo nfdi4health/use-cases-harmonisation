@@ -1,0 +1,78 @@
+index;name;label;valueType
+1;ident;participant identifier;integer
+2;SEX;sex;integer
+3;age0;Age at recruitment;decimal
+4;educc7;Accomplished vocational training [7 cat.];integer
+5;abschlus;Highest school degree;integer
+6;pal;Physical activity level;decimal
+7;smkst0i;Smoking status at baseline(imputed);integer
+8;occstat6;Current occupation [6cat.];integer
+9;zt3;On average, how many cigarettes do you smoke on average per day?;integer
+10;zr3;On average, how many cigars/cigarillos do you smoke per day?;integer
+11;pf3;On average, how many whole pipes do you smoke per day?;integer
+12;d_recrui;Recruitment date;date
+13;ysmkces0;Year when stopped smoking (imputed);integer
+14;vitamin;Intake of vitamin tablets?;integer
+15;radmeno;Menopausal status (excl. operations+hormones);integer
+16;horheute;Are you still taking menopausal hormones?;integer
+17;zeitraum;How many years have you been on the contraceptive 'pill' in total?;integer
+18;kinder;How many children have you born?;integer
+19;kind1;How old were you when you gave birth to your first child?;integer
+20;prevcanc;prevalent cancer;integer
+21;lipidlower;Lipid-lowering drugs;integer
+22;nsar_excl_ASS;non-steroidal anti-inflammatory drug (excl.ASS);integer
+23;casemi_fup5;case status of myocardial infarction at FUP5;integer
+24;casestroke_fup5;case status of stroke at FUP5;integer
+25;dd_incmi;date of diagnosis of myocardial infarction;date
+26;dd_incstroke;date of diagnosis of stroke;date
+27;caseI63_fup5;ischaemic insult (ICD-10 I63);integer
+28;caseI61_fup5;intracerebral hemorrhage (ICD-10 I61);integer
+29;casehyp_fup5;case status of essential hypertension at FUP5;integer
+30;dd_inchyp;date of diagnosis of essential hypertension;date
+31;casehf_fup5;case status of heart failure at FUP5;integer
+32;dd_inchf;date of diagnosis of heart failure;date
+33;casediab_fup5;case status of diabetes at FUP5;integer
+34;dd_incdiab;date of diagnosis of diabetes;date
+35;inccanc;incident first occuring cancer at FUP5;integer
+36;dd_inccanc;date of diagnosis of first occuring cancer;date
+37;vitstat5;vital status at FUP5;integer
+38;age_death;age of death;decimal
+39;age_fup5;age at FUP5;decimal
+40;dcens_canc;censored date for cancer at FUP5;date
+41;bmi0;BMI at baseline;decimal
+42;bmi_f4;BMI at FUP4;decimal
+43;waist0;waist circumference at baseline [cm];decimal
+44;hip0;hip circumference at baseline [cm];decimal
+45;waist_f4;waist circumference at FUP4 [cm];decimal
+46;hip_f4;hip circumference at FUP4 [cm];decimal
+47;age_anth_f4;age of anthropometric measurement at FUP4;decimal
+48;GJ;Total energy intake at baseline [kJ/d];decimal
+49;corr_trigly;corrected triglycerides [mg/dL];decimal
+50;corr_chol;corrected cholesterol [mg/dL];decimal
+51;corr_hdl;corrected HDL cholesterol [mg/dL];decimal
+52;ZK;carbohydrate intake at baseline [g/d];decimal
+53;ZE;protein intake at baseline [g/d];decimal
+54;ZF;fat intake at baseline [g/d];decimal
+55;ZA;alcohol intake at baseline [g/d];decimal
+56;ZB;fiber intake at baseline [g/d];decimal
+57;FS;saturated fatty acid intake at baseline [g/d];decimal
+58;FU;monounsaturated fatty acid intake at baseline [g/d];decimal
+59;FP;polyunsaturated fatty acid intake at baseline [g/d];decimal
+60;KD;disaccharide intake at baseline [g/d];decimal
+61;KM;monosaccharide intake at baseline [g/d];decimal
+62;KMT;glucose intakeat baseline [g/d];decimal
+63;KMF;fructose intake at baseline [g/d];decimal
+64;MNA;sodium intake at baseline [g/d];decimal
+65;MK;potassium intake at baseline [g/d];decimal
+66;VEGETABLES_02;Vegetable intake [g/d];decimal
+67;LEGUMES_TOT_03;Total legumes intake [g/d];decimal
+68;FRUITS_TOT_04;Total fruit intake [g/d];decimal
+69;RED_MEAT_0701;Intake of red meat (mammals meat) [g/d];decimal
+70;PROCMEAT_0704;Intake of processed or preserved meat [g/d];decimal
+71;SUGAR_CONFECT_11;Intake of sugar and similar, confectionery and water-based sweet desserts [g/d];decimal
+72;CAKES_12;Intake of cakes and fine bakery products [g/d];decimal
+73;FRUITVEG_JUICE_1301;Intake of fruit and vegetable juices [g/d];decimal
+74;SOFTDRINKS_1302;Intake of soft drinks [g/d];decimal
+75;COFFEE_130301;Coffee intake [g/d];decimal
+76;TEA_130302;Tea intake [g/d];decimal
+77;ART_SWEETENER_170201;Intake of artificial sweeteners (e.g., aspartam, saccharine) [g/d];decimal
