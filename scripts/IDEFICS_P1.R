@@ -1,5 +1,7 @@
 #### Script for harmonizing IDEFICS_P1 for NFDI4Health
 
+#### renv::restore()
+
 ####Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
 # install.packages("Rmonize")
 # install.packages("readxl")
@@ -28,12 +30,9 @@ dataschema <- list(Variables = dataschema_1,
 
 #### Step 2: Import Datasets 
 #### Import check provided in case the csv file is in German style (delim = ";", dec.point = ",")
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
-input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
 
-if(dim(input_dataset)[2] == 1){
-  input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
-}
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
