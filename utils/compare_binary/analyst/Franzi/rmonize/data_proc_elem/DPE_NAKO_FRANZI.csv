@@ -14,8 +14,8 @@ index;dataschema_variable;label;valueType;input_dataset;input_variables;Mlstr_ha
 ;MIXEDVEG_0209;Intake of mixed vegetable salad or mixed green salad [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;LEGUMES_TOT_03;Total legumes intake [g/d];decimal;;a_ui_m03;direct_mapping;direct_mapping;;complete;identical
 ;LEGUMES_0301;Intake fresh seeds (without pod) from legumes (beans, peas etc.) [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
-;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
-;FRUITS_0401;Intake of fresh fruits [g/d];decimal;;a_ui_f0401;direct_mapping;direct_mapping;;complete;identical
+;FRUITS_TOT_04;Total fruit intake [g/d];decimal;;a_ui_m04;direct_mapping;direct_mapping;;complete;identical
+;FRUITS_0401;Intake of fresh fruits [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;NUTS_SEEDS_0402;Intake of tree nuts and seeds [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;MIXEDFRUITS_0403;Intake of candied fruit/mixed fruit, canned, jarred mixed fruit and miscellaneous fruits [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
 ;OLIVES_0404;Intake of olives [g/d];decimal;;;undetermined;undetermined;;undetermined;undetermined
