@@ -1,1 +1,26 @@
 index;name;label;valueType
+;ID;ID;integer
+;sex;Geschlecht;integer
+;age;Alter (in vollendeten Lebensjahren);decimal
+;SDisced97z;ISCED (1997) - Klassifikation;decimal
+;KAmet31;Leichte Tätigkeiten (Mo-Fr) [Stunden];decimal
+;KAmet32;Leichte Tätigkeiten (Sa/So) [Stunden];decimal
+;KAmet41;Mittelschwere Tätigkeiten (Mo-Fr) [Stunden];decimal
+;KAmet42;Mittelschwere Tätigkeiten (Sa/So) [Stunden];decimal
+;KAmet51;Anstrengende Tätigkeiten (Mo-Fr) [Stunden];decimal
+;KAmet52;Anstrengende Tätigkeiten (Sa/So) [Stunden];decimal
+;MIstaat_m1;Staatsangehörigkeit: Deutsch;integer
+;MIstaat_m2;Staatsangehörigkeit: Andere;integer
+;RCstatD;Rauchen;integer
+;SDerwerbB;Angaben zur Berufstätigkeit;integer
+;RCz3C;Anzahl Zigarren heute;decimal
+;RCz4C;Anzahl Pfeifen heute;decimal
+;RCzC;Anzahl Zigaretten heute;decimal
+;RCexC_a;Alter des Aufhörens [Jahre];decimal
+;SEmens2;Regelblutung in den letzten 12 Monaten;decimal
+;KHdiab12p;Diabetes (12-Mon-Prävalenz);integer
+;KHhyp12p;Hypertonie (12-Mon-Prävalenz);integer
+;KHkarz12p;Krebserkrankung, bösartiger Tumor (12-Mon-Prävalenz);integer
+;tdvital1;Vitalstatus (1. Mortalitäts-Follow-up);integer
+;KHkhk12p;Koron. Herzkrankheit (12-Mon-Prävalenz);integer
+;AGE_FUP;Age at end of follow-up [years];decimal
