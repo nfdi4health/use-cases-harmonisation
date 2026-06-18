@@ -1,1 +1,36 @@
 variable;name;label
+sex;1;Mannlich
+sex;2;Weiblich
+SDisced97z;1;Primary School Level
+SDisced97z;2;Realschule, Mittlere Reife
+SDisced97z;3;Vocational training in the dual system
+SDisced97z;4;Entrance qualification for a university of applied sciences and Abitur
+SDisced97z;5;Post-secondary non-tertiary education
+SDisced97z;6;Master craftsman, technician, health-care schools, administrative college
+SDisced97z;7;Degree from a university
+RCstatD;1;Ja, täglich
+RCstatD;2;Ja, gelegentlich
+RCstatD;3;Habe früher geraucht, rauche seit mind. 1 Jahr nicht mehr
+RCstatD;4;Habe i.d.l. 12 Mon. aufgehört zu rauchen
+RCstatD;5;Habe noch nie geraucht
+SDerwerbB;1;Zur Zeit nicht berufstätig
+SDerwerbB;2;Teilzeit- od. stundenweise berufstätig
+SDerwerbB;3;Teilzeit-berufstätig
+SDerwerbB;4;Voll berufstätig
+SDerwerbB;5;Vorübergehende Freistellung
+SDerwerbB;6;Auszubildender
+SEmens2;1;Ja
+SEmens2;2;Nein
+KHdiab12p;1;Ja
+KHdiab12p;2;Nein
+KHhyp12p;1;Ja
+KHhyp12p;2;Nein
+KHkarz12p;1;Ja
+KHkarz12p;2;Nein
+tdvital1;1;Nein
+tdvital1;2;Ja
+KHkhk12p;1;Ja
+KHkhk12p;2;Nein
+MIstaat_m1;"1
+";Staatsangehörigkeit: Deutsch
+MIstaat_m2;1;Staatsangehörigkeit: Andere
