@@ -9,9 +9,9 @@ library(Rmonize)
 library(readxl)
 library(tidyverse)
 library(here)
-library(car)
 library(writexl)
 library(haven)
+library(car)
 
 #### all needs to be SAS files!!! => just switch after finish testing
 
@@ -28,9 +28,19 @@ dataschema <- list(Variables = dataschema_1,
 
 #### Step 2: Import Datasets 
 
-input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|> 
-  mutate(ID = row_number()) |> 
+# input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
+# 
+# if(dim(input_dataset)[2] == 1){
+#   input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
+# }
+
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|>
+  mutate(ID = row_number()) |>
   relocate(ID)
+
+# input_dataset <- input_dataset |>
+#   mutate(ID = row_number()) |>
+#   relocate(ID)
 
 options(scipen = 999) 
 
@@ -40,6 +50,20 @@ dd_cat <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary/
 
 dd <- list(Variables = dd_var,
            Categories = dd_cat)
+
+
+variables_missing <- dd_cat |>
+  filter(missing == TRUE)|>
+  select(variable, name) |>
+  unique() 
+
+
+#### clearing specially coded missings
+for(i in 1:length(variables_missing$variable)){
+  
+  input_dataset[[variables_missing$variable[i]]][input_dataset[[variables_missing$variable[i]]] == variables_missing$name[i]] <- NA
+  
+}
 
 #### selecting needed variables only from the input dataset
 variables_needed <- dd_var |> 
@@ -112,11 +136,7 @@ fabR::bookdown_open(bookdown_path)
 
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
-harmonized_dataset <- left_join(harmonized_dataset, maelstrom_id_match, by = c("ID" = "MAEL")) |> 
-  select(-ID) |> 
-  mutate(ID = DIFE) |> 
-  select(-DIFE) |> 
-  relocate(ID, .before = SEX)
+
 
 ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
 
