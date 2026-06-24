@@ -1,0 +1,24 @@
+variable;name;label
+basis_sex;1;Mannlich
+basis_sex;2;Weiblich
+a_ses_isced11_level;0;Less than primary education (Not applicable for Germany)
+a_ses_isced11_level;1;Primary education
+a_ses_isced11_level;2;Lower secondary education
+a_ses_isced11_level;3;Upper secondary education
+a_ses_isced11_level;4;Post-secondary non-tertiary education
+a_ses_isced11_level;5;Short-cycle tertiary education (Not applicable for Germany)
+a_ses_isced11_level;6;Bachelor's or equivalent level
+a_ses_isced11_level;7;Master's or equivalent level
+a_ses_isced11_level;8;Doctoral or equivalent level
+a_smok_stat_qn;1;Kein Raucher, auch nicht ehemalig
+a_smok_stat_qn;2;Ehemaliger Raucher
+a_smok_stat_qn;3;Raucher
+a_smok_stat_qn;4;Rauchstatus unbekannt
+a_diab;1;Ja
+a_diab;0;Nein
+d_f_mp1;1;Ja
+d_f_mp1;2;Nein
+d_an_ca;1;Ja
+d_an_ca;2;Nein
+d_an_cv_6;1;Ja
+d_an_cv_6;2;Nein

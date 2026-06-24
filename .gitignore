@@ -2,9 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+.positai
 
-
-# output documents besides the placeholders
+# output documents besides the placeholders + data folder
 output/rmonize_report/*
 !output/rmonize_report/placeholder.txt
 
@@ -16,4 +16,6 @@ output/rmonize_summary/*
 
 output/harmonised_dataset/*
 !output/harmonised_dataset/placeholder.txt
-.positai
+
+data/*
+!data/placeholder.txt
