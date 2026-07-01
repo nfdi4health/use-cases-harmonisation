@@ -1,22 +1,23 @@
-#### Script for harmonizing DEGS1 for NFDI4Health
+#### Script for harmonizing IDEFICS_P2 for NFDI4Health
 
-
-# install.packages("renv")
-# renv::restore()
+####Installation of Rmonize and its dependent packages (necessary R Version > 3.4)
+# install.packages("Rmonize")
+# install.packages("readxl")
+# install.packages("tidyverse")
+# install.packages("here")
+# install.packages("car")
+# install.packages("writexl")
 
 #### Load the package in order to conduct
 library(Rmonize)
 library(readxl)
 library(tidyverse)
 library(here)
-library(writexl)
-library(haven)
 library(car)
-
-#### all needs to be SAS files!!! => just switch after finish testing
+library(writexl)
 
 #### Step 0: Name of the study
-dataset_name <- "DEGS1_P1"
+dataset_name <- "NAKO_P1"
 
 #### Step 1: Import overall DataSchema
 dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
@@ -25,24 +26,36 @@ dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schem
 dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
 
-
 #### Step 2: Import Datasets 
+#input_dataset <- tibble::tibble(readxl::read_excel(here::here("data", paste0("DATA_", dataset_name, ".xlsx")), sheet = 1))
 
+
+#### NAKO Baseline
 input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
 
 if(dim(input_dataset)[2] == 1){
   input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
 }
 
-# input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|>
-#   mutate(ID = row_number()) |>
-#   relocate(ID)
 
-input_dataset <- input_dataset |>
-  mutate(ID = row_number()) |>
-  relocate(ID)
 
-options(scipen = 999) 
+#### NAKO FFQ
+input_dataset2 <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, "_FFQ.csv")))
+
+if(dim(input_dataset2)[2] == 1){
+  input_dataset2 <- read.csv(here::here("data", paste0("DATA_", dataset_name, "_FFQ.csv")), sep = ";", dec = ",")
+}
+
+
+
+#####################################################
+#### check after here
+
+input_dataset2 <- input_dataset2 |> 
+  rename_with(.cols = !ID, ~paste0(., "_fup"))
+
+input_dataset <- left_join(input_dataset, input_dataset2, by = "ID")
+
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
@@ -51,37 +64,14 @@ dd_cat <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary/
 dd <- list(Variables = dd_var,
            Categories = dd_cat)
 
-
-variables_missing <- dd_cat |>
-  filter(missing == TRUE)|>
-  select(variable, name) |>
-  unique() 
-
-
-#### clearing specially coded missings
-for(i in 1:length(variables_missing$variable)){
-  
-  input_dataset[[variables_missing$variable[i]]][input_dataset[[variables_missing$variable[i]]] == variables_missing$name[i]] <- NA
-  
-}
-
-#### selecting needed variables only from the input dataset
+#### selecting needed variables only
 variables_needed <- dd_var |> 
   select(name) |> 
   unique() |> 
   pull()
 
-variables_integer <- dd_var |> 
-  filter(valueType == "integer") |> 
-  select(name) |> 
-  unique() |> 
-  pull()
-
 input_dataset <- input_dataset |> 
-  select(all_of(variables_needed)) |> 
-  mutate(across(everything(), ~as.numeric(.))) |> 
-  mutate(across(all_of(variables_integer), ~as.integer(.)))
-
+  select(all_of(variables_needed))
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
 data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", paste0("DPE_",dataset_name, ".xlsx")), sheet = 1)
@@ -105,7 +95,6 @@ harmonized_dossier_evaluation <- Rmonize::harmonized_dossier_evaluate(harmonized
 harmonized_dossier_summary <- Rmonize::harmonized_dossier_summarize(harmonized_dossier)
 harmonized_dossier_summary[[1]][2,2] <- dataset_name
 
-
 #### Step 8: Create Reports on the harmonized dossiers; Folder name will include study name, date and time
 system_time <- Sys.time()
 system_name <- stringr::str_replace_all(string = system_time,
@@ -120,6 +109,7 @@ bookdown_path <- here::here("output/rmonize_report/", paste0(dataset_name, "_", 
 Rmonize::harmonized_dossier_visualize(harmonized_dossier, 
                                       bookdown_path,
                                       harmonized_dossier_summary = harmonized_dossier_summary)
+
 
 ifelse(!dir.exists(file.path(here::here("output/rmonize_summary/"))), dir.create(file.path(here::here("output/rmonize_summary/"))), FALSE)
 ifelse(!dir.exists(file.path(here::here("output/opal_dd/"))), dir.create(file.path(here::here("output/opal_dd/"))), FALSE)
@@ -145,11 +135,11 @@ fabR::bookdown_open(bookdown_path)
 #### Step 9: Extract and save harmonized data into a pre-set folder
 harmonized_dataset <- Rmonize::pooled_harmonized_dataset_create(harmonized_dossier)
 
-
 ifelse(!dir.exists(file.path(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name)))),dir.create(here::here("output/harmonised_dataset/", paste0(dataset_name, "_", system_name))), FALSE)
 
 readr::write_delim(x = harmonized_dataset, 
                    file = here::here(paste0("output/harmonised_dataset/", dataset_name, "_", system_name, "/", dataset_name,"_harmonized.csv")),
                    delim = ",",
                    na = "")
+
 
