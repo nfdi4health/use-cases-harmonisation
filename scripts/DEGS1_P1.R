@@ -28,19 +28,19 @@ dataschema <- list(Variables = dataschema_1,
 
 #### Step 2: Import Datasets 
 
-# input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
-# 
-# if(dim(input_dataset)[2] == 1){
-#   input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
-# }
+input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
 
-input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|>
-  mutate(ID = row_number()) |>
-  relocate(ID)
+if(dim(input_dataset)[2] == 1){
+  input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
+}
 
-# input_dataset <- input_dataset |>
+# input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|>
 #   mutate(ID = row_number()) |>
 #   relocate(ID)
+
+input_dataset <- input_dataset |>
+  mutate(ID = row_number()) |>
+  relocate(ID)
 
 options(scipen = 999) 
 
@@ -71,8 +71,16 @@ variables_needed <- dd_var |>
   unique() |> 
   pull()
 
+variables_integer <- dd_var |> 
+  filter(valueType == "integer") |> 
+  select(name) |> 
+  unique() |> 
+  pull()
+
 input_dataset <- input_dataset |> 
-  select(all_of(variables_needed))
+  select(all_of(variables_needed)) |> 
+  mutate(across(everything(), ~as.numeric(.))) |> 
+  mutate(across(all_of(variables_integer), ~as.integer(.)))
 
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
