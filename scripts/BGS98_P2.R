@@ -1,5 +1,6 @@
-#### Script for harmonizing DEGS1 for NFDI4Health
+#### Script for harmonizing CARLA_P1 for NFDI4Health
 
+#### Installation of Rmonize and its dependent packages (necessary R Version > 3.4) using the renv.lock file
 
 # install.packages("renv")
 # renv::restore()
@@ -9,18 +10,16 @@ library(Rmonize)
 library(readxl)
 library(tidyverse)
 library(here)
+library(car)
 library(writexl)
 library(haven)
-library(car)
-
-#### all needs to be SAS files!!! => just switch after finish testing
 
 #### Step 0: Name of the study
-dataset_name <- "DEGS1_P1"
+dataset_name <- "BGS98_P2"
 
 #### Step 1: Import overall DataSchema
-dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1))
-dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2))
+dataschema_1 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1))
+dataschema_2 <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 2))
 
 dataschema <- list(Variables = dataschema_1,
                    Categories = dataschema_2)
@@ -28,21 +27,37 @@ dataschema <- list(Variables = dataschema_1,
 
 #### Step 2: Import Datasets 
 
-input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
 
-if(dim(input_dataset)[2] == 1){
-  input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
-}
+# #### testing our documents: file 1 import
+# input_dataset <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
+# 
+# if(dim(input_dataset)[2] == 1){
+#   input_dataset <- read.csv(here::here("data", paste0("DATA_", dataset_name, ".csv")), sep = ";", dec = ",")
+# }
 
-# input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))|>
-#   mutate(ID = row_number()) |>
-#   relocate(ID)
 
-input_dataset <- input_dataset |>
-  mutate(ID = row_number()) |>
-  relocate(ID)
+#### this refers to the main dataset containing information from Baseline: bgs98_0339
+input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
-options(scipen = 999) 
+#### this refers to the follow-up dataset containing information from DEGS1: degs1_0339
+input_dataset_2 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_2.sas7bdat"))) |>
+  rename(AGE_FUP = age) |>
+  mutate(AGE_ANTH_FUP = AGE_FUP)
+
+#### this refers to the baseline dataset containing nutritional data: es98_daten
+input_dataset_3 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_3.sas7bdat"))) |>
+  mutate(ID0339 = as.integer(stringr::str_sub(string = a, start = 3L, end = 6L)))
+
+
+#### Merger 1
+input_dataset <- dplyr::left_join(input_dataset, input_dataset_2, by = "ID0339")
+
+#### Merger 2
+input_dataset <- dplyr::left_join(input_dataset, input_dataset_3, by = "ID0339")
+
+
+options(scipen = 999)
+
 
 #### Step 3: Import Data Dictionaries of the study
 dd_var <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary", paste0("DD_",dataset_name, ".xlsx")), sheet = 1))
@@ -51,6 +66,12 @@ dd_cat <- tibble::tibble(readxl::read_excel(here::here("rmonize/data_dictionary/
 dd <- list(Variables = dd_var,
            Categories = dd_cat)
 
+
+#### selecting needed variables only
+variables_needed <- dd_var |> 
+  select(name) |> 
+  unique() |> 
+  pull()
 
 variables_missing <- dd_cat |>
   filter(missing == TRUE)|>
@@ -65,23 +86,9 @@ for(i in 1:length(variables_missing$variable)){
   
 }
 
-#### selecting needed variables only from the input dataset
-variables_needed <- dd_var |> 
-  select(name) |> 
-  unique() |> 
-  pull()
-
-variables_integer <- dd_var |> 
-  filter(valueType == "integer") |> 
-  select(name) |> 
-  unique() |> 
-  pull()
 
 input_dataset <- input_dataset |> 
-  select(all_of(variables_needed)) |> 
-  mutate(across(everything(), ~as.numeric(.))) |> 
-  mutate(across(all_of(variables_integer), ~as.integer(.)))
-
+  select(all_of(variables_needed))
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
 data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", paste0("DPE_",dataset_name, ".xlsx")), sheet = 1)
@@ -137,7 +144,6 @@ opal_dd$Variables <- opal_dd$Variables[c(1,5,2:4)]
 opal_dd$Categories <- opal_dd$Categories[c(4,1:3)]
 
 writexl::write_xlsx(opal_dd, here::here("output/opal_dd/", paste0(dataset_name, "_", system_name, "/", dataset_name, "_DD.xlsx")))
-
 
 # Open the visual report in a browser.
 fabR::bookdown_open(bookdown_path)
