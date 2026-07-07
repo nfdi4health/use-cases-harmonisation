@@ -40,10 +40,11 @@ dataschema <- list(Variables = dataschema_1,
 input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
 #### this refers to the follow-up dataset containing information from DEGS1: degs1_0339
-input_dataset_2 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_2.sas7bdat"))) |> 
-  rename(AGE_FUP = age)
+input_dataset_2 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_2.sas7bdat"))) |>
+  rename(AGE_FUP = age) |>
+  mutate(AGE_ANTH_FUP = AGE_FUP)
 
-#### this refers to the baseline dataset containing nutritional data: es98_daten 
+#### this refers to the baseline dataset containing nutritional data: es98_daten
 input_dataset_3 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_3.sas7bdat"))) |>
   mutate(ID0339 = as.integer(stringr::str_sub(string = a, start = 3L, end = 6L)))
 
