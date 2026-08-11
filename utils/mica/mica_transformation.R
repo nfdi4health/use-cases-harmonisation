@@ -63,6 +63,7 @@ for(i in 1:length(dataset_name)){
                                           pattern = "_P1")) |> 
     mutate(dataschema = case_when(Project1 == TRUE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1)),
                                   Project1 == FALSE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1)))) |> 
+    select(-Project1) |> 
     unnest(cols = c(dataschema)) |> 
     rename(table = value) |> 
     mutate(missing = "0") |> #### this feels wrong !!!, 0 could mean FALSE, and we have in RKI and NAKO datasets missing = TRUE !!!
