@@ -61,8 +61,8 @@ for(i in 1:length(dataset_name)){
                                         i = 1)) |> 
     mutate(Project1 = stringr::str_detect(string = value,
                                           pattern = "_P1")) |> 
-    mutate(dataschema = case_when(Project1 == TRUE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 1)),
-                                  Project1 == FALSE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 1)))) |> 
+    mutate(dataschema = case_when(Project1 == TRUE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P1.xlsx"), sheet = 2)),
+                                  Project1 == FALSE ~ list(readxl::read_excel(here::here("rmonize/data_schema/", "Dataschema_P2.xlsx"), sheet = 2)))) |> 
     select(-Project1) |> 
     unnest(cols = c(dataschema)) |> 
     rename(table = value) |> 
