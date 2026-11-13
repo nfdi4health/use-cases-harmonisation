@@ -4,9 +4,10 @@
 # install.packages("Rmonize")
 # install.packages("readxl")
 # install.packages("tidyverse")
-# install.packages("here")
+#install.packages("here")
 # install.packages("car")
 # install.packages("writexl")
+#renv::restore()
 
 #### Load the package in order to conduct
 library(Rmonize)
@@ -15,6 +16,7 @@ library(tidyverse)
 library(here)
 library(car)
 library(writexl)
+library(dplyr)
 
 #### Step 0: Name of the study
 dataset_name <- "NAKO_P2"
@@ -40,16 +42,19 @@ if(dim(input_dataset)[2] == 1){
 
 
 #### NAKO FUP 1
-input_dataset2 <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, ".csv")))
+input_dataset2 <- readr::read_csv(here::here("data", paste0("DATA_", dataset_name, "_FUP1.csv")))
 
-if(dim(input_dataset)[2] == 1){
+if(dim(input_dataset2)[2] == 1){
   input_dataset2 <- read.csv(here::here("data", paste0("DATA_", dataset_name, "_FUP1.csv")), sep = ";", dec = ",")
 }
 
 input_dataset2 <- input_dataset2 |> 
   rename_with(.cols = !ID, ~paste0(., "_fup"))
 
+
+
 input_dataset <- left_join(input_dataset, input_dataset2, by = "ID")
+
 
 
 #### Step 3: Import Data Dictionaries of the study
@@ -65,8 +70,35 @@ variables_needed <- dd_var |>
   unique() |> 
   pull()
 
+
+variables_integer <- dd_var |>
+  filter(valueType == "integer")|>
+  select(name) |>
+  unique() |>
+  pull()
+
+variables_missing <- dd_cat |>
+  filter(missing == TRUE)|>
+  select(variable, name) |>
+  unique() 
+
 input_dataset <- input_dataset |> 
-  select(all_of(variables_needed))
+  select(all_of(variables_needed))|>
+  mutate(across(everything(), ~ifelse(. == "", NA, .)))|>
+  mutate(across(everything(), ~as.numeric(.x))) |>
+  mutate(across(all_of(variables_integer), ~as.integer(.x)))
+
+
+#### clearing specially coded missings
+for(i in 1:length(variables_missing$variable)){
+  
+  input_dataset[[variables_missing$variable[i]]][input_dataset[[variables_missing$variable[i]]] == variables_missing$name[i]] <- NA
+  
+}
+
+
+options(scipen = 10)
+
 
 #### Step 4: Import prepared Data Processing Elements (DPE)
 data_proc_elem <- readxl::read_excel(here::here("rmonize/data_proc_elem", paste0("DPE_",dataset_name, ".xlsx")), sheet = 1)

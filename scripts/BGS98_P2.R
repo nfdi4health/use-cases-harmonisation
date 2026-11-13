@@ -40,20 +40,65 @@ dataschema <- list(Variables = dataschema_1,
 input_dataset <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,".sas7bdat")))
 
 #### this refers to the follow-up dataset containing information from DEGS1: degs1_0339
-input_dataset_2 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_2.sas7bdat"))) |>
-  rename(AGE_FUP = age) |>
-  mutate(AGE_ANTH_FUP = AGE_FUP)
+#input_dataset_2 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_2.sas7bdat"))) |>
+# rename(AGE_FUP = age) |>
+# mutate(AGE_ANTH_FUP = AGE_FUP)
+
+input_dataset_2 <- haven::read_sas(
+  here::here("data", paste0("DATA_", dataset_name, "_2.sas7bdat"))
+) |>
+  rename(
+    AGE_FUP = age,
+    USbmi_FUP = USbmi,
+    UStail_FUP = UStail,
+    UShuef_FUP = UShuef
+  ) |>
+  mutate(AGE_ANTH_FUP = AGE_FUP,
+         AGE_HYP = AGE_FUP,
+         AGE_DIAB2 = AGE_FUP
+         )
 
 #### this refers to the baseline dataset containing nutritional data: es98_daten
 input_dataset_3 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name,"_3.sas7bdat"))) |>
-  mutate(ID0339 = as.integer(stringr::str_sub(string = a, start = 3L, end = 6L)))
+  mutate(
+    ID0339 = IDNR |>
+      as.character() |>
+      stringr::str_remove("^47") |>
+      stringr::str_remove("^0") |>
+      as.integer()
+  )
+#  mutate(ID0339 = as.integer(stringr::str_sub(string = a, start = 3L, end = 6L)))
 
+#### this refers to the additional baseline dataset For mortality variable: bgs98_td_0339
+input_dataset_4 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name, "_4.sas7bdat")))
+####This refers to the new additional dataset from 
+input_dataset_5 <- haven::read_sas(here::here("data", paste0("DATA_", dataset_name, "_5.sas7bdat")))
 
 #### Merger 1
 input_dataset <- dplyr::left_join(input_dataset, input_dataset_2, by = "ID0339")
 
 #### Merger 2
 input_dataset <- dplyr::left_join(input_dataset, input_dataset_3, by = "ID0339")
+
+#### Merger 3
+input_dataset <- dplyr::left_join(input_dataset, input_dataset_4, by = "ID0339")
+
+#### Merger 4
+#input_dataset <- dplyr::left_join(input_dataset,input_dataset_5,by = "ID0339")
+
+# Step 5: Add only new variables from dataset degs1 containing systolic and diastolic variable 5
+input_dataset_5_new <- input_dataset_5 |>
+  dplyr::select(
+    ID0339,
+    dplyr::all_of(
+      setdiff(names(input_dataset_5), names(input_dataset))
+    )
+  )
+
+
+# Step 6: Merge dataset 5
+input_dataset <- input_dataset |>
+  dplyr::left_join(input_dataset_5_new, by = "ID0339")
 
 
 options(scipen = 999)
